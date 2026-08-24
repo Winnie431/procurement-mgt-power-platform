@@ -1,0 +1,9 @@
+<customapirequestparameter uniquename="regardingType">
+  <displayname default="CreateWorkflowRun-In-regardingType">
+    <label description="CreateWorkflowRun-In-regardingType" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>CreateWorkflowRun-In-regardingType</name>
+  <type>10</type>
+</customapirequestparameter>

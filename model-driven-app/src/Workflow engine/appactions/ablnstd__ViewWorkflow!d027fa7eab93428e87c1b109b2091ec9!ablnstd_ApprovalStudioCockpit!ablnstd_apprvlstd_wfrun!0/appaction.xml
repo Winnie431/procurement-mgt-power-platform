@@ -1,0 +1,32 @@
+<appaction uniquename="ablnstd__ViewWorkflow!d027fa7eab93428e87c1b109b2091ec9!ablnstd_ApprovalStudioCockpit!ablnstd_apprvlstd_wfrun!0">
+  <appmoduleid>
+    <uniquename>ablnstd_ApprovalStudioCockpit</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="View Workflow">
+    <label description="View Workflow" languagecode="1033" />
+  </buttonlabeltext>
+  <context>1</context>
+  <contextentity>
+    <logicalname>ablnstd_apprvlstd_wfrun</logicalname>
+  </contextentity>
+  <contextvalue>ablnstd_apprvlstd_wfrun</contextvalue>
+  <fonticon>$clientsvg:Org</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>ViewWorkflow!d027fa7eab93428e87c1b109b2091ec9</name>
+  <onclickeventjavascriptfunctionname>openCustomPage</onclickeventjavascriptfunctionname>
+  <onclickeventjavascriptparameters>[{"type":5},{"type":21,"value":"ablnstd_workflowrunworkflowvizualizer_4963a"},{"type":21,"value":"Workflow"},{"type":19,"value":2},{"type":19,"value":300},{"type":19,"value":0},{"type":18,"value":false},{"type":18,"value":false}]</onclickeventjavascriptparameters>
+  <onclickeventjavascriptwebresourceid>
+    <webresourceid>89e22d3f-1e3c-ee11-bdf4-000d3a672530</webresourceid>
+  </onclickeventjavascriptwebresourceid>
+  <onclickeventtype>2</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100046.0000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilitytype>0</visibilitytype>
+</appaction>

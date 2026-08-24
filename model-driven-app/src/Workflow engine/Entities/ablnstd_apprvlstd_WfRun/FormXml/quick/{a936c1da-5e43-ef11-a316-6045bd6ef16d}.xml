@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{a936c1da-5e43-ef11-a316-6045bd6ef16d}</formid>
+    <IntroducedVersion>1.1.240709.1</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab id="ACBA75B7-97B6-4116-AA55-51312992B721" name="tab_1" showlabel="false" labelid="{bb85f0cb-9c15-46c9-a6f3-3d0aa4b92573}">
+          <labels>
+            <label description="New Tab" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section id="AD49B5BF-256F-46A8-9C75-947146172EB9" name="tab_1_column_1_section_1" columns="1" showlabel="false" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{56db541c-b405-49fb-a823-877774ad5f64}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="C0550AC7-0F44-45A4-8EF5-D2911C0689D9" labelid="{8d486e23-7393-4273-88e7-f75ccfb811e5}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{00a4775c-0c23-4d4a-adc0-dea13623298c}" locklevel="0" colspan="1" rowspan="1" labelid="{3453d01b-b83e-4c5e-91e1-87042fa904fe}">
+                        <labels>
+                          <label description="Workflow run status" languagecode="1033" />
+                        </labels>
+                        <control id="ablnstd_runstatuscode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="ablnstd_runstatuscode" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{75994fec-b49c-47c6-92ef-03291c41abb2}" locklevel="0" colspan="1" rowspan="1" labelid="{ccf7ab8a-0948-4d12-89d4-81e3ab7c1d55}">
+                        <labels>
+                          <label description="Latest Approval" languagecode="1033" />
+                        </labels>
+                        <control id="ablnstd_latestapprovalid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ablnstd_latestapprovalid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e7735e83-3d4d-4a0e-bb1a-c0947f0e8136}" locklevel="0" colspan="1" rowspan="1" labelid="{816fa46a-604c-493b-a69b-91e166eccc5d}">
+                        <labels>
+                          <label description="Final outcome" languagecode="1033" />
+                        </labels>
+                        <control id="ablnstd_finaloutcomeid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ablnstd_finaloutcomeid" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="tab_1_section_3" id="6a324840-05a4-4cb3-858d-030b4746ba94" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Steps" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{640faf22-95cf-4318-a12d-1be0ab885587}" rowspan="4" colspan="1" auto="false" showlabel="true">
+                        <labels>
+                          <label description="Steps" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_1" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>ablnstd_apprvlstd_wfrunapproval</TargetEntityType>
+                            <ViewId>{49C06654-C3FC-EE11-9F89-000D3AE76128}</ViewId>
+                            <ViewIds>{E5F8C250-C2C6-465F-B97D-0D95442E9391},{49C06654-C3FC-EE11-9F89-000D3AE76128}</ViewIds>
+                            <RelationshipName>ablnstd_wfrunapproval_WfRun</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="1" FallbackForm="true">
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Workflow run quick view form" languagecode="1033" />
+    </LocalizedNames>
+  </systemform>
+</forms>

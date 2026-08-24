@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppModuleSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SiteMapUniqueName>ablnstd_ApprovalStudioCockpit</SiteMapUniqueName>
+  <EnableCollapsibleGroups>False</EnableCollapsibleGroups>
+  <ShowHome>False</ShowHome>
+  <ShowPinned>False</ShowPinned>
+  <ShowRecents>False</ShowRecents>
+  <SiteMap IntroducedVersion="7.0.0.0">
+    <Area Id="area_1b41ee90" ResourceId="SitemapDesigner.NewTitle" DescriptionResourceId="SitemapDesigner.NewTitle" ShowGroups="true" IntroducedVersion="7.0.0.0">
+      <Titles>
+        <Title LCID="1033" Title="Area1" />
+      </Titles>
+      <Group Id="group_f116c387" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="Runs" />
+        </Titles>
+        <SubArea Id="subarea_18107c77" DescriptionResourceId="Dashboards_Description" Icon="/_imgs/imagestrips/transparent_spacer.gif" Url="/workplace/home_dashboards.aspx" DefaultDashboard="6062a1e7-4739-ef11-a316-000d3a78bcff" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" ToolTipResourseId="DashboardTooltip">
+          <Titles>
+            <Title LCID="1033" Title="On going Dashboard" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_12c8b564" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="ablnstd_apprvlstd_wfrun" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_9a6e93f1" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="ablnstd_apprvlstd_wfrunapproval" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Approvals" />
+          </Titles>
+        </SubArea>
+      </Group>
+      <Group Id="group_4449a00d" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="Definition" />
+        </Titles>
+        <SubArea Id="subarea_184fb1e1" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="ablnstd_apprvlstd_wfdef" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+      </Group>
+      <Group Id="group_118a58b1" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="Sample" />
+        </Titles>
+        <SubArea Id="subarea_aa6bd844" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="ablnstd_apprvlstd_samplerequest" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_571df387" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="ablnstd_apprvlstd_samplerequest2" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+      </Group>
+    </Area>
+  </SiteMap>
+  <LocalizedNames>
+    <LocalizedName description="Approval Studio Cockpit" languagecode="1033" />
+  </LocalizedNames>
+</AppModuleSiteMap>

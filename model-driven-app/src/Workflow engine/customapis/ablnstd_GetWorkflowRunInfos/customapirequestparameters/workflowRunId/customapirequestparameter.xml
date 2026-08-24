@@ -1,0 +1,9 @@
+<customapirequestparameter uniquename="workflowRunId">
+  <displayname default="GetWorkflowRunInfos-In-workflowRunId">
+    <label description="GetWorkflowRunInfos-In-workflowRunId" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>GetWorkflowRunInfos-In-workflowRunId</name>
+  <type>10</type>
+</customapirequestparameter>

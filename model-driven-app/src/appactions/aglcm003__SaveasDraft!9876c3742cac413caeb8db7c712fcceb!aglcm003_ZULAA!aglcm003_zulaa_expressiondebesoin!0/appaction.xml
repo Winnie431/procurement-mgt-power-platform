@@ -1,0 +1,45 @@
+<appaction uniquename="aglcm003__SaveasDraft!9876c3742cac413caeb8db7c712fcceb!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0">
+  <appmoduleid>
+    <uniquename>aglcm003_ZULAA</uniquename>
+  </appmoduleid>
+  <buttonaccessibilitytext default="Save">
+    <label description="Save" languagecode="1033" />
+    <label description="Enregistrer" languagecode="1036" />
+  </buttonaccessibilitytext>
+  <buttonlabeltext default="Save &amp; Close">
+    <label description="Save &amp; Close" languagecode="1033" />
+    <label description="Enregistrer et fermer" languagecode="1036" />
+  </buttonlabeltext>
+  <buttontooltipdescription default="Save This {EntityLogicalNameMarker}.">
+    <label description="Save This {EntityLogicalNameMarker}." languagecode="1033" />
+    <label description="Enregistrer ce EntityLogicalNameMarker" languagecode="1036" />
+  </buttontooltipdescription>
+  <buttontooltiptitle default="Save (CTRL+S)">
+    <label description="Save (CTRL+S)" languagecode="1033" />
+    <label description="Enregistrer CTRL+S" languagecode="1036" />
+  </buttontooltiptitle>
+  <context>1</context>
+  <contextentity>
+    <logicalname>aglcm003_zulaa_expressiondebesoin</logicalname>
+  </contextentity>
+  <contextvalue>aglcm003_zulaa_expressiondebesoin</contextvalue>
+  <fonticon>$clientsvg:SaveAndClose</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>SaveasDraft!9876c3742cac413caeb8db7c712fcceb</name>
+  <onclickeventjavascriptfunctionname>XrmCore.Commands.Save.saveAndCloseForm</onclickeventjavascriptfunctionname>
+  <onclickeventjavascriptparameters>[{"type":5,"value":null}]</onclickeventjavascriptparameters>
+  <onclickeventjavascriptwebresourceid>
+    <webresourceid>adea1aea-b2aa-e611-80d6-00155d88c343</webresourceid>
+  </onclickeventjavascriptwebresourceid>
+  <onclickeventtype>2</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100012.5000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilitytype>0</visibilitytype>
+</appaction>

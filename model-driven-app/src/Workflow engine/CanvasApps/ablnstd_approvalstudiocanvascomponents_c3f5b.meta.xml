@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>ablnstd_approvalstudiocanvascomponents_c3f5b</Name>
+  <AppVersion>2024-07-16T14:21:25Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.24071.7.0</CreatedByClientVersion>
+  <MinClientVersion>3.24071.7.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"640","primaryDeviceHeight":"640","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Phone","showStatusBar":"false","publisherVersion":"3.24071.7","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"true","isUnifiedRootApp":"false","sienaVersion":"20240716T141620Z-3.24071.7.0"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>RGBA(251,101,60,1)</BackgroundColor>
+  <DisplayName>Approval Studio - Canvas Components</DisplayName>
+  <Description xsi:nil="true"></Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
+  <Publisher xsi:nil="true"></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{}</ConnectionReferences>
+  <DatabaseReferences>{"default.cds":{"databaseDetails":{"referenceType":"Environmental","environmentName":"default.cds","overrideValues":{"status":"NotSpecified","environmentVariableName":""}},"dataSources":{"environment_39a902ba":{"entitySetName":"Environment","logicalName":"environment_39a902ba"}}}}</DatabaseReferences>
+  <AppComponents>[{"appComponentName":"90dc0abf89374070a796c742677fe91d","displayName":"Approval Workflow","appName":"858d53d0-5413-4744-a963-8d8ddaad4ec7","appVersion":"2024-07-16T14:21:25Z","appComponentLibraryLogicalName":"ablnstd_approvalstudiocanvascomponents_c3f5b","appDisplayName":"Approval Studio - Canvas Components","environmentName":"c036862a-c424-4612-b50d-71e5bb0c3046","owner":{"id":"17ffab17-3724-4090-a91e-b50da3b5b900","displayName":"Théophile Chin-Nin","email":"theophile.chin-nin@abalon.fr","type":"User","tenantId":"4b98bfc6-5052-45f0-bb9a-13e9228d4cf1","userPrincipalName":"theophile.chin-nin@abalon.fr"},"allowCustomization":true,"createdOn":"2024-04-22T13:36:45.615Z","lastModifiedOn":"2024-07-16T14:16:23.42Z","connectionReferences":{},"databaseReferences":{"default.cds":{"databaseDetails":{"referenceType":"NotSpecified","environmentName":"default.cds","overrideValues":{"status":"NotSpecified","environmentVariableName":""}},"dataSources":{"environment_39a902ba":{"entitySetName":"Environment","logicalName":"environment_39a902ba"}}}}}]</AppComponents>
+  <AppComponentDependencies>[]</AppComponentDependencies>
+  <CanConsumeAppPass>1</CanConsumeAppPass>
+  <CanvasAppType>1</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/ablnstd_approvalstudiocanvascomponents_c3f5b_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/ablnstd_approvalstudiocanvascomponents_c3f5b_DocumentUri.msapp</DocumentUri>
+  <AdditionalUris>
+    <AdditionalUri>/CanvasApps/ablnstd_approvalstudiocanvascomponents_c3f5b_AdditionalUris0_identity.json</AdditionalUri>
+  </AdditionalUris>
+</CanvasApp>

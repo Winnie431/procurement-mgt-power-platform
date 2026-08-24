@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{b7166d93-6941-4282-aeeb-978575cda844}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="ablnstd_name" select="1" icon="1" preview="1">
+        <row name="result" id="ablnstd_apprvlstd_wfrunid">
+          <cell name="ablnstd_name" width="165" />
+          <cell name="ablnstd_regardingid" width="134" />
+          <cell name="createdon" width="174" />
+          <cell name="ablnstd_runstatuscode" width="205" />
+          <cell name="ablnstd_latestapprovalid" width="189" />
+          <cell name="ablnstd_finaloutcomeid" width="121" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ablnstd_apprvlstd_wfrun">
+          <attribute name="ablnstd_apprvlstd_wfrunid" />
+          <attribute name="ablnstd_name" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <order attribute="createdon" descending="true" />
+          <attribute name="ablnstd_latestapprovalid" />
+          <attribute name="ablnstd_finaloutcomeid" />
+          <attribute name="ablnstd_runstatuscode" />
+          <attribute name="ablnstd_regardingid" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="All Workflow runs" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

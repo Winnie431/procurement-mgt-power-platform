@@ -1,0 +1,9 @@
+<customapirequestparameter uniquename="runApproversJSON">
+  <displayname default="CreateWorkflowRun-In-runApproversJSON">
+    <label description="CreateWorkflowRun-In-runApproversJSON" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>CreateWorkflowRun-In-runApproversJSON</name>
+  <type>10</type>
+</customapirequestparameter>

@@ -1,0 +1,680 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "aglcm003_CR_Dataverse_Zulaa"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "metadata": {
+            "operationMetadataId": "8513b200-0902-4e76-b83f-0a9ba4c4d549"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "aglcm003_zulaa_retourstock",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "aglcm003_statutretourstock",
+              "subscriptionRequest/filterexpression": "aglcm003_statutretourstock eq 2"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Get_a_row_by_ID_entite": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "d244450f-a55e-47a6-b6a8-d8b822b3127e"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_zulaa_entites",
+              "recordId": "@triggerOutputs()?['body/_aglcm003_entiteid_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Get_a_row_by_ID_magasin": {
+          "runAfter": {
+            "Get_a_row_by_ID_entite": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "d244450f-a55e-47a6-b6a8-d8b822b3127e"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_magasins",
+              "recordId": "@triggerOutputs()?['body/_aglcm003_magasinid_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Get_a_row_by_ID_sortie_de_stock": {
+          "runAfter": {
+            "Get_a_row_by_ID_magasin": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "d244450f-a55e-47a6-b6a8-d8b822b3127e"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_zulaa_sortiedestocks",
+              "recordId": "@triggerOutputs()?['body/_aglcm003_sortiedestockid_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "List_rows_retour_actif": {
+          "runAfter": {
+            "Get_a_row_by_ID_sortie_de_stock": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "163ff14a-640f-49e9-88a2-1da584513258"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_zulaa_retourstockactifs",
+              "$filter": "_aglcm003_retourstockid_value eq '@{triggerOutputs()?['body/aglcm003_zulaa_retourstockid']}'"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Condition_2": {
+          "actions": {},
+          "runAfter": {
+            "Initialize_variable_personne_attribue": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "For_each_5": {
+                "foreach": "@outputs('List_rows_retour_actif')?['body/value']",
+                "actions": {
+                  "Set_variable_3_personne_a_attribué": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "51c2316c-fac6-4339-9f14-b3ff0d2c9578"
+                    },
+                    "type": "SetVariable",
+                    "inputs": {
+                      "name": "personne attribue",
+                      "value": "@item()?['_aglcm003_proprietaires_value']"
+                    }
+                  }
+                },
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "5cf4bc34-f401-4d76-b4ae-41f81b134c93"
+                },
+                "type": "Foreach"
+              },
+              "List_rows_personne_attribue": {
+                "runAfter": {
+                  "For_each_5": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "51f4984d-49ba-42c5-be3f-5061fc2e7459"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "ListRecords",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "systemusers",
+                    "$filter": "systemuserid eq '@{variables('personne attribue')}'"
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              },
+              "For_each_4": {
+                "foreach": "@outputs('List_rows_personne_attribue')?['body/value']",
+                "actions": {
+                  "Set_variable_4": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "d022261b-d78f-4f28-815c-be9a439f004b"
+                    },
+                    "type": "SetVariable",
+                    "inputs": {
+                      "name": "Personne attribue",
+                      "value": "@item()?['systemuserid']"
+                    }
+                  }
+                },
+                "runAfter": {
+                  "List_rows_personne_attribue": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "35e76beb-db3f-44b4-b1c5-3d323c45fe4f"
+                },
+                "type": "Foreach"
+              },
+              "For_each_3": {
+                "foreach": "@outputs('List_rows_retour_actif')?['body/value']",
+                "actions": {
+                  "Set_variable_actif_id": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "608a788f-69ac-4c62-86a9-0d8ab9fa47a5"
+                    },
+                    "type": "SetVariable",
+                    "inputs": {
+                      "name": "Actif ID",
+                      "value": "@items('For_each_3')?['_aglcm003_actifid_value']"
+                    }
+                  }
+                },
+                "runAfter": {
+                  "For_each_4": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "114d8200-3d0f-49ef-8e3a-2b3fc20b0f2c"
+                },
+                "type": "Foreach"
+              },
+              "Get_a_row_by_ID_actif": {
+                "runAfter": {
+                  "For_each_3": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "795e9368-d92e-415d-905a-c0392df65056"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "GetItem",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "aglcm003_zulaa_actifs",
+                    "recordId": "@variables('Actif ID')"
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              },
+              "Add_a_new_row_mouvement_actif": {
+                "runAfter": {
+                  "Get_a_row_by_ID_actif": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "2e3b6b9b-4548-4bb4-a1ed-7fc21530c809"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "CreateRecord",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "aglcm003_zulaa_actifmouvementhistories",
+                    "item/aglcm003_actifId@odata.bind": "aglcm003_zulaa_actifs(@{outputs('Get_a_row_by_ID_actif')?['body/aglcm003_zulaa_actifid']})",
+                    "item/aglcm003_datedattribution": "@triggerOutputs()?['body/createdon']",
+                    "item/aglcm003_sortiestockId@odata.bind": "aglcm003_zulaa_sortiedestocks(@{outputs('Get_a_row_by_ID_sortie_de_stock')?['body/aglcm003_zulaa_sortiedestockid']})",
+                    "item/aglcm003_statutdelactif": 1,
+                    "item/aglcm003_retourstockId@odata.bind": "aglcm003_zulaa_retourstocks(@{triggerOutputs()?['body/aglcm003_zulaa_retourstockid']})"
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              },
+              "Update_a_row_Asset_user": {
+                "runAfter": {
+                  "Add_a_new_row_mouvement_actif": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "0ceb821b-3c52-4b24-aeec-6bc7ebb7a7d6"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "UpdateOnlyRecord",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "aglcm003_zulaa_actifs",
+                    "recordId": "@variables('Actif ID')",
+                    "item/aglcm003_statutactif": 1
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              }
+            }
+          },
+          "expression": {
+            "and": [
+              {
+                "equals": [
+                  "@length(outputs('List_rows_retour_actif')?['body/value'])",
+                  0
+                ]
+              }
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "a9e38dc4-5b1d-4c39-b1b8-263d500fd4cb"
+          },
+          "type": "If"
+        },
+        "Initialize_variable_Actif_ID": {
+          "runAfter": {
+            "List_rows_retour_actif": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "116694d7-2dcb-488e-bbd9-5cb15c174920"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Actif ID",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Initialize_variable_personne_attribue": {
+          "runAfter": {
+            "Initialize_variable_Actif_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f4970458-81a0-44fe-a8fd-8e8ce29f67e1"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Personne attribue",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Condition_1": {
+          "actions": {},
+          "runAfter": {
+            "Initialize_variable_Quantite_a_mettre_a_jour_dans_le_mag_apres_sustraction": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "List_rows_sortie__de_stock_article": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "f8a0a3b4-e595-46f1-9efa-93eb606d387c"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "ListRecords",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "aglcm003_zulaa_retourstockarticles",
+                    "$filter": "_aglcm003_retourstockid_value eq '@{triggerOutputs()?['body/aglcm003_zulaa_retourstockid']}'"
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              },
+              "Condition": {
+                "actions": {},
+                "runAfter": {
+                  "List_rows_sortie__de_stock_article": [
+                    "Succeeded"
+                  ]
+                },
+                "else": {
+                  "actions": {
+                    "For_each": {
+                      "foreach": "@outputs('List_rows_sortie__de_stock_article')?['body/value']",
+                      "actions": {
+                        "Set_variable": {
+                          "runAfter": {},
+                          "metadata": {
+                            "operationMetadataId": "8eacafdd-ce70-4356-bd7c-e36251d65cf7"
+                          },
+                          "type": "SetVariable",
+                          "inputs": {
+                            "name": "Quantité a retourner",
+                            "value": "@item()?['aglcm003_quantitearetourne']"
+                          }
+                        },
+                        "Set_variable_2": {
+                          "runAfter": {
+                            "Set_variable": [
+                              "Succeeded"
+                            ]
+                          },
+                          "metadata": {
+                            "operationMetadataId": "5c128376-03d4-4725-bfef-88afd4570beb"
+                          },
+                          "type": "SetVariable",
+                          "inputs": {
+                            "name": "ArticleretournerID",
+                            "value": "@item()?['_aglcm003_articleid_value']"
+                          }
+                        },
+                        "List_rows_sortie__de_stock_article_magasin_article": {
+                          "runAfter": {
+                            "Set_variable_2": [
+                              "Succeeded"
+                            ]
+                          },
+                          "metadata": {
+                            "operationMetadataId": "b556d712-ca05-4064-81fe-fc59a02f506a"
+                          },
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "host": {
+                              "connectionName": "shared_commondataserviceforapps",
+                              "operationId": "ListRecords",
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                            },
+                            "parameters": {
+                              "entityName": "aglcm003_magasinarticles",
+                              "$filter": "_aglcm003_magasinid_value eq '@{outputs('Get_a_row_by_ID_magasin')?['body/aglcm003_magasinid']}' and _aglcm003_articleid_value eq '@{variables('ArticleretournerID')}'"
+                            },
+                            "authentication": "@parameters('$authentication')"
+                          }
+                        },
+                        "For_each_1": {
+                          "foreach": "@outputs('List_rows_sortie__de_stock_article_magasin_article')?['body/value']",
+                          "actions": {
+                            "Set_variable_1": {
+                              "runAfter": {},
+                              "metadata": {
+                                "operationMetadataId": "25c62303-5e96-404e-9eb2-643365e4e943"
+                              },
+                              "type": "SetVariable",
+                              "inputs": {
+                                "name": "Quantité en stock au moment de la sortie",
+                                "value": "@items('For_each_1')?['aglcm003_quantitestock']"
+                              }
+                            }
+                          },
+                          "runAfter": {
+                            "List_rows_sortie__de_stock_article_magasin_article": [
+                              "Succeeded"
+                            ]
+                          },
+                          "metadata": {
+                            "operationMetadataId": "8b77506f-f7d0-43bc-b76c-7fef59c131ed"
+                          },
+                          "type": "Foreach"
+                        },
+                        "Set_variable_Nouvelle_quantite": {
+                          "runAfter": {
+                            "For_each_1": [
+                              "Succeeded"
+                            ]
+                          },
+                          "metadata": {
+                            "operationMetadataId": "ffa46895-2388-4bf9-a16f-6c380ba02874"
+                          },
+                          "type": "SetVariable",
+                          "inputs": {
+                            "name": "Nouvelle Quantite",
+                            "value": "@add(variables('Quantité a retourner'),variables('Quantité en stock au moment de la sortie'))"
+                          }
+                        },
+                        "For_each_2": {
+                          "foreach": "@outputs('List_rows_sortie__de_stock_article_magasin_article')?['body/value']",
+                          "actions": {
+                            "Update_a_row_quantite_de_article_": {
+                              "runAfter": {},
+                              "metadata": {
+                                "operationMetadataId": "5c8072b1-5780-4952-bfb8-591c2789219e"
+                              },
+                              "type": "OpenApiConnection",
+                              "inputs": {
+                                "host": {
+                                  "connectionName": "shared_commondataserviceforapps",
+                                  "operationId": "UpdateOnlyRecord",
+                                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                                },
+                                "parameters": {
+                                  "entityName": "aglcm003_magasinarticles",
+                                  "recordId": "@items('For_each_2')?['aglcm003_magasinarticleid']",
+                                  "item/aglcm003_quantitestock": "@variables('Nouvelle Quantite')"
+                                },
+                                "authentication": "@parameters('$authentication')"
+                              }
+                            }
+                          },
+                          "runAfter": {
+                            "Set_variable_Nouvelle_quantite": [
+                              "Succeeded"
+                            ]
+                          },
+                          "metadata": {
+                            "operationMetadataId": "b6ea95b9-d3fb-4dfb-92c5-7b1052fadc34"
+                          },
+                          "type": "Foreach"
+                        }
+                      },
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "5e30f031-eda5-4ac0-b549-ede2e36850e7"
+                      },
+                      "type": "Foreach"
+                    },
+                    "Update_a_row": {
+                      "runAfter": {
+                        "For_each": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "589f9deb-8752-4be0-86aa-fafe06275983"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_commondataserviceforapps",
+                          "operationId": "UpdateOnlyRecord",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                        },
+                        "parameters": {
+                          "entityName": "aglcm003_zulaa_retourstocks",
+                          "recordId": "@triggerOutputs()?['body/aglcm003_zulaa_retourstockid']",
+                          "item/aglcm003_statutmagasindejaajour": true
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    }
+                  }
+                },
+                "expression": {
+                  "and": [
+                    {
+                      "equals": [
+                        "@length(outputs('List_rows_sortie__de_stock_article')?['body/value'])",
+                        0
+                      ]
+                    }
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "e40d091d-ed49-43e7-ac98-e3a3ca45012f"
+                },
+                "type": "If"
+              }
+            }
+          },
+          "expression": {
+            "and": [
+              {
+                "equals": [
+                  "@triggerOutputs()?['body/aglcm003_statutmagasindejaajour']",
+                  "@true"
+                ]
+              }
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "164cbca0-d920-4db6-a811-ebcffa87b515"
+          },
+          "type": "If"
+        },
+        "Initialize_variable_Quantité_pour_la_sortie_de_stock": {
+          "runAfter": {
+            "Get_a_row_by_ID_sortie_de_stock": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "55a0b71d-11ad-42b9-86a6-53f05ad86558"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Quantité a retourner",
+                "type": "float"
+              }
+            ]
+          }
+        },
+        "Initialize_variable_Quantité_en_stock_au_moment_de_la_sortie": {
+          "runAfter": {
+            "Initialize_variable_Quantité_pour_la_sortie_de_stock": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "58f9e4e3-0e83-4a35-8927-ebb422ae8891"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Quantité en stock au moment de la sortie",
+                "type": "float"
+              }
+            ]
+          }
+        },
+        "Initialize_variable__ArticleretournerID": {
+          "runAfter": {
+            "Initialize_variable_Quantité_en_stock_au_moment_de_la_sortie": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "eead0746-e935-47dc-b5bf-4b3c1903567c"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "ArticleretournerID",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Initialize_variable_Quantite_a_mettre_a_jour_dans_le_mag_apres_sustraction": {
+          "runAfter": {
+            "Initialize_variable__ArticleretournerID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ba7b342e-dbe3-4887-87c4-a09c4117826e"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Nouvelle Quantite",
+                "type": "float"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

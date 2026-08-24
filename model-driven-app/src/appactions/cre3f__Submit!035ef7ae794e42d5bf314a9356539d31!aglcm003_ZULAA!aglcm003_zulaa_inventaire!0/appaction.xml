@@ -1,0 +1,38 @@
+<appaction uniquename="cre3f__Submit!035ef7ae794e42d5bf314a9356539d31!aglcm003_ZULAA!aglcm003_zulaa_inventaire!0">
+  <appmoduleid>
+    <uniquename>aglcm003_ZULAA</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="Submit">
+    <label description="Submit" languagecode="1033" />
+    <label description="Soumettre" languagecode="1036" />
+  </buttonlabeltext>
+  <context>1</context>
+  <contextentity>
+    <logicalname>aglcm003_zulaa_inventaire</logicalname>
+  </contextentity>
+  <contextvalue>aglcm003_zulaa_inventaire</contextvalue>
+  <fonticon>SendEmail</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>Submit!035ef7ae794e42d5bf314a9356539d31</name>
+  <onclickeventformulacomponentlibraryid>
+    <name>agl_zulaadefaultcommandlibrary_cdb20</name>
+  </onclickeventformulacomponentlibraryid>
+  <onclickeventformulacomponentname>ee72d9d34dd84ea2941032a45a47fd35</onclickeventformulacomponentname>
+  <onclickeventformulafunctionname>OnSelect</onclickeventformulafunctionname>
+  <onclickeventtype>1</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100031.0000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilityformulacomponentlibraryid>
+    <name>agl_zulaadefaultcommandlibrary_cdb20</name>
+  </visibilityformulacomponentlibraryid>
+  <visibilityformulacomponentname>ee72d9d34dd84ea2941032a45a47fd35</visibilityformulacomponentname>
+  <visibilityformulafunctionname>Visible</visibilityformulafunctionname>
+  <visibilitytype>1</visibilitytype>
+</appaction>

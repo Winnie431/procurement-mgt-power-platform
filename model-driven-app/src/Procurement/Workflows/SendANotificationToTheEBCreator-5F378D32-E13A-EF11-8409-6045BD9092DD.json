@@ -1,0 +1,169 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "aglcm003_CR_Dataverse_Zulaa"
+        },
+        "runtimeSource": "embedded"
+      },
+      "shared_teams-1": {
+        "api": {
+          "name": "shared_teams"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "aglcm003_CR_Teams_Zulaa"
+        },
+        "runtimeSource": "embedded"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "Ev_Text_Autre_langue (aglcm003_Ev_Text_Autre_langue)": {
+          "defaultValue": "Français",
+          "type": "String",
+          "metadata": {
+            "schemaName": "aglcm003_Ev_Text_Autre_langue",
+            "description": "Langue par défaut l'anglais - Ici on précise une autre langue que l'anglais"
+          }
+        }
+      },
+      "triggers": {
+        "Lorsqu’une_ligne_est_ajoutée,_modifiée_ou_supprimée": {
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "aglcm003_zulaa_expressiondebesoin",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filterexpression": "aglcm003_statuteb eq 7"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "939e011d-bf77-4bd8-8f32-b7b37f313ec4"
+          }
+        }
+      },
+      "actions": {
+        "Récupérer_le_createur_de_l'EB": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "systemusers",
+              "recordId": "@triggerOutputs()?['body/_createdby_value']"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "f0f982b3-e13c-4a78-8d4d-67a0d9419152"
+          }
+        },
+        "Récupérer_l'entité": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "aglcm003_zulaa_entites",
+              "recordId": "@triggerOutputs()?['body/_aglcm003_entiteid_value']"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Récupérer_le_createur_de_l'EB": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f0f982b3-e13c-4a78-8d4d-67a0d9419152"
+          }
+        },
+        "Switch": {
+          "type": "Switch",
+          "expression": "@outputs('Récupérer_l''entité')?['body/aglcm003_language']",
+          "default": {
+            "actions": {
+              "Post_message_in_a_chat_or_channel_-_in_english": {
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "parameters": {
+                    "poster": "Flow bot",
+                    "location": "Chat with Flow bot",
+                    "body/recipient": "@body('Récupérer_le_createur_de_l''EB')?['internalemailaddress']",
+                    "body/messageBody": "<p class=\"editor-paragraph\">Your Expression of need with the code<span style=\"font-size: 14px;\"> </span>@{triggerBody()?['aglcm003_code']}<span style=\"font-size: 14px;\"> </span>and the label@{triggerBody()?['aglcm003_libelle']}<span style=\"font-size: 14px;\"> </span>has just been processed by the Purchasing department.<br><br><span style=\"font-size: 14px;\">Kind Regards,</span><br><b><strong class=\"editor-text-bold\">ZULAA</strong></b></p>"
+                  },
+                  "host": {
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_teams",
+                    "operationId": "PostMessageToConversation",
+                    "connectionName": "shared_teams-1"
+                  }
+                },
+                "metadata": {
+                  "operationMetadataId": "58a57ba1-2a49-4e64-aa23-2dd0f86e5225"
+                }
+              }
+            }
+          },
+          "cases": {
+            "Case": {
+              "actions": {
+                "Post_message_in_a_chat_or_channel_-_in_french": {
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "parameters": {
+                      "poster": "Flow bot",
+                      "location": "Chat with Flow bot",
+                      "body/recipient": "@body('Récupérer_le_createur_de_l''EB')?['internalemailaddress']",
+                      "body/messageBody": "<p class=\"editor-paragraph\">Votre expression de besoin avec le code<span style=\"font-size: 14px;\"> </span>@{triggerBody()?['aglcm003_code']}<span style=\"font-size: 14px;\"> </span>et le libellé@{triggerBody()?['aglcm003_libelle']}<span style=\"font-size: 14px;\"> </span>vient d’être traitée par le service des achats<span style=\"font-size: 14px;\">.</span><br><br>Cordialement<span style=\"font-size: 14px;\">,</span><br><b><strong class=\"editor-text-bold\">ZULAA</strong></b></p>"
+                    },
+                    "host": {
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_teams",
+                      "operationId": "PostMessageToConversation",
+                      "connectionName": "shared_teams-1"
+                    }
+                  },
+                  "metadata": {
+                    "operationMetadataId": "58a57ba1-2a49-4e64-aa23-2dd0f86e5225"
+                  }
+                }
+              },
+              "case": "@parameters('Ev_Text_Autre_langue (aglcm003_Ev_Text_Autre_langue)')"
+            }
+          },
+          "runAfter": {
+            "Récupérer_l'entité": [
+              "Succeeded"
+            ]
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

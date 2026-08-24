@@ -1,0 +1,50 @@
+<appaction uniquename="cre3f__Submit!2912f38bf340498f89b9dabc882f4a87!aglcm003_ZULAA!aglcm003_zulaa_sortiedestock!0">
+  <appmoduleid>
+    <uniquename>aglcm003_ZULAA</uniquename>
+  </appmoduleid>
+  <buttonaccessibilitytext default="Soumettre la sortie de stock pour validation">
+    <label description="Soumettre la sortie de stock pour validation" languagecode="1033" />
+    <label description="Soumettre la sortie de stock pour validation" languagecode="1036" />
+  </buttonaccessibilitytext>
+  <buttonlabeltext default="Submit">
+    <label description="Submit" languagecode="1033" />
+    <label description="Soumettre" languagecode="1036" />
+  </buttonlabeltext>
+  <buttontooltipdescription default="Soumettre la sortie de stock pour validation">
+    <label description="Soumettre la sortie de stock pour validation" languagecode="1033" />
+    <label description="Soumettre la sortie de stock pour validation" languagecode="1036" />
+  </buttontooltipdescription>
+  <buttontooltiptitle default="Soumettre la sortie de stock">
+    <label description="Soumettre la sortie de stock" languagecode="1033" />
+    <label description="Soumettre la sortie de stock" languagecode="1036" />
+  </buttontooltiptitle>
+  <context>1</context>
+  <contextentity>
+    <logicalname>aglcm003_zulaa_sortiedestock</logicalname>
+  </contextentity>
+  <contextvalue>aglcm003_zulaa_sortiedestock</contextvalue>
+  <fonticon>SendEmail</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>Submit!2912f38bf340498f89b9dabc882f4a87</name>
+  <onclickeventformulacomponentlibraryid>
+    <name>agl_zulaadefaultcommandlibrary_cdb20</name>
+  </onclickeventformulacomponentlibraryid>
+  <onclickeventformulacomponentname>e91733617fc944bd98d12b1da075f627</onclickeventformulacomponentname>
+  <onclickeventformulafunctionname>OnSelect</onclickeventformulafunctionname>
+  <onclickeventtype>1</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100035.0000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilityformulacomponentlibraryid>
+    <name>agl_zulaadefaultcommandlibrary_cdb20</name>
+  </visibilityformulacomponentlibraryid>
+  <visibilityformulacomponentname>e91733617fc944bd98d12b1da075f627</visibilityformulacomponentname>
+  <visibilityformulafunctionname>Visible</visibilityformulafunctionname>
+  <visibilitytype>1</visibilitytype>
+</appaction>

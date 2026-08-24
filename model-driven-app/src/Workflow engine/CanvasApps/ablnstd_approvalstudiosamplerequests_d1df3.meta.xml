@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>ablnstd_approvalstudiosamplerequests_d1df3</Name>
+  <AppVersion>2024-07-03T12:40:06Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.24064.18.0</CreatedByClientVersion>
+  <MinClientVersion>3.24064.18.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","showStatusBar":"false","publisherVersion":"3.24064.18","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"false","isUnifiedRootApp":"false","sienaVersion":"20240703T092841Z-3.24064.18.0"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>rgba(43, 105, 156, 1)</BackgroundColor>
+  <DisplayName>Approval Studio - Sample Requests</DisplayName>
+  <Description xsi:nil="true"></Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
+  <Publisher xsi:nil="true"></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{}</ConnectionReferences>
+  <DatabaseReferences>{"default.cds":{"databaseDetails":{"referenceType":"Environmental","environmentName":"default.cds","overrideValues":{"status":"NotSpecified","environmentVariableName":""}},"dataSources":{"Sample Request 2S":{"entitySetName":"ablnstd_apprvlstd_samplerequest2s","logicalName":"ablnstd_apprvlstd_samplerequest2"},"Sample Requests":{"entitySetName":"ablnstd_apprvlstd_samplerequests","logicalName":"ablnstd_apprvlstd_samplerequest"},"Users":{"entitySetName":"systemusers","logicalName":"systemuser"},"environment_39a902ba":{"entitySetName":"Environment","logicalName":"environment_39a902ba"},"Workflow runs":{"entitySetName":"ablnstd_apprvlstd_wfruns","logicalName":"ablnstd_apprvlstd_wfrun"},"Workflow run approvals":{"entitySetName":"ablnstd_apprvlstd_wfrunapprovals","logicalName":"ablnstd_apprvlstd_wfrunapproval"},"Workflow definition version stages":{"entitySetName":"ablnstd_apprvlstd_wfdefversionstages","logicalName":"ablnstd_apprvlstd_wfdefversionstage"},"Workflow definition version stage outcomes":{"entitySetName":"ablnstd_apprvlstd_wfdefversionstageoutcomes","logicalName":"ablnstd_apprvlstd_wfdefversionstageoutcome"}}}}</DatabaseReferences>
+  <AppComponents>[]</AppComponents>
+  <AppComponentDependencies>[{"appComponentName":"90dc0abf89374070a796c742677fe91d","appName":"c6d4e8fc-11e1-44cd-9f82-579725bde5b1","appComponentLibraryName":"858d53d0-5413-4744-a963-8d8ddaad4ec7","appComponentLibraryVersion":"2024-06-26T11:07:05Z","appComponentLibraryLogicalName":"ablnstd_approvalstudiocanvascomponents_c3f5b","environmentName":"c036862a-c424-4612-b50d-71e5bb0c3046"},{"appComponentName":"d2406938a4c44551bc9a6472c2bdb1ef","appName":"c6d4e8fc-11e1-44cd-9f82-579725bde5b1","appComponentLibraryName":"c123a0ef-8cf0-4617-bdd6-0e4af2fc6491","appComponentLibraryVersion":"2024-06-25T13:55:08Z","appComponentLibraryLogicalName":"ablnstd_abalonstudiocanvascomponents_44617","environmentName":"c036862a-c424-4612-b50d-71e5bb0c3046"}]</AppComponentDependencies>
+  <CanConsumeAppPass>0</CanConsumeAppPass>
+  <CanvasAppType>0</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[{"logicalname":"ablnstd_apprvlstd_samplerequest2","componenttype":1},{"logicalname":"ablnstd_apprvlstd_samplerequest","componenttype":1},{"logicalname":"systemuser","componenttype":1},{"logicalname":"ablnstd_apprvlstd_wfrun","componenttype":1},{"logicalname":"ablnstd_apprvlstd_wfrunapproval","componenttype":1},{"logicalname":"ablnstd_apprvlstd_wfdefversionstage","componenttype":1},{"logicalname":"ablnstd_apprvlstd_wfdefversionstageoutcome","componenttype":1},{"logicalname":"ablnstd_approvalstudiocanvascomponents_c3f5b","componenttype":300,"componenttypeplatformname":"CanvasApp"},{"logicalname":"ablnstd_abalonstudiocanvascomponents_44617","componenttype":300,"componenttypeplatformname":"CanvasApp"}]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/ablnstd_approvalstudiosamplerequests_d1df3_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/ablnstd_approvalstudiosamplerequests_d1df3_DocumentUri.msapp</DocumentUri>
+  <AdditionalUris>
+    <AdditionalUri>/CanvasApps/ablnstd_approvalstudiosamplerequests_d1df3_AdditionalUris0_identity.json</AdditionalUri>
+  </AdditionalUris>
+</CanvasApp>

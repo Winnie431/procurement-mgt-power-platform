@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{05516bab-8117-ef11-9f89-6045bd9c5fcf}" Name="Zulaa BR Block Modifications On The DA Form" Description="Zulaa BR Block Modifications On The DA Form Based On Status" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/ZulaaBRBlockModificationsOnTheDAForm-05516BAB-8117-EF11-9F89-6045BD9C5FCF.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>2</Category>
+  <Mode>1</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>0</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <RunAs>1</RunAs>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerFormId>{aff5a368-8f2a-4c23-9374-1a57943c774b}</ProcessTriggerFormId>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <PrimaryEntity>aglcm003_zulaa_demandedachat</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Zulaa BR Block Modifications On The DA Form" />
+    <LocalizedName languagecode="1036" description="Modifications du bloc Zulaa BR sur le formulaire DA" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description languagecode="1033" description="Zulaa BR Block Modifications On The DA Form Based On Status" />
+    <Description languagecode="1036" description="Zulaa BR Bloquer les modifications sur le formulaire DA en fonction du statut" />
+  </Descriptions>
+</Workflow>

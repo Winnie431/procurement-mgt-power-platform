@@ -1,0 +1,15 @@
+<environmentvariabledefinition schemaname="aglcm003_SharedDocumentZulaaModelDriven">
+  <description default="Root Folder (Shared Documents) Of A SharePoint Site">
+    <label description="Root Folder (Shared Documents) Of A SharePoint Site" languagecode="1033" />
+    <label description="Dossier racine Documents partagés d’un site SharePoint" languagecode="1036" />
+  </description>
+  <displayname default="Shared Document ZulaaModelDriven">
+    <label description="Shared Document ZulaaModelDriven" languagecode="1033" />
+    <label description="Document partagé ZulaaModelDriven" languagecode="1036" />
+  </displayname>
+  <introducedversion>1.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

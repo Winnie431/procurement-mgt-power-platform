@@ -1,0 +1,15 @@
+<environmentvariabledefinition schemaname="aglcm003_Ev_Lib_Demandedesortie">
+  <description default="SharePoint Library Of The Stock Request List">
+    <label description="SharePoint Library Of The Stock Request List" languagecode="1033" />
+    <label description="Bibliothèque SharePoint de la liste des demandes de stock" languagecode="1036" />
+  </description>
+  <displayname default="Ev_Lib_Stock_Request">
+    <label description="Ev_Lib_Stock_Request" languagecode="1033" />
+    <label description="Ev_Lib_Stock_Request" languagecode="1036" />
+  </displayname>
+  <introducedversion>1.0.0.1</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

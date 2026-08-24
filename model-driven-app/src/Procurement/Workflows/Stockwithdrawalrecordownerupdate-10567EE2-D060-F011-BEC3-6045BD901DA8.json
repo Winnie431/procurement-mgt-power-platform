@@ -1,0 +1,120 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps-1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "aglcm003_CR_Dataverse_Zulaa"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "Lorsqu’une_ligne_est_ajoutée,_modifiée_ou_supprimée": {
+          "metadata": {
+            "operationMetadataId": "5ae0d370-43e3-4667-8a60-6a559697d2ea"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps-1",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "aglcm003_zulaa_sortiedestock",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Get_a_Entité_by_ID": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "ef846980-043e-450a-93d9-62d33cbf768f"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps-1",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_zulaa_entites",
+              "recordId": "@triggerOutputs()?['body/_aglcm003_entiteid_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Update_a_row_centre_de_cout": {
+          "runAfter": {
+            "Get_a_Cost_center_by_ID_": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "42072af6-05d3-4b8e-98d1-b84758a343fb"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps-1",
+              "operationId": "UpdateRecord",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_zulaa_sortiedestocks",
+              "recordId": "@triggerOutputs()?['body/aglcm003_zulaa_demandesortiestockid']",
+              "item/ownerid@odata.bind": "teams(@{outputs('Get_a_Cost_center_by_ID_')?['body/_aglcm003_teamgds_value']})"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Get_a_Cost_center_by_ID_": {
+          "runAfter": {
+            "Get_a_Entité_by_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ef846980-043e-450a-93d9-62d33cbf768f"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps-1",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_zulaa_centredecouts",
+              "recordId": "@triggerOutputs()?['body/_aglcm003_centredecoutid_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

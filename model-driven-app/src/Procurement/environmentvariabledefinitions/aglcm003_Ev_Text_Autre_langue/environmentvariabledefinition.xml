@@ -1,0 +1,15 @@
+<environmentvariabledefinition schemaname="aglcm003_Ev_Text_Autre_langue">
+  <description default="Langue par défaut l'anglais - Ici on précise une autre langue que l'anglais">
+    <label description="Langue par défaut l'anglais - Ici on précise une autre langue que l'anglais" languagecode="1033" />
+    <label description="Langue par défaut l'anglais - Ici on précise une autre langue que l'anglais" languagecode="1036" />
+  </description>
+  <displayname default="Ev_Text_Autre_langue">
+    <label description="Ev_Text_Autre_langue" languagecode="1033" />
+    <label description="Ev_Text_Autre_langue" languagecode="1036" />
+  </displayname>
+  <introducedversion>1.0.0.2</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

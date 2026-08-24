@@ -1,0 +1,35 @@
+<appaction uniquename="ablnstd__Vizualise!8bd87fa3ae0945c9a5380092f31d16b0!ablnstd_ApprovalStudioCockpit!ablnstd_apprvlstd_samplerequest!0">
+  <appmoduleid>
+    <uniquename>ablnstd_ApprovalStudioCockpit</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="Vizualise">
+    <label description="Vizualise" languagecode="1033" />
+  </buttonlabeltext>
+  <context>1</context>
+  <contextentity>
+    <logicalname>ablnstd_apprvlstd_samplerequest</logicalname>
+  </contextentity>
+  <contextvalue>ablnstd_apprvlstd_samplerequest</contextvalue>
+  <fonticon>$clientsvg:Org</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>Vizualise!8bd87fa3ae0945c9a5380092f31d16b0</name>
+  <onclickeventjavascriptfunctionname>openCustomPage</onclickeventjavascriptfunctionname>
+  <onclickeventjavascriptparameters>[{"type":5},{"type":21,"value":"ablnstd_samplerequestworkflowvizualizer_66ec6"},{"type":21,"value":"Workflow visualization"},{"type":19,"value":2},{"type":19,"value":300},{"type":19,"value":0},{"type":18,"value":false},{"type":18,"value":false}]</onclickeventjavascriptparameters>
+  <onclickeventjavascriptwebresourceid>
+    <webresourceid>89e22d3f-1e3c-ee11-bdf4-000d3a672530</webresourceid>
+  </onclickeventjavascriptwebresourceid>
+  <onclickeventtype>2</onclickeventtype>
+  <origin>0</origin>
+  <parentappactionid>
+    <uniquename>ablnstd__NewGroup!a4a6fbe290114dd88e9442d9cbdc47ef!ablnstd_ApprovalStudioCockpit!ablnstd_apprvlstd_samplerequest!0</uniquename>
+  </parentappactionid>
+  <sequence>5000.0000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilitytype>0</visibilitytype>
+</appaction>

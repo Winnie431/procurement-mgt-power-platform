@@ -1,0 +1,41 @@
+<appaction uniquename="aglcm003__Mscrm.SubGrid.{!EntityLogicalName}.NewRecord!aglcm003_ZULAA!aglcm003_zulaa_demandedachatarticlefournisseur!2">
+  <appmoduleid>
+    <uniquename>aglcm003_ZULAA</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="New {EntityLogicalNameMarker}">
+    <label description="New {EntityLogicalNameMarker}" languagecode="1033" />
+    <label description="Nouveau EntityLogicalNameMarker" languagecode="1036" />
+  </buttonlabeltext>
+  <buttontooltipdescription default="Create A New {EntityLogicalNameMarker} Record.">
+    <label description="Create A New {EntityLogicalNameMarker} Record." languagecode="1033" />
+    <label description="Créer un nouvel enregistrement EntityLogicalNameMarker" languagecode="1036" />
+  </buttontooltipdescription>
+  <buttontooltiptitle default="New {EntityLogicalNameMarker}">
+    <label description="New {EntityLogicalNameMarker}" languagecode="1033" />
+    <label description="Nouveau EntityLogicalNameMarker" languagecode="1036" />
+  </buttontooltiptitle>
+  <context>1</context>
+  <contextentity>
+    <logicalname>aglcm003_zulaa_demandedachatarticlefournisseur</logicalname>
+  </contextentity>
+  <contextvalue>aglcm003_zulaa_demandedachatarticlefournisseur</contextvalue>
+  <fonticon>$clientsvg:Add</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>2</location>
+  <name>Mscrm.SubGrid.{!EntityLogicalName}.NewRecord</name>
+  <onclickeventjavascriptfunctionname>XrmCore.Commands.Open.openNewRecord</onclickeventjavascriptfunctionname>
+  <onclickeventjavascriptparameters>[{"type":8,"value":null},{"type":12,"value":null}]</onclickeventjavascriptparameters>
+  <onclickeventjavascriptwebresourceid>
+    <webresourceid>adea1aea-b2aa-e611-80d6-00155d88c343</webresourceid>
+  </onclickeventjavascriptwebresourceid>
+  <onclickeventtype>2</onclickeventtype>
+  <origin>2</origin>
+  <sequence>100100010.0000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilitytype>0</visibilitytype>
+</appaction>

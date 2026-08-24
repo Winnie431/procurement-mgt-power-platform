@@ -1,0 +1,9 @@
+<customapirequestparameter uniquename="startingStageId">
+  <displayname default="CreateWorkflowRun-In-startingStageId">
+    <label description="CreateWorkflowRun-In-startingStageId" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isoptional>1</isoptional>
+  <name>CreateWorkflowRun-In-startingStageId</name>
+  <type>10</type>
+</customapirequestparameter>

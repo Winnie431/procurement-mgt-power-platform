@@ -1,0 +1,50 @@
+<appaction uniquename="agl__SaveClose!566feeee8ff247b689abc75bb820fdc9!aglcm003_ZULAA!aglcm003_zulaa_demandedachat!0">
+  <appmoduleid>
+    <uniquename>aglcm003_ZULAA</uniquename>
+  </appmoduleid>
+  <buttonaccessibilitytext default="Submit The Purchase Request">
+    <label description="Submit The Purchase Request" languagecode="1033" />
+    <label description="Soumettre la demande d’achat" languagecode="1036" />
+  </buttonaccessibilitytext>
+  <buttonlabeltext default="Submit">
+    <label description="Submit" languagecode="1033" />
+    <label description="Soumettre" languagecode="1036" />
+  </buttonlabeltext>
+  <buttontooltipdescription default="Save The {EntityLogicalNameMarker}.">
+    <label description="Save The {EntityLogicalNameMarker}." languagecode="1033" />
+    <label description="Enregistrer le EntityLogicalNameMarker" languagecode="1036" />
+  </buttontooltipdescription>
+  <buttontooltiptitle default="Save (CTRL+S)">
+    <label description="Save (CTRL+S)" languagecode="1033" />
+    <label description="Enregistrer CTRL+S" languagecode="1036" />
+  </buttontooltiptitle>
+  <context>1</context>
+  <contextentity>
+    <logicalname>aglcm003_zulaa_demandedachat</logicalname>
+  </contextentity>
+  <contextvalue>aglcm003_zulaa_demandedachat</contextvalue>
+  <fonticon>SendEmail</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>SaveClose!566feeee8ff247b689abc75bb820fdc9</name>
+  <onclickeventformulacomponentlibraryid>
+    <name>agl_zulaadefaultcommandlibrary_cdb20</name>
+  </onclickeventformulacomponentlibraryid>
+  <onclickeventformulacomponentname>f152b7f9986d4afaa63a6b78f1aeba54</onclickeventformulacomponentname>
+  <onclickeventformulafunctionname>OnSelect</onclickeventformulafunctionname>
+  <onclickeventtype>1</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100037.5000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilityformulacomponentlibraryid>
+    <name>agl_zulaadefaultcommandlibrary_cdb20</name>
+  </visibilityformulacomponentlibraryid>
+  <visibilityformulacomponentname>f152b7f9986d4afaa63a6b78f1aeba54</visibilityformulacomponentname>
+  <visibilityformulafunctionname>Visible</visibilityformulafunctionname>
+  <visibilitytype>1</visibilitytype>
+</appaction>

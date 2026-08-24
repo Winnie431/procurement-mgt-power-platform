@@ -1,0 +1,15 @@
+<environmentvariabledefinition schemaname="aglcm003_Ev_Lib_sortiedestock">
+  <description default="SharePoint Library Identifier">
+    <label description="SharePoint Library Identifier" languagecode="1033" />
+    <label description="Identifiant de bibliothèque SharePoint" languagecode="1036" />
+  </description>
+  <displayname default="Ev_Lib_Stock_Output">
+    <label description="Ev_Lib_Stock_Output" languagecode="1033" />
+    <label description="Ev_Lib_Stock_Output" languagecode="1036" />
+  </displayname>
+  <introducedversion>1.0.0.1</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

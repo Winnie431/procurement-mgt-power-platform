@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{f96d1237-5525-4421-981a-b1d9ccee5260}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{ddcaf5d4-18c6-4f5b-bfa8-81db14590166}" IsUserDefined="1" expanded="false">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="50%">
+              <sections>
+                <section showlabel="true" showbar="false" IsUserDefined="0" id="{bee536af-cc79-4811-9ee4-bc7dc836254a}">
+                  <labels>
+                    <label description="Definition" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{e1edd389-63d3-4da2-9609-ea783e7417ae}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Workflow run" languagecode="1033" />
+                        </labels>
+                        <control id="ablnstd_workflowrunid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ablnstd_workflowrunid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a6170c81-3c0c-41c3-8af3-972f79215828}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="header_ablnstd_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="ablnstd_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{bb9c0c2a-7408-4141-a34d-3314c30fc536}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Stage" languagecode="1033" />
+                        </labels>
+                        <control id="ablnstd_stageid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ablnstd_stageid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2d3edd2e-615c-4d7b-94e1-2fcfd01cfd43}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Approver role" languagecode="1033" />
+                        </labels>
+                        <control id="ablnstd_approverroleid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ablnstd_approverroleid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fb01d75f-697f-4748-9729-c8ce09c3dafd}">
+                        <labels>
+                          <label description="Approver" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="50%">
+              <sections>
+                <section name="_section_26" id="6a6c50e1-83b8-4d67-b723-ec921cec9a41" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Approval" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{ef5905ac-120b-498f-a00e-a4e20d665eed}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Approval status" languagecode="1033" />
+                        </labels>
+                        <control id="ablnstd_approvalstatuscode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="ablnstd_approvalstatuscode" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{44203408-0a88-473a-b33a-7cb43c430523}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Outcome" languagecode="1033" />
+                        </labels>
+                        <control id="ablnstd_outcomeid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ablnstd_outcomeid" disabled="false">
+                          <parameters>
+                            <DependentAttributeName>ablnstd_apprvlstd_wfrunapproval.ablnstd_stageid</DependentAttributeName>
+                            <DependentAttributeType>ablnstd_apprvlstd_wfdefversionstage</DependentAttributeType>
+                            <FilterRelationshipName>ablnstd_wfdefverstageoutcome_wfdefverstage</FilterRelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{23ac2969-2674-40fc-a9d0-f8c8fc36036d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Approved By" languagecode="1033" />
+                        </labels>
+                        <control id="ablnstd_approvedbyid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ablnstd_approvedbyid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{12483abb-f69e-4774-af7b-e1aeb1a6a3de}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Approved On" languagecode="1033" />
+                        </labels>
+                        <control id="ablnstd_approvedon" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="ablnstd_approvedon" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a95fb6f2-c116-4ea5-93fe-e936b8095d96}" locklevel="0" colspan="1" rowspan="4">
+                        <labels>
+                          <label description="Approver comment" languagecode="1033" />
+                        </labels>
+                        <control id="ablnstd_approvercomment" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="ablnstd_approvercomment" disabled="false" />
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{10986131-144e-4024-9042-a75c77240abc}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{e2192624-cbe3-4d3e-92c6-91ab589e0c94}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{73b6c6bc-9168-4f6c-bb47-14d2774193d0}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{637efd3a-571d-4e1a-b6c2-9e954a0f107a}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{9e50001e-eb6f-4d07-b0f7-f82831c9d44e}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{38c0b898-ef59-4b94-9a14-2a11324f1793}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{78ccf45c-c2cc-4723-85e2-604cccd26c81}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{cc0ec1fc-fdba-4ce5-a662-b7a1f6c39821}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

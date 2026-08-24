@@ -1,0 +1,46 @@
+<appaction uniquename="aglcm003__Submit!3d438dd83908427dad74cbf50183bbfb!aglcm003_ZULAA!aglcm003_zulaa_reception!0">
+  <appmoduleid>
+    <uniquename>aglcm003_ZULAA</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="Submit">
+    <label description="Submit" languagecode="1033" />
+    <label description="Soumettre" languagecode="1036" />
+  </buttonlabeltext>
+  <buttontooltipdescription default="Save The {EntityLogicalNameMarker}">
+    <label description="Save The {EntityLogicalNameMarker}" languagecode="1033" />
+    <label description="Enregistrer le EntityLogicalNameMarker" languagecode="1036" />
+  </buttontooltipdescription>
+  <buttontooltiptitle default="Submit The Reception">
+    <label description="Submit The Reception" languagecode="1033" />
+    <label description="Soumettre la réception" languagecode="1036" />
+  </buttontooltiptitle>
+  <context>1</context>
+  <contextentity>
+    <logicalname>aglcm003_zulaa_reception</logicalname>
+  </contextentity>
+  <contextvalue>aglcm003_zulaa_reception</contextvalue>
+  <fonticon>SendEmail</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>Submit!3d438dd83908427dad74cbf50183bbfb</name>
+  <onclickeventformulacomponentlibraryid>
+    <name>agl_zulaadefaultcommandlibrary_cdb20</name>
+  </onclickeventformulacomponentlibraryid>
+  <onclickeventformulacomponentname>fb200b0a7bdd45db916c8eff929740a8</onclickeventformulacomponentname>
+  <onclickeventformulafunctionname>OnSelect</onclickeventformulafunctionname>
+  <onclickeventtype>1</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100032.0000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilityformulacomponentlibraryid>
+    <name>agl_zulaadefaultcommandlibrary_cdb20</name>
+  </visibilityformulacomponentlibraryid>
+  <visibilityformulacomponentname>fb200b0a7bdd45db916c8eff929740a8</visibilityformulacomponentname>
+  <visibilityformulafunctionname>Visible</visibilityformulafunctionname>
+  <visibilitytype>1</visibilitytype>
+</appaction>

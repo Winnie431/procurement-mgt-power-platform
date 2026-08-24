@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{b81f2c30-df7c-f011-b4cb-7c1e525f4bf8}" Name="Send A Notification to the Storekeeper of a store" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <JsonFileName>/Workflows/SendANotificationtotheStorekeeperofastore-B81F2C30-DF7C-F011-B4CB-7C1E525F4BF8.json</JsonFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>5</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>0</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <RunAs>1</RunAs>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ModernFlowType>0</ModernFlowType>
+  <PrimaryEntity>none</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Send A Notification to the Storekeeper of a store" />
+    <LocalizedName languagecode="1036" description="Send A Notification to the Storekeeper of a store" />
+  </LocalizedNames>
+</Workflow>

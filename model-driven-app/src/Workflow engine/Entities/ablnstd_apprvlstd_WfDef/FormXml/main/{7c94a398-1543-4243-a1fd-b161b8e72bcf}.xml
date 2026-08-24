@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{7c94a398-1543-4243-a1fd-b161b8e72bcf}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{7aef1165-9d0f-4775-b309-1347137b7dd8}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{eab3cc8f-c98f-49c6-a8b0-f6725e0d3067}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{43195fc9-526e-4828-8df3-8a90a9ae843c}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="ablnstd_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="ablnstd_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{20783581-515d-442f-a4ca-f3861df5255c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Published version" languagecode="1033" />
+                        </labels>
+                        <control id="ablnstd_publishedversionid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ablnstd_publishedversionid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{1445f2b9-f63e-44f0-81fc-22c17b2dfb5a}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Published version" languagecode="1033" />
+                        </labels>
+                        <control id="ablnstd_publishedversionid" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="ablnstd_publishedversionid" uniqueid="{fee0c6aa-14d8-4ffe-a3d9-e06d793ab061}">
+                          <parameters>
+                            <DefaultViewId>{BD34C5EE-0FC9-4F63-8EA9-448F2D793E45}</DefaultViewId>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_2" id="b8a169a6-3da2-4b9e-ad91-37ab2e02cf93" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Versions" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_2_section_1" id="fdcd283c-177f-4a95-9dab-c02f3694b9ad" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{e137a8d4-bc9e-47e8-9153-62c41e293b80}" rowspan="4" colspan="1" auto="false">
+                        <labels>
+                          <label description="Versions" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_1" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>ablnstd_apprvlstd_wfdefversion</TargetEntityType>
+                            <ViewId>{F56A82F6-90F2-EE11-A1FD-000D3AE71C4F}</ViewId>
+                            <ViewIds>{CA8BCF2E-52F2-4DE8-A46C-A9197FF47531},{F56A82F6-90F2-EE11-A1FD-000D3AE71C4F}</ViewIds>
+                            <RelationshipName>ablnstd_wfdefversion_wfdef</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{bbb91555-3fdd-4506-8c79-15d9ec471cdb}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{bace5a85-6ec5-48fd-ac88-baa3e1b21bdd}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{7e700b0d-2466-4f36-bd94-ceb436155f88}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{5332b3f3-095d-4c97-b6e6-e9bc037cc923}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{c4663e41-076f-4c75-809c-740f60e804a7}" colspan="1" rowspan="1">
+              <labels>
+                <label description="Owner" languagecode="1033" />
+              </labels>
+              <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{777bd132-bca2-400b-b102-1845fadbcbf4}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{ce83d267-9976-42a2-a8e5-3a087bee1472}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{f78991ea-ead7-453b-8bfa-65c482091973}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{c6fde8ec-e197-4cbe-acc8-7a3063bc5d52}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+      <controlDescriptions>
+        <controlDescription forControl="{fee0c6aa-14d8-4ffe-a3d9-e06d793ab061}">
+          <customControl id="{270BD3DB-D9AF-4782-9025-509E298DEC0A}">
+            <parameters>
+              <datafieldname>ablnstd_publishedversionid</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl id="{270BD3DB-D9AF-4782-9025-509E298DEC0A}">
+            <parameters>
+              <datafieldname>ablnstd_publishedversionid</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.ModelForm.ModelFormControl">
+            <parameters>
+              <value>
+                <BindAttribute>ablnstd_publishedversionid</BindAttribute>
+                <DefaultViewId>{BD34C5EE-0FC9-4F63-8EA9-448F2D793E45}</DefaultViewId>
+                <FilterRelationshipName />
+                <DependentAttributeName />
+                <DependentAttributeType />
+                <AvailableViewIds />
+                <AllowFilterOff>false</AllowFilterOff>
+                <DisableQuickFind>false</DisableQuickFind>
+                <DisableViewPicker>false</DisableViewPicker>
+              </value>
+              <QuickForms type="SingleLine.Text" static="true">&lt;QuickForms&gt;&lt;QuickFormIds&gt;&lt;QuickFormId entityname="ablnstd_apprvlstd_wfdefversion"&gt;4b066901-90f2-ee11-a1fd-000d3ae71c4f&lt;/QuickFormId&gt;&lt;/QuickFormIds&gt;&lt;/QuickForms&gt;</QuickForms>
+              <SaveMode type="Enum" static="true">0</SaveMode>
+              <EnableHighDensityPageHeader type="Enum" static="true">false</EnableHighDensityPageHeader>
+              <DisplayFormSelector type="Enum" static="true">false</DisplayFormSelector>
+              <AddToRecentItems type="Enum" static="true">false</AddToRecentItems>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.ModelForm.ModelFormControl">
+            <parameters>
+              <value>
+                <BindAttribute>ablnstd_publishedversionid</BindAttribute>
+                <DefaultViewId>{BD34C5EE-0FC9-4F63-8EA9-448F2D793E45}</DefaultViewId>
+                <FilterRelationshipName />
+                <DependentAttributeName />
+                <DependentAttributeType />
+                <AvailableViewIds />
+                <AllowFilterOff>false</AllowFilterOff>
+                <DisableQuickFind>false</DisableQuickFind>
+                <DisableViewPicker>false</DisableViewPicker>
+              </value>
+              <QuickForms type="SingleLine.Text" static="true">&lt;QuickForms&gt;&lt;QuickFormIds&gt;&lt;QuickFormId entityname="ablnstd_apprvlstd_wfdefversion"&gt;4b066901-90f2-ee11-a1fd-000d3ae71c4f&lt;/QuickFormId&gt;&lt;/QuickFormIds&gt;&lt;/QuickForms&gt;</QuickForms>
+              <SaveMode type="Enum" static="true">0</SaveMode>
+              <EnableHighDensityPageHeader type="Enum" static="true">false</EnableHighDensityPageHeader>
+              <DisplayFormSelector type="Enum" static="true">false</DisplayFormSelector>
+              <AddToRecentItems type="Enum" static="true">false</AddToRecentItems>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.ModelForm.ModelFormControl">
+            <parameters>
+              <value>
+                <BindAttribute>ablnstd_publishedversionid</BindAttribute>
+                <DefaultViewId>{BD34C5EE-0FC9-4F63-8EA9-448F2D793E45}</DefaultViewId>
+                <FilterRelationshipName />
+                <DependentAttributeName />
+                <DependentAttributeType />
+                <AvailableViewIds />
+                <AllowFilterOff>false</AllowFilterOff>
+                <DisableQuickFind>false</DisableQuickFind>
+                <DisableViewPicker>false</DisableViewPicker>
+              </value>
+              <QuickForms type="SingleLine.Text" static="true">&lt;QuickForms&gt;&lt;QuickFormIds&gt;&lt;QuickFormId entityname="ablnstd_apprvlstd_wfdefversion"&gt;4b066901-90f2-ee11-a1fd-000d3ae71c4f&lt;/QuickFormId&gt;&lt;/QuickFormIds&gt;&lt;/QuickForms&gt;</QuickForms>
+              <SaveMode type="Enum" static="true">0</SaveMode>
+              <EnableHighDensityPageHeader type="Enum" static="true">false</EnableHighDensityPageHeader>
+              <DisplayFormSelector type="Enum" static="true">false</DisplayFormSelector>
+              <AddToRecentItems type="Enum" static="true">false</AddToRecentItems>
+            </parameters>
+          </customControl>
+        </controlDescription>
+      </controlDescriptions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

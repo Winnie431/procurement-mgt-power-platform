@@ -1,0 +1,15 @@
+<environmentvariabledefinition schemaname="aglcm003_Ev_File_TemplateFichierReception">
+  <description default="Path To The Receipt Template">
+    <label description="Path To The Receipt Template" languagecode="1033" />
+    <label description="Chemin vers le modèle de réception" languagecode="1036" />
+  </description>
+  <displayname default="Ev_File_TemplateFichierReception">
+    <label description="Ev_File_TemplateFichierReception" languagecode="1033" />
+    <label description="Ev_File_TemplateFichierReception" languagecode="1036" />
+  </displayname>
+  <introducedversion>1.0.0.1</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

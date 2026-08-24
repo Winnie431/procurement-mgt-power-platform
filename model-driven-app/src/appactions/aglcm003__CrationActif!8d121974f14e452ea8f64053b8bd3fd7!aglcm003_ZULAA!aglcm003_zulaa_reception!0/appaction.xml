@@ -1,0 +1,33 @@
+<appaction uniquename="aglcm003__CrationActif!8d121974f14e452ea8f64053b8bd3fd7!aglcm003_ZULAA!aglcm003_zulaa_reception!0">
+  <appmoduleid>
+    <uniquename>aglcm003_ZULAA</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="Asset Creation">
+    <label description="Asset Creation" languagecode="1033" />
+    <label description="Création d’actif" languagecode="1036" />
+  </buttonlabeltext>
+  <context>1</context>
+  <contextentity>
+    <logicalname>aglcm003_zulaa_reception</logicalname>
+  </contextentity>
+  <contextvalue>aglcm003_zulaa_reception</contextvalue>
+  <fonticon>$clientsvg:Add</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>CrationActif!8d121974f14e452ea8f64053b8bd3fd7</name>
+  <onclickeventjavascriptfunctionname>openCustomPageAsDialog</onclickeventjavascriptfunctionname>
+  <onclickeventjavascriptparameters>[{"type":5}]</onclickeventjavascriptparameters>
+  <onclickeventjavascriptwebresourceid>
+    <webresourceid>17e9e839-1ba8-ef11-b8e9-000d3a228a91</webresourceid>
+  </onclickeventjavascriptwebresourceid>
+  <onclickeventtype>2</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100031.0000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilitytype>0</visibilitytype>
+</appaction>

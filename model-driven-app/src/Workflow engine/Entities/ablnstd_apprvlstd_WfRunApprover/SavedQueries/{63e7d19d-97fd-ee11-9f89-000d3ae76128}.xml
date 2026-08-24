@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{63e7d19d-97fd-ee11-9f89-000d3ae76128}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="ablnstd_name" select="1" icon="1" preview="1">
+        <row name="result" id="ablnstd_apprvlstd_wfrunapproverid">
+          <cell name="ablnstd_name" width="200" />
+          <cell name="ownerid" width="250" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical">
+        <entity name="ablnstd_apprvlstd_wfrunapprover">
+          <attribute name="ablnstd_name" />
+          <attribute name="ablnstd_apprvlstd_wfrunapproverid" />
+          <attribute name="ownerid" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>0.1.240404.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Run approvers" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

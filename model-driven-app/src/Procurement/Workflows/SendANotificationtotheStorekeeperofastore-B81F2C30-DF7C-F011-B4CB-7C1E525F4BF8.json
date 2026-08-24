@@ -1,0 +1,663 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "aglcm003_CR_Dataverse_Zulaa"
+        },
+        "runtimeSource": "embedded"
+      },
+      "shared_teams-1": {
+        "api": {
+          "name": "shared_teams"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "aglcm003_CR_Teams_Zulaa"
+        },
+        "runtimeSource": "embedded"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "Lorsqu’une_ligne_est_ajoutée,_modifiée_ou_supprimée": {
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "aglcm003_zulaa_sortiedestock",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filterexpression": "aglcm003_statutsortiedestock eq 1"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "939e011d-bf77-4bd8-8f32-b7b37f313ec4"
+          }
+        }
+      },
+      "actions": {
+        "Get_store_keeper": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "systemusers",
+              "recordId": "@outputs('Get_a_row__store_by_ID')?['body/_aglcm003_magasinier_value']"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Get_a_row__store_by_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f0f982b3-e13c-4a78-8d4d-67a0d9419152"
+          }
+        },
+        "Get_a_row__store_by_ID": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "aglcm003_magasins",
+              "recordId": "@triggerOutputs()?['body/_aglcm003_magasinid_value']"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Initialize_variable_3": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "5007d371-c9bf-4d80-848d-967d7f5f12cd"
+          }
+        },
+        "Get_out_of_stock_creator": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "systemusers",
+              "recordId": "@triggerOutputs()?['body/_createdby_value']"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Get_related_DS_": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f0f982b3-e13c-4a78-8d4d-67a0d9419152"
+          }
+        },
+        "Initialize_store_items": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Store items",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "dce8fa70-aa93-413b-bc57-3aff784b0fe0"
+          }
+        },
+        "Initialize_store_assets": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Store assets",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {
+            "Initialize_store_items": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "6b8ed6bf-67cf-495e-b5f1-0bf92101dbf8"
+          }
+        },
+        "List_rows_stock_withdrawal_items": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "aglcm003_zulaa_sortiestockarticles",
+              "$filter": "_aglcm003_sortiedestockid_value eq '@{triggerOutputs()?['body/aglcm003_zulaa_sortiedestockid']}' and _aglcm003_magasinid_value eq '@{outputs('Get_a_row__store_by_ID')?['body/aglcm003_magasinid']}'"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Get_DS_requestor": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f8774464-ef70-432b-91b8-6e0b1b6e2138"
+          }
+        },
+        "List_rows_stock_withdrawal_assets": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "aglcm003_zulaa_sortiestockactifs",
+              "$filter": "_aglcm003_sortiestockid_value eq '@{triggerOutputs()?['body/aglcm003_zulaa_sortiedestockid']}' and _aglcm003_magasinid_value eq '@{outputs('Get_a_row__store_by_ID')?['body/aglcm003_magasinid']}'"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "List_rows_stock_withdrawal_items": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "2b907ec6-9ca5-4dc2-acbf-c8485e2f842e"
+          }
+        },
+        "Initialize_variable_3": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Person assigned to",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {
+            "Initialize_store_assets": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "1269a410-0fc6-473e-a55e-7a3614290ef6"
+          }
+        },
+        "Get_stock_withdrawal_request_approver": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "systemusers",
+              "recordId": "@outputs('Get_a_row__store_by_ID')?['body/_aglcm003_demandeursortieetretourstock_value']"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Get_store_keeper": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f0f982b3-e13c-4a78-8d4d-67a0d9419152"
+          }
+        },
+        "Condition": {
+          "type": "If",
+          "expression": {
+            "and": [
+              {
+                "equals": [
+                  "@outputs('Get_Entity_language')?['body/aglcm003_language']",
+                  0
+                ]
+              }
+            ]
+          },
+          "actions": {
+            "For_each_english": {
+              "type": "Foreach",
+              "foreach": "@outputs('List_rows_stock_withdrawal_items')?['body/value']",
+              "actions": {
+                "Get_item_name": {
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "parameters": {
+                      "entityName": "aglcm003_zulaa_articles",
+                      "recordId": "@item()?['_aglcm003_articleid_value']"
+                    },
+                    "host": {
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                      "operationId": "GetItem",
+                      "connectionName": "shared_commondataserviceforapps"
+                    }
+                  },
+                  "metadata": {
+                    "operationMetadataId": "f0f982b3-e13c-4a78-8d4d-67a0d9419152"
+                  }
+                },
+                "Append_to_string_variable": {
+                  "type": "AppendToStringVariable",
+                  "inputs": {
+                    "name": "Store items",
+                    "value": "- Item :  @{outputs('Get_item_name')?['body/aglcm003_nom']}, Quantity removed :@{items('For_each_english')?['aglcm003_quantitesortie']};"
+                  },
+                  "runAfter": {
+                    "Get_item_name": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "8febd771-7839-48cd-b296-8a8384326899"
+                  }
+                }
+              },
+              "metadata": {
+                "operationMetadataId": "42a43314-4e79-4d1f-86d3-433287ec9907"
+              }
+            }
+          },
+          "else": {
+            "actions": {
+              "For_each_french": {
+                "type": "Foreach",
+                "foreach": "@outputs('List_rows_stock_withdrawal_items')?['body/value']",
+                "actions": {
+                  "Get_item_name_1": {
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "parameters": {
+                        "entityName": "aglcm003_zulaa_articles",
+                        "recordId": "@item()?['_aglcm003_articleid_value']"
+                      },
+                      "host": {
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                        "operationId": "GetItem",
+                        "connectionName": "shared_commondataserviceforapps"
+                      }
+                    },
+                    "metadata": {
+                      "operationMetadataId": "f0f982b3-e13c-4a78-8d4d-67a0d9419152"
+                    }
+                  },
+                  "Append_to_string_variable_2": {
+                    "type": "AppendToStringVariable",
+                    "inputs": {
+                      "name": "Store items",
+                      "value": "- Article :  @{outputs('Get_item_name_1')?['body/aglcm003_nom']}, Quantité retirée :@{items('For_each_french')?['aglcm003_quantitesortie']};"
+                    },
+                    "runAfter": {
+                      "Get_item_name_1": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "8febd771-7839-48cd-b296-8a8384326899"
+                    }
+                  }
+                },
+                "metadata": {
+                  "operationMetadataId": "42a43314-4e79-4d1f-86d3-433287ec9907"
+                }
+              }
+            }
+          },
+          "runAfter": {
+            "List_rows_stock_withdrawal_assets": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Get_Entity_language": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "aglcm003_zulaa_entites",
+              "recordId": "@triggerOutputs()?['body/_aglcm003_entiteid_value']"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Get_stock_withdrawal_request_approver": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f0f982b3-e13c-4a78-8d4d-67a0d9419152"
+          }
+        },
+        "Condition_1": {
+          "type": "If",
+          "expression": {
+            "and": [
+              {
+                "equals": [
+                  "@outputs('Get_Entity_language')?['body/aglcm003_language']",
+                  0
+                ]
+              }
+            ]
+          },
+          "actions": {
+            "For_each_english_1": {
+              "type": "Foreach",
+              "foreach": "@outputs('List_rows_stock_withdrawal_assets')?['body/value']",
+              "actions": {
+                "Get__asset_name": {
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "parameters": {
+                      "entityName": "aglcm003_zulaa_actifs",
+                      "recordId": "@item()?['_aglcm003_actifid_value']"
+                    },
+                    "host": {
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                      "operationId": "GetItem",
+                      "connectionName": "shared_commondataserviceforapps"
+                    }
+                  },
+                  "runAfter": {
+                    "Get_person_assigned_to_": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "f0f982b3-e13c-4a78-8d4d-67a0d9419152"
+                  }
+                },
+                "Get_item_name_from_asset_table": {
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "parameters": {
+                      "entityName": "aglcm003_zulaa_articles",
+                      "recordId": "@outputs('Get__asset_name')?['body/_aglcm003_articleid_value']"
+                    },
+                    "host": {
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                      "operationId": "GetItem",
+                      "connectionName": "shared_commondataserviceforapps"
+                    }
+                  },
+                  "runAfter": {
+                    "Get__asset_name": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "f0f982b3-e13c-4a78-8d4d-67a0d9419152"
+                  }
+                },
+                "Append_to_string_variable_1": {
+                  "type": "AppendToStringVariable",
+                  "inputs": {
+                    "name": "Store assets",
+                    "value": "-Asset@{outputs('Get_item_name_from_asset_table')?['body/aglcm003_nom']}, Person assigned to :@{outputs('Get_person_assigned_to_')?['body/fullname']};"
+                  },
+                  "runAfter": {
+                    "Get_item_name_from_asset_table": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "c52072c0-54b7-4a9f-bb6d-4718e2832392"
+                  }
+                },
+                "Get_person_assigned_to_": {
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "parameters": {
+                      "entityName": "systemusers",
+                      "recordId": "@item()?['_aglcm003_personneaattribue_value']"
+                    },
+                    "host": {
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                      "operationId": "GetItem",
+                      "connectionName": "shared_commondataserviceforapps"
+                    }
+                  },
+                  "metadata": {
+                    "operationMetadataId": "f0f982b3-e13c-4a78-8d4d-67a0d9419152"
+                  }
+                }
+              },
+              "metadata": {
+                "operationMetadataId": "feecd3eb-2150-43f2-9d62-6c526420e42e"
+              }
+            },
+            "Post_message_in_a_chat_or_channel": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "poster": "Flow bot",
+                  "location": "Chat with Flow bot",
+                  "body/recipient": "@outputs('Get_stock_withdrawal_request_approver')?['body/internalemailaddress']",
+                  "body/messageBody": "<p class=\"editor-paragraph\">Hello,<br>The following operations have been performed in the store @{outputs('Get_a_row__store_by_ID')?['body/aglcm003_nomentite']} ,</p><p class=\"editor-paragraph\">by @{outputs('Get_out_of_stock_creator')?['body/fullname']} for the requestor @{outputs('Get_DS_requestor')?['body/fullname']}:</p><br><p class=\"editor-paragraph\"><u><b><strong class=\"editor-text-bold editor-text-underline\" style=\"font-size: 13px;\">Store Items</strong></b></u><br>@{variables('Store items')}</p><p class=\"editor-paragraph\"><br><u><b><strong class=\"editor-text-bold editor-text-underline\" style=\"font-size: 13px;\">Store Assets</strong></b></u><br>@{variables('Store assets')}<br><br><span style=\"font-size: 14px;\">Kind Regards,</span><br><b><strong class=\"editor-text-bold\">ZULAA</strong></b></p>"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_teams",
+                  "operationId": "PostMessageToConversation",
+                  "connectionName": "shared_teams-1"
+                }
+              },
+              "runAfter": {
+                "For_each_english_1": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "58a57ba1-2a49-4e64-aa23-2dd0f86e5225"
+              }
+            }
+          },
+          "else": {
+            "actions": {
+              "For_each_french_1": {
+                "type": "Foreach",
+                "foreach": "@outputs('List_rows_stock_withdrawal_assets')?['body/value']",
+                "actions": {
+                  "Get__asset_name_1": {
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "parameters": {
+                        "entityName": "aglcm003_zulaa_actifs",
+                        "recordId": "@item()?['_aglcm003_actifid_value']"
+                      },
+                      "host": {
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                        "operationId": "GetItem",
+                        "connectionName": "shared_commondataserviceforapps"
+                      }
+                    },
+                    "runAfter": {
+                      "Get_person_assigned_to__1": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "f0f982b3-e13c-4a78-8d4d-67a0d9419152"
+                    }
+                  },
+                  "Get_item_name_from_asset_table_1": {
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "parameters": {
+                        "entityName": "aglcm003_zulaa_articles",
+                        "recordId": "@outputs('Get__asset_name_1')?['body/_aglcm003_articleid_value']"
+                      },
+                      "host": {
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                        "operationId": "GetItem",
+                        "connectionName": "shared_commondataserviceforapps"
+                      }
+                    },
+                    "runAfter": {
+                      "Get__asset_name_1": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "f0f982b3-e13c-4a78-8d4d-67a0d9419152"
+                    }
+                  },
+                  "Append_to_string_variable_3": {
+                    "type": "AppendToStringVariable",
+                    "inputs": {
+                      "name": "Store assets",
+                      "value": "-Actif :@{outputs('Get_item_name_from_asset_table_1')?['body/aglcm003_nom']}, Assigné à :@{outputs('Get_person_assigned_to__1')?['body/fullname']};"
+                    },
+                    "runAfter": {
+                      "Get_item_name_from_asset_table_1": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "c52072c0-54b7-4a9f-bb6d-4718e2832392"
+                    }
+                  },
+                  "Get_person_assigned_to__1": {
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "parameters": {
+                        "entityName": "systemusers",
+                        "recordId": "@item()?['_aglcm003_personneaattribue_value']"
+                      },
+                      "host": {
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                        "operationId": "GetItem",
+                        "connectionName": "shared_commondataserviceforapps"
+                      }
+                    },
+                    "metadata": {
+                      "operationMetadataId": "f0f982b3-e13c-4a78-8d4d-67a0d9419152"
+                    }
+                  }
+                },
+                "metadata": {
+                  "operationMetadataId": "feecd3eb-2150-43f2-9d62-6c526420e42e"
+                }
+              },
+              "Post_message_in_a_chat_or_channel_1": {
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "parameters": {
+                    "poster": "Flow bot",
+                    "location": "Chat with Flow bot",
+                    "body/recipient": "@outputs('Get_stock_withdrawal_request_approver')?['body/internalemailaddress']",
+                    "body/messageBody": "<p class=\"editor-paragraph\">Bonjour,<br>Les opérations suivantes ont été effectuées dans le magasin @{outputs('Get_a_row__store_by_ID')?['body/aglcm003_nomentite']} ,</p><p class=\"editor-paragraph\">par @{outputs('Get_out_of_stock_creator')?['body/fullname']} avec pour bénéficière @{outputs('Get_DS_requestor')?['body/fullname']} :</p><br><p class=\"editor-paragraph\"><u><b><strong class=\"editor-text-bold editor-text-underline\" style=\"font-size: 13px;\">Articles :</strong></b></u><br>@{variables('Store items')}</p><p class=\"editor-paragraph\"><br><u><b><strong class=\"editor-text-bold editor-text-underline\">A</strong></b></u><u><b><strong class=\"editor-text-bold editor-text-underline\" style=\"font-size: 13px;\">ctifs :</strong></b></u><br>@{variables('Store assets')}<br><br><span style=\"font-size: 14px;\">Cordailement,</span><br><b><strong class=\"editor-text-bold\">ZULAA</strong></b></p>"
+                  },
+                  "host": {
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_teams",
+                    "operationId": "PostMessageToConversation",
+                    "connectionName": "shared_teams-1"
+                  }
+                },
+                "runAfter": {
+                  "For_each_french_1": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "58a57ba1-2a49-4e64-aa23-2dd0f86e5225"
+                }
+              }
+            }
+          },
+          "runAfter": {
+            "Condition": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Get_related_DS_": {
+          "type": "OpenApiConnection",
+          "description": "Here, we get the stock withdrawal request requestor; the user for which we are getting out items. The info is needed to inform the business director that the users need has been fulfilled",
+          "inputs": {
+            "parameters": {
+              "entityName": "aglcm003_zulaa_demandesortiestocks",
+              "recordId": "@triggerOutputs()?['body/_aglcm003_demandedesortieid_value']"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Get_Entity_language": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f0f982b3-e13c-4a78-8d4d-67a0d9419152"
+          }
+        },
+        "Get_DS_requestor": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "systemusers",
+              "recordId": "@outputs('Get_related_DS_')?['body/_aglcm003_demandeur_value']"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Get_out_of_stock_creator": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f0f982b3-e13c-4a78-8d4d-67a0d9419152"
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

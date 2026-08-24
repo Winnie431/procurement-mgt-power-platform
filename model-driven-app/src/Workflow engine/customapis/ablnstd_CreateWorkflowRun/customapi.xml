@@ -1,0 +1,15 @@
+<customapi uniquename="ablnstd_CreateWorkflowRun">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="CreateWorkflowRun">
+    <label description="CreateWorkflowRun" languagecode="1033" />
+  </description>
+  <displayname default="CreateWorkflowRun">
+    <label description="CreateWorkflowRun" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>CreateWorkflowRun</name>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

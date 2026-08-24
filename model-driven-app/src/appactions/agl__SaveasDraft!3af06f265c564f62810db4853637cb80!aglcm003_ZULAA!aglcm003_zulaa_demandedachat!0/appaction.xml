@@ -1,0 +1,45 @@
+<appaction uniquename="agl__SaveasDraft!3af06f265c564f62810db4853637cb80!aglcm003_ZULAA!aglcm003_zulaa_demandedachat!0">
+  <appmoduleid>
+    <uniquename>aglcm003_ZULAA</uniquename>
+  </appmoduleid>
+  <buttonaccessibilitytext default="Save The Purchase Request As A Draft">
+    <label description="Save The Purchase Request As A Draft" languagecode="1033" />
+    <label description="Enregistrer la demande d’achat comme brouillon" languagecode="1036" />
+  </buttonaccessibilitytext>
+  <buttonlabeltext default="Save">
+    <label description="Save" languagecode="1033" />
+    <label description="Enregistrer" languagecode="1036" />
+  </buttonlabeltext>
+  <buttontooltipdescription default="Save The {EntityLogicalNameMarker} As A Draft.">
+    <label description="Save The {EntityLogicalNameMarker} As A Draft." languagecode="1033" />
+    <label description="Enregistrer le EntityLogicalNameMarker comme brouillon" languagecode="1036" />
+  </buttontooltipdescription>
+  <buttontooltiptitle default="Save (CTRL+S)">
+    <label description="Save (CTRL+S)" languagecode="1033" />
+    <label description="Enregistrer CTRL+S" languagecode="1036" />
+  </buttontooltiptitle>
+  <context>1</context>
+  <contextentity>
+    <logicalname>aglcm003_zulaa_demandedachat</logicalname>
+  </contextentity>
+  <contextvalue>aglcm003_zulaa_demandedachat</contextvalue>
+  <fonticon>$clientsvg:Save</fonticon>
+  <hidden>1</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>SaveasDraft!3af06f265c564f62810db4853637cb80</name>
+  <onclickeventjavascriptfunctionname>XrmCore.Commands.Save.saveAndCloseForm</onclickeventjavascriptfunctionname>
+  <onclickeventjavascriptparameters>[{"type":5,"value":null}]</onclickeventjavascriptparameters>
+  <onclickeventjavascriptwebresourceid>
+    <webresourceid>adea1aea-b2aa-e611-80d6-00155d88c343</webresourceid>
+  </onclickeventjavascriptwebresourceid>
+  <onclickeventtype>2</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100015.0000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilitytype>0</visibilitytype>
+</appaction>

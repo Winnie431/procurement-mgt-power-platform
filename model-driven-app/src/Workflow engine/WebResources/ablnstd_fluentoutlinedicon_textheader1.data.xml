@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{7c3a622f-1339-ef11-a316-000d3a78bcff}</WebResourceId>
+  <Name>ablnstd_fluentoutlinedicon_textheader1</Name>
+  <DisplayName>Text Header 1 - Fluent Outlined Icon</DisplayName>
+  <WebResourceType>11</WebResourceType>
+  <IntroducedVersion>1.0.240628.1</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/ablnstd_fluentoutlinedicon_textheader17C3A622F-1339-EF11-A316-000D3A78BCFF</FileName>
+</WebResource>

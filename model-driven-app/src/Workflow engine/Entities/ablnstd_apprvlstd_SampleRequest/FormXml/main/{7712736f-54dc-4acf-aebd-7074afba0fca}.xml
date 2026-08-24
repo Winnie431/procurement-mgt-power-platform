@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{7712736f-54dc-4acf-aebd-7074afba0fca}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{6bf866a2-fe73-4962-9bc8-2436126b52df}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="50%">
+              <sections>
+                <section showlabel="true" showbar="false" IsUserDefined="0" id="{f4267e22-c991-4c24-93ae-50642f299453}">
+                  <labels>
+                    <label description="Informations" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{403d07d5-5984-4fad-beaf-28d087bd8996}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="ablnstd_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="ablnstd_name" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c21fd213-4fbd-4b6e-973d-134fc0695f59}" locklevel="0" colspan="1" rowspan="4">
+                        <labels>
+                          <label description="Description" languagecode="1033" />
+                        </labels>
+                        <control id="ablnstd_description" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="ablnstd_description" disabled="false" />
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row>
+                      <cell id="{e1f748d3-7fbb-4e06-9e2e-05d82ced7d99}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Total price" languagecode="1033" />
+                        </labels>
+                        <control id="ablnstd_totalprice" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="ablnstd_totalprice" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="50%">
+              <sections>
+                <section name="_section_327" id="c9dfe9e9-fc65-4e70-9d5e-27cf280ab786" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Request" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{5bd2be89-bf8c-4f36-9e1b-37c6335a7541}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Request status" languagecode="1033" />
+                        </labels>
+                        <control id="header_ablnstd_requeststatus" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="ablnstd_requeststatus" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7be02b0b-d4ac-4f1c-be1f-4839a405251e}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Requested By" languagecode="1033" />
+                        </labels>
+                        <control id="ablnstd_requestedbyid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ablnstd_requestedbyid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{96598d1a-6f8f-4ab8-9bbf-bc7e99dee5b9}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Requested On" languagecode="1033" />
+                        </labels>
+                        <control id="ablnstd_requestedon" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="ablnstd_requestedon" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_4" id="f11a0cba-4ac3-4b36-af61-f6ad9ba3df6f" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Workflow" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{cee058f0-8ea3-45c9-9a3a-e67e956013c3}" locklevel="0" colspan="1" rowspan="1" visible="false">
+                        <labels>
+                          <label description="Current Workflow Run" languagecode="1033" />
+                        </labels>
+                        <control id="ablnstd_currentworkflowrunid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ablnstd_currentworkflowrunid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{b783c74e-9cc1-4e90-8677-4555ccde33b0}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="New QV control 1721126094874" languagecode="1033" />
+                        </labels>
+                        <control id="QuickviewControl1721126094874" classid="{5C5600E0-1D6E-4205-A272-BE80DA87FD42}" datafieldname="ablnstd_currentworkflowrunid">
+                          <parameters>
+                            <DisplayAsCustomer360Tile>false</DisplayAsCustomer360Tile>
+                            <QuickForms>&lt;QuickFormIds&gt;&lt;QuickFormId entityname="ablnstd_apprvlstd_wfrun"&gt;a936c1da-5e43-ef11-a316-6045bd6ef16d&lt;/QuickFormId&gt;&lt;/QuickFormIds&gt;</QuickForms>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{44fa0285-f5d2-47d5-80c6-e77b6655677f}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{3e9a1035-de89-4e38-b180-b49f0cf05007}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{d54be2d7-3623-4b71-94bf-82d2d5a531c3}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{bdd88cef-eda5-4bdb-a95c-292ea8f974ee}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{2a463440-f9aa-445f-b353-586f4f19354d}" colspan="1" rowspan="1">
+              <labels>
+                <label description="Owner" languagecode="1033" />
+              </labels>
+              <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{66be7549-2948-4cbc-985d-ac852a949ecc}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{132c85b1-0d79-4677-bd68-f8a7cf3dfea5}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{b9bdd38d-14d3-4abe-ad0e-e2cdb299a17a}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{4c21f31e-38ff-4673-9172-c3436486cdd9}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+      <controlDescriptions />
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

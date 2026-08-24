@@ -1,0 +1,42 @@
+<appaction uniquename="ablnstd__Respond!55a5702278234629aa754f3918b81b90!ablnstd_ApprovalStudioCockpit!ablnstd_apprvlstd_samplerequest!0">
+  <appmoduleid>
+    <uniquename>ablnstd_ApprovalStudioCockpit</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="Respond">
+    <label description="Respond" languagecode="1033" />
+  </buttonlabeltext>
+  <context>1</context>
+  <contextentity>
+    <logicalname>ablnstd_apprvlstd_samplerequest</logicalname>
+  </contextentity>
+  <contextvalue>ablnstd_apprvlstd_samplerequest</contextvalue>
+  <hidden>0</hidden>
+  <iconwebresourceid>
+    <webresourceid>984eab15-1339-ef11-a316-000d3a78bcff</webresourceid>
+  </iconwebresourceid>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>Respond!55a5702278234629aa754f3918b81b90</name>
+  <onclickeventjavascriptfunctionname>openCustomPage</onclickeventjavascriptfunctionname>
+  <onclickeventjavascriptparameters>[{"type":5},{"type":21,"value":"ablnstd_samplerequestapprovalresponsemodal_87671"},{"type":21,"value":"Approval response"},{"type":19,"value":1},{"type":19,"value":500},{"type":19,"value":400},{"type":18,"value":true},{"type":18,"value":true}]</onclickeventjavascriptparameters>
+  <onclickeventjavascriptwebresourceid>
+    <webresourceid>89e22d3f-1e3c-ee11-bdf4-000d3a672530</webresourceid>
+  </onclickeventjavascriptwebresourceid>
+  <onclickeventtype>2</onclickeventtype>
+  <origin>0</origin>
+  <parentappactionid>
+    <uniquename>ablnstd__NewGroup!a4a6fbe290114dd88e9442d9cbdc47ef!ablnstd_ApprovalStudioCockpit!ablnstd_apprvlstd_samplerequest!0</uniquename>
+  </parentappactionid>
+  <sequence>10000.0000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilityformulacomponentlibraryid>
+    <name>ablnstd_approvalstudiocockpitdefaultcommandlibrary_759d1</name>
+  </visibilityformulacomponentlibraryid>
+  <visibilityformulacomponentname>312a4f04cd4f42aab377dfaf42d2b259</visibilityformulacomponentname>
+  <visibilityformulafunctionname>Visible</visibilityformulafunctionname>
+  <visibilitytype>1</visibilitytype>
+</appaction>

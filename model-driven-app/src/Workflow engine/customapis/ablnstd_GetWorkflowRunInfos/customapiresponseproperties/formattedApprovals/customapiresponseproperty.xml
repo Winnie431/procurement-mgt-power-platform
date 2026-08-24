@@ -1,0 +1,8 @@
+<customapiresponseproperty uniquename="formattedApprovals">
+  <displayname default="GetWorkflowRunInfos-Out-formattedApprovals">
+    <label description="GetWorkflowRunInfos-Out-formattedApprovals" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <name>GetWorkflowRunInfos-Out-formattedApprovals</name>
+  <type>10</type>
+</customapiresponseproperty>

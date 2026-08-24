@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppModule>
+  <UniqueName>ablnstd_ApprovalStudioCockpit</UniqueName>
+  <IntroducedVersion>0.1.240404.0</IntroducedVersion>
+  <WebResourceId>953b9fac-1e5e-e611-80d6-00155ded156f</WebResourceId>
+  <OptimizedFor></OptimizedFor>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <FormFactor>1</FormFactor>
+  <ClientType>4</ClientType>
+  <NavigationType>0</NavigationType>
+  <AppModuleComponents>
+    <AppModuleComponent type="1" schemaName="ablnstd_apprvlstd_samplerequest" />
+    <AppModuleComponent type="1" schemaName="ablnstd_apprvlstd_samplerequest2" />
+    <AppModuleComponent type="1" schemaName="ablnstd_apprvlstd_wfdef" />
+    <AppModuleComponent type="1" schemaName="ablnstd_apprvlstd_wfdefversion" />
+    <AppModuleComponent type="1" schemaName="ablnstd_apprvlstd_wfdefversionrole" />
+    <AppModuleComponent type="1" schemaName="ablnstd_apprvlstd_wfdefversionstage" />
+    <AppModuleComponent type="1" schemaName="ablnstd_apprvlstd_wfdefversionstageoutcome" />
+    <AppModuleComponent type="1" schemaName="ablnstd_apprvlstd_wfrun" />
+    <AppModuleComponent type="1" schemaName="ablnstd_apprvlstd_wfrunapproval" />
+    <AppModuleComponent type="1" schemaName="ablnstd_apprvlstd_wfrunapprover" />
+    <AppModuleComponent type="60" id="{6062a1e7-4739-ef11-a316-000d3a78bcff}" />
+    <AppModuleComponent type="62" schemaName="ablnstd_ApprovalStudioCockpit" />
+  </AppModuleComponents>
+  <AppModuleRoleMaps>
+    <Role id="{627090ff-40a3-4053-8790-584edc5be201}" />
+    <Role id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+  </AppModuleRoleMaps>
+  <LocalizedNames>
+    <LocalizedName description="Approval Studio Cockpit" languagecode="1033" />
+  </LocalizedNames>
+  <appelements>
+    <appelement uniquename="ablnstd_ablnstd_ApprovalStudioCockpit_canvasappid_ablnstd_approvalresponsepopup_d1b22">
+      <canvasappid>
+        <name>ablnstd_approvalresponsepopup_d1b22</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>ablnstd_ablnstd_ApprovalStudioCockpit_canvasappid_ablnstd_approvalresponsepopup_d1b22</name>
+    </appelement>
+    <appelement uniquename="ablnstd_ablnstd_ApprovalStudioCockpit_canvasappid_ablnstd_approvalstudiocockpitdefaultcommandlibrary_759d1">
+      <canvasappid>
+        <name>ablnstd_approvalstudiocockpitdefaultcommandlibrary_759d1</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>ablnstd_ablnstd_ApprovalStudioCockpit_canvasappid_ablnstd_approvalstudiocockpitdefaultcommandlibrary_759d1</name>
+    </appelement>
+    <appelement uniquename="ablnstd_ablnstd_ApprovalStudioCockpit_canvasappid_ablnstd_samplerequestapprovalresponsemodal_87671">
+      <canvasappid>
+        <name>ablnstd_samplerequestapprovalresponsemodal_87671</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>ablnstd_ablnstd_ApprovalStudioCockpit_canvasappid_ablnstd_samplerequestapprovalresponsemodal_87671</name>
+    </appelement>
+    <appelement uniquename="ablnstd_ablnstd_ApprovalStudioCockpit_canvasappid_ablnstd_samplerequestworkflowvizualizer_66ec6">
+      <canvasappid>
+        <name>ablnstd_samplerequestworkflowvizualizer_66ec6</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>ablnstd_ablnstd_ApprovalStudioCockpit_canvasappid_ablnstd_samplerequestworkflowvizualizer_66ec6</name>
+    </appelement>
+    <appelement uniquename="cr7f8_ablnstd_ApprovalStudioCockpit_canvasappid_ablnstd_workflowrunworkflowvizualizer_4963a">
+      <canvasappid>
+        <name>ablnstd_workflowrunworkflowvizualizer_4963a</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cr7f8_ablnstd_ApprovalStudioCockpit_canvasappid_ablnstd_workflowrunworkflowvizualizer_4963a</name>
+    </appelement>
+  </appelements>
+  <appsettings>
+    <appsetting settingdefinitionid.uniquename="AppChannel">
+      <iscustomizable>1</iscustomizable>
+      <value>1</value>
+    </appsetting>
+  </appsettings>
+</AppModule>

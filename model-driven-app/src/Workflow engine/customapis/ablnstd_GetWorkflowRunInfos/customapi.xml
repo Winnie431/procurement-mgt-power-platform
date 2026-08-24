@@ -1,0 +1,15 @@
+<customapi uniquename="ablnstd_GetWorkflowRunInfos">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="GetWorkflowRunInfos">
+    <label description="GetWorkflowRunInfos" languagecode="1033" />
+  </description>
+  <displayname default="GetWorkflowRunInfos">
+    <label description="GetWorkflowRunInfos" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>GetWorkflowRunInfos</name>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

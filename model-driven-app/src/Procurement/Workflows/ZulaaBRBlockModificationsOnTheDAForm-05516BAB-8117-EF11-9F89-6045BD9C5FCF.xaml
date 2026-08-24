@@ -1,0 +1,521 @@
+<Activity x:Class="XrmWorkflow00000000000000000000000000000000" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mcwc="clr-namespace:Microsoft.Crm.Workflow.ClientActivities;assembly=Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" xmlns:mxs="clr-namespace:Microsoft.Xrm.Sdk;assembly=Microsoft.Xrm.Sdk, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" xmlns:mxsq="clr-namespace:Microsoft.Xrm.Sdk.Query;assembly=Microsoft.Xrm.Sdk, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" xmlns:mxswa="clr-namespace:Microsoft.Xrm.Sdk.Workflow.Activities;assembly=Microsoft.Xrm.Sdk.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" xmlns:s="clr-namespace:System;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:srs="clr-namespace:System.Runtime.Serialization;assembly=System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:this="clr-namespace:" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="InputEntities" Type="InArgument(scg:IDictionary(x:String, mxs:Entity))" />
+    <x:Property Name="CreatedEntities" Type="InArgument(scg:IDictionary(x:String, mxs:Entity))" />
+  </x:Members>
+  <this:XrmWorkflow00000000000000000000000000000000.InputEntities>
+    <InArgument x:TypeArguments="scg:IDictionary(x:String, mxs:Entity)" />
+  </this:XrmWorkflow00000000000000000000000000000000.InputEntities>
+  <this:XrmWorkflow00000000000000000000000000000000.CreatedEntities>
+    <InArgument x:TypeArguments="scg:IDictionary(x:String, mxs:Entity)" />
+  </this:XrmWorkflow00000000000000000000000000000000.CreatedEntities>
+  <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
+  <mxswa:Workflow>
+    <mxswa:ActivityReference AssemblyQualifiedName="Microsoft.Crm.Workflow.Activities.ConditionSequence, Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" DisplayName="ConditionStep1">
+      <mxswa:ActivityReference.Arguments>
+        <InArgument x:TypeArguments="x:Boolean" x:Key="Wait">False</InArgument>
+      </mxswa:ActivityReference.Arguments>
+      <mxswa:ActivityReference.Properties>
+        <sco:Collection x:TypeArguments="Variable" x:Key="Variables">
+          <Variable x:TypeArguments="x:Boolean" Default="False" Name="ConditionBranchStep2_condition" />
+          <Variable x:TypeArguments="x:Boolean" Default="False" Name="ConditionBranchStep2_1" />
+          <Variable x:TypeArguments="x:Boolean" Default="False" Name="ConditionBranchStep2_2" />
+          <Variable x:TypeArguments="x:Object" Name="ConditionBranchStep2_3" />
+          <Variable x:TypeArguments="x:Object" Name="ConditionBranchStep2_4" />
+          <Variable x:TypeArguments="x:Boolean" Default="False" Name="ConditionBranchStep2_5" />
+          <Variable x:TypeArguments="x:Object" Name="ConditionBranchStep2_6" />
+          <Variable x:TypeArguments="x:Object" Name="ConditionBranchStep2_7" />
+          <Variable x:TypeArguments="x:Boolean" Default="False" Name="ConditionBranchStep2_8" />
+          <Variable x:TypeArguments="x:Object" Name="ConditionBranchStep2_9" />
+          <Variable x:TypeArguments="x:Object" Name="ConditionBranchStep2_10" />
+          <Variable x:TypeArguments="x:Boolean" Default="False" Name="ConditionBranchStep3_condition" />
+          <Variable x:TypeArguments="x:Object" Name="ConditionBranchStep3_1" />
+          <Variable x:TypeArguments="x:Object" Name="ConditionBranchStep3_2" />
+          <Variable x:TypeArguments="x:Boolean" Default="False" Name="ConditionBranchStep4_condition" />
+          <Variable x:TypeArguments="x:Object" Name="ConditionBranchStep4_1" />
+          <Variable x:TypeArguments="x:Boolean" Default="False" Name="True" />
+          <Variable x:TypeArguments="x:Object" Name="ConditionBranchStep5_1" />
+        </sco:Collection>
+        <sco:Collection x:TypeArguments="Activity" x:Key="Activities">
+          <mxswa:GetEntityProperty Attribute="aglcm003_statutcode" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" Value="[ConditionBranchStep2_3]">
+            <mxswa:GetEntityProperty.TargetType>
+              <InArgument x:TypeArguments="s:Type">
+                <mxswa:ReferenceLiteral x:TypeArguments="s:Type">
+                  <x:Null />
+                </mxswa:ReferenceLiteral>
+              </InArgument>
+            </mxswa:GetEntityProperty.TargetType>
+          </mxswa:GetEntityProperty>
+          <mxswa:ActivityReference AssemblyQualifiedName="Microsoft.Crm.Workflow.Activities.EvaluateExpression, Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" DisplayName="EvaluateExpression">
+            <mxswa:ActivityReference.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="ExpressionOperator">CreateCrmType</InArgument>
+              <InArgument x:TypeArguments="s:Object[]" x:Key="Parameters">[New Object() { Microsoft.Xrm.Sdk.Workflow.WorkflowPropertyType.OptionSetValue, "1", "Picklist" }]</InArgument>
+              <InArgument x:TypeArguments="s:Type" x:Key="TargetType">
+                <mxswa:ReferenceLiteral x:TypeArguments="s:Type" Value="mxs:OptionSetValue" />
+              </InArgument>
+              <OutArgument x:TypeArguments="x:Object" x:Key="Result">[ConditionBranchStep2_4]</OutArgument>
+            </mxswa:ActivityReference.Arguments>
+          </mxswa:ActivityReference>
+          <mxswa:ActivityReference AssemblyQualifiedName="Microsoft.Crm.Workflow.Activities.EvaluateCondition, Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" DisplayName="EvaluateCondition">
+            <mxswa:ActivityReference.Arguments>
+              <InArgument x:TypeArguments="mxsq:ConditionOperator" x:Key="ConditionOperator">Equal</InArgument>
+              <InArgument x:TypeArguments="s:Object[]" x:Key="Parameters">[New Object() { ConditionBranchStep2_4 }]</InArgument>
+              <InArgument x:TypeArguments="x:Object" x:Key="Operand">[ConditionBranchStep2_3]</InArgument>
+              <OutArgument x:TypeArguments="x:Boolean" x:Key="Result">[ConditionBranchStep2_2]</OutArgument>
+            </mxswa:ActivityReference.Arguments>
+          </mxswa:ActivityReference>
+          <mxswa:GetEntityProperty Attribute="aglcm003_statutcode" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" Value="[ConditionBranchStep2_6]">
+            <mxswa:GetEntityProperty.TargetType>
+              <InArgument x:TypeArguments="s:Type">
+                <mxswa:ReferenceLiteral x:TypeArguments="s:Type">
+                  <x:Null />
+                </mxswa:ReferenceLiteral>
+              </InArgument>
+            </mxswa:GetEntityProperty.TargetType>
+          </mxswa:GetEntityProperty>
+          <mxswa:ActivityReference AssemblyQualifiedName="Microsoft.Crm.Workflow.Activities.EvaluateExpression, Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" DisplayName="EvaluateExpression">
+            <mxswa:ActivityReference.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="ExpressionOperator">CreateCrmType</InArgument>
+              <InArgument x:TypeArguments="s:Object[]" x:Key="Parameters">[New Object() { Microsoft.Xrm.Sdk.Workflow.WorkflowPropertyType.OptionSetValue, "2", "Picklist" }]</InArgument>
+              <InArgument x:TypeArguments="s:Type" x:Key="TargetType">
+                <mxswa:ReferenceLiteral x:TypeArguments="s:Type" Value="mxs:OptionSetValue" />
+              </InArgument>
+              <OutArgument x:TypeArguments="x:Object" x:Key="Result">[ConditionBranchStep2_7]</OutArgument>
+            </mxswa:ActivityReference.Arguments>
+          </mxswa:ActivityReference>
+          <mxswa:ActivityReference AssemblyQualifiedName="Microsoft.Crm.Workflow.Activities.EvaluateCondition, Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" DisplayName="EvaluateCondition">
+            <mxswa:ActivityReference.Arguments>
+              <InArgument x:TypeArguments="mxsq:ConditionOperator" x:Key="ConditionOperator">Equal</InArgument>
+              <InArgument x:TypeArguments="s:Object[]" x:Key="Parameters">[New Object() { ConditionBranchStep2_7 }]</InArgument>
+              <InArgument x:TypeArguments="x:Object" x:Key="Operand">[ConditionBranchStep2_6]</InArgument>
+              <OutArgument x:TypeArguments="x:Boolean" x:Key="Result">[ConditionBranchStep2_5]</OutArgument>
+            </mxswa:ActivityReference.Arguments>
+          </mxswa:ActivityReference>
+          <mxswa:ActivityReference AssemblyQualifiedName="Microsoft.Crm.Workflow.Activities.EvaluateLogicalCondition, Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" DisplayName="EvaluateLogicalCondition">
+            <mxswa:ActivityReference.Arguments>
+              <InArgument x:TypeArguments="mxsq:LogicalOperator" x:Key="LogicalOperator">Or</InArgument>
+              <InArgument x:TypeArguments="x:Boolean" x:Key="LeftOperand">[ConditionBranchStep2_2]</InArgument>
+              <InArgument x:TypeArguments="x:Boolean" x:Key="RightOperand">[ConditionBranchStep2_5]</InArgument>
+              <OutArgument x:TypeArguments="x:Boolean" x:Key="Result">[ConditionBranchStep2_1]</OutArgument>
+            </mxswa:ActivityReference.Arguments>
+          </mxswa:ActivityReference>
+          <mxswa:GetEntityProperty Attribute="aglcm003_statutcode" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" Value="[ConditionBranchStep2_9]">
+            <mxswa:GetEntityProperty.TargetType>
+              <InArgument x:TypeArguments="s:Type">
+                <mxswa:ReferenceLiteral x:TypeArguments="s:Type">
+                  <x:Null />
+                </mxswa:ReferenceLiteral>
+              </InArgument>
+            </mxswa:GetEntityProperty.TargetType>
+          </mxswa:GetEntityProperty>
+          <mxswa:ActivityReference AssemblyQualifiedName="Microsoft.Crm.Workflow.Activities.EvaluateExpression, Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" DisplayName="EvaluateExpression">
+            <mxswa:ActivityReference.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="ExpressionOperator">CreateCrmType</InArgument>
+              <InArgument x:TypeArguments="s:Object[]" x:Key="Parameters">[New Object() { Microsoft.Xrm.Sdk.Workflow.WorkflowPropertyType.OptionSetValue, "3", "Picklist" }]</InArgument>
+              <InArgument x:TypeArguments="s:Type" x:Key="TargetType">
+                <mxswa:ReferenceLiteral x:TypeArguments="s:Type" Value="mxs:OptionSetValue" />
+              </InArgument>
+              <OutArgument x:TypeArguments="x:Object" x:Key="Result">[ConditionBranchStep2_10]</OutArgument>
+            </mxswa:ActivityReference.Arguments>
+          </mxswa:ActivityReference>
+          <mxswa:ActivityReference AssemblyQualifiedName="Microsoft.Crm.Workflow.Activities.EvaluateCondition, Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" DisplayName="EvaluateCondition">
+            <mxswa:ActivityReference.Arguments>
+              <InArgument x:TypeArguments="mxsq:ConditionOperator" x:Key="ConditionOperator">Equal</InArgument>
+              <InArgument x:TypeArguments="s:Object[]" x:Key="Parameters">[New Object() { ConditionBranchStep2_10 }]</InArgument>
+              <InArgument x:TypeArguments="x:Object" x:Key="Operand">[ConditionBranchStep2_9]</InArgument>
+              <OutArgument x:TypeArguments="x:Boolean" x:Key="Result">[ConditionBranchStep2_8]</OutArgument>
+            </mxswa:ActivityReference.Arguments>
+          </mxswa:ActivityReference>
+          <mxswa:ActivityReference AssemblyQualifiedName="Microsoft.Crm.Workflow.Activities.EvaluateLogicalCondition, Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" DisplayName="EvaluateLogicalCondition">
+            <mxswa:ActivityReference.Arguments>
+              <InArgument x:TypeArguments="mxsq:LogicalOperator" x:Key="LogicalOperator">Or</InArgument>
+              <InArgument x:TypeArguments="x:Boolean" x:Key="LeftOperand">[ConditionBranchStep2_1]</InArgument>
+              <InArgument x:TypeArguments="x:Boolean" x:Key="RightOperand">[ConditionBranchStep2_8]</InArgument>
+              <OutArgument x:TypeArguments="x:Boolean" x:Key="Result">[ConditionBranchStep2_condition]</OutArgument>
+            </mxswa:ActivityReference.Arguments>
+          </mxswa:ActivityReference>
+          <mxswa:ActivityReference AssemblyQualifiedName="Microsoft.Crm.Workflow.Activities.ConditionBranch, Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" DisplayName="ConditionBranchStep2">
+            <mxswa:ActivityReference.Arguments>
+              <InArgument x:TypeArguments="x:Boolean" x:Key="Condition">[ConditionBranchStep2_condition]</InArgument>
+            </mxswa:ActivityReference.Arguments>
+            <mxswa:ActivityReference.Properties>
+              <mxswa:ActivityReference x:Key="Then" AssemblyQualifiedName="Microsoft.Crm.Workflow.Activities.Composite, Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" DisplayName="ConditionBranchStep2">
+                <mxswa:ActivityReference.Properties>
+                  <sco:Collection x:TypeArguments="Variable" x:Key="Variables" />
+                  <sco:Collection x:TypeArguments="Activity" x:Key="Activities">
+                    <Sequence DisplayName="SetDisplayModeStep1: Entite">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_entiteid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep2: Direction">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_directionid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep3: Departement">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_departementid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep4: Centre de cout">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_centredecoutid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep5: Fournisseur">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_fournisseurid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep6: Devise">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_devise" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep9: Adresse de livraison">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_adressedelivraison" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep10: Description">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_description" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep11: Incoterm">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_incoterm" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep12: DAC">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_dac" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep13: Ref de proforma">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_referencedelaproforma" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep14: Délais de livraison">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_delaisdelivraison" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep15: Date de livraison">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_datedelivraison" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep16: Mode d'importation">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_modedimportationcode" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep17: Type d'approvisionnement">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_typedapprovisionnementcode" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep18: Conditions spécifique">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_conditionsspecifiques" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep34: Expression de besoin">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_expressiondebesoinid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep36: Has EB ?">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_haseb" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep37: type d'imputation">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_typedimputation" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep38: Garantie">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_garantie" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep39: Envoie  bc au fournisseur">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_isenvoiebcaufournisseur" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep85: TVA">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_tvaid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep86: Catégorie">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_categorieid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                  </sco:Collection>
+                </mxswa:ActivityReference.Properties>
+              </mxswa:ActivityReference>
+              <x:Null x:Key="Else" />
+              <x:String x:Key="Description" xml:space="preserve">Statut Demande Achat  = "En cours" ou "valider ou refusé"</x:String>
+            </mxswa:ActivityReference.Properties>
+          </mxswa:ActivityReference>
+          <mxswa:GetEntityProperty Attribute="aglcm003_statutcode" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" Value="[ConditionBranchStep3_1]">
+            <mxswa:GetEntityProperty.TargetType>
+              <InArgument x:TypeArguments="s:Type">
+                <mxswa:ReferenceLiteral x:TypeArguments="s:Type">
+                  <x:Null />
+                </mxswa:ReferenceLiteral>
+              </InArgument>
+            </mxswa:GetEntityProperty.TargetType>
+          </mxswa:GetEntityProperty>
+          <mxswa:ActivityReference AssemblyQualifiedName="Microsoft.Crm.Workflow.Activities.EvaluateExpression, Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" DisplayName="EvaluateExpression">
+            <mxswa:ActivityReference.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="ExpressionOperator">CreateCrmType</InArgument>
+              <InArgument x:TypeArguments="s:Object[]" x:Key="Parameters">[New Object() { Microsoft.Xrm.Sdk.Workflow.WorkflowPropertyType.OptionSetValue, "5", "Picklist" }]</InArgument>
+              <InArgument x:TypeArguments="s:Type" x:Key="TargetType">
+                <mxswa:ReferenceLiteral x:TypeArguments="s:Type" Value="mxs:OptionSetValue" />
+              </InArgument>
+              <OutArgument x:TypeArguments="x:Object" x:Key="Result">[ConditionBranchStep3_2]</OutArgument>
+            </mxswa:ActivityReference.Arguments>
+          </mxswa:ActivityReference>
+          <mxswa:ActivityReference AssemblyQualifiedName="Microsoft.Crm.Workflow.Activities.EvaluateCondition, Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" DisplayName="EvaluateCondition">
+            <mxswa:ActivityReference.Arguments>
+              <InArgument x:TypeArguments="mxsq:ConditionOperator" x:Key="ConditionOperator">Equal</InArgument>
+              <InArgument x:TypeArguments="s:Object[]" x:Key="Parameters">[New Object() { ConditionBranchStep3_2 }]</InArgument>
+              <InArgument x:TypeArguments="x:Object" x:Key="Operand">[ConditionBranchStep3_1]</InArgument>
+              <OutArgument x:TypeArguments="x:Boolean" x:Key="Result">[ConditionBranchStep3_condition]</OutArgument>
+            </mxswa:ActivityReference.Arguments>
+          </mxswa:ActivityReference>
+          <mxswa:ActivityReference AssemblyQualifiedName="Microsoft.Crm.Workflow.Activities.ConditionBranch, Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" DisplayName="ConditionBranchStep3">
+            <mxswa:ActivityReference.Arguments>
+              <InArgument x:TypeArguments="x:Boolean" x:Key="Condition">[ConditionBranchStep3_condition]</InArgument>
+            </mxswa:ActivityReference.Arguments>
+            <mxswa:ActivityReference.Properties>
+              <mxswa:ActivityReference x:Key="Then" AssemblyQualifiedName="Microsoft.Crm.Workflow.Activities.Composite, Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" DisplayName="ConditionBranchStep3">
+                <mxswa:ActivityReference.Properties>
+                  <sco:Collection x:TypeArguments="Variable" x:Key="Variables" />
+                  <sco:Collection x:TypeArguments="Activity" x:Key="Activities">
+                    <Sequence DisplayName="SetDisplayModeStep20: Entite">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_entiteid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep21: Direction">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_directionid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep22: Departement">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_departementid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep23: Centre de cout">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_centredecoutid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep24: Fournisseur">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_fournisseurid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep25: Devise">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_devise" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep26: TVA">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_tvaid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep28: Adresse de livraison">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_adressedelivraison" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep29: Description">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_description" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep30: Incoterm">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_incoterm" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep31: DAC">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_dac" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep32: Ref de proforma">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_referencedelaproforma" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep33: Délais de livraison">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_delaisdelivraison" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep34244: Mode d'importation">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_modedimportationcode" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep35: Type d'approvisionnement">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_typedapprovisionnementcode" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep36588: Conditions spécifique">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_conditionsspecifiques" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep35116: Expression de besoin">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_expressiondebesoinid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep40: Has EB ?">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_haseb" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep41: type d'imputation">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_typedimputation" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep42: Garantie">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_garantie" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep43: Envoie  bc au fournisseur">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_isenvoiebcaufournisseur" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep87: Catégorie">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_categorieid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                  </sco:Collection>
+                </mxswa:ActivityReference.Properties>
+              </mxswa:ActivityReference>
+              <x:Null x:Key="Else" />
+              <x:String x:Key="Description">Statut = Annuler</x:String>
+            </mxswa:ActivityReference.Properties>
+          </mxswa:ActivityReference>
+          <mxswa:GetEntityProperty Attribute="aglcm003_entiteid" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" Value="[ConditionBranchStep4_1]">
+            <mxswa:GetEntityProperty.TargetType>
+              <InArgument x:TypeArguments="s:Type">
+                <mxswa:ReferenceLiteral x:TypeArguments="s:Type">
+                  <x:Null />
+                </mxswa:ReferenceLiteral>
+              </InArgument>
+            </mxswa:GetEntityProperty.TargetType>
+          </mxswa:GetEntityProperty>
+          <mxswa:ActivityReference AssemblyQualifiedName="Microsoft.Crm.Workflow.Activities.EvaluateCondition, Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" DisplayName="EvaluateCondition">
+            <mxswa:ActivityReference.Arguments>
+              <InArgument x:TypeArguments="mxsq:ConditionOperator" x:Key="ConditionOperator">Null</InArgument>
+              <x:Null x:Key="Parameters" />
+              <InArgument x:TypeArguments="x:Object" x:Key="Operand">[ConditionBranchStep4_1]</InArgument>
+              <OutArgument x:TypeArguments="x:Boolean" x:Key="Result">[ConditionBranchStep4_condition]</OutArgument>
+            </mxswa:ActivityReference.Arguments>
+          </mxswa:ActivityReference>
+          <mxswa:ActivityReference AssemblyQualifiedName="Microsoft.Crm.Workflow.Activities.ConditionBranch, Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" DisplayName="ConditionBranchStep4">
+            <mxswa:ActivityReference.Arguments>
+              <InArgument x:TypeArguments="x:Boolean" x:Key="Condition">[ConditionBranchStep4_condition]</InArgument>
+            </mxswa:ActivityReference.Arguments>
+            <mxswa:ActivityReference.Properties>
+              <mxswa:ActivityReference x:Key="Then" AssemblyQualifiedName="Microsoft.Crm.Workflow.Activities.Composite, Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" DisplayName="ConditionBranchStep4">
+                <mxswa:ActivityReference.Properties>
+                  <sco:Collection x:TypeArguments="Variable" x:Key="Variables" />
+                  <sco:Collection x:TypeArguments="Activity" x:Key="Activities">
+                    <Sequence DisplayName="SetDisplayModeStep45: Direction">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_directionid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep46: Departement">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_departementid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep47: Centre de cout">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_centredecoutid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep48: Fournisseur">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_fournisseurid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep49: Devise">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_devise" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep50: TVA">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_tvaid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep51: Adresse de livraison">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_adressedelivraison" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep52: Description">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_description" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep53: Incoterm">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_incoterm" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep54: DAC">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_dac" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep55: Ref de proforma">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_referencedelaproforma" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep57: Délais de livraison">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_delaisdelivraison" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep58: Mode d'importation">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_modedimportationcode" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep59: Type d'approvisionnement">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_typedapprovisionnementcode" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep60: Conditions spécifique">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_conditionsspecifiques" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep61: Expression de besoin">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_expressiondebesoinid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep62: Has EB ?">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_haseb" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep63: type d'imputation">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_typedimputation" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep64: Garantie">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_garantie" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep65: Envoie  bc au fournisseur">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_isenvoiebcaufournisseur" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep88: Catégorie">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_categorieid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                  </sco:Collection>
+                </mxswa:ActivityReference.Properties>
+              </mxswa:ActivityReference>
+              <x:Null x:Key="Else" />
+              <x:String x:Key="Description">Is empty Entite</x:String>
+            </mxswa:ActivityReference.Properties>
+          </mxswa:ActivityReference>
+          <mxswa:ActivityReference AssemblyQualifiedName="Microsoft.Crm.Workflow.Activities.EvaluateExpression, Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" DisplayName="EvaluateExpression">
+            <mxswa:ActivityReference.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="ExpressionOperator">CreateCrmType</InArgument>
+              <InArgument x:TypeArguments="s:Object[]" x:Key="Parameters">[New Object() { Microsoft.Xrm.Sdk.Workflow.WorkflowPropertyType.Boolean, "true" }]</InArgument>
+              <InArgument x:TypeArguments="s:Type" x:Key="TargetType">
+                <mxswa:ReferenceLiteral x:TypeArguments="s:Type" Value="x:Boolean" />
+              </InArgument>
+              <OutArgument x:TypeArguments="x:Object" x:Key="Result">[ConditionBranchStep5_1]</OutArgument>
+            </mxswa:ActivityReference.Arguments>
+          </mxswa:ActivityReference>
+          <mxswa:ActivityReference AssemblyQualifiedName="Microsoft.Crm.Workflow.Activities.ConditionBranch, Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" DisplayName="ConditionBranchStep5">
+            <mxswa:ActivityReference.Arguments>
+              <InArgument x:TypeArguments="x:Boolean" x:Key="Condition">[True]</InArgument>
+            </mxswa:ActivityReference.Arguments>
+            <mxswa:ActivityReference.Properties>
+              <mxswa:ActivityReference x:Key="Then" AssemblyQualifiedName="Microsoft.Crm.Workflow.Activities.Composite, Microsoft.Crm.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" DisplayName="ConditionBranchStep5">
+                <mxswa:ActivityReference.Properties>
+                  <sco:Collection x:TypeArguments="Variable" x:Key="Variables" />
+                  <sco:Collection x:TypeArguments="Activity" x:Key="Activities">
+                    <Sequence DisplayName="SetDisplayModeStep67: Direction">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_directionid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep68: Departement">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_departementid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep69: Centre de cout">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_centredecoutid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep70: Fournisseur">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_fournisseurid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep71: Devise">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_devise" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep72: TVA">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_tvaid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep73: Adresse de livraison">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_adressedelivraison" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep74: Description">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_description" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep75: Incoterm">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_incoterm" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep76: DAC">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_dac" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep77: Ref de proforma">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_referencedelaproforma" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep78: Délais de livraison">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_delaisdelivraison" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep79: Mode d'importation">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_modedimportationcode" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep80: Type d'approvisionnement">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_typedapprovisionnementcode" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep81: Conditions spécifique">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_conditionsspecifiques" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep82: Expression de besoin">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_expressiondebesoinid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep83: Has EB ?">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_haseb" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="True" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep84: type d'imputation">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_typedimputation" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep85382: Garantie">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_garantie" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep86719: Envoie  bc au fournisseur">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_isenvoiebcaufournisseur" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                    <Sequence DisplayName="SetDisplayModeStep89: Catégorie">
+                      <mcwc:SetDisplayMode ControlId="aglcm003_categorieid" ControlType="standard" Entity="[InputEntities(&quot;primaryEntity&quot;)]" EntityName="aglcm003_zulaa_demandedachat" IsReadOnly="False" />
+                    </Sequence>
+                  </sco:Collection>
+                </mxswa:ActivityReference.Properties>
+              </mxswa:ActivityReference>
+              <x:Null x:Key="Else" />
+              <x:String x:Key="Description"></x:String>
+            </mxswa:ActivityReference.Properties>
+          </mxswa:ActivityReference>
+        </sco:Collection>
+        <x:Boolean x:Key="ContainsElseBranch">False</x:Boolean>
+      </mxswa:ActivityReference.Properties>
+    </mxswa:ActivityReference>
+  </mxswa:Workflow>
+</Activity>

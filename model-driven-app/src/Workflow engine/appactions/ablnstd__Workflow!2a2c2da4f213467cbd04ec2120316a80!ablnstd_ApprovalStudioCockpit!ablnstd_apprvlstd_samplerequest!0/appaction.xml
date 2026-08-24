@@ -1,0 +1,27 @@
+<appaction uniquename="ablnstd__Workflow!2a2c2da4f213467cbd04ec2120316a80!ablnstd_ApprovalStudioCockpit!ablnstd_apprvlstd_samplerequest!0">
+  <appmoduleid>
+    <uniquename>ablnstd_ApprovalStudioCockpit</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="Workflow">
+    <label description="Workflow" languagecode="1033" />
+  </buttonlabeltext>
+  <context>1</context>
+  <contextentity>
+    <logicalname>ablnstd_apprvlstd_samplerequest</logicalname>
+  </contextentity>
+  <contextvalue>ablnstd_apprvlstd_samplerequest</contextvalue>
+  <fonticon>$clientsvg:RunWorkflow</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>Workflow!2a2c2da4f213467cbd04ec2120316a80</name>
+  <onclickeventtype>0</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100037.5000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>1</type>
+  <visibilitytype>0</visibilitytype>
+</appaction>

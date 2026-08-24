@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{33488aa5-382a-ef11-840a-002248822253}" Name="Type Of Allocation For A DA" Description="Click To Add Description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/TypeOfAllocationForADA-33488AA5-382A-EF11-840A-002248822253.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>2</Category>
+  <Mode>1</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>0</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <RunAs>1</RunAs>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>2</ProcessTriggerScope>
+  <PrimaryEntity>aglcm003_zulaa_demandedachat</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Type Of Allocation For A DA" />
+    <LocalizedName languagecode="1036" description="Type d’allocation pour une DA" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description languagecode="1033" description="Click To Add Description" />
+    <Description languagecode="1036" description="Cliquez pour ajouter une description" />
+  </Descriptions>
+</Workflow>

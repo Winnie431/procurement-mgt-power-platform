@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{7f9775bf-e11c-4d89-899d-cd399b89a96f}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{b72b4c55-9043-4226-9329-434909ba77d8}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{2e36a260-65d4-4a1e-bd69-c0c5d1aa5fa6}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{e5b1c49d-e420-4334-8038-9f70f62cbd11}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Workflow definition version" languagecode="1033" />
+                        </labels>
+                        <control id="ablnstd_wfdefversionid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ablnstd_wfdefversionid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{28c1c344-f81f-4e07-8f8f-a2df26272867}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="ablnstd_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="ablnstd_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{dea8f2c3-8b8f-4570-bf28-69fc62a06cab}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Approver role" languagecode="1033" />
+                        </labels>
+                        <control id="ablnstd_approverroleid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ablnstd_approverroleid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d5b80bb7-5a21-4636-b5bd-cd6880261a57}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Previous stage" languagecode="1033" />
+                        </labels>
+                        <control id="ablnstd_previousstageid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ablnstd_previousstageid" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{1ef305e4-692c-448e-93fd-b634a44a10b2}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{aeba24d1-c89a-4adb-9d68-84b309c02575}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{4474ada8-4511-4b52-88b3-a9a5c4d043c6}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{c8d72444-c07f-4620-b5b5-5bae86bfca9c}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{d250cc2b-485a-4230-8e3b-6891343d9f26}" colspan="1" rowspan="1">
+              <labels>
+                <label description="Owner" languagecode="1033" />
+              </labels>
+              <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{3f669a62-6433-4809-adfb-bbedd00f4449}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{42ac6a5d-02f1-4d43-bc64-46217359cb26}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{bd8b5f35-6e1c-4235-b79a-6d6274615f3e}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{0cccb048-3521-4bc6-89c7-78366b94bfb1}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

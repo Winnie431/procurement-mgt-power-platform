@@ -1,0 +1,32 @@
+<appaction uniquename="aglcm003__NewCommand!459e819ed7ea43d6bdec75e029f256c9!aglcm003_ZULAA!aglcm003_zulaa_reception!0">
+  <appmoduleid>
+    <uniquename>aglcm003_ZULAA</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="NewCommand">
+    <label description="NewCommand" languagecode="1033" />
+    <label description="Nouvelle commande" languagecode="1036" />
+  </buttonlabeltext>
+  <context>1</context>
+  <contextentity>
+    <logicalname>aglcm003_zulaa_reception</logicalname>
+  </contextentity>
+  <contextvalue>aglcm003_zulaa_reception</contextvalue>
+  <hidden>1</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>NewCommand!459e819ed7ea43d6bdec75e029f256c9</name>
+  <onclickeventformulacomponentlibraryid>
+    <name>agl_zulaadefaultcommandlibrary_cdb20</name>
+  </onclickeventformulacomponentlibraryid>
+  <onclickeventformulacomponentname>7ec5a5cd7be04c55b20f346b5394e970</onclickeventformulacomponentname>
+  <onclickeventformulafunctionname>OnSelect</onclickeventformulafunctionname>
+  <onclickeventtype>1</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100038.5000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilitytype>0</visibilitytype>
+</appaction>

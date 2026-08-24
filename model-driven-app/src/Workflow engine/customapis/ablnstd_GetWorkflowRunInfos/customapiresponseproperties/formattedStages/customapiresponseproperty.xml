@@ -1,0 +1,8 @@
+<customapiresponseproperty uniquename="formattedStages">
+  <displayname default="GetWorkflowRunInfos-Out-formattedStages">
+    <label description="GetWorkflowRunInfos-Out-formattedStages" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <name>GetWorkflowRunInfos-Out-formattedStages</name>
+  <type>10</type>
+</customapiresponseproperty>

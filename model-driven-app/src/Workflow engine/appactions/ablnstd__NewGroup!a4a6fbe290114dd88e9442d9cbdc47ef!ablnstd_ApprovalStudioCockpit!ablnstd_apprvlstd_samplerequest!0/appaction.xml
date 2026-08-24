@@ -1,0 +1,28 @@
+<appaction uniquename="ablnstd__NewGroup!a4a6fbe290114dd88e9442d9cbdc47ef!ablnstd_ApprovalStudioCockpit!ablnstd_apprvlstd_samplerequest!0">
+  <appmoduleid>
+    <uniquename>ablnstd_ApprovalStudioCockpit</uniquename>
+  </appmoduleid>
+  <context>1</context>
+  <contextentity>
+    <logicalname>ablnstd_apprvlstd_samplerequest</logicalname>
+  </contextentity>
+  <contextvalue>ablnstd_apprvlstd_samplerequest</contextvalue>
+  <grouptitle default="NewGroup">
+    <label description="NewGroup" languagecode="1033" />
+  </grouptitle>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>1</isgrouptitlehidden>
+  <location>0</location>
+  <name>NewGroup!a4a6fbe290114dd88e9442d9cbdc47ef</name>
+  <onclickeventtype>0</onclickeventtype>
+  <origin>0</origin>
+  <parentappactionid>
+    <uniquename>ablnstd__Workflow!2a2c2da4f213467cbd04ec2120316a80!ablnstd_ApprovalStudioCockpit!ablnstd_apprvlstd_samplerequest!0</uniquename>
+  </parentappactionid>
+  <sequence>10000.0000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>3</type>
+</appaction>

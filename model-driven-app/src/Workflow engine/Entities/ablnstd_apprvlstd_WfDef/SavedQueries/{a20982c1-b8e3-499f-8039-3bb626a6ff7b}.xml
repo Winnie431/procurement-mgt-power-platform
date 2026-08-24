@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{a20982c1-b8e3-499f-8039-3bb626a6ff7b}</savedqueryid>
+    <layoutxml>
+      <grid name="ablnstd_apprvlstd_wfdefs" jump="ablnstd_name" select="1" icon="1" preview="1">
+        <row name="ablnstd_apprvlstd_wfdef" id="ablnstd_apprvlstd_wfdefid">
+          <cell name="ablnstd_name" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>2</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ablnstd_apprvlstd_wfdef">
+          <attribute name="ablnstd_apprvlstd_wfdefid" />
+          <attribute name="ablnstd_name" />
+          <attribute name="createdon" />
+          <order attribute="ablnstd_name" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Workflow definition Associated View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

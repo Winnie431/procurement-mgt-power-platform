@@ -1,0 +1,45 @@
+<appaction uniquename="aglcm003__Mscrm.Form.{!EntityLogicalName}.SaveAsComplete!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0">
+  <appmoduleid>
+    <uniquename>aglcm003_ZULAA</uniquename>
+  </appmoduleid>
+  <buttonaccessibilitytext default="Mark Complete">
+    <label description="Mark Complete" languagecode="1033" />
+    <label description="Enregistrer le EntityLogicalNameMarker et changer le statut en Terminé" languagecode="1036" />
+  </buttonaccessibilitytext>
+  <buttonlabeltext default="Mark Complete">
+    <label description="Mark Complete" languagecode="1033" />
+    <label description="Marquer comme terminé" languagecode="1036" />
+  </buttonlabeltext>
+  <buttontooltipdescription default="Save The {EntityLogicalNameMarker} And Change The Status To Completed.">
+    <label description="Save The {EntityLogicalNameMarker} And Change The Status To Completed." languagecode="1033" />
+    <label description="Enregistrer le EntityLogicalNameMarker et changer le statut en Terminé" languagecode="1036" />
+  </buttontooltipdescription>
+  <buttontooltiptitle default="Mark Complete">
+    <label description="Mark Complete" languagecode="1033" />
+    <label description="Marquer comme terminé" languagecode="1036" />
+  </buttontooltiptitle>
+  <context>1</context>
+  <contextentity>
+    <logicalname>aglcm003_zulaa_expressiondebesoin</logicalname>
+  </contextentity>
+  <contextvalue>aglcm003_zulaa_expressiondebesoin</contextvalue>
+  <fonticon>$clientsvg:Accept</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>Mscrm.Form.{!EntityLogicalName}.SaveAsComplete</name>
+  <onclickeventjavascriptfunctionname>XrmCore.Commands.Save.saveAsCompleted</onclickeventjavascriptfunctionname>
+  <onclickeventjavascriptparameters>[]</onclickeventjavascriptparameters>
+  <onclickeventjavascriptwebresourceid>
+    <webresourceid>adea1aea-b2aa-e611-80d6-00155d88c343</webresourceid>
+  </onclickeventjavascriptwebresourceid>
+  <onclickeventtype>2</onclickeventtype>
+  <origin>2</origin>
+  <sequence>100100035.0000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilitytype>2</visibilitytype>
+</appaction>

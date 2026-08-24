@@ -1,0 +1,8 @@
+<customapiresponseproperty uniquename="workflowRunName">
+  <displayname default="GetWorkflowRunInfos-Out-workflowRunName">
+    <label description="GetWorkflowRunInfos-Out-workflowRunName" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <name>GetWorkflowRunInfos-Out-workflowRunName</name>
+  <type>10</type>
+</customapiresponseproperty>

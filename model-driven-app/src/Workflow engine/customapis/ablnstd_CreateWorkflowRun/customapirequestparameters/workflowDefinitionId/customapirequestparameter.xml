@@ -1,0 +1,9 @@
+<customapirequestparameter uniquename="workflowDefinitionId">
+  <displayname default="CreateWorkflowRun-In-workflowDefinitionId">
+    <label description="CreateWorkflowRun-In-workflowDefinitionId" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>CreateWorkflowRun-In-workflowDefinitionId</name>
+  <type>10</type>
+</customapirequestparameter>

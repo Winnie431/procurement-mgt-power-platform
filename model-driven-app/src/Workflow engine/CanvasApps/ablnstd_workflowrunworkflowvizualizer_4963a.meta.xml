@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>ablnstd_workflowrunworkflowvizualizer_4963a</Name>
+  <AppVersion>2024-07-16T14:24:12Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.24071.7.0</CreatedByClientVersion>
+  <MinClientVersion>3.24071.7.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","showStatusBar":"false","publisherVersion":"3.24071.7","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"false","isUnifiedRootApp":"false","sienaVersion":"20240626T110837Z-3.24063.22.0"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
+  <DisplayName>Workflow Run - Workflow vizualizer</DisplayName>
+  <Description xsi:nil="true"></Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
+  <Publisher xsi:nil="true"></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{}</ConnectionReferences>
+  <DatabaseReferences>{"default.cds":{"databaseDetails":{"referenceType":"Environmental","environmentName":"default.cds","overrideValues":{"status":"NotSpecified","environmentVariableName":""}},"dataSources":{"environment_39a902ba":{"entitySetName":"Environment","logicalName":"environment_39a902ba"}}}}</DatabaseReferences>
+  <AppComponents>[]</AppComponents>
+  <AppComponentDependencies>[{"appComponentName":"90dc0abf89374070a796c742677fe91d","appName":"e28062d8-0f9e-44b4-ad76-c165c6b9729b","appComponentLibraryName":"858d53d0-5413-4744-a963-8d8ddaad4ec7","appComponentLibraryVersion":"2024-07-16T14:21:25Z","appComponentLibraryLogicalName":"ablnstd_approvalstudiocanvascomponents_c3f5b","environmentName":"c036862a-c424-4612-b50d-71e5bb0c3046"}]</AppComponentDependencies>
+  <CanConsumeAppPass>0</CanConsumeAppPass>
+  <CanvasAppType>2</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[{"logicalname":"ablnstd_approvalstudiocanvascomponents_c3f5b","componenttype":300,"componenttypeplatformname":"CanvasApp"}]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/ablnstd_workflowrunworkflowvizualizer_4963a_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/ablnstd_workflowrunworkflowvizualizer_4963a_DocumentUri.msapp</DocumentUri>
+  <AdditionalUris>
+    <AdditionalUri>/CanvasApps/ablnstd_workflowrunworkflowvizualizer_4963a_AdditionalUris0_identity.json</AdditionalUri>
+  </AdditionalUris>
+</CanvasApp>

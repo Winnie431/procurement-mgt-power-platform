@@ -1,0 +1,15 @@
+<environmentvariabledefinition schemaname="aglcm003_Ev_File_TemplateFichierSortieStock">
+  <description default="Template Of The Stock Output File">
+    <label description="Template Of The Stock Output File" languagecode="1033" />
+    <label description="Modèle du fichier de sortie de stock" languagecode="1036" />
+  </description>
+  <displayname default="Ev_File_TemplateFichierSortieStock">
+    <label description="Ev_File_TemplateFichierSortieStock" languagecode="1033" />
+    <label description="Ev_File_TemplateFichierSortieStock" languagecode="1036" />
+  </displayname>
+  <introducedversion>1.0.0.1</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

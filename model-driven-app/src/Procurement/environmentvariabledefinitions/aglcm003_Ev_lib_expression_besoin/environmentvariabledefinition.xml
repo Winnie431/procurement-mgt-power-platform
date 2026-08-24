@@ -1,0 +1,11 @@
+<environmentvariabledefinition schemaname="aglcm003_Ev_lib_expression_besoin">
+  <displayname default="Ev_Lib_Need_Expression">
+    <label description="Ev_Lib_Need_Expression" languagecode="1033" />
+    <label description="Ev_Lib_Need_Expression" languagecode="1036" />
+  </displayname>
+  <introducedversion>1.0.0.1</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

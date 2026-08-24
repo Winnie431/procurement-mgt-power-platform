@@ -1,0 +1,50 @@
+<appaction uniquename="aglcm003__Clturer!b02102aa5ca5424d9266e2306f9af3fd!aglcm003_ZULAA!aglcm003_zulaa_demandesortiestock!0">
+  <appmoduleid>
+    <uniquename>aglcm003_ZULAA</uniquename>
+  </appmoduleid>
+  <buttonaccessibilitytext default="Close The Stock Request">
+    <label description="Close The Stock Request" languagecode="1033" />
+    <label description="Fermer la demande de stock" languagecode="1036" />
+  </buttonaccessibilitytext>
+  <buttonlabeltext default="Close">
+    <label description="Close" languagecode="1033" />
+    <label description="Fermer" languagecode="1036" />
+  </buttonlabeltext>
+  <buttontooltipdescription default="Close The Stock Request">
+    <label description="Close The Stock Request" languagecode="1033" />
+    <label description="Fermer la demande de stock" languagecode="1036" />
+  </buttontooltipdescription>
+  <buttontooltiptitle default="Close The Stock Request">
+    <label description="Close The Stock Request" languagecode="1033" />
+    <label description="Fermer la demande de stock" languagecode="1036" />
+  </buttontooltiptitle>
+  <context>1</context>
+  <contextentity>
+    <logicalname>aglcm003_zulaa_demandesortiestock</logicalname>
+  </contextentity>
+  <contextvalue>aglcm003_zulaa_demandesortiestock</contextvalue>
+  <fonticon>CloseQuote</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>Clturer!b02102aa5ca5424d9266e2306f9af3fd</name>
+  <onclickeventformulacomponentlibraryid>
+    <name>agl_zulaadefaultcommandlibrary_cdb20</name>
+  </onclickeventformulacomponentlibraryid>
+  <onclickeventformulacomponentname>15e791350275413ba985452560b1a596</onclickeventformulacomponentname>
+  <onclickeventformulafunctionname>OnSelect</onclickeventformulafunctionname>
+  <onclickeventtype>1</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100040.0000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilityformulacomponentlibraryid>
+    <name>agl_zulaadefaultcommandlibrary_cdb20</name>
+  </visibilityformulacomponentlibraryid>
+  <visibilityformulacomponentname>15e791350275413ba985452560b1a596</visibilityformulacomponentname>
+  <visibilityformulafunctionname>Visible</visibilityformulafunctionname>
+  <visibilitytype>1</visibilitytype>
+</appaction>

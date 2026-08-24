@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml version="9.2.24072.168" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SolutionManifest>
+    <UniqueName>apprvlstd</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="Approval Studio" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions />
+    <Version>1.2.240724.1</Version>
+    <Managed>0</Managed>
+    <Publisher>
+      <UniqueName>AbalonStudio</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="Abalon Studio" languagecode="1033" />
+      </LocalizedNames>
+      <Descriptions />
+      <EMailAddress xsi:nil="true"></EMailAddress>
+      <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
+      <CustomizationPrefix>ablnstd</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>85184</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="1" schemaName="ablnstd_apprvlstd_samplerequest" behavior="0" />
+      <RootComponent type="1" schemaName="ablnstd_apprvlstd_samplerequest2" behavior="0" />
+      <RootComponent type="1" schemaName="ablnstd_apprvlstd_wfdef" behavior="0" />
+      <RootComponent type="1" schemaName="ablnstd_apprvlstd_wfdefversion" behavior="0" />
+      <RootComponent type="1" schemaName="ablnstd_apprvlstd_wfdefversionrole" behavior="0" />
+      <RootComponent type="1" schemaName="ablnstd_apprvlstd_wfdefversionstage" behavior="0" />
+      <RootComponent type="1" schemaName="ablnstd_apprvlstd_wfdefversionstageoutcome" behavior="0" />
+      <RootComponent type="1" schemaName="ablnstd_apprvlstd_wfrun" behavior="0" />
+      <RootComponent type="1" schemaName="ablnstd_apprvlstd_wfrunapproval" behavior="0" />
+      <RootComponent type="1" schemaName="ablnstd_apprvlstd_wfrunapprover" behavior="0" />
+      <RootComponent type="1" schemaName="systemuser" behavior="1" />
+      <RootComponent type="20" id="{3260f1ab-1039-ef11-a316-000d3a78bcff}" behavior="0" />
+      <RootComponent type="20" id="{52ba3978-1039-ef11-a316-000d3a78bcff}" behavior="0" />
+      <RootComponent type="29" id="{243113fd-aaf8-ee11-a1fe-000d3ae76128}" behavior="0" />
+      <RootComponent type="29" id="{3d64de25-5afe-ee11-9f89-000d3ae76128}" behavior="0" />
+      <RootComponent type="29" id="{a7c34991-4c01-ef11-9f89-000d3ae76128}" behavior="0" />
+      <RootComponent type="29" id="{cc9420d4-60f3-ee11-a1fe-000d3ae71c4f}" behavior="0" />
+      <RootComponent type="29" id="{e77b5891-98f2-ee11-a1fd-000d3ae71c4f}" behavior="0" />
+      <RootComponent type="29" id="{eff556e7-97f2-ee11-a1fd-000d3ae71c4f}" behavior="0" />
+      <RootComponent type="29" id="{fd769aad-a5f8-ee11-a1fe-000d3ae76128}" behavior="0" />
+      <RootComponent type="300" schemaName="ablnstd_approvalresponsepopup_d1b22" behavior="0" />
+      <RootComponent type="300" schemaName="ablnstd_approvalstudiocanvascomponents_c3f5b" behavior="0" />
+      <RootComponent type="300" schemaName="ablnstd_approvalstudiocockpitdefaultcommandlibrary_759d1" behavior="0" />
+      <RootComponent type="300" schemaName="ablnstd_approvalstudiosamplerequests_d1df3" behavior="0" />
+      <RootComponent type="300" schemaName="ablnstd_samplerequestapprovalresponsemodal_87671" behavior="0" />
+      <RootComponent type="300" schemaName="ablnstd_samplerequestworkflowvizualizer_66ec6" behavior="0" />
+      <RootComponent type="300" schemaName="ablnstd_workflowrunworkflowvizualizer_4963a" behavior="0" />
+      <RootComponent type="60" id="{6062a1e7-4739-ef11-a316-000d3a78bcff}" behavior="0" />
+      <RootComponent type="61" schemaName="ablnstd_fluentoutlinedicon_approval" behavior="0" />
+      <RootComponent type="61" schemaName="ablnstd_fluentoutlinedicon_organization" behavior="0" />
+      <RootComponent type="61" schemaName="ablnstd_fluentoutlinedicon_sned" behavior="0" />
+      <RootComponent type="61" schemaName="ablnstd_fluentoutlinedicon_textheader1" behavior="0" />
+      <RootComponent type="61" schemaName="ablnstd_fluentoutlinedicon_textheader2" behavior="0" />
+      <RootComponent type="62" schemaName="ablnstd_ApprovalStudioCockpit" behavior="0" />
+      <RootComponent type="80" schemaName="ablnstd_ApprovalStudioCockpit" behavior="0" />
+      <RootComponent type="9" schemaName="ablnstd_ablnstd_apprvlstd_runstatus" behavior="0" />
+      <RootComponent type="9" schemaName="ablnstd_apprvlstd_approvalstatus" behavior="0" />
+      <RootComponent type="9" schemaName="ablnstd_apprvlstd_outcometype" behavior="0" />
+      <RootComponent type="9" schemaName="ablnstd_apprvlstd_samplerequeststatus" behavior="0" />
+      <RootComponent type="9" schemaName="ablnstd_apprvlstd_startingstagetype" behavior="0" />
+      <RootComponent type="9" schemaName="ablnstd_apprvlstd_versionstate" behavior="0" />
+      <RootComponent type="91" id="{3d45fb45-2392-4b05-b961-3a9e9824ffad}" schemaName="ApprovalStudioPlugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=675fe8dec5ff4af7" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="300" schemaName="ablnstd_abalonstudiocanvascomponents_44617" displayName="Abalon Studio - Canvas Components_202406250155" solution="CanvasCustomPagesTemplates (0.1.240625.1)" />
+        <Dependent type="300" schemaName="ablnstd_approvalstudiosamplerequests_d1df3" displayName="Approval Studio - Sample Requests" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="ablnstd_opencustompage_dialog_fromform" displayName="ablnstd_opencustompage_dialog_fromform" solution="fx_CustomPageOpeners (1.0.230816.0)" />
+        <Dependent type="appaction" displayName="ablnstd__Respond!55a5702278234629aa754f3918b81b90!ablnstd_ApprovalStudioCockpit!ablnstd_apprvlstd_samplerequest!0" id.uniquename="ablnstd__Respond!55a5702278234629aa754f3918b81b90!ablnstd_ApprovalStudioCockpit!ablnstd_apprvlstd_samplerequest!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="ablnstd_opencustompage_dialog_fromform" displayName="ablnstd_opencustompage_dialog_fromform" solution="fx_CustomPageOpeners (1.0.230816.0)" />
+        <Dependent type="appaction" displayName="ablnstd__Respond!8c261b26e9b648d5b192cd81b2280a72!ablnstd_ApprovalStudioCockpit!ablnstd_apprvlstd_wfrunapproval!0" id.uniquename="ablnstd__Respond!8c261b26e9b648d5b192cd81b2280a72!ablnstd_ApprovalStudioCockpit!ablnstd_apprvlstd_wfrunapproval!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="ablnstd_opencustompage_dialog_fromform" displayName="ablnstd_opencustompage_dialog_fromform" solution="fx_CustomPageOpeners (1.0.230816.0)" />
+        <Dependent type="appaction" displayName="ablnstd__ViewWorkflow!d027fa7eab93428e87c1b109b2091ec9!ablnstd_ApprovalStudioCockpit!ablnstd_apprvlstd_wfrun!0" id.uniquename="ablnstd__ViewWorkflow!d027fa7eab93428e87c1b109b2091ec9!ablnstd_ApprovalStudioCockpit!ablnstd_apprvlstd_wfrun!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="ablnstd_opencustompage_dialog_fromform" displayName="ablnstd_opencustompage_dialog_fromform" solution="fx_CustomPageOpeners (1.0.230816.0)" />
+        <Dependent type="appaction" displayName="ablnstd__Vizualise!8bd87fa3ae0945c9a5380092f31d16b0!ablnstd_ApprovalStudioCockpit!ablnstd_apprvlstd_samplerequest!0" id.uniquename="ablnstd__Vizualise!8bd87fa3ae0945c9a5380092f31d16b0!ablnstd_ApprovalStudioCockpit!ablnstd_apprvlstd_samplerequest!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Images/AppModule_Default_Icon.png" displayName="msdyn_/Images/AppModule_Default_Icon.png" solution="AppModuleWebResources (2.5)" />
+        <Dependent type="80" schemaName="ablnstd_ApprovalStudioCockpit" displayName="Approval Studio Cockpit" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2407.2019)" />
+        <Dependent type="60" displayName="Published version Form" parentDisplayName="Workflow definition version" id="{4b066901-90f2-ee11-a1fd-000d3ae71c4f}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2407.2019)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow definition version" id="{aaa108ff-2642-45df-92a8-03e0223e3cb7}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.ModelForm.ModelFormControl" displayName="MscrmControls.ModelForm.ModelFormControl" solution="BaseCustomControlsCore (9.0.2407.2019)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow definition" id="{7c94a398-1543-4243-a1fd-b161b8e72bcf}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="SettingDefinition" displayName="AppChannel" solution="msdyn_AppFrameworkInfraExtensions (1.0.0.11)" id.uniquename="AppChannel" />
+        <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=ablnstd_ApprovalStudioCockpit,settingdefinitionid.uniquename=AppChannel" id.parentappmoduleid.uniquename="ablnstd_ApprovalStudioCockpit" id.settingdefinitionid.uniquename="AppChannel" />
+      </MissingDependency>
+    </MissingDependencies>
+  </SolutionManifest>
+</ImportExportXml>

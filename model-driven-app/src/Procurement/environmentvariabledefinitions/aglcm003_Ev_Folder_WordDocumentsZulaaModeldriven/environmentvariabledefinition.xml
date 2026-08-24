@@ -1,0 +1,15 @@
+<environmentvariabledefinition schemaname="aglcm003_Ev_Folder_WordDocumentsZulaaModeldriven">
+  <description default="Document Library To Be Filled In For Document Templates">
+    <label description="Document Library To Be Filled In For Document Templates" languagecode="1033" />
+    <label description="Bibliothèque de documents à compléter pour les modèles de documents" languagecode="1036" />
+  </description>
+  <displayname default="Ev_Folder_WordDocumentsZulaaModeldriven">
+    <label description="Ev_Folder_WordDocumentsZulaaModeldriven" languagecode="1033" />
+    <label description="Ev_Folder_WordDocumentsZulaaModeldriven" languagecode="1036" />
+  </displayname>
+  <introducedversion>1.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

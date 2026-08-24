@@ -1,0 +1,38 @@
+<appaction uniquename="aglcm003__AnnulerleBC!ad7943cab9914922bf10204388d4f15e!aglcm003_ZULAA!aglcm003_zulaa_bondecommande!0">
+  <appmoduleid>
+    <uniquename>aglcm003_ZULAA</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="Cancel The BC">
+    <label description="Cancel The BC" languagecode="1033" />
+    <label description="Annuler le BC" languagecode="1036" />
+  </buttonlabeltext>
+  <context>1</context>
+  <contextentity>
+    <logicalname>aglcm003_zulaa_bondecommande</logicalname>
+  </contextentity>
+  <contextvalue>aglcm003_zulaa_bondecommande</contextvalue>
+  <fonticon>Abandon</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>AnnulerleBC!ad7943cab9914922bf10204388d4f15e</name>
+  <onclickeventformulacomponentlibraryid>
+    <name>agl_zulaadefaultcommandlibrary_cdb20</name>
+  </onclickeventformulacomponentlibraryid>
+  <onclickeventformulacomponentname>8456b0da5b774e5d90d13f711ddefa2a</onclickeventformulacomponentname>
+  <onclickeventformulafunctionname>OnSelect</onclickeventformulafunctionname>
+  <onclickeventtype>1</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100015.0000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilityformulacomponentlibraryid>
+    <name>agl_zulaadefaultcommandlibrary_cdb20</name>
+  </visibilityformulacomponentlibraryid>
+  <visibilityformulacomponentname>8456b0da5b774e5d90d13f711ddefa2a</visibilityformulacomponentname>
+  <visibilityformulafunctionname>Visible</visibilityformulafunctionname>
+  <visibilitytype>1</visibilitytype>
+</appaction>

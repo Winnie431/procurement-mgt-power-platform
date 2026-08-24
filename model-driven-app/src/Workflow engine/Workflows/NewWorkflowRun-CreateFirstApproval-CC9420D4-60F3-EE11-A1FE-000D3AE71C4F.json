@@ -1,0 +1,239 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps_1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "ablnstd_sharedcommondataserviceforapps_2441c"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "metadata": {
+            "operationMetadataId": "f5db70c0-e0bc-4896-8cfd-0ee5fc10ad28"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_1",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "ablnstd_apprvlstd_wfrun",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "InitStartingStageId": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "f9178ab4-67db-45eb-9168-34e516be00b8"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "StartingStageId",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "StartingFirstStage": {
+          "actions": {
+            "ListFirstStage": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "22ad2873-073f-4979-bfb9-29f0e9b6d9b2"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_1",
+                  "operationId": "ListRecords",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "ablnstd_apprvlstd_wfdefversionstages",
+                  "$select": "_ablnstd_approverroleid_value,ablnstd_apprvlstd_wfdefversionstageid,ablnstd_name,_ablnstd_previousstageid_value,_ablnstd_wfdefversionid_value",
+                  "$filter": "(_ablnstd_previousstageid_value eq null and _ablnstd_wfdefversionid_value eq '@{triggerOutputs()?['body/_ablnstd_wfdefversionid_value']}')",
+                  "$top": 1
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "SetStartingStageIdFirst": {
+              "runAfter": {
+                "ListFirstStage": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "f7f015d1-8597-4793-985e-17fac56b8f4c"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "StartingStageId",
+                "value": "@{first(outputs('ListFirstStage')?['body/value'])?['ablnstd_apprvlstd_wfdefversionstageid']}"
+              }
+            }
+          },
+          "runAfter": {
+            "InitStartingStageId": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "GetStartingStageSpecific": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "ad04a58b-0f08-487d-8009-2ca5af2e0ec0"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps_1",
+                    "operationId": "GetItem",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "ablnstd_apprvlstd_wfdefversionstages",
+                    "recordId": "@triggerOutputs()?['body/_ablnstd_specificstartingstageid_value']",
+                    "$select": "_ablnstd_approverroleid_value,ablnstd_apprvlstd_wfdefversionstageid,ablnstd_name,_ablnstd_previousstageid_value,_ablnstd_wfdefversionid_value"
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              },
+              "SetStartingStageIdSpecific": {
+                "runAfter": {
+                  "GetStartingStageSpecific": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "7e0e7c16-1823-45df-a420-3dfa08e2a849"
+                },
+                "type": "SetVariable",
+                "inputs": {
+                  "name": "StartingStageId",
+                  "value": "@triggerOutputs()?['body/_ablnstd_specificstartingstageid_value']"
+                }
+              }
+            }
+          },
+          "expression": {
+            "equals": [
+              "@triggerOutputs()?['body/ablnstd_startingstagetypecode']",
+              851840000
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "65554c81-2ba4-466f-870b-d3d6415e864e"
+          },
+          "type": "If"
+        },
+        "ListNewStageInfos": {
+          "runAfter": {
+            "StartingFirstStage": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "90b19fdd-649d-489d-8c61-a6c6af7112a8"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_1",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "ablnstd_apprvlstd_wfdefversionstages",
+              "fetchXml": "<fetch>\n  <entity name=\"ablnstd_apprvlstd_wfdefversionstage\">\n    <attribute name=\"ablnstd_apprvlstd_wfdefversionstageid\" />\n    <attribute name=\"ablnstd_name\" />\n    <filter>\n      <condition attribute=\"ablnstd_apprvlstd_wfdefversionstageid\" operator=\"eq\" value=\"@{variables('StartingStageId')}\" />\n    </filter>\n    <link-entity name=\"ablnstd_apprvlstd_wfdefversionrole\" from=\"ablnstd_apprvlstd_wfdefversionroleid\" to=\"ablnstd_approverroleid\" alias=\"defrole\">\n      <attribute name=\"ablnstd_apprvlstd_wfdefversionroleid\" />\n      <link-entity name=\"ablnstd_apprvlstd_wfrunapprover\" from=\"ablnstd_wfdefversionroleid\" to=\"ablnstd_apprvlstd_wfdefversionroleid\" alias=\"runapprover\">\n        <attribute name=\"ablnstd_apprvlstd_wfrunapproverid\" />\n        <attribute name=\"ablnstd_workflowrunid\" />\n        <attribute name=\"ownerid\" />\n        <filter>\n          <condition attribute=\"ablnstd_workflowrunid\" operator=\"eq\" value=\"@{triggerOutputs()?['body/ablnstd_apprvlstd_wfrunid']}\" uitype=\"ablnstd_apprvlstd_wfrun\" />\n        </filter>\n      </link-entity>\n    </link-entity>\n  </entity>\n</fetch>"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "CreateRunApproval": {
+          "runAfter": {
+            "ListNewStageInfos": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "b13a06b1-6bfd-44a3-b9fb-ff7908bd1c06"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_1",
+              "operationId": "CreateRecord",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "ablnstd_apprvlstd_wfrunapprovals",
+              "item/ablnstd_ApproverRoleId@odata.bind": "ablnstd_apprvlstd_wfrunapprovers(@{first(outputs('ListNewStageInfos')?['body/value'])?['runapprover.ablnstd_apprvlstd_wfrunapproverid']})",
+              "item/ablnstd_name": "@first(outputs('ListNewStageInfos')?['body/value'])?['ablnstd_name']",
+              "item/ablnstd_StageId@odata.bind": "ablnstd_apprvlstd_wfdefversionstages(@{variables('StartingStageId')})",
+              "item/ablnstd_WorkflowRunId@odata.bind": "ablnstd_apprvlstd_wfruns(@{triggerOutputs()?['body/ablnstd_apprvlstd_wfrunid']})",
+              "item/ablnstd_approvalstatuscode": 851840000,
+              "item/ownerid@odata.bind": "@{first(outputs('ListNewStageInfos')?['body/value'])?['runapprover.ownerid@Microsoft.Dynamics.CRM.lookuplogicalname']}s(@{first(outputs('ListNewStageInfos')?['body/value'])?['runapprover.ownerid']})"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "UpdateRunLatestApproval": {
+          "runAfter": {
+            "CreateRunApproval": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "a17facc8-50b7-496e-b7e3-9465adf214fa"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_1",
+              "operationId": "UpdateRecord",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "ablnstd_apprvlstd_wfruns",
+              "recordId": "@triggerOutputs()?['body/ablnstd_apprvlstd_wfrunid']",
+              "item/ablnstd_LatestApprovalId@odata.bind": "ablnstd_apprvlstd_wfrunapprovals(@{outputs('CreateRunApproval')?['body/ablnstd_apprvlstd_wfrunapprovalid']})"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

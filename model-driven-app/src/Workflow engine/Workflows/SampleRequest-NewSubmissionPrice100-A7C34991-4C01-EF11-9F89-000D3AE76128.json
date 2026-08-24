@@ -1,0 +1,118 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps_1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "ablnstd_sharedcommondataserviceforapps_2441c"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "metadata": {
+            "operationMetadataId": "ffeaa916-e6ab-43d3-b7e6-0f5e5880e442"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_1",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 4,
+              "subscriptionRequest/entityname": "ablnstd_apprvlstd_samplerequest",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "ablnstd_requeststatus",
+              "subscriptionRequest/filterexpression": "(ablnstd_totalprice ge 100 and ablnstd_requeststatus eq 851840001)"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "RequestStatusApprovalOngoing": {
+          "actions": {
+            "CreateWorkflowRun": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "9539add6-8b96-4878-9959-ce477049664b"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_1",
+                  "operationId": "PerformUnboundAction",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "actionName": "ablnstd_CreateWorkflowRun",
+                  "item/workflowDefinitionId": "cd2a5b4d-59fe-ee11-9f89-000d3ae76128",
+                  "item/workflowRunName": "@triggerOutputs()?['body/ablnstd_name']",
+                  "item/runApproversJSON": "[\n {\n    \"approverCode\": \"manager\",\n    \"approverType\": \"user\",\n    \"approverId\": \"6e06f7ca-a863-eb11-b0b0-000d3a898f98\"\n  },\n {\n    \"approverCode\": \"direction\",\n    \"approverType\": \"team\",\n    \"approverId\": \"22fb7935-bffc-ee11-9f89-000d3ae76128\"\n  }\n]",
+                  "item/regardingType": "ablnstd_apprvlstd_samplerequest",
+                  "item/regardingId": "@triggerOutputs()?['body/ablnstd_apprvlstd_samplerequestid']"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "UpdateRequestWithWFRun": {
+              "runAfter": {
+                "CreateWorkflowRun": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "1bd946bb-7430-412b-ad70-31492ba0be2b"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_1",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "ablnstd_apprvlstd_samplerequests",
+                  "recordId": "@triggerOutputs()?['body/ablnstd_apprvlstd_samplerequestid']",
+                  "item/ablnstd_CurrentWorkflowRunId@odata.bind": "ablnstd_apprvlstd_wfruns(@{outputs('CreateWorkflowRun')?['body/workflowRunId']})"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {},
+          "expression": {
+            "equals": [
+              "@triggerOutputs()?['body/ablnstd_requeststatus']",
+              851840001
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "da6d7a88-a415-446f-97f5-c891baf42351"
+          },
+          "type": "If"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

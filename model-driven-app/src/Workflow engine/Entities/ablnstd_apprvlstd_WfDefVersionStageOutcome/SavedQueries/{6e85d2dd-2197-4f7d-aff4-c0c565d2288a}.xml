@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{6e85d2dd-2197-4f7d-aff4-c0c565d2288a}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="ablnstd_name" select="1" icon="1" preview="1">
+        <row name="result" id="ablnstd_apprvlstd_wfdefversionstageoutcomeid">
+          <cell name="ablnstd_name" width="195" />
+          <cell name="ablnstd_typecode" width="223" />
+          <cell name="ablnstd_gotostageid" width="104" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ablnstd_apprvlstd_wfdefversionstageoutcome">
+          <attribute name="ablnstd_apprvlstd_wfdefversionstageoutcomeid" />
+          <attribute name="ablnstd_name" />
+          <order attribute="ablnstd_name" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="ablnstd_typecode" />
+          <attribute name="ablnstd_gotostageid" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Workflow definition version stage outcomes" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

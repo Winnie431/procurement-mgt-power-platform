@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PluginAssembly FullName="ApprovalStudioPlugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=675fe8dec5ff4af7" PluginAssemblyId="3d45fb45-2392-4b05-b961-3a9e9824ffad" CustomizationLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsolationMode>2</IsolationMode>
+  <SourceType>0</SourceType>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <FileName>/PluginAssemblies/ApprovalStudioPlugins-3D45FB45-2392-4B05-B961-3A9E9824FFAD/ApprovalStudioPlugins.dll</FileName>
+  <PluginTypes>
+    <PluginType AssemblyQualifiedName="ApprovalStudioPlugins.CreateWorkflowRun, ApprovalStudioPlugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=675fe8dec5ff4af7" PluginTypeId="1ddfae16-c546-4164-86f3-ca5e39720f0e" Name="ApprovalStudioPlugins.CreateWorkflowRun">
+      <FriendlyName>aa76f2d9-c646-41da-9e87-1c81607bb6e8</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="ApprovalStudioPlugins.GetWorkflowRunInfos, ApprovalStudioPlugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=675fe8dec5ff4af7" PluginTypeId="63536333-8a2b-45c3-a4b1-a9ab10bc040e" Name="ApprovalStudioPlugins.GetWorkflowRunInfos">
+      <FriendlyName>dcc706ab-4001-4a2f-ab19-be1674f59381</FriendlyName>
+    </PluginType>
+  </PluginTypes>
+</PluginAssembly>
