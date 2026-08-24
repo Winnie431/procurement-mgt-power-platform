@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{2da1bff9-3e3c-ee11-bdf4-000d3a672530}</WebResourceId>
+  <Name>ablnstd_opencustompage_fullpage_frommaingrid</Name>
+  <DisplayName>OpenCustomPage - FullPage - FromMainGrid</DisplayName>
+  <WebResourceType>3</WebResourceType>
+  <IntroducedVersion>0.1.0.0</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/ablnstd_opencustompage_fullpage_frommaingrid2DA1BFF9-3E3C-EE11-BDF4-000D3A672530</FileName>
+</WebResource>

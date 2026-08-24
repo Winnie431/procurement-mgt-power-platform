@@ -1,0 +1,54 @@
+/*
+
+Created By : Abalon Studio
+Date : 2023-08-16
+
+Modern Command Bar Parameters
+-----------------------------
+1 : PrimaryControl
+2 : String : Custom Page Name
+3 : Boolean : Save before navigating
+*/
+
+function openCustomPage(executionContext,customPageName,saveForm)
+{
+    const formContext = executionContext;
+    const pageInput = {
+        pageType: "custom",
+        name: customPageName,
+        entityName: formContext.data.entity.getEntityName(),
+        recordId: formContext.data.entity.getId().replace('{','').replace('}',''),
+    };
+    const navigationOptions = {
+        target: 1
+    };
+
+    function navigateToCP(){
+        Xrm.Navigation.navigateTo(pageInput, navigationOptions)
+        .then()
+        .catch(
+            function (error) {
+                console.log(error.message)
+            }
+        ); 
+    }
+
+    if(saveForm === true){
+        formContext.data.save()
+            .then(
+                function(){
+                    navigateToCP();
+                },
+                function(error){
+                    console.log('Error when saving form');
+                    console.log(error.message);
+                }
+            )
+    } else{
+        navigateToCP();
+    } 
+    
+
+};
+
+

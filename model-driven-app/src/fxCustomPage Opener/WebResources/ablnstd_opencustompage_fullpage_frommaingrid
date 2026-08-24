@@ -1,0 +1,40 @@
+/*
+
+Created By : Abalon Studio
+Date : 2023-08-16
+Description : 
+
+Modern Command Bar Parameters
+-----------------------------
+1 : PrimaryControl
+2 : String : Custom Page Name
+3 : Boolean : Save before navigating
+
+*/
+
+function openCustomPage(executionContext,selectedItemIds, customPageName)
+{
+    const gridContext = executionContext;
+    const pageInput = {
+        pageType: "custom",
+        name: customPageName,
+        entityName: gridContext.getEntityName(),
+        recordId: selectedItemIds
+    };
+    const navigationOptions = {
+        target: 1
+    };
+
+    Xrm.Navigation.navigateTo(pageInput, navigationOptions)
+        .then()
+        .catch(
+            function (error) {
+                console.log(error.message)
+            }
+        ); 
+   
+    
+
+};
+
+

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{5d90ce67-343c-ee11-bdf4-000d3a672530}</WebResourceId>
+  <Name>ablnstd_opencustompage_dialog_frommaingrid</Name>
+  <DisplayName>OpenCustomPage - Dialog - FromMainGrid</DisplayName>
+  <Description>Javascript to be used in Modern Command Bar to open a  centered or sided custom page from a table main grid passing graid context and selected items id</Description>
+  <WebResourceType>3</WebResourceType>
+  <IntroducedVersion>0.1.0.0</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/ablnstd_opencustompage_dialog_frommaingrid5D90CE67-343C-EE11-BDF4-000D3A672530</FileName>
+</WebResource>

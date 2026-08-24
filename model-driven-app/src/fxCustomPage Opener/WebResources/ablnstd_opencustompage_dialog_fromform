@@ -1,0 +1,69 @@
+/*
+
+Created By : Abalon Studio
+Date : 2023-08-16
+
+Modern Command Bar Parameters
+-----------------------------
+1 : PrimaryControl
+2 : String : Custom Page Name
+3 : String : Dialog Title 
+4 : Number : Dialog Position (1 is centered, 2 is side)
+5 : Number : Width in px
+6 : Number : Height in px (used for centered only)
+7 : Boolean : Save before opening
+8 : Boolean : Refresh Form
+
+*/
+
+function openCustomPage(executionContext,customPageName,dialogTitle,dialogPosition,dialogPxWidth,dialogPxHeight,saveForm,refreshForm)
+{
+    const formContext = executionContext;
+    const pageInput = {
+        pageType: "custom",
+        name: customPageName,
+        entityName: formContext.data.entity.getEntityName(),
+        recordId: formContext.data.entity.getId().replace('{','').replace('}',''),
+    };
+    const navigationOptions = {
+        target: 2, 
+        position: dialogPosition,
+        width: {value: dialogPxWidth, unit:"px"},
+        height: {value: dialogPxHeight, unit:"px"},
+        title: dialogTitle
+    };
+
+    function navigateToCP(){
+        Xrm.Navigation.navigateTo(pageInput, navigationOptions)
+        .then(
+            function () {
+                if(refreshForm === true){
+                    formContext.data.refresh(false)
+                }
+            }
+        ).catch(
+            function (error) {
+                console.log(error.message)
+            }
+        ); 
+    }
+
+    if(saveForm === true){
+        formContext.data.save()
+            .then(
+                function(){
+                    navigateToCP();
+                },
+                function(error){
+                    console.log('Error when saving form');
+                    console.log(error.message);
+                }
+            )
+    } else{
+        navigateToCP();
+    } 
+    
+
+};
+
+

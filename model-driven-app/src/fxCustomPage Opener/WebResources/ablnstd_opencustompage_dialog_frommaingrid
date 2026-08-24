@@ -1,0 +1,54 @@
+/*
+
+Created By : Abalon Studio
+Date : 2023-08-16
+Description : 
+
+Modern Command Bar Parameters
+-----------------------------
+1 : SelectedControl
+2 : SelectedControlSelectedItemIds
+3 : String : Custom Page Name
+4 : String : Dialog Title 
+5 : Number : Dialog Position (1 is centered, 2 is side)
+6 : Number : Width in px
+7 : Number : Height in px (used for centered only)
+8 : Boolean : Refresh Grid
+
+*/
+
+function openCustomPage(executionContext,selectedItemIds,customPageName,dialogTitle,dialogPosition,dialogPxWidth,dialogPxHeight,refreshGrid)
+{
+    const gridContext = executionContext;
+    const pageInput = {
+        pageType: "custom",
+        name: customPageName,
+        entityName: gridContext.getEntityName(),
+        recordId: selectedItemIds
+    };
+    const navigationOptions = {
+        target: 2, 
+        position: dialogPosition,
+        width: {value: dialogPxWidth, unit:"px"},
+        height: {value: dialogPxHeight, unit:"px"},
+        title: dialogTitle
+    };
+
+    Xrm.Navigation.navigateTo(pageInput, navigationOptions)
+        .then(
+            function () {
+                if(refreshGrid === true){
+                    gridContext.refresh()
+                }
+            }
+        ).catch(
+            function (error) {
+                console.log(error.message)
+            }
+        ); 
+   
+    
+
+};
+
+

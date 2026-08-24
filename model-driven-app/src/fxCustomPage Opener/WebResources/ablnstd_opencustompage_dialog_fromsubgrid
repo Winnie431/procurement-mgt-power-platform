@@ -1,0 +1,81 @@
+/*
+
+Created By : Abalon Studio
+Date : 2023-08-16
+Description : 
+
+Modern Command Bar Parameters
+-----------------------------
+1 : PrimaryControl
+2 : SelectedControl
+3 : SelectedControlSelectedItemIds
+4 : String : Custom Page Name
+5 : String : Dialog Title 
+6 : Number : Dialog Position (1 is centered, 2 is side)
+7 : Number : Width in px
+8 : Number : Height in px (used for centered only)
+9 : Boolean : Save Form
+10 : Boolean : Refresh Form
+11 : Boolean : Refresh SubGrid
+
+*/
+
+function openCustomPage(executionContext,selectedControl, selectedItemIds, customPageName,dialogTitle,dialogPosition,dialogPxWidth,dialogPxHeight,saveForm,refreshForm,refreshSubGrid)
+{
+    const formContext = executionContext;
+    const gridContext = selectedControl;
+    const primaryItemId = formContext.data.entity.getId().replace('{','').replace('}','');
+    const controlName = selectedControl.getName();
+    const control = formContext.ui.controls.get(controlName);
+
+    const pageInput = {
+        pageType: "custom",
+        name: customPageName,
+        entityName: gridContext.getEntityName(),
+        recordId: primaryItemId + "#" + selectedItemIds
+    };
+    const navigationOptions = {
+        target: 2, 
+        position: dialogPosition,
+        width: {value: dialogPxWidth, unit:"px"},
+        height: {value: dialogPxHeight, unit:"px"},
+        title: dialogTitle
+    };
+
+    function navigateToCP(){
+        Xrm.Navigation.navigateTo(pageInput, navigationOptions)
+        .then(
+            function () {
+                if(refreshForm === true){
+                    formContext.data.refresh(false);
+                };
+                if(refreshSubGrid === true){
+                    control.refresh();
+                }
+            }
+        ).catch(
+            function (error) {
+                console.log(error.message);
+            }
+        ); 
+    }
+
+    if(saveForm === true){
+        formContext.data.save()
+            .then(
+                function(){
+                    navigateToCP();
+                },
+                function(error){
+                    console.log('Error when saving form');
+                    console.log(error.message);
+                }
+            )
+    } else{
+        navigateToCP();
+    } 
+    
+
+};
+
+

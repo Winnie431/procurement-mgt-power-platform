@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{89e22d3f-1e3c-ee11-bdf4-000d3a672530}</WebResourceId>
+  <Name>ablnstd_opencustompage_dialog_fromform</Name>
+  <DisplayName>OpenCustomPage - Dialog - FromForm</DisplayName>
+  <Description>Javascript to be used in Modern Command Bar to open a custom page from a Dataverse Form passing Form context, and allowing save and refresh</Description>
+  <LanguageCode>0</LanguageCode>
+  <WebResourceType>3</WebResourceType>
+  <IntroducedVersion>0.1.0.0</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/ablnstd_opencustompage_dialog_fromform89E22D3F-1E3C-EE11-BDF4-000D3A672530</FileName>
+</WebResource>
