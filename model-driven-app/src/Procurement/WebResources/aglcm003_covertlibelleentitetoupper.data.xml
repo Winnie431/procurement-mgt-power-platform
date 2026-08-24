@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{960230d4-6d6b-ef11-bfe2-000d3a4c5d02}</WebResourceId>
+  <Name>aglcm003_covertlibelleentitetoupper</Name>
+  <DisplayName>Convert Libelle entite to Upper</DisplayName>
+  <LanguageCode>0</LanguageCode>
+  <WebResourceType>3</WebResourceType>
+  <IntroducedVersion>1.0.0.1</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <DependencyXml>&lt;Dependencies&gt;&lt;Dependency componentType="WebResource"/&gt;&lt;/Dependencies&gt;</DependencyXml>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/aglcm003_covertlibelleentitetoupper960230D4-6D6B-EF11-BFE2-000D3A4C5D02</FileName>
+</WebResource>

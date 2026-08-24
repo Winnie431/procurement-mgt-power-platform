@@ -1,0 +1,56 @@
+function BlockEditAddDelete(PrimaryControl) {
+    if (!PrimaryControl) {
+        console.log(PrimaryControl);
+        return false;
+    }
+
+    // Récupère le formContext
+    var formContext = PrimaryControl.getFormContext ? PrimaryControl.getFormContext() : PrimaryControl;
+    console.log(formContext);
+
+
+    var status = formContext.getAttribute("aglcm003_statutcode").getValue();
+    console.log(status);
+    // Remplacez "new_statut" par le schema name exact de votre champ Statut
+
+    // Valeurs de votre option set à adapter :
+    var BROUILLON = 4;
+    var ANNULE = 5;
+
+    // Autorise l’action **uniquement** si le statut est Brouillon
+    return (status === BROUILLON || status === ANNULE);
+}
+function CanEditFromChildForm(executionContext) {
+    var formContext = executionContext.getFormContext();
+    console.log(formContext)
+
+    // Récupère le lookup vers la DemandeAchat parente
+    var lookup = formContext.getAttribute("aglcm003_demandeachat").getValue();
+    console.log(lookup)
+
+
+    if (!lookup || lookup.length === 0) {
+        return false;
+    }
+
+    var parentId = lookup[0].id;
+    var parentEntity = lookup[0].entityType;
+    console.log(parentEntity);
+    console.log(parentId);
+    var client = Xrm.WebApi.retrieveRecord(parentEntity, parentId, "?$select=aglcm003_statutCode");
+    return client.then(
+        function (result) {
+            var status = result["aglcm003_statutCode"];
+            console.log("GetValue status"+status)
+           
+            var BROUILLON = 4;
+            var ANNULE = 5;
+            
+            return status === BROUILLON || status === ANNULE;
+        },
+        function (error) {
+            console.error("Erreur récupération parent:", error.message);
+            return false;
+        }
+    );
+}

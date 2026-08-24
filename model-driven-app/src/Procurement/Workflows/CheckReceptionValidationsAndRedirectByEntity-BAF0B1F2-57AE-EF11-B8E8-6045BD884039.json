@@ -1,0 +1,136 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "aglcm003_CR_Dataverse_Zulaa"
+        },
+        "runtimeSource": "embedded"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "aglcm003_zulaa_reception",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "aglcm003_statut",
+              "subscriptionRequest/filterexpression": "(aglcm003_statut eq 2) or (aglcm003_statut eq 3)"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "89eae4cf-fc03-4cbd-a6f7-b41615723294"
+          }
+        }
+      },
+      "actions": {
+        "Condition_validation_reception_=_oui": {
+          "type": "If",
+          "expression": {
+            "and": [
+              {
+                "equals": [
+                  "@outputs('Get_a_row__Store_by_ID')?['body/aglcm003_isreceiptvalidation']",
+                  "@true"
+                ]
+              }
+            ]
+          },
+          "actions": {
+            "Update_a_row_reception_si_validation_=_oui": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "aglcm003_zulaa_receptions",
+                  "recordId": "@triggerOutputs()?['body/aglcm003_zulaa_receptionid']",
+                  "item/aglcm003_statutgestionnairedestock": 0
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "UpdateOnlyRecord",
+                  "connectionName": "shared_commondataserviceforapps"
+                }
+              },
+              "metadata": {
+                "operationMetadataId": "6892fc9a-5f05-4429-b8f6-b394436d07dd"
+              }
+            }
+          },
+          "else": {
+            "actions": {
+              "Update_a_row_reception-_si_validation_=_non": {
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "parameters": {
+                    "entityName": "aglcm003_zulaa_receptions",
+                    "recordId": "@triggerOutputs()?['body/aglcm003_zulaa_receptionid']",
+                    "item/aglcm003_statutquantitestock": 0
+                  },
+                  "host": {
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                    "operationId": "UpdateOnlyRecord",
+                    "connectionName": "shared_commondataserviceforapps"
+                  }
+                },
+                "metadata": {
+                  "operationMetadataId": "eb38e824-5bac-4f67-9283-7ecdb67967b0"
+                }
+              }
+            }
+          },
+          "runAfter": {
+            "Get_a_row__Store_by_ID": [
+              "SUCCEEDED"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "e2289b7c-0916-4ccd-933c-f9a5ef0cc859"
+          }
+        },
+        "Get_a_row__Store_by_ID": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "aglcm003_magasins",
+              "recordId": "@triggerOutputs()?['body/_aglcm003_magasinid_value']"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "b2d7561f-d728-45b0-88d4-b67b3f85fcc6"
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

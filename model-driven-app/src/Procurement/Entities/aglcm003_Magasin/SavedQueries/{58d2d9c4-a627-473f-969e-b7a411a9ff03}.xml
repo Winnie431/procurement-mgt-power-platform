@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>1</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{58d2d9c4-a627-473f-969e-b7a411a9ff03}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_nomentite" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_magasinid">
+          <cell name="aglcm003_nomentite" width="300" />
+          <cell name="createdon" width="125" />
+          <cell name="aglcm003_agentdereception" width="147" />
+          <cell name="aglcm003_demandeursortieetretourstock" width="257" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>4</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_magasin">
+          <attribute name="aglcm003_magasinid" />
+          <attribute name="aglcm003_nomentite" />
+          <attribute name="createdon" />
+          <order attribute="aglcm003_nomentite" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <filter type="or" isquickfindfields="1">
+            <condition attribute="aglcm003_nomentite" operator="like" value="{0}" />
+          </filter>
+          <attribute name="aglcm003_agentdereception" />
+          <attribute name="aglcm003_demandeursortieetretourstock" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Quick Find Active Stores" languagecode="1033" />
+      <LocalizedName description="Recherche Rapide des Magasins Actifs" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SdkMessageProcessingStep Name="Zulaa_Gestion_de_Stock.Package.PostOperationBloquerLignesDemandeSortie: Update of aglcm003_zulaa_lignesdelademandedesortie" SdkMessageProcessingStepId="{81883c36-a2c1-ef11-b8e8-7c1e52295aa1}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SdkMessageId>20bebb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
+  <PluginTypeName>Zulaa_Gestion_de_Stock.Package.PostOperationBloquerLignesDemandeSortie, Zulaa Gestion de Stock.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f169ead759eb29f</PluginTypeName>
+  <PluginTypeId>148bffe7-fc42-41de-a583-89d0fedb84eb</PluginTypeId>
+  <PrimaryEntity>aglcm003_zulaa_lignesdelademandedesortie</PrimaryEntity>
+  <AsyncAutoDelete>0</AsyncAutoDelete>
+  <Description>Zulaa_Gestion_de_Stock.Package.PostOperationBloquerLignesDemandeSortie: Update of aglcm003_zulaa_lignesdelademandedesortie</Description>
+  <FilteringAttributes>aglcm003_actifid,aglcm003_articleid,aglcm003_demandedesortieid,aglcm003_description,aglcm003_magasinid,aglcm003_quantiteasortir</FilteringAttributes>
+  <InvocationSource>1</InvocationSource>
+  <Mode>0</Mode>
+  <Rank>6</Rank>
+  <EventHandlerTypeCode>4602</EventHandlerTypeCode>
+  <Stage>40</Stage>
+  <IsCustomizable>1</IsCustomizable>
+  <IsHidden>0</IsHidden>
+  <SupportedDeployment>0</SupportedDeployment>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <SdkMessageProcessingStepImages />
+</SdkMessageProcessingStep>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{bb44f4b0-c7f4-46f9-9894-ac304fdc7c99}</savedqueryid>
+    <layoutxml>
+      <grid name="aglcm003_zulaa_sortiestockarticles" jump="aglcm003_code" select="1" icon="1" preview="1">
+        <row name="aglcm003_zulaa_sortiestockarticle" id="aglcm003_zulaa_sortiestockarticleid">
+          <cell name="aglcm003_code" width="300" />
+          <cell name="createdon" width="125" />
+          <cell name="aglcm003_sortiedestockid" width="127" />
+          <cell name="aglcm003_articleid" width="100" />
+          <cell name="aglcm003_quantitesortie" width="123" />
+          <cell name="aglcm003_uniteid" width="100" />
+          <cell name="aglcm003_magasinid" width="100" />
+          <cell name="aglcm003_quantitedisponible" width="151" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>2</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_sortiestockarticle">
+          <attribute name="aglcm003_zulaa_sortiestockarticleid" />
+          <attribute name="aglcm003_code" />
+          <attribute name="createdon" />
+          <order attribute="aglcm003_code" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_sortiedestockid" />
+          <attribute name="aglcm003_articleid" />
+          <attribute name="aglcm003_quantitesortie" />
+          <attribute name="aglcm003_uniteid" />
+          <attribute name="aglcm003_magasinid" />
+          <attribute name="aglcm003_quantitedisponible" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Stock Out Item Associated View" languagecode="1033" />
+      <LocalizedName description="Vue associée aux articles sortie de stock" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

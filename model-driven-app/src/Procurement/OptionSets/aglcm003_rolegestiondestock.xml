@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="aglcm003_rolegestiondestock" localizedName="Role Gestion  de stock" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.1</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <ExternalTypeName></ExternalTypeName>
+  <displaynames>
+    <displayname description="Role Gestion  de stock" languagecode="1033" />
+    <displayname description="Rôle Gestion de stock" languagecode="1036" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="2" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Out of stock or return to stock requestor" languagecode="1033" />
+        <label description="Demandeur de sortie de stock ou retour en stock  " languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="3" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Reception agent" languagecode="1033" />
+        <label description="Agent de réception" languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="4" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Store keeper" languagecode="1033" />
+        <label description="Magasinier" languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="5" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Security agent" languagecode="1033" />
+        <label description="Agent de sécurité" languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>

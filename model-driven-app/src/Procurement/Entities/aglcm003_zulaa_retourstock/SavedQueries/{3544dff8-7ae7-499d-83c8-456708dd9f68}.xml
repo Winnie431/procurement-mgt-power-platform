@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{3544dff8-7ae7-499d-83c8-456708dd9f68}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_code" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_retourstockid">
+          <cell name="aglcm003_code" width="300" />
+          <cell name="aglcm003_entiteid" width="100" />
+          <cell name="aglcm003_sortiedestockid" width="124" />
+          <cell name="aglcm003_magasinid" width="100" />
+          <cell name="aglcm003_statutretourstock" width="100" />
+          <cell name="aglcm003_commentaires" width="150" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_retourstock">
+          <attribute name="aglcm003_zulaa_retourstockid" />
+          <attribute name="aglcm003_code" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_commentaires" />
+          <attribute name="aglcm003_sortiedestockid" />
+          <attribute name="aglcm003_magasinid" />
+          <attribute name="aglcm003_entiteid" />
+          <attribute name="aglcm003_statutretourstock" />
+          <order attribute="createdon" descending="true" />
+          <order attribute="aglcm003_code" descending="true" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Stocks Return" languagecode="1033" />
+      <LocalizedName description="Retour en stocks  des actifs" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

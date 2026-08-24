@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SdkMessageProcessingStep Name="Zulaa_Gestion_de_Stock.Package.PostOperationBloquerLignesRetourStockActif: Update of aglcm003_zulaa_retourstockactif" SdkMessageProcessingStepId="{e277cf56-accb-ef11-b8e8-6045bd884039}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SdkMessageId>20bebb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
+  <PluginTypeName>Zulaa_Gestion_de_Stock.Package.PostOperationBloquerLignesRetourStockActif, Zulaa Gestion de Stock.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f169ead759eb29f</PluginTypeName>
+  <PluginTypeId>283182eb-5fa0-4c37-89a6-76ed5e3209af</PluginTypeId>
+  <PrimaryEntity>aglcm003_zulaa_retourstockactif</PrimaryEntity>
+  <AsyncAutoDelete>0</AsyncAutoDelete>
+  <Description>Zulaa_Gestion_de_Stock.Package.PostOperationBloquerLignesRetourStockActif: Update of aglcm003_zulaa_retourstockactif</Description>
+  <FilteringAttributes>aglcm003_actifid,aglcm003_numerodeserie,aglcm003_proprietaires</FilteringAttributes>
+  <InvocationSource>1</InvocationSource>
+  <Mode>0</Mode>
+  <Rank>22</Rank>
+  <EventHandlerTypeCode>4602</EventHandlerTypeCode>
+  <Stage>40</Stage>
+  <IsCustomizable>1</IsCustomizable>
+  <IsHidden>0</IsHidden>
+  <SupportedDeployment>0</SupportedDeployment>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <SdkMessageProcessingStepImages />
+</SdkMessageProcessingStep>

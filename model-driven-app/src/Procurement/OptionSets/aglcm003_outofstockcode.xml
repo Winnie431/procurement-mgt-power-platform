@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="aglcm003_outofstockcode" localizedName="Out of Stock Code" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.1</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <ExternalTypeName></ExternalTypeName>
+  <displaynames>
+    <displayname description="Out of Stock Code" languagecode="1033" />
+    <displayname description="Code rupture de stock" languagecode="1036" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="0" ExternalValue="" Color="#edebeb" IsHidden="0">
+      <labels>
+        <label description="Draft" languagecode="1033" />
+        <label description="Brouillon" languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="1" ExternalValue="" Color="#ffdeb0" IsHidden="0">
+      <labels>
+        <label description="In Progress" languagecode="1033" />
+        <label description="En cours" languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="2" ExternalValue="" Color="#d1ffdf" IsHidden="0">
+      <labels>
+        <label description="Validated" languagecode="1033" />
+        <label description="Validé" languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="3" ExternalValue="" Color="#ffcfcf" IsHidden="0">
+      <labels>
+        <label description="Refused" languagecode="1033" />
+        <label description="Refusé" languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>

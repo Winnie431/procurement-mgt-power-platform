@@ -1,0 +1,87 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "aglcm003_CR_Dataverse_Zulaa"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "metadata": {
+            "operationMetadataId": "4155e1ac-f91c-4152-a420-fc0b4cd24b81"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "aglcm003_zulaa_article",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Compose": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "5b611281-908d-401d-99d5-c174149091a1"
+          },
+          "type": "Compose",
+          "inputs": "@formatDateTime(utcNow(),'yyMMddHHmmssfff')"
+        },
+        "Update_a_row": {
+          "runAfter": {
+            "Compose": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "addca45d-893c-476f-ba59-2b412f56723b"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "UpdateRecord",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_zulaa_articles",
+              "recordId": "@triggerBody()?['aglcm003_zulaa_articleid']",
+              "item/aglcm003_codearticle": "@{outputs('Compose')}"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

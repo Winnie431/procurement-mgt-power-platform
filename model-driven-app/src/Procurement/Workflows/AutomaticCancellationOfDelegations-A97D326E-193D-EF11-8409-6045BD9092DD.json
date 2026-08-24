@@ -1,0 +1,131 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "aglcm003_CR_Dataverse_Zulaa"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "Recurrence": {
+          "recurrence": {
+            "frequency": "Day",
+            "interval": 1,
+            "startTime": "2024-07-08T22:45:00Z"
+          },
+          "metadata": {
+            "operationMetadataId": "657ff804-8b8e-4296-ad40-07ea44459e2e"
+          },
+          "type": "Recurrence"
+        }
+      },
+      "actions": {
+        "Condition": {
+          "actions": {
+            "Terminate": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "a06f1a59-d4f8-461e-9465-a76d36d60a61"
+              },
+              "type": "Terminate",
+              "inputs": {
+                "runStatus": "Cancelled"
+              }
+            }
+          },
+          "runAfter": {
+            "List_rows": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "For_each": {
+                "foreach": "@outputs('List_rows')?['body/value']",
+                "actions": {
+                  "Delete_a_row_-suppresion_automatique": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "0a0e5320-6ffa-4104-9280-fab3222a0b1d"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "parameters": {
+                        "entityName": "aglcm003_delegationparroles",
+                        "recordId": "@items('For_each')?['aglcm003_delegationparroleid']"
+                      },
+                      "host": {
+                        "connectionName": "shared_commondataserviceforapps",
+                        "operationId": "DeleteRecord",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    }
+                  }
+                },
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "78692c62-7011-4821-b473-518791c9fa38"
+                },
+                "type": "Foreach"
+              }
+            }
+          },
+          "expression": {
+            "and": [
+              {
+                "equals": [
+                  "@empty(outputs('List_rows')?['body/value'])",
+                  "@true"
+                ]
+              }
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "1c271225-ebf1-4d88-b522-83e4ea0a6362"
+          },
+          "type": "If"
+        },
+        "List_rows": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "4897e6c2-50a8-4175-b0a8-d6c7b43f6f7a"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "aglcm003_delegationparroles",
+              "$filter": "aglcm003_datefindelegation eq @{formatDateTime(utcNow(),'yyyy-MM-dd')}"
+            },
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

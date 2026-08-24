@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{b9cc086a-5225-4c24-920e-b3009d8c5f3c}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls" shownavigationbar="false">
+      <tabs>
+        <tab verticallayout="true" id="{348cfebd-3710-4ec6-b495-67b695b22200}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+            <label description="Général" languagecode="1036" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{5138963d-3202-47bd-9d62-65f9a1f4f4ec}" visible="true" columns="11">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                    <label description="Général" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{594419c4-eda2-4bf0-8e0e-aa57819bb9cb}" locklevel="0" rowspan="1" colspan="1">
+                        <labels>
+                          <label description="Entity" languagecode="1033" />
+                          <label description="Entité" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_entiteid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_entiteid" disabled="false">
+                          <parameters>
+                            <DisableMru>true</DisableMru>
+                          </parameters>
+                        </control>
+                      </cell>
+                      <cell locklevel="0" id="{d809eeb3-bfda-4ee6-8fd2-e0423c602728}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{77be424f-7e92-4e6c-a8ad-c474cf538b26}" locklevel="0" rowspan="1" colspan="1">
+                        <labels>
+                          <label description="Store" languagecode="1033" />
+                          <label description="Magasin" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_magasinid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_magasinid" disabled="false">
+                          <parameters>
+                            <DisableViewPicker>true</DisableViewPicker>
+                            <DependentAttributeName>aglcm003_zulaa_sortiedestock.aglcm003_entiteid</DependentAttributeName>
+                            <DependentAttributeType>aglcm003_zulaa_entite</DependentAttributeType>
+                            <FilterRelationshipName>aglcm003_magasin_entite</FilterRelationshipName>
+                            <DisableMru>true</DisableMru>
+                          </parameters>
+                        </control>
+                      </cell>
+                      <cell id="{1638fc42-1df7-4e30-8341-16d08d9bd7f9}" locklevel="0" rowspan="1" colspan="1">
+                        <labels>
+                          <label description="Cost center" languagecode="1033" />
+                          <label description="Centre de coûts" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_centredecoutid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_centredecoutid" disabled="false">
+                          <parameters>
+                            <DependentAttributeName>aglcm003_zulaa_sortiedestock.aglcm003_entiteid</DependentAttributeName>
+                            <DependentAttributeType>aglcm003_zulaa_entite</DependentAttributeType>
+                            <FilterRelationshipName>aglcm003_centredecout_entite</FilterRelationshipName>
+                            <DisableMru>true</DisableMru>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{69b7326c-bc2b-4d5f-9302-3c436478f746}" locklevel="0" rowspan="1" colspan="1">
+                        <labels>
+                          <label description="Stock withdrawal request" languagecode="1033" />
+                          <label description="Demande de sortie de stock" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_demandedesortieid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_demandedesortieid" disabled="false">
+                          <parameters>
+                            <DisableViewPicker>true</DisableViewPicker>
+                            <DependentAttributeName>aglcm003_zulaa_sortiedestock.aglcm003_magasinid</DependentAttributeName>
+                            <DependentAttributeType>aglcm003_magasin</DependentAttributeType>
+                            <FilterRelationshipName>aglcm003_zulaa_demandesortiestock_magasin</FilterRelationshipName>
+                            <DisableMru>true</DisableMru>
+                          </parameters>
+                        </control>
+                      </cell>
+                      <cell id="{c0d86a0c-d4fc-4755-a925-15b488cddd14}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Comment" languagecode="1033" />
+                          <label description="Commentaire" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_commentaire" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="aglcm003_commentaire" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{4e2f632f-936f-49f4-b762-a0b9adb409df}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell id="{736cc260-df09-49c5-8833-ec99b7ed9607}" locklevel="0" rowspan="1" colspan="1" visible="false">
+                        <labels>
+                          <label description="AcronymId" languagecode="1033" />
+                          <label description="AcronymId" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_acronymeid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_acronymeid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fe218ed3-1cd0-4db3-8eb2-9332de316440}" colspan="1" rowspan="1" visible="false">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                          <label description="Propriétaire" languagecode="1036" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                      <cell id="{88a81659-31f2-42b8-9fd4-8e5dd769c0d3}" locklevel="0" colspan="1" rowspan="1" visible="false">
+                        <labels>
+                          <label description="Current Workflow Run" languagecode="1033" />
+                          <label description="Exécution actuelle du workflow" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_currentworkflowrun" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_currentworkflowrun" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{9ad39005-efe6-490f-9099-ed935f8a8cec}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell id="{e2677746-9548-4ef0-9f13-04a90010c0e2}" locklevel="0" colspan="1" rowspan="1" visible="false">
+                        <labels>
+                          <label description="Stock withdrawal status" languagecode="1033" />
+                          <label description="Statut de la sortie de stock" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_statutsortiedestock" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="aglcm003_statutsortiedestock" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_3" id="47e95984-d1df-45f0-bc17-307f50332dda" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Article exit" languagecode="1033" />
+                    <label description="Sortie d'article" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{e5749c46-a124-4bfe-8219-bbeae1e029c9}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="New SG control 1734452184499" languagecode="1033" />
+                          <label description="Nouveau contrôle SG 1734452184499" languagecode="1036" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_2" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>true</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>false</EnableChartPicker>
+                            <ChartGridMode>Grid</ChartGridMode>
+                            <TargetEntityType>aglcm003_zulaa_sortiestockarticle</TargetEntityType>
+                            <ViewId>{427B56C0-5257-456D-8E15-76EAFABF0F94}</ViewId>
+                            <ViewIds>{427B56C0-5257-456D-8E15-76EAFABF0F94}</ViewIds>
+                            <RelationshipName>aglcm003_zulaa_sortiestockarticle_sortiedestockId_aglcm003_zulaa_sortiedestock</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+                <section name="null_section_4" id="f8c07307-4cdd-4ac2-8fa9-9b22f1a8ec76" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Asset exit" languagecode="1033" />
+                    <label description="Sortie d'actif" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{059516c5-df8c-410c-af9f-ef8e1ce93964}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="New SG control 1734450305280" languagecode="1033" />
+                          <label description="Nouveau contrôle SG 1734450305280" languagecode="1036" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_1" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>true</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>aglcm003_zulaa_sortiestockactif</TargetEntityType>
+                            <ViewId>{29DC2704-4FAF-41C9-BF31-09912B671113}</ViewId>
+                            <ViewIds>{29DC2704-4FAF-41C9-BF31-09912B671113}</ViewIds>
+                            <RelationshipName>aglcm003_zulaa_sortiestockactif_zulaa_sortiedestock</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_2" id="e0ce37d4-5354-4a7a-850c-9842261af46d" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Documents" languagecode="1033" />
+            <label description="Documents" languagecode="1036" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_2_section_1" id="f5d465b6-db69-411d-be92-13ae6bab8d70" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                    <label description="Nouvelle section" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{a22b203e-5c4b-4ba3-8fd2-4fe5ab4890e0}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="New SG control 1734963483030" languagecode="1033" />
+                          <label description="Nouveau contrôle SG 1734963483030" languagecode="1036" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_3" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>sharepointdocument</TargetEntityType>
+                            <ViewId>{A5B008AC-07D9-4554-8509-2C05767BFF51}</ViewId>
+                            <ViewIds>{A5B008AC-07D9-4554-8509-2C05767BFF51}</ViewIds>
+                            <RelationshipName>aglcm003_zulaa_sortiedestock_SharePointDocuments</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{af6d5328-1dd1-46f0-b7a3-a192055f4535}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{61468633-8c7c-4423-9ba7-1fba49ad7944}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{4710e2d1-6388-4a8e-ab70-77c57cf7a6a9}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{10408e03-23db-47ae-933e-6a4165a3767b}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{07aa43f0-dc59-4955-af26-266636c68605}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{90430cd6-94f9-4b39-8587-da14523843a8}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{24d49114-84f8-4bde-9f0c-18881da18398}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{0ca58c1c-c066-4771-8cf9-a808c07beb1a}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+      <LocalizedName description="Informations" languagecode="1036" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+      <Description description="Formulaire pour cette entité." languagecode="1036" />
+    </Descriptions>
+  </systemform>
+</forms>

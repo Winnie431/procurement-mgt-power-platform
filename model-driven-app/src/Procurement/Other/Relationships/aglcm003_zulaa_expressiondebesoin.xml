@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="ablnstd_ablnstd_apprvlstd_wfrun_aglcm003_zulaa_expressiondebesoin_ablnstd_RegardingId">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>ablnstd_apprvlstd_WfRun</ReferencingEntityName>
+    <ReferencedEntityName>aglcm003_zulaa_expressiondebesoin</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>ablnstd_RegardingId</ReferencingAttributeName>
+    <RelationshipDescription />
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>ablnstd_RegardingId_aglcm003_zulaa_expressiondebesoin</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>ablnstd_ablnstd_apprvlstd_wfrun_aglcm003_zulaa_expressiondebesoin_ablnstd_RegardingId</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_bondecommande_expressiondebesoin">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_bondecommande</ReferencingEntityName>
+    <ReferencedEntityName>aglcm003_zulaa_expressiondebesoin</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_expressiondebesoinId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_expressiondebesoinId</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_bondecommande_expressiondebesoin</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_demandedachat_expressiondebesoin">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_demandedachat</ReferencingEntityName>
+    <ReferencedEntityName>aglcm003_zulaa_expressiondebesoin</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_expressiondebesoinId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Expression of Need linked to the Purchase Request" languagecode="1033" />
+        <Description description="Expression du besoin liée à la demande d'achat" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_expressiondebesoinId</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_demandedachat_expressiondebesoin</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+</EntityRelationships>

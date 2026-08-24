@@ -1,0 +1,53 @@
+function openCustomPage(executionContext,customPageName,dialogTitle,dialogPosition,dialogPxWidth,dialogPxHeight,saveForm,refreshForm)
+{
+    const formContext = executionContext;
+    console.log(formContext)
+    var lookupValue = formContext.getAttribute("aglcm003_currentworkflowrun").getValue();
+    var lookupId = lookupValue[0].id.replace(/[{}]/g, "");
+    const pageInput = {
+        pageType: "custom",
+        name: customPageName,
+        entityName: formContext.data.entity.getEntityName(),
+        recordId: lookupId,
+    };
+    const navigationOptions = {
+        target: 2, 
+        position: dialogPosition,
+        width: {value: dialogPxWidth, unit:"px"},
+        height: {value: dialogPxHeight, unit:"px"},
+        title: dialogTitle
+    };
+
+    function navigateToCP(){
+        Xrm.Navigation.navigateTo(pageInput, navigationOptions)
+        .then(
+            function () {
+                if(refreshForm === true){
+                    formContext.data.refresh(false)
+                }
+            }
+        ).catch(
+            function (error) {
+                console.log(error.message)
+            }
+        ); 
+    }
+
+    if(saveForm === true){
+        formContext.data.save()
+            .then(
+                function(){
+                    navigateToCP();
+                },
+                function(error){
+                    console.log('Error when saving form');
+                    console.log(error.message);
+                }
+            )
+    } else{
+        navigateToCP();
+    } 
+    
+
+};
+

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{4c7989f7-26e2-f011-8544-0022487f0edc}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_codeactif" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_actifid">
+          <cell name="aglcm003_codeactif" width="154" />
+          <cell name="aglcm003_entiteid" width="100" />
+          <cell name="aglcm003_articleid" width="100" />
+          <cell name="aglcm003_receptionid" width="150" />
+          <cell name="aglcm003_magasinid" width="100" />
+          <cell name="aglcm003_bondecommandeid" width="157" />
+          <cell name="aglcm003_numeroserie" width="150" />
+          <cell name="aglcm003_numeroparc" width="150" />
+          <cell name="aglcm003_fabriquant" width="150" />
+          <cell name="aglcm003_modele" width="150" />
+          <cell name="aglcm003_marque" width="150" />
+          <cell name="aglcm003_utilisateurdelactif" width="151" />
+          <cell name="aglcm003_dateacquisition" width="150" />
+          <cell name="aglcm003_statutactif" width="150" />
+          <cell name="aglcm003_description" width="150" />
+          <cell name="aglcm003_natureactif" width="150" />
+          <cell name="aglcm003_typeactif" width="150" />
+          <cell name="aglcm003_etatactif" width="150" />
+          <cell name="aglcm003_numerodac" width="150" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_actif">
+          <attribute name="aglcm003_zulaa_actifid" />
+          <attribute name="aglcm003_codeactif" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_numeroparc" />
+          <attribute name="aglcm003_numeroserie" />
+          <attribute name="aglcm003_description" />
+          <attribute name="aglcm003_fabriquant" />
+          <attribute name="aglcm003_modele" />
+          <attribute name="aglcm003_marque" />
+          <attribute name="aglcm003_statutactif" />
+          <attribute name="aglcm003_natureactif" />
+          <attribute name="aglcm003_dateacquisition" />
+          <attribute name="aglcm003_typeactif" />
+          <attribute name="aglcm003_etatactif" />
+          <attribute name="aglcm003_numerodac" />
+          <attribute name="aglcm003_receptionid" />
+          <attribute name="aglcm003_articleid" />
+          <attribute name="aglcm003_bondecommandeid" />
+          <attribute name="aglcm003_entiteid" />
+          <attribute name="aglcm003_utilisateurdelactif" />
+          <attribute name="aglcm003_magasinid" />
+          <order attribute="aglcm003_codeactif" descending="false" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.3</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Assets by status" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Assets grouped by status" languagecode="1033" />
+    </Descriptions>
+  </savedquery>
+</savedqueries>

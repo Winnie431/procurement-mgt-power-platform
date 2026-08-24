@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{49d39fa5-205c-4408-992b-d882c7b39b0f}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls" shownavigationbar="false">
+      <tabs>
+        <tab verticallayout="true" id="{fb238170-0db6-4c20-b541-b906cc1955ae}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+            <label description="Général" languagecode="1036" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{7a424d14-dbe0-4c19-a40d-86bc24a5b33b}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                    <label description="Général" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{75415183-5254-4979-bdb7-c66d9f096add}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Entity" languagecode="1033" />
+                          <label description="Entité" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_entiteid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_entiteid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6f247253-132e-45b8-9430-ccbdeba97a64}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Code" languagecode="1033" />
+                          <label description="Code" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_code" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_code" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8fd8374f-5757-4b3f-8bbd-c0551adcc84b}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                          <label description="Nom" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_nom" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="aglcm003_nom" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d4790eb7-1385-42ec-8d2b-3fb4dc818682}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Manager" languagecode="1033" />
+                          <label description="Responsable" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_responsableid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_responsableid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{836de7cb-7e0f-41de-a3ec-6a3455d76416}" visible="false">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                          <label description="Propriétaire" languagecode="1036" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{3f59fd7e-4e76-488b-b4d9-65953abd3fb2}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{0310ff49-149d-4204-a65c-cc6bd78d2477}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{392a553c-d976-4670-892a-fe193bf2bb21}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{2539d3b6-0232-4518-9306-e2af529a7e19}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{48923248-368b-47d2-8fa9-5b00aa59b4aa}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{b787bf14-e228-4a47-bcd7-4f159bf2c660}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{901a6868-06e2-4b42-81e5-62bd44ac3f45}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{00279d7e-bd89-48d8-b626-dfc0c9b9021e}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+      <formLibraries>
+        <Library name="aglcm003_convertlibelledirtoupper" libraryUniqueId="{2970bcaa-58a2-4043-890d-d2a1edd41991}" />
+      </formLibraries>
+      <events>
+        <event name="onsave" application="false" active="false">
+          <Handlers>
+            <Handler functionName="transformToUpperCase" libraryName="aglcm003_convertlibelledirtoupper" handlerUniqueId="{86463615-5b88-4829-82dd-901866fabcf9}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+      </events>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+      <LocalizedName description="Informations" languagecode="1036" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+      <Description description="Formulaire pour cette entité." languagecode="1036" />
+    </Descriptions>
+  </systemform>
+</forms>

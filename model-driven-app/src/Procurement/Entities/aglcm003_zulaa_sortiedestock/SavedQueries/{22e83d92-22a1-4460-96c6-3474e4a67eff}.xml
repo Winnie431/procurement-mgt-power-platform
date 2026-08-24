@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{22e83d92-22a1-4460-96c6-3474e4a67eff}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_codesortiedestock" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_sortiedestockid">
+          <cell name="aglcm003_codesortiedestock" width="300" />
+          <cell name="createdon" width="125" />
+          <cell name="aglcm003_magasinid" width="100" />
+          <cell name="aglcm003_entiteid" width="100" />
+          <cell name="aglcm003_statutsortiedestock" width="100" />
+          <cell name="aglcm003_demandedesortieid" width="145" />
+          <cell name="aglcm003_centredecoutid" width="134" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_sortiedestock">
+          <attribute name="aglcm003_zulaa_sortiedestockid" />
+          <attribute name="aglcm003_codesortiedestock" />
+          <attribute name="createdon" />
+          <order attribute="aglcm003_codesortiedestock" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="1" />
+          </filter>
+          <attribute name="aglcm003_magasinid" />
+          <attribute name="aglcm003_entiteid" />
+          <attribute name="aglcm003_statutsortiedestock" />
+          <attribute name="aglcm003_demandedesortieid" />
+          <attribute name="aglcm003_centredecoutid" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Inactive Out of stock " languagecode="1033" />
+      <LocalizedName description="Sortie de stock Inactif" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{8fc80866-6365-49c1-9dea-6469a8ab0acc}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_nomentite" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_magasinid">
+          <cell name="aglcm003_nomentite" width="300" />
+          <cell name="createdon" width="125" />
+          <cell name="aglcm003_agentdereception" width="147" />
+          <cell name="aglcm003_demandeursortieetretourstock" width="257" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_magasin">
+          <attribute name="aglcm003_magasinid" />
+          <attribute name="aglcm003_nomentite" />
+          <attribute name="createdon" />
+          <order attribute="aglcm003_nomentite" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="1" />
+          </filter>
+          <attribute name="aglcm003_agentdereception" />
+          <attribute name="aglcm003_demandeursortieetretourstock" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Inactive Stores" languagecode="1033" />
+      <LocalizedName description="Magasins Inactifs" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

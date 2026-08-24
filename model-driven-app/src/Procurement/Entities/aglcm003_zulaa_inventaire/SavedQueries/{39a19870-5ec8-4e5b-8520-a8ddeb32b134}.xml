@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{39a19870-5ec8-4e5b-8520-a8ddeb32b134}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_codeinventaire" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_inventaireid">
+          <cell name="aglcm003_codeinventaire" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>1</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_inventaire">
+          <attribute name="aglcm003_zulaa_inventaireid" />
+          <attribute name="aglcm003_codeinventaire" />
+          <attribute name="createdon" />
+          <order attribute="aglcm003_codeinventaire" descending="false" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Inventory Advanced Find View" languagecode="1033" />
+      <LocalizedName description="Vue de recherche avancée dans l'inventaire" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

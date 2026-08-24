@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>1</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{9dceebe1-3b1b-4f43-8e39-8f3cf2ec93c5}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_name" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_delegationparroleid">
+          <cell name="aglcm003_name" width="300" />
+          <cell name="createdon" width="125" />
+          <cell name="aglcm003_centredecoutid" width="134" />
+          <cell name="aglcm003_datedebutdelegation" width="170" />
+          <cell name="aglcm003_datefindelegation" width="158" />
+          <cell name="aglcm003_entiteid" width="100" />
+          <cell name="aglcm003_personnedelegue" width="142" />
+          <cell name="aglcm003_roledafdafadg" width="169" />
+          <cell name="aglcm003_role" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>4</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_delegationparrole">
+          <attribute name="aglcm003_delegationparroleid" />
+          <attribute name="aglcm003_name" />
+          <attribute name="createdon" />
+          <order attribute="aglcm003_name" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <filter type="or" isquickfindfields="1">
+            <condition attribute="aglcm003_name" operator="like" value="{0}" />
+          </filter>
+          <attribute name="aglcm003_centredecoutid" />
+          <attribute name="aglcm003_datedebutdelegation" />
+          <attribute name="aglcm003_datefindelegation" />
+          <attribute name="aglcm003_entiteid" />
+          <attribute name="aglcm003_personnedelegue" />
+          <attribute name="aglcm003_roledafdafadg" />
+          <attribute name="aglcm003_role" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Quick Find Active Delegations by Roles" languagecode="1033" />
+      <LocalizedName description="Recherche rapide - Délégations actives par rôles" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

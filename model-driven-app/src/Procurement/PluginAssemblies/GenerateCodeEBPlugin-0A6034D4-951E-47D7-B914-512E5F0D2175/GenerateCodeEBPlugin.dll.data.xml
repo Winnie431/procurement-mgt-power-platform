@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PluginAssembly FullName="GenerateCodeEBPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=99416271ca1827de" PluginAssemblyId="0a6034d4-951e-47d7-b914-512e5f0d2175" CustomizationLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsolationMode>2</IsolationMode>
+  <SourceType>0</SourceType>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <FileName>/PluginAssemblies/GenerateCodeEBPlugin-0A6034D4-951E-47D7-B914-512E5F0D2175/GenerateCodeEBPlugin.dll</FileName>
+  <PluginTypes>
+    <PluginType AssemblyQualifiedName="GenerateCodeEBPlugin.GenerateCodeEBPlugin, GenerateCodeEBPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=99416271ca1827de" PluginTypeId="09744dbb-9cec-4301-9518-7c45483b2883" Name="GenerateCodeEBPlugin.GenerateCodeEBPlugin">
+      <FriendlyName>8483fe8c-7140-43c3-8d98-a8d83f507bcc</FriendlyName>
+    </PluginType>
+  </PluginTypes>
+</PluginAssembly>

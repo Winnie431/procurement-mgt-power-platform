@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PluginAssembly FullName="DaAmountUpdate, Version=1.0.0.0, Culture=neutral, PublicKeyToken=468c5f968f7a2cb9" PluginAssemblyId="77565228-e3be-40c5-b57b-ff4e3de9dd39" CustomizationLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsolationMode>2</IsolationMode>
+  <SourceType>0</SourceType>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <FileName>/PluginAssemblies/DaAmountUpdate-77565228-E3BE-40C5-B57B-FF4E3DE9DD39/DaAmountUpdate.dll</FileName>
+  <PluginTypes>
+    <PluginType AssemblyQualifiedName="DaAmountUpdate.DaAmountUpdate, DaAmountUpdate, Version=1.0.0.0, Culture=neutral, PublicKeyToken=468c5f968f7a2cb9" PluginTypeId="72d772c4-ab19-4324-8d1c-2d28a7c6d73f" Name="DaAmountUpdate.DaAmountUpdate">
+      <FriendlyName>f3dd7f65-ef38-4e90-89c2-a165f5b6b868</FriendlyName>
+    </PluginType>
+  </PluginTypes>
+</PluginAssembly>

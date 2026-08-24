@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{379eb326-c88a-4267-8a41-f15420965fc1}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_codemagasinarticle" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_magasinarticleid">
+          <cell name="aglcm003_codemagasinarticle" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_magasinarticle">
+          <attribute name="aglcm003_magasinarticleid" />
+          <attribute name="aglcm003_codemagasinarticle" />
+          <attribute name="createdon" />
+          <order attribute="aglcm003_codemagasinarticle" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="1" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Inactive Store Items" languagecode="1033" />
+      <LocalizedName description="Magasin articles inactifs" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

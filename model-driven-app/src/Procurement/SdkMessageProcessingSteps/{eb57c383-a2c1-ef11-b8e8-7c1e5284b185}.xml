@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SdkMessageProcessingStep Name="Zulaa_Gestion_de_Stock.Package.PostOperation_GenerateCode_Create: Create of aglcm003_zulaa_reception" SdkMessageProcessingStepId="{eb57c383-a2c1-ef11-b8e8-7c1e5284b185}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SdkMessageId>9ebdbb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
+  <PluginTypeName>Zulaa_Gestion_de_Stock.Package.PostOperation_GenerateCode_Create, Zulaa Gestion de Stock.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f169ead759eb29f</PluginTypeName>
+  <PluginTypeId>5ef9a2d2-ab8f-4dc4-a94b-db04cfb97ee9</PluginTypeId>
+  <PrimaryEntity>aglcm003_zulaa_reception</PrimaryEntity>
+  <AsyncAutoDelete>0</AsyncAutoDelete>
+  <Description>Zulaa_Gestion_de_Stock.Package.PostOperation_GenerateCode_Create: Create of aglcm003_zulaa_reception</Description>
+  <FilteringAttributes></FilteringAttributes>
+  <InvocationSource>1</InvocationSource>
+  <Mode>0</Mode>
+  <Rank>7</Rank>
+  <EventHandlerTypeCode>4602</EventHandlerTypeCode>
+  <Stage>40</Stage>
+  <IsCustomizable>1</IsCustomizable>
+  <IsHidden>0</IsHidden>
+  <SupportedDeployment>0</SupportedDeployment>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <SdkMessageProcessingStepImages />
+</SdkMessageProcessingStep>

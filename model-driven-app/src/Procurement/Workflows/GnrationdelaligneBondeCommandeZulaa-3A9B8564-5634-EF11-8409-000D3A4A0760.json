@@ -1,0 +1,622 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "aglcm003_CR_Dataverse_Zulaa"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "metadata": {
+            "operationMetadataId": "d118ff70-cccf-462a-8107-ee8ccabc45cf"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "aglcm003_zulaa_demandedachat",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "aglcm003_statutcode",
+              "subscriptionRequest/filterexpression": "aglcm003_statutcode eq 2"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Condition": {
+          "actions": {},
+          "runAfter": {},
+          "else": {
+            "actions": {
+              "Terminate": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "2ba6957a-f0e7-4214-b3f1-1019390f0cd1"
+                },
+                "type": "Terminate",
+                "inputs": {
+                  "runStatus": "Cancelled"
+                }
+              }
+            }
+          },
+          "expression": {
+            "equals": [
+              "@triggerOutputs()?['body/aglcm003_isboncommande']",
+              false
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f2268df0-4b41-4489-acd8-013f3507e108"
+          },
+          "type": "If"
+        },
+        "List_rows_DAAF": {
+          "runAfter": {
+            "Condition_EB_créer_sur_DA": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "e06e10ac-823a-494b-8370-7808df543e8d"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_zulaa_demandedachatarticlefournisseurs",
+              "$filter": "_aglcm003_demandeachat_value eq '@{triggerBody()?['aglcm003_zulaa_demandedachatid']}'"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Initialize_variable_Fournisseur": {
+          "runAfter": {
+            "List_rows_DAAF": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "5d6ea78d-9739-47f5-9251-648519353a8d"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "ListeFournisseur",
+                "type": "array",
+                "value": []
+              }
+            ]
+          }
+        },
+        "Initialize_variable_fournisseur_unique": {
+          "runAfter": {
+            "Initialize_variable_Fournisseur": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "7ff7de4c-87a4-4125-8eed-bfa6e3647527"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "UniqueListeFournisseur",
+                "type": "array",
+                "value": []
+              }
+            ]
+          }
+        },
+        "Initialize_variable_bonCommandeMontantHT": {
+          "runAfter": {
+            "Initialize_variable_fournisseur_unique": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "738d3c4f-b8fd-44dd-a6f3-a13c929715bd"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "bonCommandeMontantHT",
+                "type": "float",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "Initialize_variable_bonCommandeMontantTTC": {
+          "runAfter": {
+            "Initialize_variable_bonCommandeMontantHT": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "21b7f8b6-0d4e-4ed5-8601-3c7c7ebf3460"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "bonCommandeMontantTTC",
+                "type": "float",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "Set_variable_unique_liste_fournisseur": {
+          "runAfter": {
+            "For_each": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "71f6b8dd-205b-4bdc-9188-57688d716c5f"
+          },
+          "type": "SetVariable",
+          "inputs": {
+            "name": "UniqueListeFournisseur",
+            "value": "@\r\nunion(variables('ListeFournisseur'),variables('ListeFournisseur'))"
+          }
+        },
+        "For_each": {
+          "foreach": "@outputs('List_rows_DAAF')?['body/value']",
+          "actions": {
+            "Append_to_array_variable_fournisseur": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "a35f4b11-6601-4a72-beb2-8506203b515c"
+              },
+              "type": "AppendToArrayVariable",
+              "inputs": {
+                "name": "ListeFournisseur",
+                "value": {
+                  "fournisseur": "@item()?['_aglcm003_fournisseurid_value']"
+                }
+              }
+            }
+          },
+          "runAfter": {
+            "Initialize_variable_bonCommandeMontantTTC": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "1f4328bc-82b3-408a-8e1d-ca71f94df4ff"
+          },
+          "type": "Foreach"
+        },
+        "Update_a_DA": {
+          "runAfter": {
+            "Bon_de_commandes": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "56f0ee31-2581-4b74-96f0-43082d6c4ee5"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "UpdateRecord",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_zulaa_demandedachats",
+              "recordId": "@triggerBody()?['aglcm003_zulaa_demandedachatid']",
+              "item/aglcm003_isboncommande": true
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Bon_de_commandes": {
+          "foreach": "@variables('UniqueListeFournisseur')",
+          "actions": {
+            "List_rows-DAAF_par_Fourniseur": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "293bcd9f-137a-4454-b0f1-6614ac129ccf"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "ListRecords",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "aglcm003_zulaa_demandedachatarticlefournisseurs",
+                  "$filter": "_aglcm003_demandeachat_value eq '@{triggerBody()?['aglcm003_zulaa_demandedachatid']}' and _aglcm003_fournisseurid_value eq  '@{items('Bon_de_commandes')?['fournisseur']}'"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Set_variable_montant_ttc_valeur_initiale": {
+              "runAfter": {
+                "List_rows-DAAF_par_Fourniseur": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "5cf0dc1e-6fd0-4b02-bd90-442ca18c18f4"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "bonCommandeMontantTTC",
+                "value": 0
+              }
+            },
+            "Set_variable-montant_ht_valeur_initiale": {
+              "runAfter": {
+                "Set_variable_montant_ttc_valeur_initiale": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "c9d09508-fe9a-47d5-bfb9-34663dc30d92"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "bonCommandeMontantHT",
+                "value": 0
+              }
+            },
+            "For_each_1": {
+              "foreach": "@outputs('List_rows-DAAF_par_Fourniseur')?['body/value']",
+              "actions": {
+                "Increment_variable_bon_de_commande_TTC": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "4501ea19-1691-4fb8-8e3d-5cf5d533e683"
+                  },
+                  "type": "IncrementVariable",
+                  "inputs": {
+                    "name": "bonCommandeMontantTTC",
+                    "value": "@items('For_each_1')?['aglcm003_montantlingetaxecalculer']"
+                  }
+                },
+                "Increment_variable-bon_de_commande_HT": {
+                  "runAfter": {
+                    "Increment_variable_bon_de_commande_TTC": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "ff8ac77a-dd69-4b24-af3e-f4e0002e1046"
+                  },
+                  "type": "IncrementVariable",
+                  "inputs": {
+                    "name": "bonCommandeMontantHT",
+                    "value": "@item()?['aglcm003_montantlignecalculer']"
+                  }
+                }
+              },
+              "runAfter": {
+                "Set_variable-montant_ht_valeur_initiale": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "76d7ba7c-0ac7-4d68-8133-99f477869996"
+              },
+              "type": "Foreach"
+            },
+            "For_each_2": {
+              "foreach": "@outputs('List_rows-DAAF_par_Fourniseur')?['body/value']",
+              "actions": {
+                "Update_a_row_DAAF": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "d97316c6-bb77-4458-b883-cf34d115b1d0"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps",
+                      "operationId": "UpdateRecord",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "aglcm003_zulaa_demandedachatarticlefournisseurs",
+                      "recordId": "@items('For_each_2')?['aglcm003_zulaa_demandedachatarticlefournisseurid']",
+                      "item/aglcm003_bondecommandeId@odata.bind": "aglcm003_zulaa_bondecommandes(@{variables('Bon de comande ID')})"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                }
+              },
+              "runAfter": {
+                "Condition_1": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "cea37813-e8f3-43b0-a388-2b7cd1095751"
+              },
+              "type": "Foreach"
+            },
+            "Condition_1": {
+              "actions": {
+                "Add_a_new_row_bon_de_commande-_BC_sans_EB": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "6eac19e1-23eb-4059-87b6-c28a80402662"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps",
+                      "operationId": "CreateRecord",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "aglcm003_zulaa_bondecommandes",
+                      "item/aglcm003_montantht": "@variables('bonCommandeMontantHT')",
+                      "item/aglcm003_deviseId@odata.bind": "aglcm003_zulaa_devises(@{triggerOutputs()?['body/_aglcm003_devise_value']})",
+                      "item/aglcm003_statutdelivraisoncode": 1,
+                      "item/aglcm003_entiteId@odata.bind": "aglcm003_zulaa_entites(@{triggerOutputs()?['body/_aglcm003_entiteid_value']})",
+                      "item/aglcm003_date": "@utcNow()",
+                      "item/aglcm003_statutcode": 1,
+                      "item/aglcm003_montantttc": "@variables('bonCommandeMontantTTC')",
+                      "item/aglcm003_montanthtconverti": "@triggerOutputs()?['body/aglcm003_montanthtconverti']",
+                      "item/aglcm003_montantttcconverti": "@triggerOutputs()?['body/aglcm003_montantttcconverti']",
+                      "item/aglcm003_numerodeladac": "@triggerOutputs()?['body/aglcm003_dac']",
+                      "item/aglcm003_isactif": true,
+                      "item/aglcm003_demandedachatId@odata.bind": "aglcm003_zulaa_demandedachats(@{triggerOutputs()?['body/aglcm003_zulaa_demandedachatid']})",
+                      "item/aglcm003_fournisseurId@odata.bind": "aglcm003_zulaa_fournisseurs(@{items('Bon_de_commandes')?['fournisseur']})"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Set_variable-copy": {
+                  "runAfter": {
+                    "Add_a_new_row_bon_de_commande-_BC_sans_EB": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "cd0994b9-65f1-422f-aa90-7997606743e9"
+                  },
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "Bon de comande ID",
+                    "value": "@body('Add_a_new_row_bon_de_commande-_BC_sans_EB')?['aglcm003_zulaa_bondecommandeid']"
+                  }
+                }
+              },
+              "runAfter": {
+                "For_each_1": [
+                  "Succeeded"
+                ]
+              },
+              "else": {
+                "actions": {
+                  "Add_a_new_row_bon_de_commande-BC_avec_EB": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "6eac19e1-23eb-4059-87b6-c28a80402662"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_commondataserviceforapps",
+                        "operationId": "CreateRecord",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                      },
+                      "parameters": {
+                        "entityName": "aglcm003_zulaa_bondecommandes",
+                        "item/aglcm003_montantht": "@variables('bonCommandeMontantHT')",
+                        "item/aglcm003_deviseId@odata.bind": "aglcm003_zulaa_devises(@{triggerOutputs()?['body/_aglcm003_devise_value']})",
+                        "item/aglcm003_statutdelivraisoncode": 1,
+                        "item/aglcm003_entiteId@odata.bind": "aglcm003_zulaa_entites(@{triggerOutputs()?['body/_aglcm003_entiteid_value']})",
+                        "item/aglcm003_date": "@utcNow()",
+                        "item/aglcm003_statutcode": 1,
+                        "item/aglcm003_montantttc": "@variables('bonCommandeMontantTTC')",
+                        "item/aglcm003_montanthtconverti": "@triggerOutputs()?['body/aglcm003_montanthtconverti']",
+                        "item/aglcm003_montantttcconverti": "@triggerOutputs()?['body/aglcm003_montantttcconverti']",
+                        "item/aglcm003_numerodeladac": "@triggerOutputs()?['body/aglcm003_dac']",
+                        "item/aglcm003_expressiondebesoinId@odata.bind": "aglcm003_zulaa_expressiondebesoins(@{body('Get_a_row_EB_by_ID')?['aglcm003_zulaa_expressiondebesoinid']})",
+                        "item/aglcm003_isactif": true,
+                        "item/aglcm003_demandedachatId@odata.bind": "aglcm003_zulaa_demandedachats(@{triggerOutputs()?['body/aglcm003_zulaa_demandedachatid']})",
+                        "item/aglcm003_fournisseurId@odata.bind": "aglcm003_zulaa_fournisseurs(@{items('Bon_de_commandes')?['fournisseur']})"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    }
+                  },
+                  "Set_variable": {
+                    "runAfter": {
+                      "Add_a_new_row_bon_de_commande-BC_avec_EB": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "978b1ddb-c2c8-4222-8646-b59dcc2f01a5"
+                    },
+                    "type": "SetVariable",
+                    "inputs": {
+                      "name": "Bon de comande ID",
+                      "value": "@body('Add_a_new_row_bon_de_commande-BC_avec_EB')?['aglcm003_zulaa_bondecommandeid']"
+                    }
+                  }
+                }
+              },
+              "expression": {
+                "and": [
+                  {
+                    "equals": [
+                      "@variables('Expression besoin')",
+                      "  "
+                    ]
+                  }
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "21382a1b-5060-4e53-a94f-7dd67892976d"
+              },
+              "type": "If"
+            }
+          },
+          "runAfter": {
+            "Initialize_variable_Bon_de_comande_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "306262ef-f27e-4b29-8f5c-f15913bd657f"
+          },
+          "type": "Foreach"
+        },
+        "Condition_EB_créer_sur_DA": {
+          "actions": {
+            "Get_a_row_EB_by_ID": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "cd4fb280-ee3c-4e14-80ec-f9721f988361"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "GetItem",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "aglcm003_zulaa_expressiondebesoins",
+                  "recordId": "@triggerBody()?['_aglcm003_expressiondebesoinid_value']"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Append_to_string_variable__EB": {
+              "runAfter": {
+                "Get_a_row_EB_by_ID": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "5b48dc39-4c75-4fe7-8556-5543f847c160"
+              },
+              "type": "AppendToStringVariable",
+              "inputs": {
+                "name": "Expression besoin",
+                "value": "@body('Get_a_row_EB_by_ID')?['aglcm003_zulaa_expressiondebesoinid']"
+              }
+            }
+          },
+          "runAfter": {
+            "Initialize_variable_Expression_besoin": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Append_to_string_variable-EB": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "30b73f20-4ce6-4878-8179-75b378759dc4"
+                },
+                "type": "AppendToStringVariable",
+                "inputs": {
+                  "name": "Expression besoin",
+                  "value": "  "
+                }
+              }
+            }
+          },
+          "expression": {
+            "and": [
+              {
+                "not": {
+                  "equals": [
+                    "@triggerBody()?['_aglcm003_expressiondebesoinid_value']",
+                    "@null"
+                  ]
+                }
+              }
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "21499582-f34d-4cab-9b2d-8cb15e2a0de2"
+          },
+          "type": "If"
+        },
+        "Initialize_variable_Expression_besoin": {
+          "runAfter": {
+            "Condition": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "6b8d456c-ecd4-4394-8b23-987b9e749c01"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Expression besoin",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Initialize_variable_Bon_de_comande_ID": {
+          "runAfter": {
+            "Set_variable_unique_liste_fournisseur": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "977f17a9-0b24-438a-ac57-b8240e7165c8"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Bon de comande ID",
+                "type": "string"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

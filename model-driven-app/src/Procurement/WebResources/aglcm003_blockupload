@@ -1,0 +1,42 @@
+function disabledupload(executionContext) {
+    var formContext = executionContext.getFormContext();
+
+    var status = formContext.getAttribute("aglcm003_statuteb").getValue();
+
+
+
+
+    if (status === 1 || status === 2 || status === 3) {
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var buttonup = document.querySelector('button[aria-label="Upload"]');
+            console.log(buttonup)
+            console.log("Le DOM est bien load")
+
+            if (buttonup) {
+                buttonup.style.display = 'none';
+                console.log("ok je peux travailler sur le button")
+            }
+        });
+
+        setTimeout(function () {
+            console.log("test")
+            // Récupérer tous les éléments <button> de la page
+            var buttons = document.getElementsByTagName('button');
+            console.log(buttons)
+
+            // Parcourir la liste des boutons et faire quelque chose avec chacun
+            buttons.forEach(function (button) {
+                console.log(button);  // Affiche chaque bouton dans la console
+                button.style.display = 'none';
+            });
+
+
+        }, 10000)
+
+
+
+    } else {
+        console.log("Aucune valeur sélectionnée.");
+    }
+}

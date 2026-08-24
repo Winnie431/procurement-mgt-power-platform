@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{6db7d860-84e9-4f6f-9c42-f37267ad2897}</savedqueryid>
+    <layoutxml>
+      <grid name="aglcm003_zulaa_inventaireactifs" jump="aglcm003_code" select="1" icon="1" preview="0">
+        <row name="aglcm003_zulaa_inventaireactif" id="aglcm003_zulaa_inventaireactifid">
+          <cell name="aglcm003_code" width="300" />
+          <cell name="createdon" width="125" />
+          <cell name="aglcm003_actifid" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_inventaireactif">
+          <attribute name="aglcm003_zulaa_inventaireactifid" />
+          <attribute name="aglcm003_code" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_actifid" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Inventory Lookup View" languagecode="1033" />
+      <LocalizedName description="Vue de recherche dans l'inventaire actif" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

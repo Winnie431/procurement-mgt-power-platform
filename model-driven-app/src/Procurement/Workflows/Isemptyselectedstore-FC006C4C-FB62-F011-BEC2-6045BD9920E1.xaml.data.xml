@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{fc006c4c-fb62-f011-bec2-6045bd9920e1}" Name="Is empty selected store" Description="Is empty selected store?" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/Isemptyselectedstore-FC006C4C-FB62-F011-BEC2-6045BD9920E1.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>2</Category>
+  <Mode>1</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>0</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <RunAs>1</RunAs>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.1</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>2</ProcessTriggerScope>
+  <ModernFlowType>0</ModernFlowType>
+  <PrimaryEntity>aglcm003_zulaa_sortiedestock</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Is empty selected store" />
+    <LocalizedName languagecode="1036" description="Magasin sélectionné vide" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description languagecode="1033" description="Is empty selected store?" />
+    <Description languagecode="1036" description="Magasin sélectionné vide" />
+  </Descriptions>
+</Workflow>

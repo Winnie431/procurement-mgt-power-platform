@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{0f8cf8fc-897a-4c91-b95e-915d76473435}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{0f4363cb-6995-46d9-b5b8-43a8492402f3}" IsUserDefined="1">
+          <labels>
+            <label description="" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{dcf1220d-d018-4b49-9071-ca99a59694fb}">
+                  <labels>
+                    <label description="GENERAL" languagecode="1033" />
+                    <label description="GÉNÉRAL" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{fd053e6b-764a-485a-8f2e-8ed06faa1416}">
+                        <labels>
+                          <label description="Nom" languagecode="1033" />
+                          <label description="Nom" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_nom" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="aglcm003_nom" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{333e6567-44d3-48e5-b9e0-4ae4134d2fc2}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="IsActive" languagecode="1033" />
+                          <label description="Est actif" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_isactive" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="aglcm003_isactive" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0f661eb6-9175-46fb-aa33-53086ea174c2}" visible="false">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                          <label description="Propriétaire" languagecode="1036" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+      <LocalizedName description="Informations" languagecode="1036" />
+    </LocalizedNames>
+  </systemform>
+</forms>

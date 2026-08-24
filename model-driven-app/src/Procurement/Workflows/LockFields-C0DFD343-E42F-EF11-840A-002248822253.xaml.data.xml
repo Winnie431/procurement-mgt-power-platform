@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{c0dfd343-e42f-ef11-840a-002248822253}" Name="Lock Fields" Description="Click To Add Description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/LockFields-C0DFD343-E42F-EF11-840A-002248822253.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>2</Category>
+  <Mode>1</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>0</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <RunAs>1</RunAs>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerFormId>{73c4282d-fcf0-4592-aab0-e7e0b1b853ca}</ProcessTriggerFormId>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <PrimaryEntity>aglcm003_zulaa_expressiondebesoin</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Lock Fields" />
+    <LocalizedName languagecode="1036" description="Verrouiller les champs" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description languagecode="1033" description="Click To Add Description" />
+    <Description languagecode="1036" description="Cliquez pour ajouter une description" />
+  </Descriptions>
+</Workflow>

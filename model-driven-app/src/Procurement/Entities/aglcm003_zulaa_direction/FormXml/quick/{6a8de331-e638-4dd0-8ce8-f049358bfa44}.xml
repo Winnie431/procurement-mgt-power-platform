@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{6a8de331-e638-4dd0-8ce8-f049358bfa44}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{1acd4e51-7bc2-45cf-a5a1-f9680cd0b043}" IsUserDefined="1">
+          <labels>
+            <label description="" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{608b87a5-8026-45f6-9338-827a7b58a96d}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                    <label description="Général" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{f264adf4-1a56-4cc9-995b-7e0ff5f66095}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Entity" languagecode="1033" />
+                          <label description="Entité" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_entiteid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_entiteid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9e61a33a-2758-4db8-9216-1b15d1168bdc}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                          <label description="Nom" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_nom" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="aglcm003_nom" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b61a34ad-4375-461a-9a87-e9a394db2259}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Code" languagecode="1033" />
+                          <label description="Code" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_code" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_code" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{97dde541-529f-42bc-8d4a-cfdeef7ce0ff}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Responsible" languagecode="1033" />
+                          <label description="Responsable" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_responsableid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_responsableid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b5d0aba5-f4b7-4441-833b-bb659d0add43}" colspan="1" rowspan="1" visible="false">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                          <label description="Propriétaire" languagecode="1036" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d03df24e-1c01-4ce7-b941-94ef64b242bf}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Is Active" languagecode="1033" />
+                          <label description="Est actif" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_isactif" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="aglcm003_isactif" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+      <LocalizedName description="Informations" languagecode="1036" />
+    </LocalizedNames>
+  </systemform>
+</forms>

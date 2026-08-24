@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SdkMessageProcessingStep Name="Zulaa_Gestion_de_Stock.Package.PostOperationPopulateLigneInventaire: Create of aglcm003_zulaa_inventaire" SdkMessageProcessingStepId="{19f0f918-72c3-ef11-b8e8-7c1e5284b185}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SdkMessageId>9ebdbb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
+  <PluginTypeName>Zulaa_Gestion_de_Stock.Package.PostOperationPopulateLigneInventaire, Zulaa Gestion de Stock.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f169ead759eb29f</PluginTypeName>
+  <PluginTypeId>c59b2a4d-e12e-4b7f-940b-cb594d141cc0</PluginTypeId>
+  <PrimaryEntity>aglcm003_zulaa_inventaire</PrimaryEntity>
+  <AsyncAutoDelete>0</AsyncAutoDelete>
+  <Description>Zulaa_Gestion_de_Stock.Package.PostOperationPopulateLigneInventaire: Create of aglcm003_zulaa_inventaire</Description>
+  <FilteringAttributes></FilteringAttributes>
+  <InvocationSource>1</InvocationSource>
+  <Mode>0</Mode>
+  <Rank>14</Rank>
+  <EventHandlerTypeCode>4602</EventHandlerTypeCode>
+  <Stage>40</Stage>
+  <IsCustomizable>1</IsCustomizable>
+  <IsHidden>0</IsHidden>
+  <SupportedDeployment>0</SupportedDeployment>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <SdkMessageProcessingStepImages />
+</SdkMessageProcessingStep>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>1</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{8f0bb38b-493b-4aef-aef6-28adc540ddc2}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_description" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_lignesdelademandedesortieid">
+          <cell name="aglcm003_demandedesortieid" width="157" />
+          <cell name="aglcm003_magasinid" width="100" />
+          <cell name="aglcm003_articleid" width="100" />
+          <cell name="aglcm003_actifid" width="100" />
+          <cell name="aglcm003_quantiteasortir" width="131" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>4</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_lignesdelademandedesortie">
+          <attribute name="aglcm003_zulaa_lignesdelademandedesortieid" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <filter type="or" isquickfindfields="1">
+            <condition attribute="aglcm003_description" operator="like" value="{0}" />
+          </filter>
+          <attribute name="aglcm003_demandedesortieid" />
+          <attribute name="aglcm003_articleid" />
+          <attribute name="aglcm003_actifid" />
+          <attribute name="aglcm003_magasinid" />
+          <attribute name="aglcm003_quantiteasortir" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Quick Find Active Stock Issue Request Lines" languagecode="1033" />
+      <LocalizedName description="Recherche Rapide des Lignes de Demande de Sortie de Stock Actives" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

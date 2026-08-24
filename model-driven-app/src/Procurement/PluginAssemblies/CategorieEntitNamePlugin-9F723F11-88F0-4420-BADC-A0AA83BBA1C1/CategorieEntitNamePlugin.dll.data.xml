@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PluginAssembly FullName="CategorieEntitéNamePlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4d6c3892466a4ed6" PluginAssemblyId="9f723f11-88f0-4420-badc-a0aa83bba1c1" CustomizationLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsolationMode>2</IsolationMode>
+  <SourceType>0</SourceType>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <FileName>/PluginAssemblies/CategorieEntitNamePlugin-9F723F11-88F0-4420-BADC-A0AA83BBA1C1/CategorieEntitNamePlugin.dll</FileName>
+  <PluginTypes>
+    <PluginType AssemblyQualifiedName="CategorieEntitéNamePlugin.CategorieEntitéNamePlugin, CategorieEntitéNamePlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4d6c3892466a4ed6" PluginTypeId="109ed2d2-7570-4728-8409-8c56b83d9974" Name="CategorieEntitéNamePlugin.CategorieEntitéNamePlugin">
+      <FriendlyName>e41bb549-951f-4348-acb3-8192de2d2bbd</FriendlyName>
+    </PluginType>
+  </PluginTypes>
+</PluginAssembly>

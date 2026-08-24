@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{0b4883a9-e64f-4486-94df-001137182a53}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls" shownavigationbar="false">
+      <tabs>
+        <tab verticallayout="true" id="{49ec022c-2aa1-4051-bdc5-d3b45a3c8499}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+            <label description="Général" languagecode="1036" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{197cbdff-b580-48bb-8095-3f508e768da2}" name="Entite" columns="11">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                    <label description="Général" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{4c11d106-957e-43d5-8345-cf92d87db2d5}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Entity" languagecode="1033" />
+                          <label description="Entité" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_entiteid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_entiteid" disabled="false">
+                          <parameters>
+                            <useMainFormDialogForEdit>true</useMainFormDialogForEdit>
+                            <useMainFormDialogForCreate>true</useMainFormDialogForCreate>
+                            <DisableMru>true</DisableMru>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4edfc2aa-4df4-47cb-807c-fd9e22e29159}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                          <label description="Nom" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_nomentite" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="aglcm003_nomentite" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{50c98419-f4b2-4db1-bd63-00b9aafd9b4f}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Approbateur de la demande de sortie de stock" languagecode="1033" />
+                          <label description="Magasinier" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_magasinier" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_magasinier" disabled="false">
+                          <parameters>
+                            <useMainFormDialogForEdit>true</useMainFormDialogForEdit>
+                            <useMainFormDialogForCreate>true</useMainFormDialogForCreate>
+                            <DisableMru>true</DisableMru>
+                          </parameters>
+                        </control>
+                      </cell>
+                      <cell id="{297923a5-7a8d-43f4-86b3-fd790e31d50c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Approbateur de la demande de sortie de stock" languagecode="1033" />
+                          <label description="Approbateur de la demande de sortie de stock" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_demandeursortieetretourstock" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_demandeursortieetretourstock" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7c9d9408-8ca2-4022-94b1-df192e1e82ad}">
+                        <labels>
+                          <label description="Store Type" languagecode="1033" />
+                          <label description="Type de Magasin" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_typemagasin" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="aglcm003_typemagasin" />
+                      </cell>
+                      <cell id="{e898b8e9-8507-4169-9923-972a10f1a009}" locklevel="0" rowspan="1" colspan="1">
+                        <labels>
+                          <label description="Reception Agent" languagecode="1033" />
+                          <label description="Agent de Réception" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_agentdereception" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_agentdereception" disabled="false">
+                          <parameters>
+                            <DisableMru>true</DisableMru>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c6d4b1c0-8ec5-4cdf-8b67-d047d69fb8cb}">
+                        <labels>
+                          <label description="Description" languagecode="1033" />
+                          <label description="Description" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_description" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="aglcm003_description" />
+                      </cell>
+                      <cell id="{b03c3369-bee1-4970-b354-380c59dfafd3}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Security Agent" languagecode="1033" />
+                          <label description="Agent de Sécurité" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_agentdesecurite" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_agentdesecurite" disabled="false">
+                          <parameters>
+                            <DisableMru>true</DisableMru>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6a0babef-1d8f-400d-a67a-4e3ccd6056bc}" colspan="1" rowspan="1" visible="false">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                          <label description="Propriétaire" languagecode="1036" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                      <cell id="{7de2630f-22ea-4733-a163-ab6cee7fb9a2}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Reception Validation?" languagecode="1033" />
+                          <label description="Validation de Réception ?" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_isreceiptvalidation" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="aglcm003_isreceiptvalidation" disabled="false" uniqueid="{8bc3b492-54d2-40fc-aed9-b1747fd2063a}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{c4a0dd20-6fa0-42f3-9a59-a81fbdee7896}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell id="{fe52d5b8-4702-434e-92db-af5491845e58}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Stock withdrawal approval ?" languagecode="1033" />
+                          <label description="Approbation du Sortie de Stock ?" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_isstockwithdrawalapproval" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="aglcm003_isstockwithdrawalapproval" disabled="false" uniqueid="{d87affa3-a7d5-4853-b09f-db0bb5ae94ee}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_3" id="dc16c894-0e3f-4c0a-ba48-5dcdbf50b402" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Store items" languagecode="1033" />
+                    <label description="Articles du Magasin" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{8870171e-3e6e-45e3-a596-5400a465e772}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{70f7e6c0-3793-4448-993f-dd460ad51c6d}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="Items" languagecode="1033" />
+                          <label description="Articles" languagecode="1036" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_1" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>true</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>aglcm003_magasinarticle</TargetEntityType>
+                            <ViewId>{D8D62820-BAB8-441B-AB9C-2EDB5A8088C0}</ViewId>
+                            <ViewIds>{D8D62820-BAB8-441B-AB9C-2EDB5A8088C0}</ViewIds>
+                            <RelationshipName>aglcm003_magasinarticle_magasin</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+                <section name="null_section_4" id="4cfeec81-57e0-468c-8963-a329274b10a1" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Store assets" languagecode="1033" />
+                    <label description="Biens du Magasin" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{bed45ae8-faa9-4e8c-9cf9-0c3594535e91}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="Store Assets" languagecode="1033" />
+                          <label description="Biens du Magasin" languagecode="1036" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_2" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>true</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>aglcm003_zulaa_actif</TargetEntityType>
+                            <ViewId>{68A8FC84-40B9-45A1-9E7E-4717104B8161}</ViewId>
+                            <ViewIds>{68A8FC84-40B9-45A1-9E7E-4717104B8161}</ViewIds>
+                            <RelationshipName>aglcm003_zulaa_actif_magasin</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{f62eee82-002f-46a9-80c8-7c22217e19c2}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{3ce0b437-68e1-496d-835b-7ade53f3786f}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{95a55156-3f06-48b4-9b72-3a3371b0b4c3}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{0ec4b5a0-9113-49db-84f8-b56ce3186c69}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{89a487ab-61c8-4966-88ea-afff5e1c30d0}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{bc8d8c2e-ce03-4002-bc6d-70b74f5443b1}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{7741bbd0-4684-4446-9335-631289c6bd5f}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{7acbb3ef-206e-4456-9bf7-897a78d3f2d8}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+      <controlDescriptions>
+        <controlDescription forControl="{d87affa3-a7d5-4853-b09f-db0bb5ae94ee}">
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>aglcm003_isstockwithdrawalapproval</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_isstockwithdrawalapproval</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_isstockwithdrawalapproval</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_isstockwithdrawalapproval</value>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{8bc3b492-54d2-40fc-aed9-b1747fd2063a}">
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>aglcm003_isreceiptvalidation</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_isreceiptvalidation</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_isreceiptvalidation</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_isreceiptvalidation</value>
+            </parameters>
+          </customControl>
+        </controlDescription>
+      </controlDescriptions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+      <LocalizedName description="Informations" languagecode="1036" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+      <Description description="Un formulaire pour cette entité" languagecode="1036" />
+    </Descriptions>
+  </systemform>
+</forms>

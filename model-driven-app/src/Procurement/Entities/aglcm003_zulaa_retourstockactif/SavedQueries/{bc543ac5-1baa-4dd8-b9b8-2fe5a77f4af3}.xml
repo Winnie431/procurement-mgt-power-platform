@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{bc543ac5-1baa-4dd8-b9b8-2fe5a77f4af3}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_code" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_retourstockactifid">
+          <cell name="aglcm003_code" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_retourstockactif">
+          <attribute name="aglcm003_zulaa_retourstockactifid" />
+          <attribute name="aglcm003_code" />
+          <attribute name="createdon" />
+          <order attribute="aglcm003_code" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="1" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Inactive Return Of Stock Assets" languagecode="1033" />
+      <LocalizedName description="Retour inactif des actifs en stock" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

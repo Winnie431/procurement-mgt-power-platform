@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppModuleSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SiteMapUniqueName>aglcm003_ZULAA</SiteMapUniqueName>
+  <EnableCollapsibleGroups>False</EnableCollapsibleGroups>
+  <ShowHome>True</ShowHome>
+  <ShowPinned>True</ShowPinned>
+  <ShowRecents>True</ShowRecents>
+  <SiteMap IntroducedVersion="7.0.0.0">
+    <Area Id="area_e6533911" ResourceId="SitemapDesigner.NewTitle" DescriptionResourceId="SitemapDesigner.NewTitle" ShowGroups="true" IntroducedVersion="7.0.0.0">
+      <Titles>
+        <Title LCID="1033" Title="Achat" />
+      </Titles>
+      <Group Id="Gestion_des_achats_a2bd2c16" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="Purchase Management" />
+          <Title LCID="1036" Title="Gestion des achats" />
+        </Titles>
+        <SubArea Id="subarea_8925d4ba" VectorIcon="/WebResources/mspp_ad_placement.svg" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="aglcm003_zulaa_expressiondebesoin" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_6a436184" VectorIcon="/WebResources/mspp_entity_forms.svg" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="aglcm003_zulaa_demandedachat" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_5fbfde4c" VectorIcon="/WebResources/msdyn_/Icons/SolutionHealthAppModule.svg" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="aglcm003_zulaa_bondecommande" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_d2261c9f" VectorIcon="/WebResources/mspp_web_pages.svg" Icon="/WebResources/mspp_web_pages.svg" Entity="aglcm003_delegationparrole" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1036" Title="Délégation des validations" />
+            <Title LCID="1033" Title="Approvals Delegation" />
+          </Titles>
+        </SubArea>
+      </Group>
+      <Group Id="Gestion_de_stock_6c4e6d40" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="Stock Management" />
+          <Title LCID="1036" Title="Gestion de stock" />
+        </Titles>
+        <SubArea Id="subarea_6b531110" VectorIcon="/WebResources/mspp_site_settings.svg" Icon="/WebResources/mspp_site_settings.svg" Entity="aglcm003_magasin" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_a0c4e088" VectorIcon="/WebResources/agl_iIconcategoriezulaa.svg" Icon="/WebResources/agl_iIconcategoriezulaa.svg" Entity="aglcm003_zulaa_actif" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_e9f9d918" VectorIcon="/WebResources/mspp_entity_permissions.svg" Icon="/WebResources/mspp_entity_permissions.svg" Entity="aglcm003_zulaa_reception" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_04c903b4" VectorIcon="/WebResources/msdyncrm_/KnowledgeSearch/DefaultIcon.svg" Icon="/WebResources/msdyncrm_/KnowledgeSearch/DefaultIcon.svg" Entity="aglcm003_zulaa_demandesortiestock" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_7988db0b" VectorIcon="/WebResources/msdyncrm_/KnowledgeSearch/SendToCTI.svg" Icon="/WebResources/msdyncrm_/KnowledgeSearch/SendToCTI.svg" Entity="aglcm003_zulaa_sortiedestock" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_68d0b7a3" VectorIcon="/WebResources/mspp_publishing_state_transition_rules.svg" Icon="/WebResources/mspp_publishing_state_transition_rules.svg" Entity="aglcm003_zulaa_inventaire" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_2cb1a835" VectorIcon="/WebResources/mspp_redirects.svg" Icon="/WebResources/mspp_redirects.svg" Entity="aglcm003_zulaa_retourstock" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+      </Group>
+      <Group Id="Donnees_de_bases_67369274" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="Basic Data" />
+          <Title LCID="1036" Title="Données de bases" />
+        </Titles>
+        <SubArea Id="subarea_4c7cf47d" VectorIcon="/WebResources/cat_customapi_icon" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="aglcm003_zulaa_entite" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Privilege Entity="aglcm003_zulaa_entite" Privilege="All,Create,Read,Write,Delete,Append,AppendTo,Share,Assign" />
+        </SubArea>
+        <SubArea Id="subarea_fa51742e" VectorIcon="/WebResources/aglcm003_icondirectionzulaa.svg" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="aglcm003_zulaa_direction" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Privilege Entity="aglcm003_zulaa_direction" Privilege="Create,Read,Write,Append,AppendTo" />
+        </SubArea>
+        <SubArea Id="subarea_7f55b47d" VectorIcon="/WebResources/msdyncrm_/KnowledgeArticleSubgrid/Hierarchy_16.svg" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="aglcm003_zulaa_departement" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Privilege Entity="aglcm003_zulaa_departement" Privilege="All,Create,Read,Write,Delete,Append,AppendTo,Share,Assign" />
+        </SubArea>
+        <SubArea Id="subarea_c30b0e1a" VectorIcon="/WebResources/aglcm003_iconcentredecoutzulaa" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="aglcm003_zulaa_centredecout" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Privilege Entity="aglcm003_zulaa_centredecout" Privilege="Create,Read,Write,Append,AppendTo" />
+        </SubArea>
+        <SubArea Id="subarea_50afa619" VectorIcon="/WebResources/agl_iIconcategoriezulaa.svg" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="aglcm003_zulaa_categorie" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Privilege Entity="aglcm003_zulaa_categorie" Privilege="All,Create,Read,Write,Delete,Append,AppendTo,Share,Assign" />
+        </SubArea>
+        <SubArea Id="subarea_305d2932" VectorIcon="/WebResources/aglcm003_Logoarticlezulaa.svg" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="aglcm003_zulaa_article" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Privilege Entity="aglcm003_zulaa_article" Privilege="Create,Read,Write,Append,AppendTo" />
+        </SubArea>
+        <SubArea Id="subarea_18f86f74" VectorIcon="/WebResources/adx_contacts.svg" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="aglcm003_zulaa_fournisseur" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Privilege Entity="aglcm003_zulaa_fournisseur" Privilege="All,Create,Read,Write,Delete,Append,AppendTo,Share,Assign" />
+        </SubArea>
+        <SubArea Id="subarea_bd86fa1b" VectorIcon="/WebResources/mspp_site_markers.svg" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="aglcm003_zulaa_pays" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Privilege Entity="aglcm003_zulaa_pays" Privilege="All,Create,Read,Write,Delete,Append,AppendTo,Share,Assign" />
+        </SubArea>
+        <SubArea Id="subarea_e2c509c8" VectorIcon="/WebResources/aglcm003_deviseicon" Icon="/WebResources/aglcm003_deviseicon" Entity="aglcm003_zulaa_devise" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Privilege Entity="aglcm003_zulaa_devise" Privilege="All,Create,Read,Write,Delete,Append,AppendTo,Share,Assign" />
+        </SubArea>
+        <SubArea Id="subarea_c2ede34b" VectorIcon="/WebResources/aglcm003_icontauxdeconversionzulaasvg" Icon="/WebResources/aglcm003_icontauxdeconversionzulaasvg" Entity="aglcm003_zulaa_auxdeconsversion" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Privilege Entity="aglcm003_zulaa_auxdeconsversion" Privilege="All,Create,Read,Write,Delete,Append,AppendTo,Share,Assign" />
+        </SubArea>
+        <SubArea Id="subarea_5d3f6e32" VectorIcon="/WebResources/msdyn_/Icons/AnalysisJob.svg" Icon="/WebResources/msdyn_/Icons/AnalysisJob.svg" Entity="aglcm003_zulaa_tva" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="TVA" />
+          </Titles>
+          <Privilege Entity="aglcm003_zulaa_tva" Privilege="Create,Read,Write,Delete,Append,AppendTo" />
+        </SubArea>
+        <SubArea Id="subarea_767567a2" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="aglcm003_zulaa_unite" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Privilege Entity="aglcm003_zulaa_unite" Privilege="All,Create,Read,Write,Delete,Append,AppendTo,Share,Assign" />
+        </SubArea>
+        <SubArea Id="subarea_7edd270b" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="systemuser" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Privilege Entity="systemuser" Privilege="All,Create,Read,Write,Delete,Append,AppendTo,Share,Assign" />
+        </SubArea>
+      </Group>
+      <Group Id="group_059f45de" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="User Guide - French version" />
+          <Title LCID="1036" Title="Guide Utilisateur - Version française" />
+        </Titles>
+        <SubArea Id="subarea_4b10448d" ResourceId="SitemapDesigner.NewSubArea" Icon="/_imgs/imagestrips/transparent_spacer.gif" Url="https://teamsite.msc.com/:v:/s/CM003-AFR-CIO-ZULAA-MODELDRIVEN-DEV/EbuZgBTW0NdIqdCrdVHo4SsBpFPDNaTt0xkKtjcLKYiRmQ?e=Fe5Vto" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Expression of Need Management" />
+            <Title LCID="1036" Title="Gestion des Expressions de besoins" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_19e09d02" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/mspp_entity_forms.svg" Icon="/WebResources/mspp_entity_forms.svg" Url="https://teamsite.msc.com/:v:/s/CM003-AFR-CIO-ZULAA-MODELDRIVEN-DEV/ERAycliH4nRIkZNSUTsyoT0Bmu_StmzHVbBlEtYbBcsxlg?e=xpm3Qy" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Purchase request - Create a request" />
+            <Title LCID="1036" Title="Demande d'achat - Créer une demande d'achat" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_6fe7270d" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/mspp_entity_forms.svg" Icon="/WebResources/mspp_entity_forms.svg" Url="https://teamsite.msc.com/:v:/s/CM003-AFR-CIO-ZULAA-MODELDRIVEN-DEV/EWlXtIpN-GBOnJhFoYUJnkcBZdxojNMgCyWoT6NyLsvC5g?e=N31U9g" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Purchase Request - Documents &amp; Submission for approval" />
+            <Title LCID="1036" Title="Demande d'achat - Documents et Soumission pour validation" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_f4e052c8" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/mspp_entity_permissions.svg" Icon="/WebResources/mspp_entity_permissions.svg" Url="https://teamsite.msc.com/:v:/s/CM003-AFR-CIO-ZULAA-MODELDRIVEN-DEV/EWzRgh5HCKxHiiQpRhMLLD8BKhhS0HLtKbdh40myEGPzSA?e=ROOfoi" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Purchase Order Management" />
+            <Title LCID="1036" Title="Gestion des Bons de Commandes" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_f85d1760" ResourceId="SitemapDesigner.NewSubArea" Icon="/_imgs/imagestrips/transparent_spacer.gif" Url="https://teamsite.msc.com/:v:/s/CM003-MIGRATIONZULAASHAREPOINTVERSDATAVERSE/IQCccs3BrGNeS4a_LhcglI7dAWIHh2-JxX8HKvib50-B5pw?e=VjOoxI" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Stock Management - Reception" />
+            <Title LCID="1036" Title="Gestion de Stock - Réception" />
+          </Titles>
+          <Descriptions>
+            <Description LCID="1033" Description="Gestion de Stock - Réception" />
+          </Descriptions>
+        </SubArea>
+        <SubArea Id="subarea_9b80a417" ResourceId="SitemapDesigner.NewSubArea" Icon="/_imgs/imagestrips/transparent_spacer.gif" Url="https://teamsite.msc.com/:v:/s/CM003-MIGRATIONZULAASHAREPOINTVERSDATAVERSE/IQBflYOJUJ5vTYc6RZJDNxU5AQbY4RvfKF7ZNbHdyB_4rGw?e=mHhpJr" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Assets Management" />
+            <Title LCID="1036" Title="Gestion des Actifs" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_b1fb0a7a" ResourceId="SitemapDesigner.NewSubArea" Icon="/_imgs/imagestrips/transparent_spacer.gif" Url="https://teamsite.msc.com/:v:/s/CM003-MIGRATIONZULAASHAREPOINTVERSDATAVERSE/IQD31R9OU5scR7WRcGQs14ETAbPCQfiERVYF-jTDEJ55z7w?e=kJAcTJ" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Stock Withdrawal Request Management" />
+            <Title LCID="1036" Title="Gestion des Demandes de Sortie de Stock" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_8f4bef21" ResourceId="SitemapDesigner.NewSubArea" Icon="/_imgs/imagestrips/transparent_spacer.gif" Url="https://teamsite.msc.com/:v:/s/CM003-MIGRATIONZULAASHAREPOINTVERSDATAVERSE/IQDeSw7vNDDbTY6Th_BpnnmtARgpsGTpj3p-ojSR46yM6gQ?e=Zuh7cc" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Stock Withdrawal Management" />
+            <Title LCID="1036" Title="Gestion des Sorties de Stock" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_69e806b5" ResourceId="SitemapDesigner.NewSubArea" Icon="/_imgs/imagestrips/transparent_spacer.gif" Url="https://teamsite.msc.com/:v:/s/CM003-MIGRATIONZULAASHAREPOINTVERSDATAVERSE/IQAfntDIbjfyQpNYsQADyhyoAYLs1wv7uqTJLG1upcIu92Y?e=eoYEvg" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Return Into Stock Management" />
+            <Title LCID="1036" Title="Gestion des Retours en Stock" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_eb0cc541" ResourceId="SitemapDesigner.NewSubArea" Icon="/_imgs/imagestrips/transparent_spacer.gif" Url="https://teamsite.msc.com/:v:/s/CM003-MIGRATIONZULAASHAREPOINTVERSDATAVERSE/IQDEK6cT-37nSruN7xwhc5ZWAfGPZ-7xpf4xA1QgslBsd60?e=pT3Ml8" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Store Inventory Management" />
+            <Title LCID="1036" Title="Gestion des Inventaires de magasin" />
+          </Titles>
+        </SubArea>
+      </Group>
+      <Group Id="group_15560f91" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="User Guide - English version" />
+          <Title LCID="1036" Title="Guide Utilisateur - Version Anglaise" />
+        </Titles>
+        <SubArea Id="subarea_5707ab05" ResourceId="SitemapDesigner.NewSubArea" Icon="/_imgs/imagestrips/transparent_spacer.gif" Url="https://teamsite.msc.com/:v:/s/CM003-MIGRATIONZULAASHAREPOINTVERSDATAVERSE/IQBdjmTOjLlZTLGjKMvAXeUHAfIhOaQmdj6uXu31bi5M3LA?e=Juhlod" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Expression of need Management" />
+            <Title LCID="1036" Title="Gestion des Expressions de besoins" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_39f5a860" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/mspp_entity_forms.svg" Icon="/WebResources/mspp_entity_forms.svg" Url="https://teamsite.msc.com/:v:/s/CM003-MIGRATIONZULAASHAREPOINTVERSDATAVERSE/IQAah3zxOzOGTLr1FAC89RGZAVb6VLY1GP3_ETg4deaTMgA?e=CVJtZx" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Purchase request - Create a purchase request" />
+            <Title LCID="1036" Title="Demande d'achat - Créer une demande d'achat" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_178f3db3" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/mspp_web_forms.svg" Icon="/WebResources/mspp_web_forms.svg" Url="https://teamsite.msc.com/:v:/s/CM003-MIGRATIONZULAASHAREPOINTVERSDATAVERSE/IQDS3fGaORoHSr1Dtni9QtfVAWtMPZ9yjbWhgsBszrWHSTI?e=yUOxld" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Purchase request - Add a document" />
+            <Title LCID="1036" Title="Demande d'achat - Documents et Soumission pour validation" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_c1bc46f5" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/mspp_entity_permissions.svg" Icon="/WebResources/mspp_entity_permissions.svg" Url="https://teamsite.msc.com/:v:/s/CM003-MIGRATIONZULAASHAREPOINTVERSDATAVERSE/IQDC_ksS7A73Q7PZoo31UORtAfhvHqL6Xq26FA5OQW4A2Gg?e=0mVthD" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Purchase Order Management" />
+            <Title LCID="1036" Title="Gestion des Bons de Commandes" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_d05b2574" ResourceId="SitemapDesigner.NewSubArea" Icon="/_imgs/imagestrips/transparent_spacer.gif" Url="https://teamsite.msc.com/:v:/s/CM003-MIGRATIONZULAASHAREPOINTVERSDATAVERSE/IQDcTNHAN2P7SrNKhp2q_GiSASWcu5rec0Hu3YjUh8QACNY?e=bdjn7W" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Stock Management- Reception" />
+            <Title LCID="1036" Title="Gestion de Stock - Réception" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_956509a5" ResourceId="SitemapDesigner.NewSubArea" Icon="/_imgs/imagestrips/transparent_spacer.gif" Url="https://teamsite.msc.com/:v:/s/CM003-MIGRATIONZULAASHAREPOINTVERSDATAVERSE/IQCpHna0Osh8R6dVVbKKgk3cARkG47Z-sMXo_lH_tVV6GrM?e=zSV4Pz" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Assets Management" />
+            <Title LCID="1036" Title="Gestion des Actifs" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_4fe540f9" ResourceId="SitemapDesigner.NewSubArea" Icon="/_imgs/imagestrips/transparent_spacer.gif" Url="https://teamsite.msc.com/:v:/s/CM003-MIGRATIONZULAASHAREPOINTVERSDATAVERSE/IQAtYO5nOc8RSIUk20ayu0NtARLCUTrQLn7WRGbNli9j5Dc?e=xtJpwf" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Stock Withdrawal Request Management" />
+            <Title LCID="1036" Title="Gestion des Demandes de Sortie de Stock" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_76a88312" ResourceId="SitemapDesigner.NewSubArea" Icon="/_imgs/imagestrips/transparent_spacer.gif" Url="https://teamsite.msc.com/:v:/s/CM003-MIGRATIONZULAASHAREPOINTVERSDATAVERSE/IQDYLzoVOjfRTKK5bPZH-gToAflQorxtxyK16UCssXaPkjE?e=OOeEJK" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Stock Withdrawal Management" />
+            <Title LCID="1036" Title="Gestion des Sorties de Stock" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_de089cee" ResourceId="SitemapDesigner.NewSubArea" Icon="/_imgs/imagestrips/transparent_spacer.gif" Url="https://teamsite.msc.com/:v:/s/CM003-MIGRATIONZULAASHAREPOINTVERSDATAVERSE/IQB7xGlECSQfQZaGYLvsK8gBAStydXvXYvzJpDv2a8AZmFk?e=cNbsTu" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Return Into Stock Management" />
+            <Title LCID="1036" Title="Gestion des Retours en Stock" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_79fadf79" ResourceId="SitemapDesigner.NewSubArea" Icon="/_imgs/imagestrips/transparent_spacer.gif" Url="https://teamsite.msc.com/:v:/s/CM003-MIGRATIONZULAASHAREPOINTVERSDATAVERSE/IQA5ArQXyvNtT5WgnfIU4oPLASztgHwOAPNO1LPmO6Trty8?e=lUrDhc" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Store Inventory Management" />
+            <Title LCID="1036" Title="Gestion des Inventaires de magasin" />
+          </Titles>
+        </SubArea>
+      </Group>
+    </Area>
+  </SiteMap>
+  <LocalizedNames>
+    <LocalizedName description="ZULAA" languagecode="1033" />
+    <LocalizedName description="ZULAA" languagecode="1036" />
+  </LocalizedNames>
+</AppModuleSiteMap>

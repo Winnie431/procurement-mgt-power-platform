@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{08cfce45-c1eb-4af6-9d99-8720b97b59dd}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_nom" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_articleid">
+          <cell name="aglcm003_codearticle" width="109" />
+          <cell name="aglcm003_nom" width="86" />
+          <cell name="aglcm003_categorieid" width="107" />
+          <cell name="a_f0abd1aa03074e0ea99a2653d424ea24.aglcm003_nom" width="147" />
+          <cell name="aglcm003_description" width="106" />
+          <cell name="createdon" width="125" />
+          <cell name="aglcm003_isstockable" width="106" />
+          <cell name="aglcm003_isserialsable" width="112" />
+          <cell name="aglcm003_isprestation" width="107" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>1</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_article">
+          <attribute name="aglcm003_zulaa_articleid" />
+          <attribute name="aglcm003_nom" />
+          <attribute name="createdon" />
+          <attribute name="aglcm003_codearticle" />
+          <attribute name="aglcm003_description" />
+          <order attribute="createdon" descending="true" />
+          <order attribute="aglcm003_nom" descending="false" />
+          <attribute name="aglcm003_categorieid" />
+          <link-entity alias="a_f0abd1aa03074e0ea99a2653d424ea24" name="aglcm003_zulaa_categorie" to="aglcm003_categorieid" from="aglcm003_zulaa_categorieid" link-type="outer" visible="false">
+            <attribute name="aglcm003_nom" />
+          </link-entity>
+          <attribute name="aglcm003_isstockable" />
+          <attribute name="aglcm003_isserialsable" />
+          <attribute name="aglcm003_isprestation" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Item Advanced Find View" languagecode="1033" />
+      <LocalizedName description="Affichage de recherche avancée d'éléments" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

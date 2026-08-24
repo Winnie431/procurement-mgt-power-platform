@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{5008e5f4-f949-475c-a5e7-9288b827da76}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_code" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_entiteid">
+          <cell name="aglcm003_code" width="300" />
+          <cell name="aglcm003_nom" width="100" />
+          <cell name="aglcm003_email" width="100" />
+          <cell name="aglcm003_ndetelephone" width="127" />
+          <cell name="aglcm003_nducontribuable" width="150" />
+          <cell name="aglcm003_adresse" width="100" />
+          <cell name="createdon" width="125" />
+          <cell name="aglcm003_typegestionda" width="143" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_entite">
+          <attribute name="aglcm003_zulaa_entiteid" />
+          <attribute name="aglcm003_code" />
+          <attribute name="createdon" />
+          <order attribute="aglcm003_code" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_email" />
+          <attribute name="aglcm003_ndetelephone" />
+          <attribute name="aglcm003_nducontribuable" />
+          <attribute name="aglcm003_adresse" />
+          <attribute name="aglcm003_nom" />
+          <attribute name="aglcm003_typegestionda" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Entity" languagecode="1033" />
+      <LocalizedName description="Entité active" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

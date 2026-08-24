@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SdkMessageProcessingStep Name="Zulaa_Gestion_de_Stock.Package.PostOperationBloquerLigneSortieArticle: Create of aglcm003_zulaa_sortiestockarticle" SdkMessageProcessingStepId="{1f3a08d3-a4c1-ef11-b8e8-7c1e5284b185}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SdkMessageId>9ebdbb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
+  <PluginTypeName>Zulaa_Gestion_de_Stock.Package.PostOperationBloquerLigneSortieArticle, Zulaa Gestion de Stock.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f169ead759eb29f</PluginTypeName>
+  <PluginTypeId>76f8250e-3f2f-45ba-8ff1-0f15df43efd7</PluginTypeId>
+  <PrimaryEntity>aglcm003_zulaa_sortiestockarticle</PrimaryEntity>
+  <AsyncAutoDelete>0</AsyncAutoDelete>
+  <Description>Zulaa_Gestion_de_Stock.Package.PostOperationBloquerLigneSortieArticle: Create of aglcm003_zulaa_sortiestockarticle</Description>
+  <FilteringAttributes>aglcm003_articleid,aglcm003_quantitesortie,aglcm003_uniteid</FilteringAttributes>
+  <InvocationSource>1</InvocationSource>
+  <Mode>0</Mode>
+  <Rank>13</Rank>
+  <EventHandlerTypeCode>4602</EventHandlerTypeCode>
+  <Stage>40</Stage>
+  <IsCustomizable>1</IsCustomizable>
+  <IsHidden>0</IsHidden>
+  <SupportedDeployment>0</SupportedDeployment>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <SdkMessageProcessingStepImages />
+</SdkMessageProcessingStep>

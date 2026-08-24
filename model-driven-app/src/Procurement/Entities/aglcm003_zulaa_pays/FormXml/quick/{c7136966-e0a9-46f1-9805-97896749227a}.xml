@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{c7136966-e0a9-46f1-9805-97896749227a}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{c5fa8f62-6f60-4e7b-8f12-91fc3830a044}" IsUserDefined="1">
+          <labels>
+            <label description="" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{7deb527e-c499-476f-8c39-65c8e5b9b944}">
+                  <labels>
+                    <label description="GENERAL" languagecode="1033" />
+                    <label description="GÉNÉRAL" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{e710f0bd-ac1b-4318-9f9a-9b77f45eba7b}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                          <label description="Nom" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_nom" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="aglcm003_nom" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{51594103-96d9-4585-8c67-5ac96b8126ae}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Country indicator" languagecode="1033" />
+                          <label description="Indicatif du Pays" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_indicateurdupays" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_indicateurdupays" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4dc03b4b-1007-421b-aab3-05a177e2ae72}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="VAT" languagecode="1033" />
+                          <label description="TVA" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_tvaid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_tvaid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2729c16c-a784-49ae-8af2-fd235f99d3b9}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="IsActive" languagecode="1033" />
+                          <label description="Est Actif" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_isactif" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="aglcm003_isactif" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e3ba783b-a0c6-4525-94bb-ff9a10ea6dcf}" colspan="1" rowspan="1" visible="false">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                          <label description="Propriétaire" languagecode="1036" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+      <LocalizedName description="Informations" languagecode="1036" />
+    </LocalizedNames>
+  </systemform>
+</forms>

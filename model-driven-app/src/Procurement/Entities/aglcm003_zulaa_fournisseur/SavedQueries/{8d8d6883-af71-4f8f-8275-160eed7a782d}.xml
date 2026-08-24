@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{8d8d6883-af71-4f8f-8275-160eed7a782d}</savedqueryid>
+    <layoutxml>
+      <grid name="aglcm003_zulaa_fournisseurs" jump="aglcm003_nom" select="1" icon="1" preview="1">
+        <row name="aglcm003_zulaa_fournisseur" id="aglcm003_zulaa_fournisseurid">
+          <cell name="aglcm003_nom" width="300" />
+          <cell name="aglcm003_raisonsociale" width="124" />
+          <cell name="aglcm003_compteiris" width="107" />
+          <cell name="aglcm003_ndetelephone" width="127" />
+          <cell name="aglcm003_email" width="100" />
+          <cell name="aglcm003_nducontribuable" width="150" />
+          <cell name="aglcm003_registredecommerce" width="166" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>2</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_fournisseur">
+          <attribute name="aglcm003_zulaa_fournisseurid" />
+          <attribute name="aglcm003_nom" />
+          <order attribute="aglcm003_nom" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_raisonsociale" />
+          <attribute name="aglcm003_compteiris" />
+          <attribute name="aglcm003_ndetelephone" />
+          <attribute name="aglcm003_email" />
+          <attribute name="aglcm003_nducontribuable" />
+          <attribute name="aglcm003_registredecommerce" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Supplier Associated View" languagecode="1033" />
+      <LocalizedName description="Vue associée aux fournisseurs" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

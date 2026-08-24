@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{898e02a7-8a6e-4b4f-85ab-b04667ce57ea}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab name="general" verticallayout="true" id="{1b3526ed-e1b8-4d27-8932-a8f1413f98f6}" IsUserDefined="0">
+          <labels>
+            <label description="" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="25%">
+              <sections>
+                <section name="ColorStrip" showlabel="false" showbar="false" columns="1" IsUserDefined="0" id="{d7f3e746-0a8e-4503-9633-d048de563d98}">
+                  <labels>
+                    <label description="ColorStrip" languagecode="1033" />
+                    <label description="Bande de couleur" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{3be8080d-dc9a-4cf6-ae5b-4fc2efd70da3}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="75%">
+              <sections>
+                <section name="CardHeader" showlabel="false" showbar="false" columns="111" id="{152161f2-88f7-4961-b433-0d4161581ca4}" IsUserDefined="0">
+                  <labels>
+                    <label description="Header" languagecode="1033" />
+                    <label description="En-tête" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{4f50349e-1ded-49c3-b3b7-74036fa7796f}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Status Reason" languagecode="1033" />
+                          <label description="Motif du statut" languagecode="1036" />
+                        </labels>
+                        <control id="statuscode" classid="{5D68B988-0661-4db2-BC3E-17598AD3BE6C}" datafieldname="statuscode" disabled="false" />
+                      </cell>
+                      <cell id="{df12aee2-e2c2-4bdc-a031-b94c2fc0e55d}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell id="{62482679-5a9f-4a16-b156-625a4595fc10}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="CardDetails" showlabel="false" showbar="false" columns="1" id="{e8c601a6-bbf0-40f5-a9c6-6906c4ef4b46}" IsUserDefined="0">
+                  <labels>
+                    <label description="Details" languagecode="1033" />
+                    <label description="Détails" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{8c0c5625-8bbd-407f-80b0-174916069026}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="VAT Label" languagecode="1033" />
+                          <label description="Étiquette TVA" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_libelle_tva" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="aglcm003_libelle_tva" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3deba59d-1dc1-7877-45c6-b04d3e09a8ca}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="VAT Rate" languagecode="1033" />
+                          <label description="Taux de TVA" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_taux_tva" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="aglcm003_taux_tva" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="CardFooter" showlabel="false" columns="1111" showbar="false" id="{42889764-57d0-47a1-ad21-45e336c43736}" IsUserDefined="0">
+                  <labels>
+                    <label description="Footer" languagecode="1033" />
+                    <label description="Pied de page" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{c0069882-3277-494a-a543-f27ed4d06742}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Created On" languagecode="1033" />
+                          <label description="Date de création" languagecode="1036" />
+                        </labels>
+                        <control id="createdon" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="createdon" disabled="false" />
+                      </cell>
+                      <cell id="{c46c0d89-1fe5-4ff2-b005-7e6f60f59a33}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell id="{3ac38018-b6d0-4ed4-9020-1e00c2afaf17}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell id="{2c55016e-c444-4915-98c9-d29ac12638a5}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+      <LocalizedName description="Informations" languagecode="1036" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A card form for this entity." languagecode="1033" />
+      <Description description="Formulaire de carte pour cette entité." languagecode="1036" />
+    </Descriptions>
+  </systemform>
+</forms>

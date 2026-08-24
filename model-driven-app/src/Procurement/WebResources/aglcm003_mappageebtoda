@@ -1,0 +1,75 @@
+function onLookupFieldChange(executionContext) {
+    // Récupération du contexte du formulaire pour accéder aux champs et autres informations du formulaire
+    var formContext = executionContext.getFormContext();
+
+    // Récupération de la valeur du champ lookup 'aglcm003_expressiondebesoinid'
+    var expressiondebeesoin = formContext.getAttribute("aglcm003_expressiondebesoinid").getValue();
+    console.log(expressiondebeesoin); // Affiche la valeur récupérée pour debug
+
+    // Vérifie si une valeur a été sélectionnée dans le champ 'aglcm003_expressiondebesoinid'
+    if (expressiondebeesoin != null) {
+        // Extraction de l'ID de l'enregistrement lookup sélectionné (sans les accolades)
+        var lookupId = expressiondebeesoin[0].id.replace('{', '').replace('}', '');
+        console.log(lookupId); // Affiche l'ID extrait pour debug
+
+        // Appel à l'API Web pour récupérer les informations de l'enregistrement associé
+        Xrm.WebApi.retrieveRecord(
+            "aglcm003_zulaa_expressiondebesoin", // Nom logique de l'entité à partir de laquelle les données sont récupérées
+            lookupId,                            // ID de l'enregistrement à récupérer
+            "?$select=aglcm003_code,_aglcm003_directionid_value,_aglcm003_departementid_value,_aglcm003_centredecoutid_value,_aglcm003_categorie_value" // Sélection des champs à récupérer
+        ).then(
+            function success(result) {
+                console.log(result); // Affiche le résultat complet pour debug
+
+                // Remplir le champ 'aglcm003_directionid' sur le formulaire avec les données récupérées
+                var direction = new Array();
+                direction[0] = {};
+                direction[0].id = result._aglcm003_directionid_value; // ID de la direction récupérée
+                direction[0].name = result["_aglcm003_directionid_value@OData.Community.Display.V1.FormattedValue"]; // Nom formaté de la direction
+                direction[0].entityType = "aglcm003_zulaa_direction"; // Nom logique de l'entité liée
+
+                console.log(direction); // Affiche l'objet direction pour debug
+
+                // Remplit le champ lookup 'aglcm003_directionid' sur le formulaire avec l'objet direction
+                formContext.getAttribute("aglcm003_directionid").setValue(direction);
+
+                // Vérifie si un département est lié et le remplit s'il existe
+                if(result._aglcm003_departementid_value) {
+                    var departement = [{
+                        id: result._aglcm003_departementid_value, // ID du département récupéré
+                        name: result["_aglcm003_departementid_value@OData.Community.Display.V1.FormattedValue"], // Nom formaté du département
+                        entityType: "aglcm003_zulaa_departement" // Nom logique de l'entité liée
+                    }];
+                    // Remplit le champ lookup 'aglcm003_departementid' sur le formulaire
+                    formContext.getAttribute("aglcm003_departementid").setValue(departement);
+                }
+                else
+                {
+                     formContext.getAttribute("aglcm003_departementid").setValue(null);
+                }
+
+                // Remplir le champ 'aglcm003_centredecoutid' sur le formulaire avec les données récupérées
+                var centredecout = [{
+                    id: result._aglcm003_centredecoutid_value, // ID du centre de coût récupéré
+                    name: result["_aglcm003_centredecoutid_value@OData.Community.Display.V1.FormattedValue"], // Nom formaté du centre de coût
+                    entityType: "aglcm003_zulaa_centredecout" // Nom logique de l'entité liée
+                }];
+                // Remplit le champ lookup 'aglcm003_centredecoutid' sur le formulaire
+                formContext.getAttribute("aglcm003_centredecoutid").setValue(centredecout);
+
+                var categorie = [{
+                    id: result._aglcm003_categorie_value, 
+                    name: result["_aglcm003_categorie_value@OData.Community.Display.V1.FormattedValue"], 
+                    entityType: "aglcm003_zulaa_categorie"
+                }];
+                // Remplit le champ lookup 'aglcm003_centredecoutid' sur le formulaire
+                formContext.getAttribute("aglcm003_categorieid").setValue(categorie);
+
+            },
+            function error(error) {
+                // Affiche le message d'erreur en cas d'échec de l'appel à l'API Web
+                console.log(error.message);
+            }
+        );
+    }
+}

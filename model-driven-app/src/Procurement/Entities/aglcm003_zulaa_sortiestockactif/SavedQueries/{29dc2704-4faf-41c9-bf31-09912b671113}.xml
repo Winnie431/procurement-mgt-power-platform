@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{29dc2704-4faf-41c9-bf31-09912b671113}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_code" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_sortiestockactifid">
+          <cell name="aglcm003_sortiestockid" width="124" />
+          <cell name="aglcm003_actifid" width="100" />
+          <cell name="aglcm003_personneaattribue" width="148" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_sortiestockactif">
+          <attribute name="aglcm003_zulaa_sortiestockactifid" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_actifid" />
+          <attribute name="aglcm003_personneaattribue" />
+          <attribute name="aglcm003_sortiestockid" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Stock Withdrawals" languagecode="1033" />
+      <LocalizedName description="Sortie de stock actifs" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

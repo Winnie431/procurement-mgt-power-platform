@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PluginAssembly FullName="CalculMontantDADelete, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f728363e7814519" PluginAssemblyId="5ee70772-2de0-411b-94ec-f5720944b749" CustomizationLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsolationMode>2</IsolationMode>
+  <SourceType>0</SourceType>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <FileName>/PluginAssemblies/CalculMontantDADelete-5EE70772-2DE0-411B-94EC-F5720944B749/CalculMontantDADelete.dll</FileName>
+  <PluginTypes>
+    <PluginType AssemblyQualifiedName="CalculMontantDADelete.CalculMontantDADelete, CalculMontantDADelete, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f728363e7814519" PluginTypeId="fb39f350-6375-4bfa-abd1-20538d99aff5" Name="CalculMontantDADelete.CalculMontantDADelete">
+      <FriendlyName>9e809dc3-265e-4559-a204-2a8ba0a06040</FriendlyName>
+    </PluginType>
+  </PluginTypes>
+</PluginAssembly>

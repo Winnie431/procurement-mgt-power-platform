@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PluginAssembly FullName="CalculMontantDA, Version=1.0.0.0, Culture=neutral, PublicKeyToken=38d19d989321e419" PluginAssemblyId="67eb9277-520d-45aa-95e9-504b7dfbe659" CustomizationLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsolationMode>2</IsolationMode>
+  <SourceType>0</SourceType>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <FileName>/PluginAssemblies/CalculMontantDA-67EB9277-520D-45AA-95E9-504B7DFBE659/CalculMontantDA.dll</FileName>
+  <PluginTypes>
+    <PluginType AssemblyQualifiedName="CalculMontantDA.CalculMontantDA, CalculMontantDA, Version=1.0.0.0, Culture=neutral, PublicKeyToken=38d19d989321e419" PluginTypeId="70129907-2ae2-445c-bbec-5e21d39b77aa" Name="CalculMontantDA.CalculMontantDA">
+      <FriendlyName>74b63d21-cd75-448b-97cc-4fb4938db12d</FriendlyName>
+    </PluginType>
+  </PluginTypes>
+</PluginAssembly>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{3b4ef97a-a506-41de-8c31-d1f90f8dc0e1}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_nom" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_departementid">
+          <cell name="aglcm003_nom" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_departement">
+          <attribute name="aglcm003_zulaa_departementid" />
+          <attribute name="aglcm003_nom" />
+          <attribute name="createdon" />
+          <order attribute="aglcm003_nom" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="1" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Inactive Departments" languagecode="1033" />
+      <LocalizedName description="Départements Inactifs" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

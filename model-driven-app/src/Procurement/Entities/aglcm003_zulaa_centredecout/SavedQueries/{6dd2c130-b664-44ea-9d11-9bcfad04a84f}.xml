@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{6dd2c130-b664-44ea-9d11-9bcfad04a84f}</savedqueryid>
+    <layoutxml>
+      <grid name="aglcm003_zulaa_centredecouts" jump="aglcm003_code" select="1" icon="1" preview="0">
+        <row name="aglcm003_zulaa_centredecout" id="aglcm003_zulaa_centredecoutid">
+          <cell name="aglcm003_code" width="209" />
+          <cell name="aglcm003_libelle" width="134" />
+          <cell name="aglcm003_entiteid" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_centredecout">
+          <attribute name="aglcm003_zulaa_centredecoutid" />
+          <attribute name="aglcm003_code" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_libelle" />
+          <attribute name="aglcm003_entiteid" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Cost Center Lookup View" languagecode="1033" />
+      <LocalizedName description="Vue de recherche des centres de coûts" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

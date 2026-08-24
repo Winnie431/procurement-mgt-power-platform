@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{bb6adbba-abd6-44d4-b2e2-b7849cd3fdb9}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_codemagasinarticle" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_magasinarticleid">
+          <cell name="aglcm003_codemagasinarticle" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>1</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_magasinarticle">
+          <attribute name="aglcm003_magasinarticleid" />
+          <attribute name="aglcm003_codemagasinarticle" />
+          <attribute name="createdon" />
+          <order attribute="aglcm003_codemagasinarticle" descending="false" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Store Items Advanced Find View" languagecode="1033" />
+      <LocalizedName description="Affichage de la recherche avancée de magasin articles d'entrepôt" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

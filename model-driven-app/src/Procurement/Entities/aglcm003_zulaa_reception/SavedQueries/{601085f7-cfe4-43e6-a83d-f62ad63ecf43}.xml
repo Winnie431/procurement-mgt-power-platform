@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{601085f7-cfe4-43e6-a83d-f62ad63ecf43}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_codereception" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_receptionid">
+          <cell name="aglcm003_codereception" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>1</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_reception">
+          <attribute name="aglcm003_zulaa_receptionid" />
+          <attribute name="aglcm003_codereception" />
+          <attribute name="createdon" />
+          <order attribute="aglcm003_codereception" descending="false" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Reception Advanced Find View" languagecode="1033" />
+      <LocalizedName description="Réception Recherche avancée Afficher" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

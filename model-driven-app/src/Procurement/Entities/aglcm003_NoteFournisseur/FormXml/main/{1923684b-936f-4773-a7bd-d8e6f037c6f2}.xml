@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{1923684b-936f-4773-a7bd-d8e6f037c6f2}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{5054334c-a2b9-49b8-bf8d-213a18318272}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+            <label description="General" languagecode="1036" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{0b84ecb3-5808-412b-98b9-684f21327c76}" name="Note fournisseur" columns="11">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                    <label description="General" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{dd9e7416-07ca-4b2d-8a7b-168ad5134ac1}">
+                        <labels>
+                          <label description="Planning compliance / Delivery date" languagecode="1033" />
+                          <label description="Conformité à la planification / Date de livraison" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_respectplanningdatelivraison" classid="{c3efe0c3-0ec6-42be-8349-cbd9079dfd8e}" datafieldname="aglcm003_respectplanningdatelivraison" />
+                      </cell>
+                      <cell id="{3e5ab025-24f3-4115-ba86-f4ff54cff1f1}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Follow-up on claims and requests" languagecode="1033" />
+                          <label description="Suivi des réclamations et demandes  " languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_suividreclamationsdemandes" classid="{c3efe0c3-0ec6-42be-8349-cbd9079dfd8e}" datafieldname="aglcm003_suividreclamationsdemandes" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a3b67883-02eb-4cff-9db9-ab8576b3c564}">
+                        <labels>
+                          <label description="Work organization" languagecode="1033" />
+                          <label description="Organisation du travail  " languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_organisationdestravaux" classid="{c3efe0c3-0ec6-42be-8349-cbd9079dfd8e}" datafieldname="aglcm003_organisationdestravaux" />
+                      </cell>
+                      <cell id="{d805747f-d0ac-44e1-baa0-8ae90473302d}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Personnel equipment and documentation" languagecode="1033" />
+                          <label description="Équipements et documentation du personnel  " languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_equipementetdocumentationdupersonnel" classid="{c3efe0c3-0ec6-42be-8349-cbd9079dfd8e}" datafieldname="aglcm003_equipementetdocumentationdupersonnel" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{25fe0177-a323-4024-86d2-f48607103231}">
+                        <labels>
+                          <label description="Technical Capacity and Reactivity" languagecode="1033" />
+                          <label description="Capacité technique et réactivité" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_capacitetechniquereactivite" classid="{c3efe0c3-0ec6-42be-8349-cbd9079dfd8e}" datafieldname="aglcm003_capacitetechniquereactivite" />
+                      </cell>
+                      <cell id="{a50ef367-a6aa-4016-ad5c-74e9cd0273e9}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Compliance with Q-HSE requirements" languagecode="1033" />
+                          <label description="Conformité aux exigences Q-HSE  " languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_conformiteauxexigencesqhse" classid="{c3efe0c3-0ec6-42be-8349-cbd9079dfd8e}" datafieldname="aglcm003_conformiteauxexigencesqhse" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5ca3c7e7-3520-4c4b-a223-3171af34d2f1}">
+                        <labels>
+                          <label description="Recurrence / Non-recurrence of anomalies" languagecode="1033" />
+                          <label description="Récurrence / Non-récurrence des anomalies" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_recurrencenonrecurrenceanomalies" classid="{c3efe0c3-0ec6-42be-8349-cbd9079dfd8e}" datafieldname="aglcm003_recurrencenonrecurrenceanomalies" />
+                      </cell>
+                      <cell id="{be2c3353-962f-45af-ac7c-6f9f8c47a992}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Personnel skills and training" languagecode="1033" />
+                          <label description="Compétences et formations du personnel  " languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_competenceformationpersonnel" classid="{c3efe0c3-0ec6-42be-8349-cbd9079dfd8e}" datafieldname="aglcm003_competenceformationpersonnel" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7a33ceeb-45cf-4f3e-bb53-648744bebb8a}" visible="false" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                          <label description="Propriétaire" languagecode="1036" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                      <cell locklevel="0" id="{7de54ee9-6ff3-4288-b21a-f74973ed6822}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{9b4f40bc-0380-4915-a12f-3c71aca6af93}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{a0b692a3-e491-4ef2-b5ca-8aa7d9456afe}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{db73f170-5c94-4147-9cf4-630031a4be8f}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{f909ceaa-2f3b-4008-aa2b-2be8cf34d00e}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{2515c4f8-c56a-43c5-a3da-1d112ddb5b6d}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{237050f0-0b8a-41ec-879a-6afa22594460}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{343f06d3-3c9c-46e9-84a1-8e1a44b3f3cd}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{e5595ce6-7bc4-4254-9de6-9db3d5074d9b}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+      <LocalizedName description="Informations  " languagecode="1036" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+      <Description description="Un formulaire pour cette entité  " languagecode="1036" />
+    </Descriptions>
+  </systemform>
+</forms>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{d738d9ee-3cc3-4ba0-96a5-ca2a4b2c6d15}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_nom" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_articleid">
+          <cell name="aglcm003_nom" width="124" />
+          <cell name="aglcm003_codearticle" width="109" />
+          <cell name="aglcm003_categorieid" width="107" />
+          <cell name="aglcm003_description" width="106" />
+          <cell name="createdon" width="125" />
+          <cell name="aglcm003_isstockable" width="106" />
+          <cell name="aglcm003_isserialsable" width="112" />
+          <cell name="aglcm003_isprestation" width="107" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_article">
+          <attribute name="aglcm003_zulaa_articleid" />
+          <attribute name="aglcm003_nom" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_codearticle" />
+          <attribute name="aglcm003_description" />
+          <order attribute="createdon" descending="true" />
+          <order attribute="aglcm003_nom" descending="false" />
+          <attribute name="aglcm003_categorieid" />
+          <attribute name="aglcm003_isstockable" />
+          <attribute name="aglcm003_isserialsable" />
+          <attribute name="aglcm003_isprestation" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Items" languagecode="1033" />
+      <LocalizedName description="Éléments actifs" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

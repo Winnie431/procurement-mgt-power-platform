@@ -1,0 +1,3 @@
+aglcm003_lignetaxecalculer: =aglcm003_montantlingetaxecalculer-aglcm003_montantlignecalculer
+aglcm003_montantlignecalculer: =aglcm003_quantite * aglcm003_prix
+aglcm003_montantlingetaxecalculer: =If(aglcm003_istaxable,aglcm003_montantlignecalculer * (1+(aglcm003_tvaid.aglcm003_taux_tva/100)),aglcm003_montantlignecalculer)

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SdkMessageProcessingStep Name="ZulaaReception.Package.PreOperationBloquerLignesReception: Update of aglcm003_lignedelareception" SdkMessageProcessingStepId="{53591be8-2d21-f011-998a-7c1e524da469}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SdkMessageId>20bebb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
+  <PluginTypeName>ZulaaReception.Package.PreOperationBloquerLignesReception, ZulaaReception.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ee0f489481216997</PluginTypeName>
+  <PluginTypeId>7c2a76b0-f67a-4f99-9b58-2f400cdf9c76</PluginTypeId>
+  <PrimaryEntity>aglcm003_lignedelareception</PrimaryEntity>
+  <AsyncAutoDelete>0</AsyncAutoDelete>
+  <Description>ZulaaReception.Package.PreOperationBloquerLignesReception: Update of aglcm003_lignedelareception</Description>
+  <FilteringAttributes></FilteringAttributes>
+  <InvocationSource>0</InvocationSource>
+  <Mode>0</Mode>
+  <Rank>1</Rank>
+  <EventHandlerTypeCode>4602</EventHandlerTypeCode>
+  <Stage>10</Stage>
+  <IsCustomizable>1</IsCustomizable>
+  <IsHidden>0</IsHidden>
+  <SupportedDeployment>0</SupportedDeployment>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <SdkMessageProcessingStepImages />
+</SdkMessageProcessingStep>

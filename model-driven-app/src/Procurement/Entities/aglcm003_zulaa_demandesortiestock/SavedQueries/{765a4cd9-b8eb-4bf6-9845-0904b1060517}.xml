@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{765a4cd9-b8eb-4bf6-9845-0904b1060517}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_codedemandesortiestock" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_demandesortiestockid">
+          <cell name="aglcm003_codedemandesortiestock" width="121" />
+          <cell name="aglcm003_entiteid" width="100" />
+          <cell name="aglcm003_demandeur" width="106" />
+          <cell name="aglcm003_magasinid" width="100" />
+          <cell name="aglcm003_centredecoutid" width="122" />
+          <cell name="aglcm003_commentaires" width="150" />
+          <cell name="aglcm003_statutds" width="100" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_demandesortiestock">
+          <attribute name="aglcm003_zulaa_demandesortiestockid" />
+          <attribute name="aglcm003_codedemandesortiestock" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_commentaires" />
+          <attribute name="aglcm003_statutds" />
+          <attribute name="aglcm003_entiteid" />
+          <attribute name="aglcm003_demandeur" />
+          <attribute name="aglcm003_magasinid" />
+          <attribute name="aglcm003_centredecoutid" />
+          <order attribute="createdon" descending="true" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Stock Issue Requests" languagecode="1033" />
+      <LocalizedName description="Demandes de Sortie de Stock Actives" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

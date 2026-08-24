@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{2965e384-2052-458d-b78c-55147f74d48b}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_name" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_notefournisseurid">
+          <cell name="aglcm003_receptionid" width="109" />
+          <cell name="aglcm003_fournisseurid" width="118" />
+          <cell name="aglcm003_respectplanningdatelivraison" width="150" />
+          <cell name="aglcm003_suividreclamationsdemandes" width="150" />
+          <cell name="aglcm003_organisationdestravaux" width="150" />
+          <cell name="aglcm003_equipementetdocumentationdupersonnel" width="150" />
+          <cell name="aglcm003_capacitetechniquereactivite" width="150" />
+          <cell name="aglcm003_conformiteauxexigencesqhse" width="150" />
+          <cell name="aglcm003_recurrencenonrecurrenceanomalies" width="150" />
+          <cell name="aglcm003_competenceformationpersonnel" width="150" />
+          <cell name="aglcm003_name" width="145" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_notefournisseur">
+          <attribute name="aglcm003_notefournisseurid" />
+          <attribute name="aglcm003_name" />
+          <attribute name="createdon" />
+          <order attribute="aglcm003_name" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_respectplanningdatelivraison" />
+          <attribute name="aglcm003_suividreclamationsdemandes" />
+          <attribute name="aglcm003_organisationdestravaux" />
+          <attribute name="aglcm003_equipementetdocumentationdupersonnel" />
+          <attribute name="aglcm003_capacitetechniquereactivite" />
+          <attribute name="aglcm003_conformiteauxexigencesqhse" />
+          <attribute name="aglcm003_recurrencenonrecurrenceanomalies" />
+          <attribute name="aglcm003_competenceformationpersonnel" />
+          <attribute name="aglcm003_fournisseurid" />
+          <attribute name="aglcm003_receptionid" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Supplier Notes" languagecode="1033" />
+      <LocalizedName description="Notes fournisseur actives  " languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

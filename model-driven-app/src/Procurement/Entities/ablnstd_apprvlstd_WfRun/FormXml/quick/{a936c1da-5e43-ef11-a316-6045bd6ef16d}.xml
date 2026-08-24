@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{a936c1da-5e43-ef11-a316-6045bd6ef16d}</formid>
+    <IntroducedVersion>1.1.240709.1</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab id="ACBA75B7-97B6-4116-AA55-51312992B721" name="tab_1" showlabel="false" labelid="{bb85f0cb-9c15-46c9-a6f3-3d0aa4b92573}" ordinalvalue="0">
+          <labels>
+            <label description="Nouvel onglet" languagecode="1036" solutionaction="Added" />
+          </labels>
+          <columns>
+            <column width="100%" id="0">
+              <sections>
+                <section id="AD49B5BF-256F-46A8-9C75-947146172EB9" name="tab_1_column_1_section_1" columns="1" showlabel="false" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{56db541c-b405-49fb-a823-877774ad5f64}" ordinalvalue="0">
+                  <labels>
+                    <label description="Nouvelle section" languagecode="1036" solutionaction="Added" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="C0550AC7-0F44-45A4-8EF5-D2911C0689D9" labelid="{8d486e23-7393-4273-88e7-f75ccfb811e5}" ordinalvalue="10000" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{00a4775c-0c23-4d4a-adc0-dea13623298c}" locklevel="0" colspan="1" rowspan="1" labelid="{3453d01b-b83e-4c5e-91e1-87042fa904fe}" ordinalvalue="10000" solutionaction="Modified">
+                        <labels>
+                          <label description="Statut de l'exécution du workflow" languagecode="1036" solutionaction="Added" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{75994fec-b49c-47c6-92ef-03291c41abb2}" locklevel="0" colspan="1" rowspan="1" labelid="{ccf7ab8a-0948-4d12-89d4-81e3ab7c1d55}" ordinalvalue="10001" solutionaction="Modified">
+                        <labels>
+                          <label description="Dernière approbation" languagecode="1036" solutionaction="Added" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e7735e83-3d4d-4a0e-bb1a-c0947f0e8136}" locklevel="0" colspan="1" rowspan="1" labelid="{816fa46a-604c-493b-a69b-91e166eccc5d}" ordinalvalue="10002" solutionaction="Modified">
+                        <labels>
+                          <label description="Résultat final" languagecode="1036" solutionaction="Added" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="tab_1_section_3" id="6a324840-05a4-4cb3-858d-030b4746ba94" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" ordinalvalue="1">
+                  <labels>
+                    <label description="Étapes" languagecode="1036" solutionaction="Added" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{640faf22-95cf-4318-a12d-1be0ab885587}" rowspan="4" colspan="1" auto="false" showlabel="true" ordinalvalue="10000">
+                        <labels>
+                          <label description="Étapes" languagecode="1036" solutionaction="Added" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <LocalizedNames>
+      <LocalizedName description="Workflow run quick view form" languagecode="1033" />
+      <LocalizedName description="Formulaire d'aperçu rapide de l'exécution du workflow" languagecode="1036" />
+    </LocalizedNames>
+  </systemform>
+</forms>

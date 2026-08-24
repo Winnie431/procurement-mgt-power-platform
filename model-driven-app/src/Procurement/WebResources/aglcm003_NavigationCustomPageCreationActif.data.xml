@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{17e9e839-1ba8-ef11-b8e9-000d3a228a91}</WebResourceId>
+  <Name>aglcm003_NavigationCustomPageCreationActif</Name>
+  <DisplayName>NavigationCustomPageCreationActif</DisplayName>
+  <Description>Cette ressource permet de naviguer vers la custom page de creation des actif</Description>
+  <LanguageCode>0</LanguageCode>
+  <WebResourceType>3</WebResourceType>
+  <IntroducedVersion>1.0.0.1</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <DependencyXml>&lt;Dependencies&gt;&lt;Dependency componentType="WebResource"/&gt;&lt;/Dependencies&gt;</DependencyXml>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/aglcm003_NavigationCustomPageCreationActif17E9E839-1BA8-EF11-B8E9-000D3A228A91</FileName>
+</WebResource>

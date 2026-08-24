@@ -1,0 +1,26 @@
+function setAndValidateQuantitedejarecu(executionContext) {
+    try {
+        // Get the context of the grid
+        var gridContext = executionContext.getFormContext();
+
+        // Get the attributes for Quantité Livré and Quantité Restante
+        var quantiteLivreField = gridContext.getAttribute("aglcm003_quantitelivre");
+        alert('quantite livrer field :',quantiteLivreField);
+        var quantitedejarecuField = gridContext.getAttribute("aglcm003_quantitedejareceptionne");
+        alert('quantite quantitedejarecuField field :',quantitedejarecuField);
+        // Get the current values
+        var quantiteLivre = quantiteLivreField.getValue();
+        alert('quantite quantiteLivre field :',quantiteLivre);
+
+        var quantitedejarecu = quantiteRestanteField.getValue();
+
+        // Set  value for Quantité deja recu  on save
+        if (quantiteLivre !== null) {
+            quantitedejarecuField.setValue(quantiteLivre); // Default value
+        }
+
+        
+    } catch (error) {
+        console.error("Erreur dans la fonction de mise à jour : ", error.message);
+    }
+}

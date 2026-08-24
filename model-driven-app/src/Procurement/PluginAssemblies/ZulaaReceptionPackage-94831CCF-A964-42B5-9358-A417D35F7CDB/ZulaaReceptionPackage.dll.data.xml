@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PluginAssembly FullName="ZulaaReception.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ee0f489481216997" PluginAssemblyId="94831ccf-a964-42b5-9358-a417d35f7cdb" CustomizationLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsolationMode>2</IsolationMode>
+  <SourceType>0</SourceType>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <FileName>/PluginAssemblies/ZulaaReceptionPackage-94831CCF-A964-42B5-9358-A417D35F7CDB/ZulaaReceptionPackage.dll</FileName>
+  <PluginTypes>
+    <PluginType AssemblyQualifiedName="ZulaaReception.Package.PostOperationPopulateLigneDeLaReception, ZulaaReception.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ee0f489481216997" PluginTypeId="8a363162-f1e3-4b6d-a549-7e0f799150e8" Name="ZulaaReception.Package.PostOperationPopulateLigneDeLaReception">
+      <FriendlyName>bef4450e-4f00-4714-bfd5-da36ef2d3bb3</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="ZulaaReception.Package.Postoperationverifiationstatutrecetion, ZulaaReception.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ee0f489481216997" PluginTypeId="7c20f0bb-7eac-4dd2-8779-af0fb0cef218" Name="ZulaaReception.Package.Postoperationverifiationstatutrecetion">
+      <FriendlyName>e6a0956b-2d36-4d29-8cf0-c8d83bcaa2c1</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="ZulaaReception.Package.PreOperationBloquerLignesReception, ZulaaReception.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ee0f489481216997" PluginTypeId="7c2a76b0-f67a-4f99-9b58-2f400cdf9c76" Name="ZulaaReception.Package.PreOperationBloquerLignesReception">
+      <FriendlyName>2027547f-9658-4d86-b1d3-164b100f97e1</FriendlyName>
+    </PluginType>
+  </PluginTypes>
+</PluginAssembly>

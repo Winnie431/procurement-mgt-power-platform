@@ -1,0 +1,116 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "aglcm003_CR_Dataverse_Zulaa"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "Lorsqu’une_ligne_est_ajoutée,_modifiée_ou_supprimée": {
+          "metadata": {
+            "operationMetadataId": "7f5eebb6-5c1c-4374-baf9-aa862ee5e6ee"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "aglcm003_zulaa_expressiondebesoin",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/name": "db46d3cb-d537-ef11-8409-002248822253"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          }
+        }
+      },
+      "actions": {
+        "Get_Entité": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "bfd7da68-3af8-425e-8b34-48f3214137fe"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "aglcm003_zulaa_entites",
+              "recordId": "@triggerOutputs()?['body/_aglcm003_entiteid_value']"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          }
+        },
+        "Get_Centre_de_coût": {
+          "runAfter": {
+            "Get_Entité": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "00df857f-d5bb-4120-a009-0fac69373961"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "aglcm003_zulaa_centredecouts",
+              "recordId": "@triggerOutputs()?['body/_aglcm003_centredecoutid_value']"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          }
+        },
+        "Get_l'equipe_createur_EB": {
+          "runAfter": {
+            "Get_Centre_de_coût": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "e4cbb724-6a8b-4adf-853a-8bd1fd13d4c8"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "teams",
+              "$filter": "_businessunitid_value eq  '@{outputs('Get_Centre_de_coût')?['body/_aglcm003_businessunitpropretaire_value']}' and  name eq '@{outputs('Get_Entité')?['body/aglcm003_code']} Team CEB'"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

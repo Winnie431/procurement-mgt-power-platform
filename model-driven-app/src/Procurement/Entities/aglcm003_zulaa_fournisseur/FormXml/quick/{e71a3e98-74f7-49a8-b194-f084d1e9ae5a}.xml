@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{e71a3e98-74f7-49a8-b194-f084d1e9ae5a}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{17b2a7d3-92a4-47c4-9bf5-fc964bd3347b}" IsUserDefined="1">
+          <labels>
+            <label description="" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{c0dd198d-0d05-45ed-b36b-c2b4de885b7e}">
+                  <labels>
+                    <label description="GENERAL" languagecode="1033" />
+                    <label description="GÉNÉRAL" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{a4861050-c77a-493c-836d-5dc3b148e299}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                          <label description="Nom" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_nom" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="aglcm003_nom" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fd000290-44b3-43e5-8ac2-37c9cb2a0db1}" visible="false">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                          <label description="Propriétaire" languagecode="1036" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{69e4d2dc-34c4-4d51-86af-ede86ce3ef47}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Company Name" languagecode="1033" />
+                          <label description="Nom de l'entreprise" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_raisonsociale" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_raisonsociale" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{09280a29-2326-42ea-af17-bea05537505c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Iris Account" languagecode="1033" />
+                          <label description="Compte Iris" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_compteiris" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_compteiris" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1c3676e9-74eb-4065-8ba4-93aa320355f5}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Phone Number" languagecode="1033" />
+                          <label description="Numéro de téléphone" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_ndetelephone" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_ndetelephone" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f4fe6ef5-460f-4dc4-a96c-3008b0e33df7}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Email" languagecode="1033" />
+                          <label description="E-mail" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_email" classid="{ADA2203E-B4CD-49BE-9DDF-234642B43B52}" datafieldname="aglcm003_email" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ddff6bde-d8c8-47d5-af06-f2e307dd4377}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Taxpayer Number" languagecode="1033" />
+                          <label description="Numéro d'identification fiscale" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_nducontribuable" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_nducontribuable" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5a3f4e3e-a87f-40af-82a8-842fa7e40d5b}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Trade Register" languagecode="1033" />
+                          <label description="Registre du commerce" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_registredecommerce" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_registredecommerce" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+      <LocalizedName description="Informations" languagecode="1036" />
+    </LocalizedNames>
+  </systemform>
+</forms>

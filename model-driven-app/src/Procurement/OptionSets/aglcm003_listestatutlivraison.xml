@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="aglcm003_listestatutlivraison" localizedName="Delivery Status List" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <ExternalTypeName></ExternalTypeName>
+  <displaynames>
+    <displayname description="Delivery Status List" languagecode="1033" />
+    <displayname description="Liste des statuts de livraison" languagecode="1036" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="1" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="In Reception" languagecode="1033" />
+        <label description="En réception" languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="2" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Delivered" languagecode="1033" />
+        <label description="Livré" languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="3" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Closed" languagecode="1033" />
+        <label description="Fermé" languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SdkMessageProcessingStep Name="CalculMontantDADelete.CalculMontantDADelete: Delete of aglcm003_zulaa_demandedachatarticlefournisseur" SdkMessageProcessingStepId="{4d954c23-4b4e-ef11-bfe2-6045bd91cd0d}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SdkMessageId>a1bdbb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
+  <PluginTypeName>CalculMontantDADelete.CalculMontantDADelete, CalculMontantDADelete, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f728363e7814519</PluginTypeName>
+  <PluginTypeId>fb39f350-6375-4bfa-abd1-20538d99aff5</PluginTypeId>
+  <PrimaryEntity>aglcm003_zulaa_demandedachatarticlefournisseur</PrimaryEntity>
+  <AsyncAutoDelete>0</AsyncAutoDelete>
+  <Description>CalculMontantDADelete.CalculMontantDADelete: Delete of aglcm003_zulaa_demandedachatarticlefournisseur</Description>
+  <FilteringAttributes></FilteringAttributes>
+  <InvocationSource>0</InvocationSource>
+  <Mode>0</Mode>
+  <Rank>1</Rank>
+  <EventHandlerTypeCode>4602</EventHandlerTypeCode>
+  <Stage>10</Stage>
+  <IsCustomizable>1</IsCustomizable>
+  <IsHidden>0</IsHidden>
+  <SupportedDeployment>0</SupportedDeployment>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <SdkMessageProcessingStepImages />
+</SdkMessageProcessingStep>

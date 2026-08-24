@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{3f995b7a-45d8-4d2b-9115-8d6e4c939516}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls" shownavigationbar="false">
+      <tabs>
+        <tab verticallayout="true" id="{4e8ecd59-029c-4222-ad37-e076a4ecd0cb}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+            <label description="Général" languagecode="1036" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{b8dd1a1e-97d7-476b-bd10-0f75265438da}" columns="11">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                    <label description="Général" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{56ac3bcc-1b56-4e1d-a481-6050ab12d052}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Inventory" languagecode="1033" />
+                          <label description="Inventaire" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_inventaireid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_inventaireid" disabled="false" />
+                      </cell>
+                      <cell id="{faa0eb08-d0bb-4ad5-bf09-0eec2009d447}" locklevel="0" rowspan="1" colspan="1">
+                        <labels>
+                          <label description="Wharehouse" languagecode="1033" />
+                          <label description="Magasin" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_magasinid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_magasinid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8bc06648-5421-4093-9fdc-ceb181b2200b}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Item" languagecode="1033" />
+                          <label description="Article" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_articleid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_articleid" disabled="false" />
+                      </cell>
+                      <cell id="{44da6641-02f4-42eb-a293-1e5785f9ce63}" locklevel="0" rowspan="1" colspan="1">
+                        <labels>
+                          <label description="Unit" languagecode="1033" />
+                          <label description="Unité" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_uniteid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_uniteid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e51e2316-e492-4e2c-be38-7990a73c4561}">
+                        <labels>
+                          <label description="Quantity before inventory" languagecode="1033" />
+                          <label description="Quantité avant l'inventaire" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_lastquantity" classid="{c3efe0c3-0ec6-42be-8349-cbd9079dfd8e}" datafieldname="aglcm003_lastquantity" disabled="true" />
+                      </cell>
+                      <cell id="{79331e08-98e6-4569-b737-0fc66b93aaac}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Quantity of inventory" languagecode="1033" />
+                          <label description="Quantité en stock" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_quantitedelinventaire" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="aglcm003_quantitedelinventaire" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2b07413e-1b14-48e6-9747-783d62a5869c}">
+                        <labels>
+                          <label description="Comments" languagecode="1033" />
+                          <label description="Commentaires" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_commentaires" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="aglcm003_commentaires" />
+                      </cell>
+                      <cell locklevel="0" id="{5b80f541-1915-41c4-9bdb-4a4d4822421f}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f2bd8902-f273-46bb-a321-453bce8bb01a}" colspan="1" rowspan="1" visible="false">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                          <label description="Propriétaire" languagecode="1036" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                      <cell locklevel="0" id="{b243845f-764d-46fb-9d66-efa4baa2e09b}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{18d8368f-d72e-4afc-a4e8-b3928e324988}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{a761d19d-c613-47c7-88a0-15d07653e298}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{fb5bde06-5352-4251-bc48-1d0b8dc14af5}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{9bdbc185-7950-4486-aa13-3a1cd71fe6ce}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{40947c9c-acb4-4d0a-84ab-7459a4173dbf}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{02d55b45-d20c-4e88-a1b8-02cf9b22e93b}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{aa098a73-3291-4e98-ab4e-57b0e3734193}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{44e86d9a-57ef-41c2-80c4-9817cc9d023e}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+      <LocalizedName description="Informations" languagecode="1036" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+      <Description description="Formulaire pour cette entité." languagecode="1036" />
+    </Descriptions>
+  </systemform>
+</forms>

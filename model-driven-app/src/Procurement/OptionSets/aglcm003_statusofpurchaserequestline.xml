@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="aglcm003_statusofpurchaserequestline" localizedName="Status of Purchase Request Line" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.1</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <ExternalTypeName></ExternalTypeName>
+  <displaynames>
+    <displayname description="Status of Purchase Request Line" languagecode="1033" />
+    <displayname description="Statut de la ligne de demande d'achat" languagecode="1036" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="10" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Draft" languagecode="1033" />
+        <label description="Brouillon" languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="20" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="In Progress" languagecode="1033" />
+        <label description="En cours" languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="30" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Awaiting Reception" languagecode="1033" />
+        <label description="En attente de réception" languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="40" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Delivered" languagecode="1033" />
+        <label description="Livré" languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="50" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Refused" languagecode="1033" />
+        <label description="Refusé" languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="60" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Cancelled" languagecode="1033" />
+        <label description="Annulé" languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="70" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Closed" languagecode="1033" />
+        <label description="Fermé" languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>

@@ -1,0 +1,62 @@
+function onArticleChange(executionContext) {
+    const formContext = executionContext.getFormContext();
+
+    // Get the Article lookup field value
+    const articleLookup = formContext.getAttribute("aglcm003_articleid").getValue();
+    const magasinLookup = formContext.getAttribute("aglcm003_magasinid").getValue();
+
+    if (articleLookup && articleLookup[0] && magasinLookup && magasinLookup[0]) {
+        const articleId = articleLookup[0].id.replace(/[{}]/g, "");
+        const magasinId = magasinLookup[0].id.replace(/[{}]/g, "");
+
+        Xrm.WebApi.retrieveMultipleRecords(
+            "aglcm003_magasinarticle",
+            `?$filter=_aglcm003_magasinid_value eq ${magasinId}&$select=aglcm003_quantitestock,_aglcm003_articleid_value`
+        ).then(
+            function (result) {
+                const normalizedArticleId = articleId.toLowerCase().replace(/[{}]/g, "");
+                const matchingRecord = result.entities.find((record) => {
+                    const retrievedArticleId = record["_aglcm003_articleid_value"]
+                        .toLowerCase()
+                        .replace(/[{}]/g, "");
+                    return retrievedArticleId === normalizedArticleId;
+                });
+
+                if (matchingRecord) {
+                    const availableQuantity = matchingRecord.aglcm003_quantitestock;
+
+                    // Set the hidden field value
+                    formContext.getAttribute("aglcm003_quantitedisponible").setValue(availableQuantity);
+
+                    // Notify the user
+                    formContext.ui.setFormNotification(
+                        "Available quantity: " + availableQuantity,
+                        "INFO",
+                        "availableQty"
+                    );
+
+                    // Set the default value for Quantity
+                    formContext.getAttribute("aglcm003_quantiteasortir").setValue(availableQuantity);
+
+                    // Clear previous notifications
+                    formContext.getControl("aglcm003_quantiteasortir").clearNotification();
+                } else {
+                    formContext.ui.setFormNotification(
+                        "No matching item found in this store.",
+                        "ERROR",
+                        "noArticleFound"
+                    );
+                }
+            },
+            function (error) {
+                console.error("Error retrieving records from Magasin Article: ", error.message);
+            }
+        );
+    } else {
+        formContext.ui.setFormNotification(
+            "Please select an item and a store.",
+            "ERROR",
+            "missingFields"
+        );
+    }
+}

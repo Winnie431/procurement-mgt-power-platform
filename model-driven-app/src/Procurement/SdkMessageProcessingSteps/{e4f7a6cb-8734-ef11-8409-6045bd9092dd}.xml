@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SdkMessageProcessingStep Name="GenerateCodeBCPlugin.GenerateCodeBCPlugin: Create of aglcm003_zulaa_bondecommande" SdkMessageProcessingStepId="{e4f7a6cb-8734-ef11-8409-6045bd9092dd}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SdkMessageId>9ebdbb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
+  <PluginTypeName>GenerateCodeBCPlugin.GenerateCodeBCPlugin, GenerateCodeBCPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7e9df4eec31d7d9f</PluginTypeName>
+  <PluginTypeId>01e03fdb-93f0-4997-9d5b-aeb10a4ac724</PluginTypeId>
+  <PrimaryEntity>aglcm003_zulaa_bondecommande</PrimaryEntity>
+  <AsyncAutoDelete>0</AsyncAutoDelete>
+  <Description>GenerateCodeBCPlugin.GenerateCodeBCPlugin: Create of aglcm003_zulaa_bondecommande</Description>
+  <FilteringAttributes></FilteringAttributes>
+  <InvocationSource>1</InvocationSource>
+  <Mode>0</Mode>
+  <Rank>1</Rank>
+  <EventHandlerTypeCode>4602</EventHandlerTypeCode>
+  <Stage>40</Stage>
+  <IsCustomizable>1</IsCustomizable>
+  <IsHidden>0</IsHidden>
+  <SupportedDeployment>0</SupportedDeployment>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <SdkMessageProcessingStepImages />
+</SdkMessageProcessingStep>

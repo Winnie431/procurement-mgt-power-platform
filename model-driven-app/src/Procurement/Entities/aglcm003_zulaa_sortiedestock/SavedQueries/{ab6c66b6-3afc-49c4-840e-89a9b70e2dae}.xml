@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{ab6c66b6-3afc-49c4-840e-89a9b70e2dae}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_codesortiedestock" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_sortiedestockid">
+          <cell name="aglcm003_codesortiedestock" width="300" />
+          <cell name="aglcm003_entiteid" width="100" />
+          <cell name="aglcm003_magasinid" width="100" />
+          <cell name="aglcm003_demandedesortieid" width="145" />
+          <cell name="aglcm003_centredecoutid" width="134" />
+          <cell name="aglcm003_commentaire" width="150" />
+          <cell name="aglcm003_statutsortiedestock" width="145" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_sortiedestock">
+          <attribute name="aglcm003_zulaa_sortiedestockid" />
+          <attribute name="aglcm003_codesortiedestock" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_commentaire" />
+          <attribute name="aglcm003_magasinid" />
+          <attribute name="aglcm003_entiteid" />
+          <attribute name="aglcm003_demandedesortieid" />
+          <attribute name="aglcm003_centredecoutid" />
+          <order attribute="createdon" descending="true" />
+          <order attribute="aglcm003_codesortiedestock" descending="false" />
+          <attribute name="aglcm003_statutsortiedestock" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Out of stock " languagecode="1033" />
+      <LocalizedName description="Sortie de stock Actif" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

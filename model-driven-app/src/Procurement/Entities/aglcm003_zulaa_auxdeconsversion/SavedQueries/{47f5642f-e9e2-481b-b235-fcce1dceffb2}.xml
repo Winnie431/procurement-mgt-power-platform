@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{47f5642f-e9e2-481b-b235-fcce1dceffb2}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_tauxdeconversionid" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_auxdeconsversionid">
+          <cell name="aglcm003_tauxdeconversionid" width="300" />
+          <cell name="aglcm003_taux" width="100" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_auxdeconsversion">
+          <attribute name="aglcm003_zulaa_auxdeconsversionid" />
+          <attribute name="aglcm003_tauxdeconversionid" />
+          <attribute name="createdon" />
+          <order attribute="aglcm003_tauxdeconversionid" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_taux" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Conversion Rate" languagecode="1033" />
+      <LocalizedName description="Taux de conversion actif" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

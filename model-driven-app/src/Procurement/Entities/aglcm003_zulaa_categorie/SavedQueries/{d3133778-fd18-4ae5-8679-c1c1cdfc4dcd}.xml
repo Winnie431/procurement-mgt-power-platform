@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{d3133778-fd18-4ae5-8679-c1c1cdfc4dcd}</savedqueryid>
+    <layoutxml>
+      <grid name="aglcm003_zulaa_categories" jump="aglcm003_nom" select="1" icon="1" preview="1">
+        <row name="aglcm003_zulaa_categorie" id="aglcm003_zulaa_categorieid">
+          <cell name="aglcm003_nom" width="91" />
+          <cell name="aglcm003_isactive" width="100" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>2</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_categorie">
+          <attribute name="aglcm003_zulaa_categorieid" />
+          <attribute name="aglcm003_nom" />
+          <attribute name="createdon" />
+          <order attribute="aglcm003_nom" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_isactive" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Category Associated View" languagecode="1033" />
+      <LocalizedName description="Vue associée des catégories" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

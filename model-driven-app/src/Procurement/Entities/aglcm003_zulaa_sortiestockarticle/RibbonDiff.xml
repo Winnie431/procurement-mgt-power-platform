@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RibbonDiffXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CustomActions>
+    <HideCustomAction HideActionId="agl.Mscrm.Form.aglcm003_zulaa_sortiestockarticle.NewRecord.Hide" Location="Mscrm.Form.aglcm003_zulaa_sortiestockarticle.NewRecord" />
+    <HideCustomAction HideActionId="agl.Mscrm.Form.aglcm003_zulaa_sortiestockarticle.NewRecordForBPFEntity.Hide" Location="Mscrm.Form.aglcm003_zulaa_sortiestockarticle.NewRecordForBPFEntity" />
+    <HideCustomAction HideActionId="agl.Mscrm.SubGrid.aglcm003_zulaa_sortiestockarticle.AddExistingAssoc.Hide" Location="Mscrm.SubGrid.aglcm003_zulaa_sortiestockarticle.AddExistingAssoc" />
+    <HideCustomAction HideActionId="agl.Mscrm.SubGrid.aglcm003_zulaa_sortiestockarticle.AddExistingStandard.Hide" Location="Mscrm.SubGrid.aglcm003_zulaa_sortiestockarticle.AddExistingStandard" />
+    <HideCustomAction HideActionId="agl.Mscrm.SubGrid.aglcm003_zulaa_sortiestockarticle.AddNewStandard.Hide" Location="Mscrm.SubGrid.aglcm003_zulaa_sortiestockarticle.AddNewStandard" />
+    <HideCustomAction HideActionId="agl.Mscrm.SubGrid.aglcm003_zulaa_sortiestockarticle.NewRecord.Hide" Location="Mscrm.SubGrid.aglcm003_zulaa_sortiestockarticle.NewRecord" />
+  </CustomActions>
+  <Templates>
+    <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+  </Templates>
+  <CommandDefinitions />
+  <RuleDefinitions>
+    <TabDisplayRules />
+    <DisplayRules />
+    <EnableRules />
+  </RuleDefinitions>
+  <LocLabels />
+</RibbonDiffXml>

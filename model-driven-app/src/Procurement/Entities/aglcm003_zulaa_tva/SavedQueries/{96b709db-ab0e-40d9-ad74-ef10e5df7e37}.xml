@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{96b709db-ab0e-40d9-ad74-ef10e5df7e37}</savedqueryid>
+    <layoutxml>
+      <grid name="aglcm003_zulaa_tvas" jump="aglcm003_libelle_tva" select="1" icon="1" preview="0">
+        <row name="aglcm003_zulaa_tva" id="aglcm003_zulaa_tvaid">
+          <cell name="aglcm003_libelle_tva" width="300" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_tva">
+          <attribute name="aglcm003_zulaa_tvaid" />
+          <attribute name="aglcm003_libelle_tva" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="VAT Lookup View" languagecode="1033" />
+      <LocalizedName description="Vue de recherche TVA" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

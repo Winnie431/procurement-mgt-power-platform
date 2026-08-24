@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{5ad3a2c1-413d-ef11-8409-000d3a4a0760}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls" shownavigationbar="false">
+      <tabs>
+        <tab verticallayout="true" id="{9c093407-dda7-4b5f-8f0f-7e26eadbc7a6}" IsUserDefined="1" labelid="{9659c179-cc47-4688-a312-82aa1ec2962b}">
+          <labels>
+            <label description="General" languagecode="1033" />
+            <label description="Général" languagecode="1036" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{171d0476-563b-42c9-be7a-c6d0e46aa55b}" labelid="{fd83e8ba-bbeb-4b69-b2cf-72aa966225e2}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                    <label description="Général" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{2ecb698a-128c-4a32-9a0a-c220e3aff353}" locklevel="0" rowspan="1" colspan="1" labelid="{18cd0c9a-b9d1-43d1-bba0-437b8e13bd24}">
+                        <labels>
+                          <label description="Entity" languagecode="1033" />
+                          <label description="Entité" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_entiteid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_entiteid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0267fc4e-cc2b-443a-8b62-738604b732c7}" visible="false" labelid="{6c688bf7-25f8-4d3c-af83-1d3d71a6e949}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                          <label description="Propriétaire" languagecode="1036" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0638e01e-8222-4eed-a185-17b3b2673b64}" locklevel="0" rowspan="1" colspan="1" visible="true" labelid="{904d30d1-cf67-4762-a29e-022f6d2b6286}">
+                        <labels>
+                          <label description="Cost Center" languagecode="1033" />
+                          <label description="Centre de coûts" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_centredecoutid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_centredecoutid" disabled="false">
+                          <parameters>
+                            <DependentAttributeName>aglcm003_delegationparrole.aglcm003_entiteid</DependentAttributeName>
+                            <DependentAttributeType>aglcm003_zulaa_entite</DependentAttributeType>
+                            <FilterRelationshipName>aglcm003_centredecout_entite</FilterRelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{62d203e2-670d-47e5-ab1c-4dc1ff7a066b}" locklevel="0" rowspan="1" colspan="1" labelid="{d8c6bf7c-d5df-426b-9c37-6138d601bdc7}">
+                        <labels>
+                          <label description="Delegate Person" languagecode="1033" />
+                          <label description="Personne déléguée" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_personnedelegue" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_personnedelegue" disabled="false">
+                          <parameters />
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ef2f1571-3706-4db8-a8db-f017bae7a871}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Role" languagecode="1033" />
+                          <label description="Rôle" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_role" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="aglcm003_role" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{40b52544-c974-4a1d-ad68-a3b329132031}" locklevel="0" rowspan="1" colspan="1" labelid="{b67b1f23-66aa-4ddb-a689-0aaf9179e3a9}">
+                        <labels>
+                          <label description="Delegation Start Date" languagecode="1033" />
+                          <label description="Date de début de la délégation" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_datedebutdelegation" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="aglcm003_datedebutdelegation" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5b6bda61-2996-47a6-964d-d67b1f7c5987}" locklevel="0" rowspan="1" colspan="1" labelid="{5c67fe74-695e-45f9-b3b5-bbfa56334281}">
+                        <labels>
+                          <label description="Delegation End Date" languagecode="1033" />
+                          <label description="Date de fin de la délégation" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_datefindelegation" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="aglcm003_datefindelegation" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f68dda62-005a-4e8d-bf3d-92b66fe28de7}" colspan="1" rowspan="1" labelid="{b7a95a2e-86b2-42f6-9105-b3a94279b0df}">
+                        <labels>
+                          <label description="Comment" languagecode="1033" />
+                          <label description="Commentaire" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="aglcm003_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{661cab4c-31b7-425c-8eaa-1760cec3b731}" locklevel="0" colspan="1" rowspan="1" visible="false">
+                        <labels>
+                          <label description="Role stock management" languagecode="1033" />
+                          <label description="Rôle de gestion des stocks" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_rolestockmanagement" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="aglcm003_rolestockmanagement" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c5381170-8ac2-4a6e-bf7f-31e7ad9bdaa5}" locklevel="0" colspan="1" rowspan="1" visible="false">
+                        <labels>
+                          <label description="Role DAF, DAFA, DG" languagecode="1033" />
+                          <label description="Rôle DAF, DAFA, DG" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_roledafdafadg" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="aglcm003_roledafdafadg" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{14f75ee5-c1ab-4c3e-83b4-4760d499985c}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{51da160d-2c71-4544-9105-8c2cee9c7cb6}" showlabel="false" labelid="{ed1cca2a-b72d-458b-ba09-2c7ef189bb73}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{aabf0989-7314-48a5-bc9f-1fbf56523135}" showlabel="false" labelid="{443eae8c-8d60-4658-8c56-7bbb769e3f03}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{5061e729-3241-4ca6-91ad-58ac309a50a7}" showlabel="false" labelid="{e6540386-b2c0-46e5-a41a-38096051323a}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{145d372c-fbed-4a30-b934-c7c133a6f300}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{473fee1f-e786-42e3-bb90-357a5394fa34}" showlabel="false" labelid="{f951bc57-2661-4cee-899f-2c621293c4b5}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{bac686e4-5164-4f7a-9532-150b756af313}" showlabel="false" labelid="{8f84ee4a-a9c4-49c8-9bf7-385950378e22}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{fea57929-6608-47bf-be8f-5ddb5ae9a02f}" showlabel="false" labelid="{892e6510-c74f-4b71-9de2-49c559d29c99}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="1" FallbackForm="true">
+        <Role Id="{BC573542-D64D-EF11-BFE2-6045BD91CD0D}" />
+        <Role Id="{F4FBDAA9-D64D-EF11-BFE2-7C1E52285B25}" />
+        <Role Id="{18A072CA-D64D-EF11-BFE2-6045BD91CD0D}" />
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information VEB VDA VCG" languagecode="1033" />
+      <LocalizedName description="Informations VEB VDA VCG" languagecode="1036" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+      <Description description="Formulaire pour cette entité." languagecode="1036" />
+    </Descriptions>
+  </systemform>
+</forms>

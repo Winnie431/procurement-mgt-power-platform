@@ -1,0 +1,1768 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "aglcm003_CR_Dataverse_Zulaa"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_sharepointonline-1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "aglcm003_CR_SharePoint_Zulaa"
+        },
+        "api": {
+          "name": "shared_sharepointonline"
+        }
+      },
+      "shared_wordonlinebusiness-1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "aglcm003_CR_Word_Zulaa"
+        },
+        "api": {
+          "name": "shared_wordonlinebusiness"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)": {
+          "defaultValue": "https://teamsite.msc.com/sites/CM003-AFR-CIO-ZULAA-MODELDRIVEN-DEV",
+          "type": "String",
+          "metadata": {
+            "schemaName": "aglcm003_Ev_Con_Zulaa_Modeldriven",
+            "description": "Site SharePoint"
+          }
+        },
+        "Ev_Folder_WordDocumentsZulaaModeldriven (aglcm003_Ev_Folder_WordDocumentsZulaaModeldriven)": {
+          "defaultValue": "b!D5F9rOgxM0yyCNdD89KrzSnaVhu-jXRJjHzlshORXgRMLjieOVVjRJncZP1-0c5-",
+          "type": "String",
+          "metadata": {
+            "schemaName": "aglcm003_Ev_Folder_WordDocumentsZulaaModeldriven",
+            "description": "Bibliothèque de documents à compléter pour les modèles de documents"
+          }
+        },
+        "Ev_File_TemplateFichierReception (aglcm003_Ev_File_TemplateFichierReception)": {
+          "defaultValue": "01XU4T36Z75PDGOIP2PJHYRJ3NBUYZALV3",
+          "type": "String",
+          "metadata": {
+            "schemaName": "aglcm003_Ev_File_TemplateFichierReception",
+            "description": "Chemin vers le modèle de réception"
+          }
+        },
+        "Document partagé ZulaaModelDriven (aglcm003_SharedDocumentZulaaModelDriven)": {
+          "defaultValue": "Shared Documents",
+          "type": "String",
+          "metadata": {
+            "schemaName": "aglcm003_SharedDocumentZulaaModelDriven",
+            "description": "Dossier racine Documents partagés d’un site SharePoint"
+          }
+        },
+        "Ev_Lib_Réception (aglcm003_Ev_Lib_reception)": {
+          "defaultValue": "a45afed8-fb35-446d-8aae-aa33c3f96399",
+          "type": "String",
+          "metadata": {
+            "schemaName": "aglcm003_Ev_Lib_reception"
+          }
+        },
+        "Ev_File_TemplateFichierRC_French (aglcm003_Ev_File_TemplateFichierRC_French)": {
+          "defaultValue": "01XU4T364WHC44XS5DKBAYFM5RMQ7E2BUT",
+          "type": "String",
+          "metadata": {
+            "schemaName": "aglcm003_Ev_File_TemplateFichierRC_French"
+          }
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "metadata": {
+            "operationMetadataId": "d12f1356-da5a-45e8-876e-cfdf32478403"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "aglcm003_zulaa_reception",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "aglcm003_fichiercreer",
+              "subscriptionRequest/filterexpression": "aglcm003_fichiercreer eq true"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Get_a_row_magasin__by_ID": {
+          "runAfter": {
+            "Compose_statut_reception": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "eb214abd-5504-467a-9d61-1fa89d17ffe5"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_magasins",
+              "recordId": "@triggerOutputs()?['body/_aglcm003_magasinid_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Initialize_variable_nbreLigneReception": {
+          "runAfter": {
+            "List_rows-_note_fournisseur": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "dfc0109f-4fc3-4d1c-8256-e0832b1ec8a0"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "nbreLigneReception",
+                "type": "integer",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "List_rows_DAAF": {
+          "runAfter": {
+            "Initialize_variable_devise": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "3ac9da9d-8e24-49e7-afea-e67ceb8f2a25"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_zulaa_demandedachatarticlefournisseurs",
+              "$filter": "_aglcm003_bondecommandeid_value eq '@{outputs('Get_a_row_Bon_de_commande__by_ID')?['body/aglcm003_zulaa_bondecommandeid']}' and _aglcm003_fournisseurid_value eq  '@{outputs('Get_a_row__fournisseur__by_ID')?['body/aglcm003_zulaa_fournisseurid']}'"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Get_a_row_créateur_Reception_by_ID": {
+          "runAfter": {
+            "Get_a_row__Entite___by_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "1b12a7b8-7e4a-494b-b77c-61db10b31033"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "systemusers",
+              "recordId": "@triggerOutputs()?['body/_createdby_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Compose_Nom_Dosser_-_GUIDmajiscule": {
+          "runAfter": {
+            "Condition_3": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "025f5cba-5e46-4032-a8f9-5d53091373ef"
+          },
+          "type": "Compose",
+          "inputs": "@toUpper(triggerOutputs()?['body/aglcm003_zulaa_receptionid'])"
+        },
+        "Compose-Remplace_les_caractès_spéciaux": {
+          "runAfter": {
+            "Compose_Nom_Dosser_-_GUIDmajiscule": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "85393161-440b-4793-b8e2-31a96b46adac"
+          },
+          "type": "Compose",
+          "inputs": "@replace(outputs('Compose_Nom_Dosser_-_GUIDmajiscule'),'-','')"
+        },
+        "Create_new_folder_réception": {
+          "runAfter": {
+            "Compose-Remplace_les_caractès_spéciaux": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "68b1169e-e98d-4760-8d6a-871cb4d4f5ff"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_sharepointonline-1",
+              "operationId": "CreateNewFolder",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+            },
+            "parameters": {
+              "dataset": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+              "table": "@parameters('Ev_Lib_Réception (aglcm003_Ev_Lib_reception)')",
+              "parameters/path": "@{triggerOutputs()?['body/aglcm003_codereception']}_@{outputs('Compose-Remplace_les_caractès_spéciaux')}"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Condition": {
+          "actions": {},
+          "runAfter": {},
+          "else": {
+            "actions": {
+              "Terminate": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "00d8cf75-0a7f-4f99-aefe-dd63fcdc87a2"
+                },
+                "type": "Terminate",
+                "inputs": {
+                  "runStatus": "Cancelled"
+                }
+              }
+            }
+          },
+          "expression": {
+            "and": [
+              {
+                "equals": [
+                  "@triggerOutputs()?['body/aglcm003_fichiercreer']",
+                  true
+                ]
+              }
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "54bfb63c-bf6e-4fbf-86d7-3ef3a0f81e82"
+          },
+          "type": "If"
+        },
+        "Get_file_content_using_path": {
+          "runAfter": {
+            "Create_new_folder_réception": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "83bac675-2779-495f-9ea8-256a1b30d22e"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_sharepointonline-1",
+              "operationId": "GetFileContentByPath",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+            },
+            "parameters": {
+              "dataset": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+              "path": "/Shared Documents/Logo Zulaa/@{outputs('Get_a_row__Entite___by_ID')?['body/aglcm003_code']}.png",
+              "inferContentType": true
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Get_a_row_Bon_de_commande__by_ID": {
+          "runAfter": {
+            "Get_a_row_magasin__by_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "eb214abd-5504-467a-9d61-1fa89d17ffe5"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_zulaa_bondecommandes",
+              "recordId": "@triggerOutputs()?['body/_aglcm003_bondecommandeid_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Get_a_row__fournisseur__by_ID": {
+          "runAfter": {
+            "Get_a_row_devise_by_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "eb214abd-5504-467a-9d61-1fa89d17ffe5"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_zulaa_fournisseurs",
+              "recordId": "@triggerOutputs()?['body/_aglcm003_fournisseurid_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "List_rows_ligne_de_la_réception": {
+          "runAfter": {
+            "Get_a_row__fournisseur__by_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "e2ff2b3d-7a7b-4184-b488-c5e84821aedf"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_lignedelareceptions",
+              "$filter": "_aglcm003_receptionid_value eq '@{triggerOutputs()?['body/aglcm003_zulaa_receptionid']}'"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Get_a_row__Entite___by_ID": {
+          "runAfter": {
+            "List_rows_ligne_de_la_réception": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "eb214abd-5504-467a-9d61-1fa89d17ffe5"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_zulaa_entites",
+              "recordId": "@triggerOutputs()?['body/_aglcm003_entiteid_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Initialize_variable-_nbreLigneCommande": {
+          "runAfter": {
+            "Initialize_variable_nbreLigneReception": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "dfc0109f-4fc3-4d1c-8256-e0832b1ec8a0"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "nbresLigneCommande",
+                "type": "integer",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "Initialize_variable-completeBC": {
+          "runAfter": {
+            "Initialize_variable-_nbreLigneCommande": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "dfc0109f-4fc3-4d1c-8256-e0832b1ec8a0"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "completeBC",
+                "type": "string",
+                "value": "Oui"
+              }
+            ]
+          }
+        },
+        "Initialize_variable-listArticle": {
+          "runAfter": {
+            "Initialize_variable-completeBC": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "dfc0109f-4fc3-4d1c-8256-e0832b1ec8a0"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "listArticle",
+                "type": "array",
+                "value": []
+              }
+            ]
+          }
+        },
+        "Initialize_variable-numeroLigne": {
+          "runAfter": {
+            "Initialize_variable-listArticle": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "dfc0109f-4fc3-4d1c-8256-e0832b1ec8a0"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "numeroLigne",
+                "type": "integer",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "Initialize_variable-prixReceptionHT": {
+          "runAfter": {
+            "For_each_5": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "dfc0109f-4fc3-4d1c-8256-e0832b1ec8a0"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "prixReceptionHT",
+                "type": "float"
+              }
+            ]
+          }
+        },
+        "Initialize_variable-prixReceptionTTC": {
+          "runAfter": {
+            "Initialize_variable-prixReceptionHT": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "dfc0109f-4fc3-4d1c-8256-e0832b1ec8a0"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "prixReceptionTTC",
+                "type": "float",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "Initialize_variable-logoContent": {
+          "runAfter": {
+            "Initialize_variable-prixReceptionTTC": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "dfc0109f-4fc3-4d1c-8256-e0832b1ec8a0"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "logoContent",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Initialize_variable_qte_réceptionné": {
+          "runAfter": {
+            "Initialize_variable-logoContent": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "e33c47cb-d545-453f-bb26-40e9642338b9"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Quantité receptionné",
+                "type": "float"
+              }
+            ]
+          }
+        },
+        "For_each_1": {
+          "foreach": "@outputs('List_rows_ligne_de_la_réception')?['body/value']",
+          "actions": {
+            "Get_a_row_article_by_ID_": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "9531fe16-b8b1-4b33-8040-8d858185386b"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "GetItem",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "aglcm003_zulaa_articles",
+                  "recordId": "@item()?['_aglcm003_articleid_value']"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Format_number_prix": {
+              "runAfter": {
+                "Format_number_quantité": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "80117310-de1e-416b-8c28-2eda06990aef"
+              },
+              "type": "Expression",
+              "kind": "FormatNumber",
+              "inputs": {
+                "number": "@item()?['aglcm003_prixht']",
+                "format": "#,###.##",
+                "locale": "fr"
+              }
+            },
+            "Format_number_quantité": {
+              "runAfter": {
+                "For_each": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "cdb25da9-4f1a-4473-9e56-15c422119496"
+              },
+              "type": "Expression",
+              "kind": "FormatNumber",
+              "inputs": {
+                "number": "@item()?['aglcm003_quantitedejareceptionne']",
+                "format": "#,###.##",
+                "locale": "fr"
+              }
+            },
+            "Append_to_array_variable_articles": {
+              "runAfter": {
+                "Format_number_prix": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "1365354b-52d6-4cc3-a973-88daba2671e7"
+              },
+              "type": "AppendToArrayVariable",
+              "inputs": {
+                "name": "listArticle",
+                "value": {
+                  "designation": "@outputs('Get_a_row_article_by_ID_')?['body/aglcm003_nom']",
+                  "qte": "@body('Format_number_quantité')",
+                  "numero": "@variables('numeroLigne')",
+                  "puht": "@body('Format_number_prix')",
+                  "ref": "@outputs('Get_a_row_article_by_ID_')?['body/aglcm003_codearticle']",
+                  "fabricant": "",
+                  "unite": "@variables('Unite')",
+                  "observation": "@item()?['aglcm003_observation']",
+                  "magasin": "@outputs('Get_a_row_magasin__by_ID')?['body/aglcm003_nomentite']"
+                }
+              }
+            },
+            "Increment_variable_Numéro_ligne": {
+              "runAfter": {
+                "Append_to_array_variable_articles": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "e2e0c8f1-e642-4d0a-8e01-9f11b43936dd"
+              },
+              "type": "IncrementVariable",
+              "inputs": {
+                "name": "numeroLigne",
+                "value": 1
+              }
+            },
+            "Increment_variable_Prix_HT": {
+              "runAfter": {
+                "Update_a_row__prix_de_la_reception": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "4e96c503-02ea-49ba-83ee-6e67ec71e69a"
+              },
+              "type": "IncrementVariable",
+              "inputs": {
+                "name": "prixReceptionHT",
+                "value": "@outputs('Update_a_row__prix_de_la_reception')?['body/aglcm003_prixht']"
+              }
+            },
+            "Increment_variable_prix_ttc": {
+              "runAfter": {
+                "Increment_variable_Prix_HT": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "724f988e-cf48-4132-98da-40a216c327b8"
+              },
+              "type": "IncrementVariable",
+              "inputs": {
+                "name": "prixReceptionTTC",
+                "value": "@outputs('Update_a_row__prix_de_la_reception')?['body/aglcm003_prixttc']"
+              }
+            },
+            "Increment_variable_nombre_ligne_reception": {
+              "runAfter": {
+                "Condition_1": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "1196df5c-db6b-4f2c-ba35-9733f0a6862a"
+              },
+              "type": "IncrementVariable",
+              "inputs": {
+                "name": "nbreLigneReception",
+                "value": 1
+              }
+            },
+            "Condition_1": {
+              "actions": {},
+              "runAfter": {
+                "Increment_variable_prix_ttc": [
+                  "Succeeded"
+                ]
+              },
+              "else": {
+                "actions": {
+                  "Set_variable_2_complet_bc": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "8d676d3d-d379-40fa-9da5-e4710db3164f"
+                    },
+                    "type": "SetVariable",
+                    "inputs": {
+                      "name": "completeBC",
+                      "value": "non"
+                    }
+                  }
+                }
+              },
+              "expression": {
+                "and": [
+                  {
+                    "equals": [
+                      "@item()?['aglcm003_quantiterestante']",
+                      0
+                    ]
+                  }
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "f543d772-69c4-42a4-8ed7-98801499dcd8"
+              },
+              "type": "If"
+            },
+            "For_each": {
+              "foreach": "@outputs('List_rows_DAAF')?['body/value']",
+              "actions": {
+                "Condition_4": {
+                  "actions": {},
+                  "runAfter": {},
+                  "else": {
+                    "actions": {
+                      "Get_a_row__unité_by_ID_2": {
+                        "runAfter": {},
+                        "metadata": {
+                          "operationMetadataId": "d1193b73-af65-4fc3-b601-d19353d4f744"
+                        },
+                        "type": "OpenApiConnection",
+                        "inputs": {
+                          "host": {
+                            "connectionName": "shared_commondataserviceforapps",
+                            "operationId": "GetItem",
+                            "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                          },
+                          "parameters": {
+                            "entityName": "aglcm003_zulaa_unites",
+                            "recordId": "@item()?['_aglcm003_uniteid_value']"
+                          },
+                          "authentication": "@parameters('$authentication')"
+                        }
+                      },
+                      "Set_variable_unite_": {
+                        "runAfter": {
+                          "Get_a_row__unité_by_ID_2": [
+                            "Succeeded"
+                          ]
+                        },
+                        "metadata": {
+                          "operationMetadataId": "d14cd3a8-3e05-46a4-9086-817e271813a1"
+                        },
+                        "type": "SetVariable",
+                        "inputs": {
+                          "name": "Unite",
+                          "value": "@outputs('Get_a_row__unité_by_ID_2')?['body/aglcm003_unitedemesure']"
+                        }
+                      }
+                    }
+                  },
+                  "expression": {
+                    "and": [
+                      {
+                        "equals": [
+                          "@empty(item()?['_aglcm003_uniteid_value'])",
+                          "@true"
+                        ]
+                      }
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "56107c71-1767-4c5f-ab2a-db6160a183bb"
+                  },
+                  "type": "If"
+                }
+              },
+              "runAfter": {
+                "Get_a_row_article_by_ID_": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "7629099b-d816-43e1-b7d4-598b082e6d8c"
+              },
+              "type": "Foreach"
+            },
+            "Update_a_row__prix_de_la_reception": {
+              "runAfter": {
+                "Increment_variable_Numéro_ligne": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "5fd542cf-7e96-4ac9-9101-dbace5477745"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "UpdateOnlyRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "aglcm003_lignedelareceptions",
+                  "recordId": "@item()?['aglcm003_lignedelareceptionid']",
+                  "item/aglcm003_prixht": "@mul(item()?['aglcm003_prixht'],div(item()?['aglcm003_quantitedejareceptionne'],item()?['aglcm003_quantitecommande']))",
+                  "item/aglcm003_prixttc": "@mul(item()?['aglcm003_prixttc'],div(item()?['aglcm003_quantitedejareceptionne'],item()?['aglcm003_quantitecommande']))"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "List_rows_DAAF": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "0afefa86-cc14-4eed-87e2-96ad6c962579"
+          },
+          "type": "Foreach"
+        },
+        "Initialize_variable_unite": {
+          "runAfter": {
+            "Initialize_variable_qte_réceptionné": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "474eb312-637f-481d-b363-dbcbd0f6bbe5"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Unite",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Format_number_Montant_TTC": {
+          "runAfter": {
+            "For_each_3": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "d6e321cd-84b9-462e-8057-b4c010280b3c"
+          },
+          "type": "Expression",
+          "kind": "FormatNumber",
+          "inputs": {
+            "number": "@variables('prixReceptionTTC')",
+            "format": "#,###.##\n",
+            "locale": "fr"
+          }
+        },
+        "Format_number_Montant_HT": {
+          "runAfter": {
+            "Format_number_Montant_TTC": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "d6e321cd-84b9-462e-8057-b4c010280b3c"
+          },
+          "type": "Expression",
+          "kind": "FormatNumber",
+          "inputs": {
+            "number": "@variables('prixReceptionHT')",
+            "format": "#,###.##\n",
+            "locale": "fr"
+          }
+        },
+        "For_each_3": {
+          "foreach": "@outputs('List_rows_DAAF')?['body/value']",
+          "actions": {
+            "Condition_2": {
+              "actions": {},
+              "runAfter": {
+                "Increment_variable_nbres_ligne_bondecommande": [
+                  "Succeeded"
+                ]
+              },
+              "else": {
+                "actions": {
+                  "Set_variable_3_complet_bc_": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "03ed1f2c-7d34-4009-b37f-d370a387bd3a"
+                    },
+                    "type": "SetVariable",
+                    "inputs": {
+                      "name": "completeBC",
+                      "value": "non"
+                    }
+                  }
+                }
+              },
+              "expression": {
+                "and": [
+                  {
+                    "greaterOrEquals": [
+                      "@items('For_each_3')?['aglcm003_quantiterecue']",
+                      "@item()?['aglcm003_quantite']"
+                    ]
+                  }
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "9ec7ef06-1f62-40eb-a9cb-85cb5aa4cda1"
+              },
+              "type": "If"
+            },
+            "Increment_variable_nbres_ligne_bondecommande": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "42e29811-e428-43a0-ac6c-70c3958d7ea0"
+              },
+              "type": "IncrementVariable",
+              "inputs": {
+                "name": "nbresLigneCommande",
+                "value": 1
+              }
+            }
+          },
+          "runAfter": {
+            "For_each_1": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "1a548b85-4260-44b4-afd2-e04c21115961"
+          },
+          "type": "Foreach"
+        },
+        "Condition_3": {
+          "actions": {
+            "Update_a_row_bon_de_commande": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "ffb923a3-4d6d-4e6b-8578-588a213e3e3b"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "UpdateOnlyRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "aglcm003_zulaa_bondecommandes",
+                  "recordId": "@outputs('Get_a_row_Bon_de_commande__by_ID')?['body/aglcm003_zulaa_bondecommandeid']",
+                  "item/aglcm003_statutdelivraisoncode": 2
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Set_variable_3_complet_bc__1": {
+              "runAfter": {
+                "Update_a_row_bon_de_commande": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "b1d79607-b133-4689-b1d9-0252e155f24f"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "completeBC",
+                "value": "non"
+              }
+            }
+          },
+          "runAfter": {
+            "Format_number_Montant_HT": [
+              "Succeeded"
+            ]
+          },
+          "expression": {
+            "and": [
+              {
+                "equals": [
+                  "@variables('completeBC')",
+                  "Oui"
+                ]
+              },
+              {
+                "equals": [
+                  "@variables('nbreLigneReception')",
+                  "@variables('nbresLigneCommande')"
+                ]
+              }
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "d2fe1f63-7e21-4c0e-9998-f8adb5e8290b"
+          },
+          "type": "If"
+        },
+        "List_rows-_note_fournisseur": {
+          "runAfter": {
+            "Get_a_row_créateur_Reception_by_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "d9ea01e5-8149-493c-9925-64e8babf7df2"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_notefournisseurs",
+              "$filter": "_aglcm003_receptionid_value eq '@{triggerOutputs()?['body/aglcm003_zulaa_receptionid']}'"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "For_each_5": {
+          "foreach": "@outputs('List_rows-_note_fournisseur')?['body/value']",
+          "actions": {
+            "Compose_respect_planning": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "2d6ee2db-0488-47aa-a318-8c7f3fa5f32d"
+              },
+              "type": "Compose",
+              "inputs": "@string(item()?['aglcm003_respectplanningdatelivraison'])"
+            },
+            "Compose_suivi_reclamation": {
+              "runAfter": {
+                "Set_variable": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "ebf7dd74-954b-46d2-be71-6552c804222a"
+              },
+              "type": "Compose",
+              "inputs": "@string(item()?['aglcm003_suividreclamationsdemandes'])"
+            },
+            "Compose_organisation_travaux": {
+              "runAfter": {
+                "Set_variable-copy": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "e9aa7dae-a8c0-4913-9535-6fe6127fdf77"
+              },
+              "type": "Compose",
+              "inputs": "@string(item()?['aglcm003_organisationdestravaux'])"
+            },
+            "Compose_equipement": {
+              "runAfter": {
+                "Set_variable-copy_1": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "38eafc1e-171f-4031-b90a-dc5c1ea805ca"
+              },
+              "type": "Compose",
+              "inputs": "@string(item()?['aglcm003_equipementetdocumentationdupersonnel'])"
+            },
+            "Compose_capacité_technique": {
+              "runAfter": {
+                "Set_variable-copy_2": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "e1efefcc-b773-4835-8e32-2b7e45eefe3e"
+              },
+              "type": "Compose",
+              "inputs": "@string(item()?['aglcm003_capacitetechniquereactivite'])"
+            },
+            "Compose_conformité_qhse": {
+              "runAfter": {
+                "Set_variable-copy3": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "8b29340f-05d6-4a2c-bb4f-af191cc2ceb5"
+              },
+              "type": "Compose",
+              "inputs": "@string(item()?['aglcm003_conformiteauxexigencesqhse'])"
+            },
+            "Compose_récurrence_anomalie": {
+              "runAfter": {
+                "Set_variable-copy_4": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "2c4de00f-d840-4090-bd96-9678c22c74f3"
+              },
+              "type": "Compose",
+              "inputs": "@string(item()?['aglcm003_recurrencenonrecurrenceanomalies'])"
+            },
+            "Compose_competence_formation": {
+              "runAfter": {
+                "Set_variable-copy_5": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "12795634-c22b-4788-9568-8dd640065f7e"
+              },
+              "type": "Compose",
+              "inputs": "@string(item()?['aglcm003_competenceformationpersonnel'])"
+            },
+            "Set_variable": {
+              "runAfter": {
+                "Compose_respect_planning": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "59e2fd6b-723c-47b0-8fde-0b228a5b727d"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "NF_respectplanningText",
+                "value": "@outputs('Compose_respect_planning')"
+              }
+            },
+            "Set_variable-copy": {
+              "runAfter": {
+                "Compose_suivi_reclamation": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "b03e27c6-fe9c-439b-bcf5-387ae671029b"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "NF_suiviReclemmationText",
+                "value": "@outputs('Compose_suivi_reclamation')"
+              }
+            },
+            "Set_variable-copy_1": {
+              "runAfter": {
+                "Compose_organisation_travaux": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "c66a2e2b-f658-412e-8b8e-b9efca270370"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "NF_organisationTravauxText",
+                "value": "@outputs('Compose_organisation_travaux')"
+              }
+            },
+            "Set_variable-copy_2": {
+              "runAfter": {
+                "Compose_equipement": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "d5b0f9e7-1b89-47ee-8457-045ec5e9d222"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "NF_equipDocPersText",
+                "value": "@outputs('Compose_equipement')"
+              }
+            },
+            "Set_variable-copy3": {
+              "runAfter": {
+                "Compose_capacité_technique": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "2ad8e3c6-81d5-4efa-bd08-b21dc06e85d7"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "NF_capaciteTechniqueText",
+                "value": "@outputs('Compose_capacité_technique')"
+              }
+            },
+            "Set_variable-copy_4": {
+              "runAfter": {
+                "Compose_conformité_qhse": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "38f5caeb-7e7d-4161-bb7d-ad693fa4d37e"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "NF_conformiteQHSEText",
+                "value": "@outputs('Compose_conformité_qhse')"
+              }
+            },
+            "Set_variable-copy_5": {
+              "runAfter": {
+                "Compose_récurrence_anomalie": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "6da1f73b-e63a-4de8-ad3a-e2bbc396a6e6"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "NF_recurrenceAnomalieText",
+                "value": "@outputs('Compose_récurrence_anomalie')"
+              }
+            },
+            "Set_variable-copy_6": {
+              "runAfter": {
+                "Compose_competence_formation": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "41caa53a-01ea-4d25-a4cf-38f59227c1c9"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "NF_competenceFormationText",
+                "value": "@outputs('Compose_competence_formation')"
+              }
+            }
+          },
+          "runAfter": {
+            "Initialize_variable-NF_competenceFormation-text": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "7cad501a-5a4a-48d4-8e9a-68b32c4db8c3"
+          },
+          "type": "Foreach"
+        },
+        "Initialize_variable_devise": {
+          "runAfter": {
+            "Initialize_variable_unite": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "337823eb-47cd-455d-9d2e-709f5e3609d2"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Devise",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Get_a_row_devise_by_ID": {
+          "runAfter": {
+            "Get_a_row_Bon_de_commande__by_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "8c2afe41-a500-4fb7-bc49-129d02770126"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_zulaa_devises",
+              "recordId": "@outputs('Get_a_row_Bon_de_commande__by_ID')?['body/_aglcm003_deviseid_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Initialize_variable-NF_respectplanning_Text": {
+          "runAfter": {
+            "Initialize_variable-numeroLigne": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "dfc0109f-4fc3-4d1c-8256-e0832b1ec8a0"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "NF_respectplanningText",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Initialize_variable-DNF_suiviReclemmation-text": {
+          "runAfter": {
+            "Initialize_variable-NF_respectplanning_Text": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "dfc0109f-4fc3-4d1c-8256-e0832b1ec8a0"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "NF_suiviReclemmationText",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Initialize_variable-NF_organisationTravaux-text": {
+          "runAfter": {
+            "Initialize_variable-DNF_suiviReclemmation-text": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "dfc0109f-4fc3-4d1c-8256-e0832b1ec8a0"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "NF_organisationTravauxText",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Initialize_variable-NF_capaciteTechnique-text": {
+          "runAfter": {
+            "Initialize_variable-NF_equipDocPers-Text": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "dfc0109f-4fc3-4d1c-8256-e0832b1ec8a0"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "NF_capaciteTechniqueText",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Initialize_variable-NF_conformiteQHSE-text": {
+          "runAfter": {
+            "Initialize_variable-NF_capaciteTechnique-text": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "dfc0109f-4fc3-4d1c-8256-e0832b1ec8a0"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "NF_conformiteQHSEText",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Initialize_variable-NF_recurrenceAnomalie-text": {
+          "runAfter": {
+            "Initialize_variable-NF_conformiteQHSE-text": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "dfc0109f-4fc3-4d1c-8256-e0832b1ec8a0"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "NF_recurrenceAnomalieText",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Initialize_variable-NF_competenceFormation-text": {
+          "runAfter": {
+            "Initialize_variable-NF_recurrenceAnomalie-text": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "dfc0109f-4fc3-4d1c-8256-e0832b1ec8a0"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "NF_competenceFormationText",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Initialize_variable-NF_equipDocPers-Text": {
+          "runAfter": {
+            "Initialize_variable-NF_organisationTravaux-text": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "dfc0109f-4fc3-4d1c-8256-e0832b1ec8a0"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "NF_equipDocPersText",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Compose_statut_reception": {
+          "runAfter": {
+            "Condition": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "7b209ac5-6967-495d-94ee-f5a8f0f07de0"
+          },
+          "type": "Compose",
+          "inputs": "@triggerOutputs()?['body/_aglcm003_statut_label']"
+        },
+        "Condition_5": {
+          "actions": {
+            "Populate_a_Microsoft_Word_template_": {
+              "runAfter": {},
+              "metadata": {
+                "01XU4T36ZKICGUEBIJUJEYP73B3YRRJ3S3": "/Template Zulaa/BTLCM Template  Bon de commande.docx",
+                "operationMetadataId": "703d3715-33b3-41cb-b4fe-27182d8c51df",
+                "01XU4T362HQEYCGUMGHJFZ5OEZA5YXGSB5": "/Template Zulaa/BTLCM Template  Bon de commande .docx",
+                "01XU4T36Z75PDGOIP2PJHYRJ3NBUYZALV3": "/Template Zulaa/Template PV Reception.docx"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_wordonlinebusiness-1",
+                  "operationId": "CreateFileItem",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_wordonlinebusiness"
+                },
+                "parameters": {
+                  "source": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                  "drive": "@parameters('Ev_Folder_WordDocumentsZulaaModeldriven (aglcm003_Ev_Folder_WordDocumentsZulaaModeldriven)')",
+                  "file": "@parameters('Ev_File_TemplateFichierReception (aglcm003_Ev_File_TemplateFichierReception)')",
+                  "dynamicFileSchema/224644714": "@variables('NF_competenceFormationText')",
+                  "dynamicFileSchema/348144399": "@variables('NF_organisationTravauxText')",
+                  "dynamicFileSchema/390239900": "@body('Format_number_Montant_HT')",
+                  "dynamicFileSchema/461779350": "@triggerOutputs()?['body/aglcm003_bondelivraison']",
+                  "dynamicFileSchema/480661645": "@variables('NF_equipDocPersText')",
+                  "dynamicFileSchema/798729995": "@triggerOutputs()?['body/aglcm003_bondelivraison']",
+                  "dynamicFileSchema/824010986": "@formatDateTime(utcNow(),'dd/MM/yyyy HH:mm')",
+                  "dynamicFileSchema/1075936123": "@outputs('Get_a_row__fournisseur__by_ID')?['body/aglcm003_nom']",
+                  "dynamicFileSchema/1176774491": "@triggerOutputs()?['body/aglcm003_commentairereception']",
+                  "dynamicFileSchema/1805126077": "@outputs('Get_a_row_devise_by_ID')?['body/aglcm003_nom']",
+                  "dynamicFileSchema/1846125596": "@variables('NF_recurrenceAnomalieText')",
+                  "dynamicFileSchema/1940253920": "@body('Format_number_Montant_TTC')",
+                  "dynamicFileSchema/-473375693": "@body('Get_file_content_using_path')",
+                  "dynamicFileSchema/-2094842973": "@{triggerOutputs()?['body/aglcm003_codereception']}-@{triggerOutputs()?['body/aglcm003_bondelivraison']}",
+                  "dynamicFileSchema/-551693061": "@outputs('Get_a_row_Bon_de_commande__by_ID')?['body/aglcm003_code']",
+                  "dynamicFileSchema/-1890253749": "@formatDateTime(utcNow(),'dd/MM/yyyy HH:mm')",
+                  "dynamicFileSchema/-512231607": "@outputs('Compose_statut_reception')",
+                  "dynamicFileSchema/-1547360136": "@variables('listArticle')",
+                  "dynamicFileSchema/-117999527": "@variables('NF_respectplanningText')",
+                  "dynamicFileSchema/-214126011": "@variables('NF_suiviReclemmationText')",
+                  "dynamicFileSchema/-554243740": "@variables('NF_capaciteTechniqueText')",
+                  "dynamicFileSchema/-1084455344": "@variables('NF_conformiteQHSEText')",
+                  "dynamicFileSchema/-1907760575": "@formatDateTime(utcNow(),'dd/MM/yyyy HH:mm')"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Create_file_Word_": {
+              "runAfter": {
+                "Populate_a_Microsoft_Word_template_": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "312d572c-dc64-4a63-94c0-491e25cff7ee"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_sharepointonline-1",
+                  "operationId": "CreateFile",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                },
+                "parameters": {
+                  "dataset": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                  "folderPath": "/@{parameters('Document partagé ZulaaModelDriven (aglcm003_SharedDocumentZulaaModelDriven)')}/Document Généré  Word",
+                  "name": "@concat(triggerOutputs()?['body/aglcm003_codereception'],'.docx')",
+                  "body": "@body('Populate_a_Microsoft_Word_template_')"
+                },
+                "authentication": "@parameters('$authentication')"
+              },
+              "runtimeConfiguration": {
+                "contentTransfer": {
+                  "transferMode": "Chunked"
+                }
+              }
+            },
+            "Convert_Word_Document_to_PDF": {
+              "runAfter": {
+                "Create_file_Word_": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "4a537502-7f1c-4458-b3d3-dfd2fa8dc7ca"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_wordonlinebusiness-1",
+                  "operationId": "GetFilePDF",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_wordonlinebusiness"
+                },
+                "parameters": {
+                  "source": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                  "drive": "@parameters('Ev_Folder_WordDocumentsZulaaModeldriven (aglcm003_Ev_Folder_WordDocumentsZulaaModeldriven)')",
+                  "file": "/Document Généré  Word/@{outputs('Create_file_Word_')?['body/Name']}"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Create_file_PDF__ORIGINAL": {
+              "runAfter": {
+                "Convert_Word_Document_to_PDF": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "ef37a8b5-785e-462c-9712-6e6f3d3837ba"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_sharepointonline-1",
+                  "operationId": "CreateFile",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                },
+                "parameters": {
+                  "dataset": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                  "folderPath": "/aglcm003_zulaa_reception/@{triggerOutputs()?['body/aglcm003_codereception']}_@{outputs('Compose-Remplace_les_caractès_spéciaux')}",
+                  "name": "@concat(triggerOutputs()?['body/aglcm003_codereception'],'.pdf')",
+                  "body": "@body('Convert_Word_Document_to_PDF')"
+                },
+                "authentication": "@parameters('$authentication')"
+              },
+              "runtimeConfiguration": {
+                "contentTransfer": {
+                  "transferMode": "Chunked"
+                }
+              }
+            }
+          },
+          "runAfter": {
+            "Get_file_content_using_path": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Populate_a_Microsoft_Word_template__1": {
+                "runAfter": {},
+                "metadata": {
+                  "01XU4T36ZKICGUEBIJUJEYP73B3YRRJ3S3": "/Template Zulaa/BTLCM Template  Bon de commande.docx",
+                  "operationMetadataId": "703d3715-33b3-41cb-b4fe-27182d8c51df",
+                  "01XU4T362HQEYCGUMGHJFZ5OEZA5YXGSB5": "/Template Zulaa/BTLCM Template  Bon de commande .docx",
+                  "01XU4T36Z75PDGOIP2PJHYRJ3NBUYZALV3": "/Template Zulaa/Template PV Reception.docx",
+                  "01XU4T364WHC44XS5DKBAYFM5RMQ7E2BUT": "/Template Zulaa/Template PV Reception - French.docx"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_wordonlinebusiness-1",
+                    "operationId": "CreateFileItem",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_wordonlinebusiness"
+                  },
+                  "parameters": {
+                    "source": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                    "drive": "@parameters('Ev_Folder_WordDocumentsZulaaModeldriven (aglcm003_Ev_Folder_WordDocumentsZulaaModeldriven)')",
+                    "file": "@parameters('Ev_File_TemplateFichierRC_French (aglcm003_Ev_File_TemplateFichierRC_French)')",
+                    "dynamicFileSchema/224644714": "@variables('NF_competenceFormationText')",
+                    "dynamicFileSchema/348144399": "@variables('NF_organisationTravauxText')",
+                    "dynamicFileSchema/390239900": "@body('Format_number_Montant_HT')",
+                    "dynamicFileSchema/461779350": "@triggerOutputs()?['body/aglcm003_bondelivraison']",
+                    "dynamicFileSchema/480661645": "@variables('NF_equipDocPersText')",
+                    "dynamicFileSchema/798729995": "@triggerOutputs()?['body/aglcm003_bondelivraison']",
+                    "dynamicFileSchema/824010986": "@formatDateTime(utcNow(),'dd/MM/yyyy HH:mm')",
+                    "dynamicFileSchema/1075936123": "@outputs('Get_a_row__fournisseur__by_ID')?['body/aglcm003_nom']",
+                    "dynamicFileSchema/1176774491": "@triggerOutputs()?['body/aglcm003_commentairereception']",
+                    "dynamicFileSchema/1805126077": "@outputs('Get_a_row_devise_by_ID')?['body/aglcm003_nom']",
+                    "dynamicFileSchema/1846125596": "@variables('NF_recurrenceAnomalieText')",
+                    "dynamicFileSchema/1940253920": "@body('Format_number_Montant_TTC')",
+                    "dynamicFileSchema/-473375693": "@body('Get_file_content_using_path')",
+                    "dynamicFileSchema/-2094842973": "@{triggerOutputs()?['body/aglcm003_codereception']}-@{triggerOutputs()?['body/aglcm003_bondelivraison']}",
+                    "dynamicFileSchema/-551693061": "@outputs('Get_a_row_Bon_de_commande__by_ID')?['body/aglcm003_code']",
+                    "dynamicFileSchema/-1890253749": "@formatDateTime(utcNow(),'dd/MM/yyyy HH:mm')",
+                    "dynamicFileSchema/-512231607": "@outputs('Compose_statut_reception')",
+                    "dynamicFileSchema/-1547360136": "@variables('listArticle')",
+                    "dynamicFileSchema/-117999527": "@variables('NF_respectplanningText')",
+                    "dynamicFileSchema/-214126011": "@variables('NF_suiviReclemmationText')",
+                    "dynamicFileSchema/-554243740": "@variables('NF_capaciteTechniqueText')",
+                    "dynamicFileSchema/-1084455344": "@variables('NF_conformiteQHSEText')",
+                    "dynamicFileSchema/-1907760575": "@formatDateTime(utcNow(),'dd/MM/yyyy HH:mm')"
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              },
+              "Create_file_Word__1": {
+                "runAfter": {
+                  "Populate_a_Microsoft_Word_template__1": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "312d572c-dc64-4a63-94c0-491e25cff7ee"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_sharepointonline-1",
+                    "operationId": "CreateFile",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                  },
+                  "parameters": {
+                    "dataset": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                    "folderPath": "/@{parameters('Document partagé ZulaaModelDriven (aglcm003_SharedDocumentZulaaModelDriven)')}/Document Généré  Word",
+                    "name": "@concat(triggerOutputs()?['body/aglcm003_codereception'],'.docx')",
+                    "body": "@body('Populate_a_Microsoft_Word_template__1')"
+                  },
+                  "authentication": "@parameters('$authentication')"
+                },
+                "runtimeConfiguration": {
+                  "contentTransfer": {
+                    "transferMode": "Chunked"
+                  }
+                }
+              },
+              "Convert_Word_Document_to_PDF_1": {
+                "runAfter": {
+                  "Create_file_Word__1": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "4a537502-7f1c-4458-b3d3-dfd2fa8dc7ca"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_wordonlinebusiness-1",
+                    "operationId": "GetFilePDF",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_wordonlinebusiness"
+                  },
+                  "parameters": {
+                    "source": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                    "drive": "@parameters('Ev_Folder_WordDocumentsZulaaModeldriven (aglcm003_Ev_Folder_WordDocumentsZulaaModeldriven)')",
+                    "file": "/Document Généré  Word/@{outputs('Create_file_Word__1')?['body/Name']}"
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              },
+              "Create_file_PDF__ORIGINAL_1": {
+                "runAfter": {
+                  "Convert_Word_Document_to_PDF_1": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "ef37a8b5-785e-462c-9712-6e6f3d3837ba"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_sharepointonline-1",
+                    "operationId": "CreateFile",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                  },
+                  "parameters": {
+                    "dataset": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                    "folderPath": "/aglcm003_zulaa_reception/@{triggerOutputs()?['body/aglcm003_codereception']}_@{outputs('Compose-Remplace_les_caractès_spéciaux')}",
+                    "name": "@concat(triggerOutputs()?['body/aglcm003_codereception'],'.pdf')",
+                    "body": "@body('Convert_Word_Document_to_PDF_1')"
+                  },
+                  "authentication": "@parameters('$authentication')"
+                },
+                "runtimeConfiguration": {
+                  "contentTransfer": {
+                    "transferMode": "Chunked"
+                  }
+                }
+              }
+            }
+          },
+          "expression": {
+            "and": [
+              {
+                "equals": [
+                  "@outputs('Get_a_row__Entite___by_ID')?['body/aglcm003_language']",
+                  0
+                ]
+              }
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "a2396515-bcc1-4be1-a7d2-4b10004c07ef"
+          },
+          "type": "If"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

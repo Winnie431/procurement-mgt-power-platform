@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{c3265d83-1832-4e8d-a0cd-8a8ab76fe518}</savedqueryid>
+    <layoutxml>
+      <grid name="aglcm003_zulaa_bondecommandes" jump="aglcm003_code" select="1" icon="1" preview="1">
+        <row name="aglcm003_zulaa_bondecommande" id="aglcm003_zulaa_bondecommandeid">
+          <cell name="aglcm003_code" width="145" />
+          <cell name="aglcm003_demandedachatid" width="196" />
+          <cell name="aglcm003_fournisseurid" width="206" />
+          <cell name="createdon" width="125" />
+          <cell name="aglcm003_montantht" width="165" />
+          <cell name="aglcm003_montantttc" width="178" />
+          <cell name="aglcm003_statutdelivraisoncode" width="142" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>2</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_bondecommande">
+          <attribute name="aglcm003_zulaa_bondecommandeid" />
+          <attribute name="aglcm003_code" />
+          <attribute name="createdon" />
+          <order attribute="aglcm003_code" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_demandedachatid" />
+          <attribute name="aglcm003_fournisseurid" />
+          <attribute name="aglcm003_montantht" />
+          <attribute name="aglcm003_montantttc" />
+          <attribute name="aglcm003_statutdelivraisoncode" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Purchase Order Associated View" languagecode="1033" />
+      <LocalizedName description="Vue associée aux bon de commandes" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

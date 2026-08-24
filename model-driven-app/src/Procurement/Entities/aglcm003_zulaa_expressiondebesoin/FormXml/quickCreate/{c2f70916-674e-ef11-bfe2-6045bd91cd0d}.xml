@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{c2f70916-674e-ef11-bfe2-6045bd91cd0d}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab id="F931FFE2-B873-473F-8F95-9502F0AA3F5E" name="tab_1" showlabel="false" labelid="{0ebe8ab9-7093-4648-8dec-d803fdeb2025}">
+          <labels>
+            <label description="New Tab" languagecode="1033" />
+            <label description="Nouvel Onglet" languagecode="1036" />
+          </labels>
+          <columns>
+            <column width="34%">
+              <sections>
+                <section id="0C655D4E-C6E3-424E-9AF5-71E72D30D12E" name="tab_1_column_1_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{3ed0ec08-bbfd-4ad6-9168-9fb7d5961d44}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                    <label description="Général" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="542FBFBE-0E4C-496C-8012-555DE6581923" labelid="{e94615ae-264d-4278-8320-1d90eb093a9e}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0a19bb00-ba5f-49e8-b349-190d5837661e}" locklevel="0" colspan="1" rowspan="1" labelid="{0bf59bc8-3e21-4b2c-989b-5ea63d2f1f84}">
+                        <labels>
+                          <label description="Entity" languagecode="1033" />
+                          <label description="Entité" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_entiteid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_entiteid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0e5251a3-bd4e-4e30-b515-e4343a1c3115}" locklevel="0" colspan="1" rowspan="1" labelid="{52d90243-fa5f-4a24-a6ea-2481b9e49f5c}">
+                        <labels>
+                          <label description="Cost Center" languagecode="1033" />
+                          <label description="Centre de Coût" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_centredecoutid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_centredecoutid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{90cb89ac-48e0-41e5-8229-f9c9be032628}" locklevel="0" colspan="1" rowspan="1" labelid="{79bc1b11-aa61-4fb4-a5a8-18b9e50200bf}">
+                        <labels>
+                          <label description="Direction" languagecode="1033" />
+                          <label description="Direction" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_directionid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_directionid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{92f196ba-7bd2-4e53-ad38-7ecef3224af5}" locklevel="0" colspan="1" rowspan="1" labelid="{6edfbb0e-4f6d-494c-a49d-805f3baa388a}">
+                        <labels>
+                          <label description="Department" languagecode="1033" />
+                          <label description="Département" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_departementid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_departementid" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section id="02DECBA0-3AE2-484D-A19F-C5353AF4F4F2" name="tab_1_column_2_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{5a40c0cc-46d3-4b6c-8c9f-8a0daa04918e}">
+                  <labels>
+                    <label description="Details" languagecode="1033" />
+                    <label description="Détails" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="266FE48D-4D04-4E9A-8C5A-7DEF9A2F059B" labelid="{73f00efd-ffda-417c-b571-3afcba9fd606}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1f7b48d3-129c-4285-b40b-93200d64f758}" locklevel="0" colspan="1" rowspan="1" labelid="{b3d6aaaa-43bb-47bd-b0b1-8a8cb6fca5bc}">
+                        <labels>
+                          <label description="Type of Expression of Need" languagecode="1033" />
+                          <label description="Type d’Expression de Besoin" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_type" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="aglcm003_type" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8db74f92-e975-4354-838c-b61d0ea5484a}" locklevel="0" colspan="1" rowspan="1" labelid="{332a12cf-7a01-409c-8493-b4b05be8303f}">
+                        <labels>
+                          <label description="Label" languagecode="1033" />
+                          <label description="Libellé" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_libelle" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_libelle" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c5a952f3-9270-49fe-993f-188a45f9cc46}" locklevel="0" colspan="1" rowspan="1" labelid="{a316f83a-0dd4-4400-88e0-cf828fd0c95f}">
+                        <labels>
+                          <label description="Priority" languagecode="1033" />
+                          <label description="Priorité" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_priorite" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="aglcm003_priorite" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section id="46FD66EA-B686-41D9-AAE0-C565BD78EC1F" name="tab_1_column_3_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{5404b0ca-d0fe-4db5-998f-94f95cf11d94}">
+                  <labels>
+                    <label description="Description" languagecode="1033" />
+                    <label description="Description" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="07C04A4E-A482-45CC-BAB7-7FCA3CD02938" labelid="{d711ac2c-8e85-4c05-9f16-0e88021d9dc3}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{269d9f85-4298-4349-90a7-87f52740dd4f}" locklevel="0" colspan="1" rowspan="1" labelid="{bac01c54-52dd-446f-8e3f-3613b2ba1afe}">
+                        <labels>
+                          <label description="Description" languagecode="1033" />
+                          <label description="Description" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_description" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="aglcm003_description" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+        <Role Id="{aca8900e-9ae0-48b0-b8a0-27c5d1b3ddfa}" />
+        <Role Id="{193bc51f-e247-4384-9ae8-9b5002fc254e}" />
+        <Role Id="{28b7e58a-972a-4f98-be9b-a7c0b42b8d58}" />
+        <Role Id="{eb40b86c-4ad3-4db8-b5c8-f35dbfaf1a2f}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Expression of Need quick create form" languagecode="1033" />
+      <LocalizedName description="Formulaire de création rapide d’une Expression de Besoin" languagecode="1036" />
+    </LocalizedNames>
+  </systemform>
+</forms>

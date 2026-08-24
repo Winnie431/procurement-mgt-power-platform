@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{f41b38aa-d0ab-ef11-b8e8-7c1e52295aa1}</formid>
+    <IntroducedVersion>1.0.0.1</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{a95dd9fe-d7ed-4328-817e-4b82e15df2b9}" showlabel="false" name="New Tab" labelid="{b0307017-fdd3-4cec-b22e-0f91c50f75a8}">
+          <labels>
+            <label description="New Tab" languagecode="1033" />
+            <label description="Nouvel onglet  " languagecode="1036" />
+          </labels>
+          <columns>
+            <column width="34%">
+              <sections>
+                <section showlabel="true" columns="1" showbar="false" IsUserDefined="false" labelwidth="130" id="{4974c107-6042-45a9-b2fe-a9cea7f9df09}" name="tab_1_column_1_section_1" labelid="{a52d9aed-6182-46f2-8153-18cb74970f42}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                    <label description="Général  " languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{ffa1610f-9b42-465f-824a-86948b00ecea}" locklevel="0" colspan="1" rowspan="1" labelid="{2c02141e-4310-4aee-bba0-25bacc6d110a}">
+                        <labels>
+                          <label description="Reception" languagecode="1033" />
+                          <label description="Réception  " languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_receptionid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_receptionid" disabled="true">
+                          <parameters>
+                            <DisableViewPicker>true</DisableViewPicker>
+                            <DependentAttributeName>aglcm003_notefournisseur.aglcm003_fournisseurid</DependentAttributeName>
+                            <DependentAttributeType>aglcm003_zulaa_fournisseur</DependentAttributeType>
+                            <FilterRelationshipName>aglcm003_zulaa_reception_fournisseur</FilterRelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{16baf2ad-aaaa-44a4-9499-f4262b238638}" locklevel="0" colspan="1" rowspan="1" labelid="{d97ff746-0913-40fa-8566-53de69d303d5}">
+                        <labels>
+                          <label description="Supplier" languagecode="1033" />
+                          <label description="Fournisseur  " languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_fournisseurid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_fournisseurid" disabled="true">
+                          <parameters>
+                            <DisableViewPicker>true</DisableViewPicker>
+                            <DependentAttributeName>aglcm003_notefournisseur.aglcm003_receptionid</DependentAttributeName>
+                            <DependentAttributeType>aglcm003_zulaa_reception</DependentAttributeType>
+                            <FilterRelationshipName>aglcm003_zulaa_reception_fournisseur</FilterRelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section id="{a4f50316-94bc-465d-b76c-e95ae015579f}" name="tab_1_column_2_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" visible="true" labelid="{94f10f5f-b14c-4e77-ad0a-10635f8e1b6b}">
+                  <labels>
+                    <label description="Rating" languagecode="1033" />
+                    <label description="Évaluation  " languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{7b8e2be1-4d4d-4ceb-b2b9-701e98807da2}" labelid="{6a6c70e6-16d6-4f75-a9c2-4eb9232b3a2c}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d6ab3893-7736-4df3-a355-be947452bbc9}" locklevel="0" colspan="1" rowspan="1" labelid="{e43dec7b-f59f-49e3-8764-a3cab18bd9fe}">
+                        <labels>
+                          <label description="Tracking of claims and requests" languagecode="1033" />
+                          <label description="Suivi des réclamations et demandes  " languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_suividreclamationsdemandes" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="aglcm003_suividreclamationsdemandes" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{436a3081-d13d-4eea-8b77-53b30290bf6d}" locklevel="0" colspan="1" rowspan="1" labelid="{cdb3829e-c8f1-43de-b951-1a8cb1a4beed}">
+                        <labels>
+                          <label description="Compliance with schedule / Delivery date" languagecode="1033" />
+                          <label description="Respect du calendrier / Date de livraison  " languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_respectplanningdatelivraison" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="aglcm003_respectplanningdatelivraison" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{46f3688c-dc0e-4543-9d2a-e1da11d7bc57}" locklevel="0" colspan="1" rowspan="1" labelid="{15c5263b-f8b8-4d0f-a7b8-f797de161c03}">
+                        <labels>
+                          <label description="Technical capacity / Responsiveness" languagecode="1033" />
+                          <label description="Capacité technique / Réactivité  " languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_capacitetechniquereactivite" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="aglcm003_capacitetechniquereactivite" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e6b56c3c-7666-4cd5-9ee8-f241c7c70bf3}" locklevel="0" colspan="1" rowspan="1" labelid="{0dc07ef6-b242-4358-ae74-c599e52d5cc3}">
+                        <labels>
+                          <label description="Staff skills and training" languagecode="1033" />
+                          <label description="Compétences et formations du personnel  " languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_competenceformationpersonnel" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="aglcm003_competenceformationpersonnel" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1569ee3e-73a5-464b-bbb4-700182742fc8}" locklevel="0" colspan="1" rowspan="1" labelid="{e3ddd52b-b1c2-423e-9991-c6bd562a3b35}">
+                        <labels>
+                          <label description="Compliance with Q-HSE requirements" languagecode="1033" />
+                          <label description="Conformité aux exigences Q-HSE  " languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_conformiteauxexigencesqhse" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="aglcm003_conformiteauxexigencesqhse" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{48a0580d-4f19-49b3-bb0d-7b0cfc6dc50b}" locklevel="0" colspan="1" rowspan="1" labelid="{016e7ff1-c7f3-427a-9add-8d8761efefc5}">
+                        <labels>
+                          <label description="Personnel equipment and documentation" languagecode="1033" />
+                          <label description="Équipements et documentation du personnel  " languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_equipementetdocumentationdupersonnel" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="aglcm003_equipementetdocumentationdupersonnel" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9ec0df35-e807-4752-b286-c65dc66b77ca}" locklevel="0" colspan="1" rowspan="1" labelid="{c4d36072-a20c-41ec-845c-5905aa549ef4}">
+                        <labels>
+                          <label description="Work organization" languagecode="1033" />
+                          <label description="Organisation du travail  " languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_organisationdestravaux" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="aglcm003_organisationdestravaux" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1f5e50dc-7a2c-4ad4-849f-5b5125581c76}" locklevel="0" colspan="1" rowspan="1" labelid="{bf283711-25ba-4e99-a1f2-ab1e47538d75}">
+                        <labels>
+                          <label description="Recurrence / Non-recurrence of anomalies" languagecode="1033" />
+                          <label description="Récurrence / Non-récurrence des anomalies  " languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_recurrencenonrecurrenceanomalies" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="aglcm003_recurrencenonrecurrenceanomalies" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section id="{fb541473-764f-4050-8f5b-f063594ed991}" name="tab_1_column_3_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" visible="false" labelid="{211d6a78-2383-4cbc-a14e-042675b28633}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                    <label description="Nouvelle section  " languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{d16e6ded-c49f-4a7c-92fd-3bd6d14a2873}" labelid="{ab182a58-a9b3-4bd3-9c1b-7c788a434ccc}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+        <Role Id="{67a417dd-5408-4780-ae31-08eb352689d8}" />
+        <Role Id="{1e751128-eb5a-4fc6-a40a-1b9777e44be0}" />
+        <Role Id="{2caf8682-2983-4ef1-911a-21428753c86c}" />
+        <Role Id="{aca8900e-9ae0-48b0-b8a0-27c5d1b3ddfa}" />
+        <Role Id="{8af06709-761b-45ce-8635-2843b7611713}" />
+        <Role Id="{6243f70f-f966-4bef-a974-3fcf74010665}" />
+        <Role Id="{df86adf3-7f84-42ca-9f5d-471894cc0a67}" />
+        <Role Id="{bcea6ffa-392f-4fc3-9cb9-4f5c1ee014ca}" />
+        <Role Id="{e8f681c1-b86d-4eb8-96e9-4fe841b8e677}" />
+        <Role Id="{26dbdc93-b507-4142-bee8-53bd107de494}" />
+        <Role Id="{e966cc81-0df5-4219-8d84-810dd77a2f94}" />
+        <Role Id="{f6b0002f-e424-456f-9923-91a4a24531d3}" />
+        <Role Id="{193bc51f-e247-4384-9ae8-9b5002fc254e}" />
+        <Role Id="{28b7e58a-972a-4f98-be9b-a7c0b42b8d58}" />
+        <Role Id="{9114d76e-83a6-4284-9a3d-b22ddde94ff4}" />
+        <Role Id="{a2f58b85-93af-4738-b79c-b2dac2a56c2f}" />
+        <Role Id="{9647979b-20a6-49c4-ae51-b8009ec9ef27}" />
+        <Role Id="{7be09862-32a5-4748-8b4a-cb796e44f27b}" />
+        <Role Id="{b0f08eca-c9fd-4fdc-96c7-d42c64f8f28c}" />
+        <Role Id="{77f0a1c4-d371-4c74-9322-d4b8ce4b63dd}" />
+        <Role Id="{a4f9ae0b-bc0e-48aa-9e4a-e107b36708f0}" />
+        <Role Id="{d09e433c-062d-484b-ae30-e168ebb6628e}" />
+        <Role Id="{eb40b86c-4ad3-4db8-b5c8-f35dbfaf1a2f}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Quick Create Supplier Note" languagecode="1033" />
+      <LocalizedName description="Création rapide de note fournisseur  " languagecode="1036" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Quick create Supplier Note" languagecode="1033" />
+      <Description description="Création rapide de note fournisseur  " languagecode="1036" />
+    </Descriptions>
+  </systemform>
+</forms>

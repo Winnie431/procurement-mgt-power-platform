@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{fe1507bb-c783-4866-859b-baff5e13607f}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_code" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_demandedachatid">
+          <cell name="aglcm003_code" width="117" />
+          <cell name="aglcm003_entiteid" width="100" />
+          <cell name="aglcm003_fournisseurid" width="117" />
+          <cell name="aglcm003_departementid" width="113" />
+          <cell name="aglcm003_directionid" width="100" />
+          <cell name="createdon" width="125" />
+          <cell name="aglcm003_montantht" width="110" />
+          <cell name="aglcm003_montantttc" width="118" />
+          <cell name="aglcm003_centredecoutid" width="122" />
+          <cell name="aglcm003_statutcode" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_demandedachat">
+          <attribute name="aglcm003_zulaa_demandedachatid" />
+          <attribute name="aglcm003_code" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_centredecoutid" />
+          <attribute name="aglcm003_departementid" />
+          <attribute name="aglcm003_directionid" />
+          <attribute name="aglcm003_entiteid" />
+          <attribute name="aglcm003_statutcode" />
+          <attribute name="aglcm003_fournisseurid" />
+          <attribute name="aglcm003_montantht" />
+          <attribute name="aglcm003_montantttc" />
+          <order attribute="createdon" descending="true" />
+          <order attribute="aglcm003_code" descending="true" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Purchase Requests" languagecode="1033" />
+      <LocalizedName description="Demandes d'achat" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

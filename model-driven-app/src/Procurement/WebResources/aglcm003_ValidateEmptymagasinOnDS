@@ -1,0 +1,49 @@
+function onMagasinChange(executionContext) {
+    const formContext = executionContext.getFormContext();
+    const magasinField = formContext.getAttribute("aglcm003_magasinid");
+
+    // Check if Magasin is selected
+    if (!magasinField || !magasinField.getValue()) {
+        formContext.ui.setFormNotification("Please select a store.", "ERROR", "noMagasin");
+        return;
+    }
+
+    // Get the selected Magasin ID
+    const magasinId = magasinField.getValue()[0].id.replace(/[{}]/g, "");
+
+    // Clear any previous notifications
+    formContext.ui.clearFormNotification("noMagasin");
+    formContext.ui.clearFormNotification("magasinEmpty");
+
+    // Query MagasinArticle table to check for related articles
+    Xrm.WebApi.retrieveMultipleRecords(
+        "aglcm003_magasinarticle",
+        `?$filter=_aglcm003_magasinid_value eq ${magasinId}&$select=_aglcm003_articleid_value`
+    ).then(
+        function (result) {
+            if (result.entities.length === 0) {
+                // Notify the user and disable fields
+                formContext.ui.setFormNotification(
+                    "The selected store is empty. Please choose another store..",
+                    "ERROR",
+                    "magasinEmpty"
+                );
+
+                
+            } else {
+                // Clear notification and enable fields
+                formContext.ui.clearFormNotification("magasinEmpty");
+                disableFields(formContext, false);
+            }
+        },
+        function (error) {
+            console.error("Error checking MagasinArticle records:", error.message);
+            formContext.ui.setFormNotification(
+                "An error occurred while checking the items. Please try again.",
+                "ERROR",
+                "magasinError"
+            );
+        }
+    );
+}
+

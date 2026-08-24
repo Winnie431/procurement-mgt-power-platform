@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{bd9c8b29-8a75-4ff2-a5b6-3c69fecd57b8}</savedqueryid>
+    <layoutxml>
+      <grid name="aglcm003_zulaa_auxdeconsversions" jump="aglcm003_tauxdeconversionid" select="1" icon="1" preview="0">
+        <row name="aglcm003_zulaa_auxdeconsversion" id="aglcm003_zulaa_auxdeconsversionid">
+          <cell name="aglcm003_tauxdeconversionid" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_auxdeconsversion">
+          <attribute name="aglcm003_zulaa_auxdeconsversionid" />
+          <attribute name="aglcm003_tauxdeconversionid" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Conversion Rate Lookup View" languagecode="1033" />
+      <LocalizedName description="Vue de recherche du taux de conversion" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="aglcm003_rolevebvdacg" localizedName="Role VEBVDACG" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <ExternalTypeName></ExternalTypeName>
+  <displaynames>
+    <displayname description="Role VEBVDACG" languagecode="1033" />
+    <displayname description="Rôle VEBVDACG" languagecode="1036" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="1" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Business Manager" languagecode="1033" />
+        <label description="Directeur commercial" languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="2" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Business Director" languagecode="1033" />
+        <label description="Directeur commercial" languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="3" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Management Control" languagecode="1033" />
+        <label description="Contrôle de gestion" languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>

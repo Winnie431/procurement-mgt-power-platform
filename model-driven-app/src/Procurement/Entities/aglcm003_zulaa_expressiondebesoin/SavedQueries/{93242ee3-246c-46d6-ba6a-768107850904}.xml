@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{93242ee3-246c-46d6-ba6a-768107850904}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_code" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_expressiondebesoinid">
+          <cell name="aglcm003_code" width="108" />
+          <cell name="aglcm003_entiteid" width="100" />
+          <cell name="aglcm003_libelle" width="100" />
+          <cell name="aglcm003_centredecoutid" width="127" />
+          <cell name="aglcm003_categorie" width="100" />
+          <cell name="aglcm003_directionid" width="105" />
+          <cell name="aglcm003_departementid" width="124" />
+          <cell name="createdby" width="104" />
+          <cell name="aglcm003_statuteb" width="100" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_expressiondebesoin">
+          <attribute name="aglcm003_zulaa_expressiondebesoinid" />
+          <attribute name="aglcm003_code" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_libelle" />
+          <attribute name="aglcm003_centredecoutid" />
+          <attribute name="aglcm003_directionid" />
+          <attribute name="aglcm003_departementid" />
+          <order attribute="createdon" descending="true" />
+          <attribute name="aglcm003_statuteb" />
+          <attribute name="createdby" />
+          <attribute name="aglcm003_categorie" />
+          <attribute name="aglcm003_entiteid" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Expressions of Need" languagecode="1033" />
+      <LocalizedName description="Expressions de Besoin Actives" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

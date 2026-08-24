@@ -1,0 +1,31 @@
+function onQuantityChange(executionContext) {
+    const formContext = executionContext.getFormContext();
+
+    // Retrieve the 'type desortie' control field (boolean value)
+    const isArticleSelected = formContext.getAttribute("aglcm003_istypedesortie").getValue();
+
+    if (isArticleSelected) {
+        // If 'typedesortie' is TRUE, Article field is selected, validate the quantity
+
+        // Get the entered quantity in Table B
+        const enteredQuantity = formContext.getAttribute("aglcm003_quantiteasortir").getValue();
+
+        const availableQuantity = formContext.getAttribute("aglcm003_quantitedisponible").getValue();
+
+        console.log("entered qte "+ enteredQuantity);
+        console.log("available qte "+ availableQuantity)
+
+        if (enteredQuantity > availableQuantity) {
+            // If the entered quantity exceeds the available quantity, show an error
+            formContext.getControl("aglcm003_quantiteasortir").setNotification(
+                "The quantity to be issued cannot exceed the quantity in stock " + availableQuantity + "."
+            );
+        } else {
+            // Clear any previous notifications if the value is valid
+            formContext.getControl("aglcm003_quantiteasortir").clearNotification();
+        }
+    } else {
+        // If 'typedesortie' is FALSE (Actif field is selected), skip the validation
+        formContext.getControl("aglcm003_quantiteasortir").clearNotification();
+    }
+}

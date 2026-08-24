@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{17ffce1e-c5e4-4c8d-a6af-11731c88baa4}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_code" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_retourstockarticleid">
+          <cell name="aglcm003_retourstockid" width="112" />
+          <cell name="aglcm003_articleid" width="100" />
+          <cell name="aglcm003_magasinid" width="100" />
+          <cell name="aglcm003_quantitearetourne" width="150" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_retourstockarticle">
+          <attribute name="aglcm003_zulaa_retourstockarticleid" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_quantitearetourne" />
+          <attribute name="aglcm003_articleid" />
+          <attribute name="aglcm003_magasinid" />
+          <attribute name="aglcm003_retourstockid" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Return Stock Item" languagecode="1033" />
+      <LocalizedName description="Articles Retournés Actifs" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

@@ -1,0 +1,11 @@
+function transformToUpperCase(executionContext) {
+    var formContext = executionContext.getFormContext(); // Get form context
+    var fieldName = "aglcm003_nom"; // Replace with your column logical name
+
+    var fieldValue = formContext.getAttribute(fieldName).getValue();
+
+    if (fieldValue) {
+        var upperCaseValue = fieldValue.toUpperCase();
+        formContext.getAttribute(fieldName).setValue(upperCaseValue);
+    }
+}

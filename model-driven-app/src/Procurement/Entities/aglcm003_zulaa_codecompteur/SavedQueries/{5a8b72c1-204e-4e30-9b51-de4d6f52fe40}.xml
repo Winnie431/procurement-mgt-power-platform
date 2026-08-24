@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{5a8b72c1-204e-4e30-9b51-de4d6f52fe40}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_code" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_codecompteurid">
+          <cell name="aglcm003_code" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>1</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_codecompteur">
+          <attribute name="aglcm003_zulaa_codecompteurid" />
+          <attribute name="aglcm003_code" />
+          <attribute name="createdon" />
+          <order attribute="aglcm003_code" descending="false" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Counter Code Advanced Find View" languagecode="1033" />
+      <LocalizedName description="Vue de recherche avancée du Code Compteur" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

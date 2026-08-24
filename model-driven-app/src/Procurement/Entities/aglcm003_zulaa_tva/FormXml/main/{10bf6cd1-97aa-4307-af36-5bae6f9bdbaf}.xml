@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{10bf6cd1-97aa-4307-af36-5bae6f9bdbaf}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls" shownavigationbar="false">
+      <tabs>
+        <tab verticallayout="true" id="{27f82358-77cd-4d73-a437-e7041ce7a7e8}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+            <label description="Général" languagecode="1036" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{62617aaf-7676-47f4-876d-c8c9fd1e3218}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                    <label description="Général" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{a2da875a-7156-4ceb-8e5c-74293f63636c}">
+                        <labels>
+                          <label description="VAT Label" languagecode="1033" />
+                          <label description="Étiquette TVA" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_libelle_tva" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="aglcm003_libelle_tva" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3d50d209-f1a6-4be0-8647-39cc1cb5b756}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="VAT Rate" languagecode="1033" />
+                          <label description="Taux de TVA" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_taux_tva" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="aglcm003_taux_tva" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{1d21ca5b-f03e-40a7-8317-f4544ad3c8a7}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{7235a2f8-7b3e-4485-b175-486e9fc73c24}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{25a05681-457b-458a-b0d0-ed741cc95cb6}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{26157bdc-9e2d-4760-81db-c9f437a12bb4}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{85e57247-e775-4fb7-8f9d-f6f702ea5a25}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{cfe602d1-a4fe-414d-a374-2aaf7504cd49}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{6fe0faa3-65e3-4f45-98d0-99003782c504}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{94df7781-db35-4e4c-b96c-ed4184f62aec}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+      <LocalizedName description="Informations" languagecode="1036" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+      <Description description="Formulaire pour cette entité." languagecode="1036" />
+    </Descriptions>
+  </systemform>
+</forms>

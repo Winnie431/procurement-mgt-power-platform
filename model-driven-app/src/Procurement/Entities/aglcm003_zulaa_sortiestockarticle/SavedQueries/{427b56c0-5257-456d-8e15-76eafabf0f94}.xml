@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{427b56c0-5257-456d-8e15-76eafabf0f94}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_code" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_sortiestockarticleid">
+          <cell name="aglcm003_sortiedestockid" width="127" />
+          <cell name="aglcm003_articleid" width="100" />
+          <cell name="aglcm003_quantitesortie" width="123" />
+          <cell name="aglcm003_uniteid" width="100" />
+          <cell name="createdon" width="125" />
+          <cell name="aglcm003_quantitedisponible" width="151" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_sortiestockarticle">
+          <attribute name="aglcm003_zulaa_sortiestockarticleid" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_sortiedestockid" />
+          <attribute name="aglcm003_articleid" />
+          <attribute name="aglcm003_quantitesortie" />
+          <attribute name="aglcm003_uniteid" />
+          <attribute name="aglcm003_quantitedisponible" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Stock Out Item " languagecode="1033" />
+      <LocalizedName description="Sortie de stock artcles actif" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

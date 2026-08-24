@@ -1,0 +1,1364 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "aglcm003_CR_Dataverse_Zulaa"
+        },
+        "runtimeSource": "embedded"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "aglcm003_zulaa_reception",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "aglcm003_statut",
+              "subscriptionRequest/filterexpression": "aglcm003_statut eq 2 or aglcm003_statut eq 3"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "cdfedf82-e31a-447e-9a75-936d8d013cf6"
+          }
+        }
+      },
+      "actions": {
+        "Get_a_row_magasin_by_ID": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "aglcm003_magasins",
+              "recordId": "@triggerOutputs()?['body/_aglcm003_magasinid_value']"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Get_a_row_entite_by_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "59800500-5551-4886-8c08-aa4f5bfde453"
+          }
+        },
+        "Get_a_row_fournisseur_by_ID": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "aglcm003_zulaa_fournisseurs",
+              "recordId": "@triggerOutputs()?['body/_aglcm003_fournisseurid_value']"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Get_a_row_magasin_by_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "5e8163ae-f44c-4a8f-b706-30b3f0eb99d8"
+          }
+        },
+        "Get_a_row_bon_de_commande__by_ID": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "aglcm003_zulaa_bondecommandes",
+              "recordId": "@triggerOutputs()?['body/_aglcm003_bondecommandeid_value']"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Get_a_row_fournisseur_by_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "59bd9674-8fff-4043-84a5-e3823dfa91e3"
+          }
+        },
+        "List_rows_note_fournisseur": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "aglcm003_notefournisseurs",
+              "$filter": "_aglcm003_receptionid_value eq '@{triggerOutputs()?['body/aglcm003_zulaa_receptionid']}'"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Get_a_row_Demande_dachat__by_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "d11abff2-0e62-4141-bfa3-f2d6b7343dde"
+          }
+        },
+        "List_rows_ligne_de_la_réception": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "aglcm003_lignedelareceptions",
+              "$filter": "_aglcm003_receptionid_value eq '@{triggerOutputs()?['body/aglcm003_zulaa_receptionid']}'"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Initialize_variable": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "4e452b49-b870-4010-b11e-5db474fdee90"
+          }
+        },
+        "Initialize_variable": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Créer une nouvelle ligne d'article",
+                "type": "boolean",
+                "value": true
+              }
+            ]
+          },
+          "runAfter": {
+            "List_rows_note_fournisseur": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "8f3174c4-6b6e-40f3-9d15-ecdcbed30891"
+          }
+        },
+        "Initialize_variable__Quantité_livré": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Quantité livré",
+                "type": "float"
+              }
+            ]
+          },
+          "runAfter": {
+            "List_rows_ligne_de_la_réception": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "34cf3730-4767-4852-82cb-dd177692b017"
+          }
+        },
+        "Get_a_row_Demande_dachat__by_ID": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "aglcm003_zulaa_demandedachats",
+              "recordId": "@outputs('Get_a_row_bon_de_commande__by_ID')?['body/_aglcm003_demandedachatid_value']"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Get_a_row_bon_de_commande__by_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "59bd9674-8fff-4043-84a5-e3823dfa91e3"
+          }
+        },
+        "Get_a_row_entite_by_ID": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "aglcm003_zulaa_entites",
+              "recordId": "@triggerOutputs()?['body/_aglcm003_entiteid_value']"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "59800500-5551-4886-8c08-aa4f5bfde453"
+          }
+        },
+        "Condition_type_de_gestion_de_DA": {
+          "type": "If",
+          "description": "est-ce une gestion par centre de cout ou par catégorie",
+          "expression": {
+            "and": [
+              {
+                "equals": [
+                  "@outputs('Get_a_row_entite_by_ID')?['body/aglcm003_typegestionda']",
+                  1
+                ]
+              }
+            ]
+          },
+          "actions": {
+            "Condition": {
+              "type": "If",
+              "expression": {
+                "equals": [
+                  "@outputs('Get_a_row_magasin_by_ID')?['body/aglcm003_isreceiptvalidation']",
+                  "@true"
+                ]
+              },
+              "actions": {
+                "Condition_2": {
+                  "type": "If",
+                  "expression": {
+                    "equals": [
+                      "@triggerOutputs()?['body/aglcm003_statutgestionnairedestock']",
+                      "Validated"
+                    ]
+                  },
+                  "actions": {
+                    "For_each": {
+                      "type": "Foreach",
+                      "foreach": "@outputs('List_rows_ligne_de_la_réception')?['body/value']",
+                      "actions": {
+                        "Get_a_row_article_by_ID": {
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "parameters": {
+                              "entityName": "aglcm003_zulaa_articles",
+                              "recordId": "@items('For_each')?['_aglcm003_articleid_value']"
+                            },
+                            "host": {
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                              "operationId": "GetItem",
+                              "connectionName": "shared_commondataserviceforapps"
+                            }
+                          },
+                          "metadata": {
+                            "operationMetadataId": "0e1fd483-ddc4-47a6-acd8-09ff1d7b5cbe"
+                          }
+                        },
+                        "Set_variable_": {
+                          "type": "SetVariable",
+                          "inputs": {
+                            "name": "Créer une nouvelle ligne d'article",
+                            "value": true
+                          },
+                          "runAfter": {
+                            "Get_a_row_article_by_ID": [
+                              "Succeeded"
+                            ]
+                          },
+                          "metadata": {
+                            "operationMetadataId": "87604df8-189a-425d-bdf7-7f9767e71893"
+                          }
+                        },
+                        "Condition_article_stockable": {
+                          "type": "If",
+                          "expression": {
+                            "and": [
+                              {
+                                "equals": [
+                                  "@outputs('Get_a_row_article_by_ID')?['body/aglcm003_isstockable']",
+                                  "@true"
+                                ]
+                              }
+                            ]
+                          },
+                          "actions": {
+                            "For_each_1": {
+                              "type": "Foreach",
+                              "foreach": "@outputs('List_rows_magasin_article')?['body/value']",
+                              "actions": {
+                                "Get_a_row_magasin_article_by_ID_2": {
+                                  "type": "OpenApiConnection",
+                                  "inputs": {
+                                    "parameters": {
+                                      "entityName": "aglcm003_magasinarticles",
+                                      "recordId": "@items('For_each_1')?['aglcm003_magasinarticleid']"
+                                    },
+                                    "host": {
+                                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                      "operationId": "GetItem",
+                                      "connectionName": "shared_commondataserviceforapps"
+                                    }
+                                  },
+                                  "metadata": {
+                                    "operationMetadataId": "b2ffb0f2-45a3-4c62-a2ea-e401d9d66b95"
+                                  }
+                                },
+                                "Update_a_row": {
+                                  "type": "OpenApiConnection",
+                                  "inputs": {
+                                    "parameters": {
+                                      "entityName": "aglcm003_magasinarticles",
+                                      "recordId": "@outputs('Get_a_row_magasin_article_by_ID_2')?['body/aglcm003_magasinarticleid']",
+                                      "item/aglcm003_quantitestock": "@add(variables('Quantité livré'),outputs('Get_a_row_magasin_article_by_ID_2')?['body/aglcm003_quantitestock'])"
+                                    },
+                                    "host": {
+                                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                      "operationId": "UpdateOnlyRecord",
+                                      "connectionName": "shared_commondataserviceforapps"
+                                    }
+                                  },
+                                  "runAfter": {
+                                    "Get_a_row_magasin_article_by_ID_2": [
+                                      "Succeeded"
+                                    ]
+                                  },
+                                  "metadata": {
+                                    "operationMetadataId": "c7c8e11c-406e-4507-8543-b49645f0f69b"
+                                  }
+                                },
+                                "Set_variable_créer_une_nouvelle_ligne_d'article_2": {
+                                  "type": "SetVariable",
+                                  "inputs": {
+                                    "name": "Créer une nouvelle ligne d'article",
+                                    "value": false
+                                  },
+                                  "runAfter": {
+                                    "Update_a_row": [
+                                      "Succeeded"
+                                    ]
+                                  },
+                                  "metadata": {
+                                    "operationMetadataId": "e977e794-1ba0-45b8-af27-1d077aa394ff"
+                                  }
+                                }
+                              },
+                              "runAfter": {
+                                "Set_variable": [
+                                  "Succeeded"
+                                ]
+                              },
+                              "metadata": {
+                                "operationMetadataId": "6abf1882-169f-44b4-ae51-b10e67e64be0"
+                              }
+                            },
+                            "Condition_article_a_créer": {
+                              "type": "If",
+                              "expression": {
+                                "and": [
+                                  {
+                                    "equals": [
+                                      "@variables('Créer une nouvelle ligne d''article')",
+                                      "@true"
+                                    ]
+                                  }
+                                ]
+                              },
+                              "actions": {
+                                "Add_a_new_magasin_article_row": {
+                                  "type": "OpenApiConnection",
+                                  "inputs": {
+                                    "parameters": {
+                                      "entityName": "aglcm003_magasinarticles",
+                                      "item/aglcm003_magasinId@odata.bind": "aglcm003_magasins(@{outputs('Get_a_row_magasin_by_ID')?['body/aglcm003_magasinid']})",
+                                      "item/aglcm003_articleId@odata.bind": "aglcm003_zulaa_articles(@{outputs('Get_a_row_article_by_ID')?['body/aglcm003_zulaa_articleid']})",
+                                      "item/aglcm003_quantitestock": "@item()?['aglcm003_quantitedejareceptionne']",
+                                      "item/aglcm003_receptionId@odata.bind": "aglcm003_zulaa_receptions(@{triggerOutputs()?['body/aglcm003_zulaa_receptionid']})"
+                                    },
+                                    "host": {
+                                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                      "operationId": "CreateRecord",
+                                      "connectionName": "shared_commondataserviceforapps"
+                                    }
+                                  },
+                                  "metadata": {
+                                    "operationMetadataId": "9a762ebd-0a3f-40e8-b607-4976949338a5"
+                                  }
+                                }
+                              },
+                              "else": {
+                                "actions": {}
+                              },
+                              "runAfter": {
+                                "For_each_1": [
+                                  "Succeeded"
+                                ]
+                              },
+                              "metadata": {
+                                "operationMetadataId": "8dc767e1-8286-4227-b215-f77bf4bcdd3a"
+                              }
+                            },
+                            "Set_variable": {
+                              "type": "SetVariable",
+                              "inputs": {
+                                "name": "Quantité livré",
+                                "value": "@item()?['aglcm003_quantitelivrer']"
+                              },
+                              "metadata": {
+                                "operationMetadataId": "cdbe1cab-c18e-4a17-82b9-c85de0c3272d"
+                              }
+                            }
+                          },
+                          "else": {
+                            "actions": {}
+                          },
+                          "runAfter": {
+                            "List_rows_magasin_article": [
+                              "Succeeded"
+                            ]
+                          },
+                          "metadata": {
+                            "operationMetadataId": "e58a70d0-f8b8-495f-bef0-c31a74d16b4f"
+                          }
+                        },
+                        "List_rows_magasin_article": {
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "parameters": {
+                              "entityName": "aglcm003_magasinarticles",
+                              "$filter": "_aglcm003_magasinid_value eq '@{outputs('Get_a_row_magasin_by_ID')?['body/aglcm003_magasinid']}'  and _aglcm003_articleid_value eq '@{outputs('Get_a_row_article_by_ID')?['body/aglcm003_zulaa_articleid']}'"
+                            },
+                            "host": {
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                              "operationId": "ListRecords",
+                              "connectionName": "shared_commondataserviceforapps"
+                            }
+                          },
+                          "runAfter": {
+                            "Set_variable_": [
+                              "Succeeded"
+                            ]
+                          },
+                          "metadata": {
+                            "operationMetadataId": "39155f37-c80a-44a0-bf3a-210ec4048efc"
+                          }
+                        }
+                      },
+                      "metadata": {
+                        "operationMetadataId": "45e1599a-523e-41ed-a847-d69ceb277381"
+                      }
+                    }
+                  },
+                  "else": {
+                    "actions": {}
+                  },
+                  "metadata": {
+                    "operationMetadataId": "160e5d4f-0765-4cf7-a3d0-874dc515fe49"
+                  }
+                }
+              },
+              "else": {
+                "actions": {
+                  "For_each_2": {
+                    "type": "Foreach",
+                    "foreach": "@outputs('List_rows_ligne_de_la_réception')?['body/value']",
+                    "actions": {
+                      "Get_a_row_article_by_ID_2": {
+                        "type": "OpenApiConnection",
+                        "inputs": {
+                          "parameters": {
+                            "entityName": "aglcm003_zulaa_articles",
+                            "recordId": "@items('For_each_2')?['_aglcm003_articleid_value']"
+                          },
+                          "host": {
+                            "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                            "operationId": "GetItem",
+                            "connectionName": "shared_commondataserviceforapps"
+                          }
+                        },
+                        "metadata": {
+                          "operationMetadataId": "0e1fd483-ddc4-47a6-acd8-09ff1d7b5cbe"
+                        }
+                      },
+                      "Set_variable__2": {
+                        "type": "SetVariable",
+                        "inputs": {
+                          "name": "Créer une nouvelle ligne d'article",
+                          "value": true
+                        },
+                        "runAfter": {
+                          "Get_a_row_article_by_ID_2": [
+                            "Succeeded"
+                          ]
+                        },
+                        "metadata": {
+                          "operationMetadataId": "87604df8-189a-425d-bdf7-7f9767e71893"
+                        }
+                      },
+                      "Condition_article_stockable_2": {
+                        "type": "If",
+                        "expression": {
+                          "and": [
+                            {
+                              "equals": [
+                                "@outputs('Get_a_row_article_by_ID_2')?['body/aglcm003_isstockable']",
+                                "@true"
+                              ]
+                            }
+                          ]
+                        },
+                        "actions": {
+                          "For_each_3": {
+                            "type": "Foreach",
+                            "foreach": "@outputs('List_rows_magasin_article_2')?['body/value']",
+                            "actions": {
+                              "Get_a_row_magasin_article_by_ID": {
+                                "type": "OpenApiConnection",
+                                "inputs": {
+                                  "parameters": {
+                                    "entityName": "aglcm003_magasinarticles",
+                                    "recordId": "@items('For_each_3')?['aglcm003_magasinarticleid']"
+                                  },
+                                  "host": {
+                                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                    "operationId": "GetItem",
+                                    "connectionName": "shared_commondataserviceforapps"
+                                  }
+                                },
+                                "metadata": {
+                                  "operationMetadataId": "b2ffb0f2-45a3-4c62-a2ea-e401d9d66b95"
+                                }
+                              },
+                              "Update_a_row_2": {
+                                "type": "OpenApiConnection",
+                                "inputs": {
+                                  "parameters": {
+                                    "entityName": "aglcm003_magasinarticles",
+                                    "recordId": "@outputs('Get_a_row_magasin_article_by_ID')?['body/aglcm003_magasinarticleid']",
+                                    "item/aglcm003_quantitestock": "@add(variables('Quantité livré'), outputs('Get_a_row_magasin_article_by_ID')?['body/aglcm003_quantitestock'])"
+                                  },
+                                  "host": {
+                                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                    "operationId": "UpdateOnlyRecord",
+                                    "connectionName": "shared_commondataserviceforapps"
+                                  }
+                                },
+                                "runAfter": {
+                                  "Get_a_row_magasin_article_by_ID": [
+                                    "Succeeded"
+                                  ]
+                                },
+                                "metadata": {
+                                  "operationMetadataId": "c7c8e11c-406e-4507-8543-b49645f0f69b"
+                                }
+                              },
+                              "Set_variable_créer_une_nouvelle_ligne_d'article": {
+                                "type": "SetVariable",
+                                "inputs": {
+                                  "name": "Créer une nouvelle ligne d'article",
+                                  "value": false
+                                },
+                                "runAfter": {
+                                  "Update_a_row_2": [
+                                    "Succeeded"
+                                  ]
+                                },
+                                "metadata": {
+                                  "operationMetadataId": "e977e794-1ba0-45b8-af27-1d077aa394ff"
+                                }
+                              }
+                            },
+                            "runAfter": {
+                              "Set_variable_2": [
+                                "Succeeded"
+                              ]
+                            },
+                            "metadata": {
+                              "operationMetadataId": "6abf1882-169f-44b4-ae51-b10e67e64be0"
+                            }
+                          },
+                          "Condition_article_a_créer_2": {
+                            "type": "If",
+                            "expression": {
+                              "and": [
+                                {
+                                  "equals": [
+                                    "@variables('Créer une nouvelle ligne d''article')",
+                                    "@true"
+                                  ]
+                                }
+                              ]
+                            },
+                            "actions": {
+                              "Add_a_new_magasin_article_row_2": {
+                                "type": "OpenApiConnection",
+                                "inputs": {
+                                  "parameters": {
+                                    "entityName": "aglcm003_magasinarticles",
+                                    "item/aglcm003_magasinId@odata.bind": "aglcm003_magasins(@{outputs('Get_a_row_magasin_by_ID')?['body/aglcm003_magasinid']})",
+                                    "item/aglcm003_articleId@odata.bind": "aglcm003_zulaa_articles(@{outputs('Get_a_row_article_by_ID_2')?['body/aglcm003_zulaa_articleid']})",
+                                    "item/aglcm003_quantitestock": "@item()?['aglcm003_quantitedejareceptionne']",
+                                    "item/aglcm003_receptionId@odata.bind": "aglcm003_zulaa_receptions(@{triggerOutputs()?['body/aglcm003_zulaa_receptionid']})"
+                                  },
+                                  "host": {
+                                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                    "operationId": "CreateRecord",
+                                    "connectionName": "shared_commondataserviceforapps"
+                                  }
+                                },
+                                "metadata": {
+                                  "operationMetadataId": "9a762ebd-0a3f-40e8-b607-4976949338a5"
+                                }
+                              }
+                            },
+                            "else": {
+                              "actions": {}
+                            },
+                            "runAfter": {
+                              "For_each_3": [
+                                "Succeeded"
+                              ]
+                            },
+                            "metadata": {
+                              "operationMetadataId": "8dc767e1-8286-4227-b215-f77bf4bcdd3a"
+                            }
+                          },
+                          "Set_variable_2": {
+                            "type": "SetVariable",
+                            "inputs": {
+                              "name": "Quantité livré",
+                              "value": "@item()?['aglcm003_quantitelivrer']"
+                            },
+                            "metadata": {
+                              "operationMetadataId": "cdbe1cab-c18e-4a17-82b9-c85de0c3272d"
+                            }
+                          }
+                        },
+                        "else": {
+                          "actions": {}
+                        },
+                        "runAfter": {
+                          "List_rows_magasin_article_2": [
+                            "Succeeded"
+                          ]
+                        },
+                        "metadata": {
+                          "operationMetadataId": "e58a70d0-f8b8-495f-bef0-c31a74d16b4f"
+                        }
+                      },
+                      "List_rows_magasin_article_2": {
+                        "type": "OpenApiConnection",
+                        "inputs": {
+                          "parameters": {
+                            "entityName": "aglcm003_magasinarticles",
+                            "$filter": "_aglcm003_magasinid_value eq '@{outputs('Get_a_row_magasin_by_ID')?['body/aglcm003_magasinid']}'  and _aglcm003_articleid_value eq '@{outputs('Get_a_row_article_by_ID_2')?['body/aglcm003_zulaa_articleid']}'"
+                          },
+                          "host": {
+                            "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                            "operationId": "ListRecords",
+                            "connectionName": "shared_commondataserviceforapps"
+                          }
+                        },
+                        "runAfter": {
+                          "Set_variable__2": [
+                            "Succeeded"
+                          ]
+                        },
+                        "metadata": {
+                          "operationMetadataId": "39155f37-c80a-44a0-bf3a-210ec4048efc"
+                        }
+                      }
+                    },
+                    "metadata": {
+                      "operationMetadataId": "45e1599a-523e-41ed-a847-d69ceb277381"
+                    }
+                  }
+                }
+              },
+              "runAfter": {
+                "List_rows_magasin_article-copy": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "5befb760-cf2e-4300-972e-893dcb420e46"
+              }
+            },
+            "Get_a_row_cost_center_by_ID-": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "aglcm003_zulaa_centredecouts",
+                  "recordId": "@outputs('Get_a_row_Demande_dachat__by_ID')?['body/_aglcm003_centredecoutid_value']"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "GetItem",
+                  "connectionName": "shared_commondataserviceforapps"
+                }
+              },
+              "metadata": {
+                "operationMetadataId": "5e8163ae-f44c-4a8f-b706-30b3f0eb99d8"
+              }
+            },
+            "List_rows_magasin_article-copy": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "aglcm003_magasinarticles",
+                  "$filter": "_aglcm003_magasinid_value eq '@{outputs('Get_a_row_magasin_by_ID')?['body/aglcm003_magasinid']}' "
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "ListRecords",
+                  "connectionName": "shared_commondataserviceforapps"
+                }
+              },
+              "runAfter": {
+                "Get_a_row_cost_center_by_ID-": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "39155f37-c80a-44a0-bf3a-210ec4048efc"
+              }
+            }
+          },
+          "else": {
+            "actions": {
+              "List_rows_categorie_entite_-_gestion_par_categorie": {
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "parameters": {
+                    "entityName": "aglcm003_zulaa_categorieentites",
+                    "$filter": "_aglcm003_categorieid_value eq '@{outputs('Get_a_row_Demande_dachat__by_ID')?['body/_aglcm003_categorieid_value']}' and _aglcm003_entiteid_value eq '@{outputs('Get_a_row_magasin_by_ID')?['body/_aglcm003_entiteid_value']}'"
+                  },
+                  "host": {
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                    "operationId": "ListRecords",
+                    "connectionName": "shared_commondataserviceforapps"
+                  }
+                },
+                "metadata": {
+                  "operationMetadataId": "08fbab71-ed69-4bae-893a-33e526bba359"
+                }
+              },
+              "Condition-copy": {
+                "type": "If",
+                "expression": {
+                  "and": [
+                    {
+                      "equals": [
+                        "@outputs('Get_a_row_magasin_by_ID')?['body/aglcm003_isreceiptvalidation']",
+                        "@true"
+                      ]
+                    }
+                  ]
+                },
+                "actions": {
+                  "Condition_type_de_gestion_de_DA_de_lentite": {
+                    "type": "If",
+                    "expression": {
+                      "and": [
+                        {
+                          "equals": [
+                            "@triggerOutputs()?['body/aglcm003_statutgestionnairedestock']",
+                            "Validated"
+                          ]
+                        }
+                      ]
+                    },
+                    "actions": {
+                      "For_each_5": {
+                        "type": "Foreach",
+                        "foreach": "@outputs('List_rows_ligne_de_la_réception')?['body/value']",
+                        "actions": {
+                          "Get_a_row_article_by_ID_1": {
+                            "type": "OpenApiConnection",
+                            "inputs": {
+                              "parameters": {
+                                "entityName": "aglcm003_zulaa_articles",
+                                "recordId": "@items('For_each_5')?['_aglcm003_articleid_value']"
+                              },
+                              "host": {
+                                "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                "operationId": "GetItem",
+                                "connectionName": "shared_commondataserviceforapps"
+                              }
+                            },
+                            "metadata": {
+                              "operationMetadataId": "0e1fd483-ddc4-47a6-acd8-09ff1d7b5cbe"
+                            }
+                          },
+                          "Set_variable__1": {
+                            "type": "SetVariable",
+                            "inputs": {
+                              "name": "Créer une nouvelle ligne d'article",
+                              "value": true
+                            },
+                            "runAfter": {
+                              "Get_a_row_article_by_ID_1": [
+                                "Succeeded"
+                              ]
+                            },
+                            "metadata": {
+                              "operationMetadataId": "87604df8-189a-425d-bdf7-7f9767e71893"
+                            }
+                          },
+                          "Condition_article_stockable_1": {
+                            "type": "If",
+                            "expression": {
+                              "and": [
+                                {
+                                  "equals": [
+                                    "@outputs('Get_a_row_article_by_ID_1')?['body/aglcm003_isstockable']",
+                                    "@true"
+                                  ]
+                                }
+                              ]
+                            },
+                            "actions": {
+                              "For_each_6": {
+                                "type": "Foreach",
+                                "foreach": "@outputs('List_rows_magasin_article_1')?['body/value']",
+                                "actions": {
+                                  "Get_a_row_magasin_article_by_ID_1": {
+                                    "type": "OpenApiConnection",
+                                    "inputs": {
+                                      "parameters": {
+                                        "entityName": "aglcm003_magasinarticles",
+                                        "recordId": "@items('For_each_6')?['aglcm003_magasinarticleid']"
+                                      },
+                                      "host": {
+                                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                        "operationId": "GetItem",
+                                        "connectionName": "shared_commondataserviceforapps"
+                                      }
+                                    },
+                                    "metadata": {
+                                      "operationMetadataId": "b2ffb0f2-45a3-4c62-a2ea-e401d9d66b95"
+                                    }
+                                  },
+                                  "Update_magasin_article_quantity": {
+                                    "type": "OpenApiConnection",
+                                    "inputs": {
+                                      "parameters": {
+                                        "entityName": "aglcm003_magasinarticles",
+                                        "recordId": "@outputs('Get_a_row_magasin_article_by_ID_1')?['body/aglcm003_magasinarticleid']",
+                                        "item/aglcm003_quantitestock": "@add(variables('Quantité livré'),outputs('Get_a_row_magasin_article_by_ID_1')?['body/aglcm003_quantitestock'])"
+                                      },
+                                      "host": {
+                                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                        "operationId": "UpdateOnlyRecord",
+                                        "connectionName": "shared_commondataserviceforapps"
+                                      }
+                                    },
+                                    "runAfter": {
+                                      "Get_a_row_magasin_article_by_ID_1": [
+                                        "Succeeded"
+                                      ]
+                                    },
+                                    "metadata": {
+                                      "operationMetadataId": "c7c8e11c-406e-4507-8543-b49645f0f69b"
+                                    }
+                                  },
+                                  "Set_variable_créer_une_nouvelle_ligne_d'article_1": {
+                                    "type": "SetVariable",
+                                    "inputs": {
+                                      "name": "Créer une nouvelle ligne d'article",
+                                      "value": false
+                                    },
+                                    "runAfter": {
+                                      "Update_magasin_article_quantity": [
+                                        "Succeeded"
+                                      ]
+                                    },
+                                    "metadata": {
+                                      "operationMetadataId": "e977e794-1ba0-45b8-af27-1d077aa394ff"
+                                    }
+                                  }
+                                },
+                                "runAfter": {
+                                  "Set_variable_1": [
+                                    "Succeeded"
+                                  ]
+                                },
+                                "metadata": {
+                                  "operationMetadataId": "6abf1882-169f-44b4-ae51-b10e67e64be0"
+                                }
+                              },
+                              "Condition_article_a_créer_1": {
+                                "type": "If",
+                                "expression": {
+                                  "and": [
+                                    {
+                                      "equals": [
+                                        "@variables('Créer une nouvelle ligne d''article')",
+                                        "@true"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "actions": {
+                                  "Add_a_new_magasin_article_row_1": {
+                                    "type": "OpenApiConnection",
+                                    "inputs": {
+                                      "parameters": {
+                                        "entityName": "aglcm003_magasinarticles",
+                                        "item/aglcm003_magasinId@odata.bind": "aglcm003_magasins(@{outputs('Get_a_row_magasin_by_ID')?['body/aglcm003_magasinid']})",
+                                        "item/aglcm003_articleId@odata.bind": "aglcm003_zulaa_articles(@{outputs('Get_a_row_article_by_ID_1')?['body/aglcm003_zulaa_articleid']})",
+                                        "item/aglcm003_quantitestock": "@item()?['aglcm003_quantitedejareceptionne']",
+                                        "item/aglcm003_receptionId@odata.bind": "aglcm003_zulaa_receptions(@{triggerOutputs()?['body/aglcm003_zulaa_receptionid']})"
+                                      },
+                                      "host": {
+                                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                        "operationId": "CreateRecord",
+                                        "connectionName": "shared_commondataserviceforapps"
+                                      }
+                                    },
+                                    "metadata": {
+                                      "operationMetadataId": "9a762ebd-0a3f-40e8-b607-4976949338a5"
+                                    }
+                                  }
+                                },
+                                "else": {
+                                  "actions": {}
+                                },
+                                "runAfter": {
+                                  "For_each_6": [
+                                    "Succeeded"
+                                  ]
+                                },
+                                "metadata": {
+                                  "operationMetadataId": "8dc767e1-8286-4227-b215-f77bf4bcdd3a"
+                                }
+                              },
+                              "Set_variable_1": {
+                                "type": "SetVariable",
+                                "inputs": {
+                                  "name": "Quantité livré",
+                                  "value": "@item()?['aglcm003_quantitelivrer']"
+                                },
+                                "metadata": {
+                                  "operationMetadataId": "cdbe1cab-c18e-4a17-82b9-c85de0c3272d"
+                                }
+                              }
+                            },
+                            "else": {
+                              "actions": {}
+                            },
+                            "runAfter": {
+                              "List_rows_magasin_article_1": [
+                                "Succeeded"
+                              ]
+                            },
+                            "metadata": {
+                              "operationMetadataId": "e58a70d0-f8b8-495f-bef0-c31a74d16b4f"
+                            }
+                          },
+                          "List_rows_magasin_article_1": {
+                            "type": "OpenApiConnection",
+                            "inputs": {
+                              "parameters": {
+                                "entityName": "aglcm003_magasinarticles",
+                                "$filter": "_aglcm003_magasinid_value eq '@{outputs('Get_a_row_magasin_by_ID')?['body/aglcm003_magasinid']}'  and _aglcm003_articleid_value eq '@{outputs('Get_a_row_article_by_ID_1')?['body/aglcm003_zulaa_articleid']}'"
+                              },
+                              "host": {
+                                "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                "operationId": "ListRecords",
+                                "connectionName": "shared_commondataserviceforapps"
+                              }
+                            },
+                            "runAfter": {
+                              "Set_variable__1": [
+                                "Succeeded"
+                              ]
+                            },
+                            "metadata": {
+                              "operationMetadataId": "39155f37-c80a-44a0-bf3a-210ec4048efc"
+                            }
+                          }
+                        },
+                        "metadata": {
+                          "operationMetadataId": "45e1599a-523e-41ed-a847-d69ceb277381"
+                        }
+                      }
+                    },
+                    "else": {
+                      "actions": {}
+                    },
+                    "metadata": {
+                      "operationMetadataId": "160e5d4f-0765-4cf7-a3d0-874dc515fe49"
+                    }
+                  }
+                },
+                "else": {
+                  "actions": {
+                    "For_each_8": {
+                      "type": "Foreach",
+                      "foreach": "@outputs('List_rows_ligne_de_la_réception')?['body/value']",
+                      "actions": {
+                        "Get_a_row_article_by_ID_3": {
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "parameters": {
+                              "entityName": "aglcm003_zulaa_articles",
+                              "recordId": "@items('For_each_8')?['_aglcm003_articleid_value']"
+                            },
+                            "host": {
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                              "operationId": "GetItem",
+                              "connectionName": "shared_commondataserviceforapps"
+                            }
+                          },
+                          "metadata": {
+                            "operationMetadataId": "0e1fd483-ddc4-47a6-acd8-09ff1d7b5cbe"
+                          }
+                        },
+                        "Set_variable__3": {
+                          "type": "SetVariable",
+                          "inputs": {
+                            "name": "Créer une nouvelle ligne d'article",
+                            "value": true
+                          },
+                          "runAfter": {
+                            "Get_a_row_article_by_ID_3": [
+                              "Succeeded"
+                            ]
+                          },
+                          "metadata": {
+                            "operationMetadataId": "87604df8-189a-425d-bdf7-7f9767e71893"
+                          }
+                        },
+                        "Condition_article_stockable_3": {
+                          "type": "If",
+                          "expression": {
+                            "and": [
+                              {
+                                "equals": [
+                                  "@outputs('Get_a_row_article_by_ID_3')?['body/aglcm003_isstockable']",
+                                  "@true"
+                                ]
+                              }
+                            ]
+                          },
+                          "actions": {
+                            "For_each_9": {
+                              "type": "Foreach",
+                              "foreach": "@outputs('List_rows_magasin_article_3')?['body/value']",
+                              "actions": {
+                                "Get_a_row_magasin_article_by_ID_3": {
+                                  "type": "OpenApiConnection",
+                                  "inputs": {
+                                    "parameters": {
+                                      "entityName": "aglcm003_magasinarticles",
+                                      "recordId": "@items('For_each_9')?['aglcm003_magasinarticleid']"
+                                    },
+                                    "host": {
+                                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                      "operationId": "GetItem",
+                                      "connectionName": "shared_commondataserviceforapps"
+                                    }
+                                  },
+                                  "metadata": {
+                                    "operationMetadataId": "b2ffb0f2-45a3-4c62-a2ea-e401d9d66b95"
+                                  }
+                                },
+                                "Update_a_row_3": {
+                                  "type": "OpenApiConnection",
+                                  "inputs": {
+                                    "parameters": {
+                                      "entityName": "aglcm003_magasinarticles",
+                                      "recordId": "@outputs('Get_a_row_magasin_article_by_ID_3')?['body/aglcm003_magasinarticleid']",
+                                      "item/aglcm003_quantitestock": "@add(variables('Quantité livré'), outputs('Get_a_row_magasin_article_by_ID_3')?['body/aglcm003_quantitestock'])"
+                                    },
+                                    "host": {
+                                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                      "operationId": "UpdateOnlyRecord",
+                                      "connectionName": "shared_commondataserviceforapps"
+                                    }
+                                  },
+                                  "runAfter": {
+                                    "Get_a_row_magasin_article_by_ID_3": [
+                                      "Succeeded"
+                                    ]
+                                  },
+                                  "metadata": {
+                                    "operationMetadataId": "c7c8e11c-406e-4507-8543-b49645f0f69b"
+                                  }
+                                },
+                                "Set_variable_créer_une_nouvelle_ligne_d'article_3": {
+                                  "type": "SetVariable",
+                                  "inputs": {
+                                    "name": "Créer une nouvelle ligne d'article",
+                                    "value": false
+                                  },
+                                  "runAfter": {
+                                    "Update_a_row_3": [
+                                      "Succeeded"
+                                    ]
+                                  },
+                                  "metadata": {
+                                    "operationMetadataId": "e977e794-1ba0-45b8-af27-1d077aa394ff"
+                                  }
+                                }
+                              },
+                              "runAfter": {
+                                "Set_variable_3": [
+                                  "Succeeded"
+                                ]
+                              },
+                              "metadata": {
+                                "operationMetadataId": "6abf1882-169f-44b4-ae51-b10e67e64be0"
+                              }
+                            },
+                            "Condition_article_a_créer_3": {
+                              "type": "If",
+                              "expression": {
+                                "and": [
+                                  {
+                                    "equals": [
+                                      "@variables('Créer une nouvelle ligne d''article')",
+                                      "@true"
+                                    ]
+                                  }
+                                ]
+                              },
+                              "actions": {
+                                "Add_a_new_magasin_article_row_3": {
+                                  "type": "OpenApiConnection",
+                                  "inputs": {
+                                    "parameters": {
+                                      "entityName": "aglcm003_magasinarticles",
+                                      "item/aglcm003_magasinId@odata.bind": "aglcm003_magasins(@{outputs('Get_a_row_magasin_by_ID')?['body/aglcm003_magasinid']})",
+                                      "item/aglcm003_articleId@odata.bind": "aglcm003_zulaa_articles(@{outputs('Get_a_row_article_by_ID_3')?['body/aglcm003_zulaa_articleid']})",
+                                      "item/aglcm003_quantitestock": "@item()?['aglcm003_quantitedejareceptionne']",
+                                      "item/aglcm003_receptionId@odata.bind": "aglcm003_zulaa_receptions(@{triggerOutputs()?['body/aglcm003_zulaa_receptionid']})"
+                                    },
+                                    "host": {
+                                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                      "operationId": "CreateRecord",
+                                      "connectionName": "shared_commondataserviceforapps"
+                                    }
+                                  },
+                                  "metadata": {
+                                    "operationMetadataId": "9a762ebd-0a3f-40e8-b607-4976949338a5"
+                                  }
+                                }
+                              },
+                              "else": {
+                                "actions": {}
+                              },
+                              "runAfter": {
+                                "For_each_9": [
+                                  "Succeeded"
+                                ]
+                              },
+                              "metadata": {
+                                "operationMetadataId": "8dc767e1-8286-4227-b215-f77bf4bcdd3a"
+                              }
+                            },
+                            "Set_variable_3": {
+                              "type": "SetVariable",
+                              "inputs": {
+                                "name": "Quantité livré",
+                                "value": "@item()?['aglcm003_quantitelivrer']"
+                              },
+                              "metadata": {
+                                "operationMetadataId": "cdbe1cab-c18e-4a17-82b9-c85de0c3272d"
+                              }
+                            }
+                          },
+                          "else": {
+                            "actions": {}
+                          },
+                          "runAfter": {
+                            "List_rows_magasin_article_3": [
+                              "Succeeded"
+                            ]
+                          },
+                          "metadata": {
+                            "operationMetadataId": "e58a70d0-f8b8-495f-bef0-c31a74d16b4f"
+                          }
+                        },
+                        "List_rows_magasin_article_3": {
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "parameters": {
+                              "entityName": "aglcm003_magasinarticles",
+                              "$filter": "_aglcm003_magasinid_value eq '@{outputs('Get_a_row_magasin_by_ID')?['body/aglcm003_magasinid']}'  and _aglcm003_articleid_value eq '@{outputs('Get_a_row_article_by_ID_3')?['body/aglcm003_zulaa_articleid']}'"
+                            },
+                            "host": {
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                              "operationId": "ListRecords",
+                              "connectionName": "shared_commondataserviceforapps"
+                            }
+                          },
+                          "runAfter": {
+                            "Set_variable__3": [
+                              "Succeeded"
+                            ]
+                          },
+                          "metadata": {
+                            "operationMetadataId": "39155f37-c80a-44a0-bf3a-210ec4048efc"
+                          }
+                        }
+                      },
+                      "metadata": {
+                        "operationMetadataId": "45e1599a-523e-41ed-a847-d69ceb277381"
+                      }
+                    }
+                  }
+                },
+                "runAfter": {
+                  "List_rows_magasin_article_1-copy": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "5befb760-cf2e-4300-972e-893dcb420e46"
+                }
+              },
+              "For_each_11": {
+                "type": "Foreach",
+                "foreach": "@outputs('List_rows_categorie_entite_-_gestion_par_categorie')?['body/value']",
+                "actions": {
+                  "Set_variable_4": {
+                    "type": "SetVariable",
+                    "inputs": {
+                      "name": "categorieentiteId",
+                      "value": "@items('For_each_11')?['aglcm003_zulaa_categorieentiteid']"
+                    }
+                  }
+                },
+                "runAfter": {
+                  "List_rows_categorie_entite_-_gestion_par_categorie": [
+                    "Succeeded"
+                  ]
+                }
+              },
+              "Get_a_row_unique_company_category_by_ID": {
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "parameters": {
+                    "entityName": "aglcm003_zulaa_categorieentites",
+                    "recordId": "@variables('categorieentiteId')"
+                  },
+                  "host": {
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                    "operationId": "GetItem",
+                    "connectionName": "shared_commondataserviceforapps"
+                  }
+                },
+                "runAfter": {
+                  "For_each_11": [
+                    "Succeeded"
+                  ]
+                }
+              },
+              "List_rows_magasin_article_1-copy": {
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "parameters": {
+                    "entityName": "aglcm003_magasinarticles",
+                    "$filter": "_aglcm003_magasinid_value eq '@{outputs('Get_a_row_magasin_by_ID')?['body/aglcm003_magasinid']}' "
+                  },
+                  "host": {
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                    "operationId": "ListRecords",
+                    "connectionName": "shared_commondataserviceforapps"
+                  }
+                },
+                "runAfter": {
+                  "Get_a_row_unique_company_category_by_ID": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "39155f37-c80a-44a0-bf3a-210ec4048efc"
+                }
+              }
+            }
+          },
+          "runAfter": {
+            "Initialize_variable_1": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Initialize_variable_1": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "categorieentiteId",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {
+            "Initialize_variable__Quantité_livré": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Update_a_row_reception-trigger_document_generation": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "aglcm003_zulaa_receptions",
+              "recordId": "@triggerOutputs()?['body/aglcm003_zulaa_receptionid']",
+              "item/aglcm003_fichiercreer": true
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "UpdateOnlyRecord",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Condition_type_de_gestion_de_DA": [
+              "Succeeded"
+            ]
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

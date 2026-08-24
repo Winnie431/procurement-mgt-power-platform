@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{cb46ccf0-73e8-4825-8513-9b05f8403340}</savedqueryid>
+    <layoutxml>
+      <grid name="aglcm003_zulaa_demandedachatarticlefournisseurs" jump="aglcm003_id" select="1" icon="1" preview="1">
+        <row name="aglcm003_zulaa_demandedachatarticlefournisseur" id="aglcm003_zulaa_demandedachatarticlefournisseurid">
+          <cell name="aglcm003_demandeachat" width="140" />
+          <cell name="aglcm003_articleid" width="100" />
+          <cell name="aglcm003_quantite" width="100" />
+          <cell name="aglcm003_prix" width="100" />
+          <cell name="aglcm003_centredecoutid" width="122" />
+          <cell name="aglcm003_fournisseurid" width="107" />
+          <cell name="aglcm003_istaxable" width="100" />
+          <cell name="aglcm003_tvaid" width="100" />
+          <cell name="aglcm003_lignetaxecalculer" width="155" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>2</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_demandedachatarticlefournisseur">
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_articleid" />
+          <attribute name="aglcm003_prix" />
+          <attribute name="aglcm003_centredecoutid" />
+          <attribute name="aglcm003_fournisseurid" />
+          <order attribute="createdon" descending="true" />
+          <attribute name="aglcm003_zulaa_demandedachatarticlefournisseurid" />
+          <attribute name="aglcm003_tvaid" />
+          <attribute name="aglcm003_istaxable" />
+          <attribute name="aglcm003_lignetaxecalculer" />
+          <attribute name="aglcm003_quantite" />
+          <attribute name="aglcm003_demandeachat" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Purchase Request Item Associated View" languagecode="1033" />
+      <LocalizedName description="Vue Associée des Articles de Demande d’Achat" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

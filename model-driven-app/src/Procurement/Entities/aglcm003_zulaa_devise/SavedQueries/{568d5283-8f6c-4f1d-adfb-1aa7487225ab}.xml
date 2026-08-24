@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{568d5283-8f6c-4f1d-adfb-1aa7487225ab}</savedqueryid>
+    <layoutxml>
+      <grid name="aglcm003_zulaa_devises" jump="aglcm003_nom" select="1" icon="1" preview="0">
+        <row name="aglcm003_zulaa_devise" id="aglcm003_zulaa_deviseid">
+          <cell name="aglcm003_nom" width="121" />
+          <cell name="aglcm003_taux" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_devise">
+          <attribute name="aglcm003_zulaa_deviseid" />
+          <attribute name="aglcm003_nom" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_taux" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Currency Lookup View" languagecode="1033" />
+      <LocalizedName description="Vue de recherche des devises" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="ablnstd_ablnstd_apprvlstd_wfrun_aglcm003_zulaa_demandesortiestock_ablnstd_RegardingId">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.1</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>ablnstd_apprvlstd_WfRun</ReferencingEntityName>
+    <ReferencedEntityName>aglcm003_zulaa_demandesortiestock</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>ablnstd_RegardingId</ReferencingAttributeName>
+    <RelationshipDescription />
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>ablnstd_RegardingId_aglcm003_zulaa_demandesortiestock</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>ablnstd_ablnstd_apprvlstd_wfrun_aglcm003_zulaa_demandesortiestock_ablnstd_RegardingId</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_lignesdelademandedesortie_demandesortiestock">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.1</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_lignesdelademandedesortie</ReferencingEntityName>
+    <ReferencedEntityName>aglcm003_zulaa_demandesortiestock</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_demandedesortieId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="The Stock Issue Request Id" languagecode="1033" />
+        <Description description="ID de la Demande de Sortie de Stock" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_demandedesortieId</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_lignesdelademandedesortie_demandesortiestock</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_sortiedestock_aglcm003_zulaa_demandesortiestock">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.1</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_sortiedestock</ReferencingEntityName>
+    <ReferencedEntityName>aglcm003_zulaa_demandesortiestock</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_demandedesortieId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Out of stock request that initiates the stock exit" languagecode="1033" />
+        <Description description="Demande de rupture de stock qui déclenche la sortie de stock" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_demandedesortieId</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_sortiedestock_aglcm003_zulaa_demandesortiestock</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+</EntityRelationships>

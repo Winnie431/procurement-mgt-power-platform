@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{6161755e-0bc3-449a-b026-c642a94a1dce}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_code" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_inventairearticleid">
+          <cell name="aglcm003_inventaireid" width="100" />
+          <cell name="aglcm003_magasinid" width="100" />
+          <cell name="aglcm003_articleid" width="100" />
+          <cell name="aglcm003_lastquantity" width="150" />
+          <cell name="aglcm003_quantitedelinventaire" width="171" />
+          <cell name="aglcm003_newquantity" width="150" />
+          <cell name="aglcm003_uniteid" width="100" />
+          <cell name="aglcm003_commentaires" width="150" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_inventairearticle">
+          <attribute name="aglcm003_zulaa_inventairearticleid" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_lastquantity" />
+          <attribute name="aglcm003_newquantity" />
+          <attribute name="aglcm003_commentaires" />
+          <attribute name="aglcm003_articleid" />
+          <attribute name="aglcm003_inventaireid" />
+          <attribute name="aglcm003_magasinid" />
+          <attribute name="aglcm003_uniteid" />
+          <attribute name="aglcm003_quantitedelinventaire" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Inventory Items" languagecode="1033" />
+      <LocalizedName description="Inventaire Articles inactifs" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{1c41401d-bd36-48a5-97a6-afef060a1f06}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_name" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_delegationparroleid">
+          <cell name="aglcm003_name" width="300" />
+          <cell name="createdon" width="125" />
+          <cell name="aglcm003_centredecoutid" width="134" />
+          <cell name="aglcm003_datedebutdelegation" width="170" />
+          <cell name="aglcm003_datefindelegation" width="158" />
+          <cell name="aglcm003_entiteid" width="100" />
+          <cell name="aglcm003_personnedelegue" width="142" />
+          <cell name="aglcm003_roledafdafadg" width="169" />
+          <cell name="aglcm003_role" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>1</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_delegationparrole">
+          <attribute name="aglcm003_delegationparroleid" />
+          <attribute name="aglcm003_name" />
+          <attribute name="createdon" />
+          <order attribute="aglcm003_name" descending="false" />
+          <attribute name="aglcm003_centredecoutid" />
+          <attribute name="aglcm003_datedebutdelegation" />
+          <attribute name="aglcm003_datefindelegation" />
+          <attribute name="aglcm003_entiteid" />
+          <attribute name="aglcm003_personnedelegue" />
+          <attribute name="aglcm003_roledafdafadg" />
+          <attribute name="aglcm003_role" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Delegation by Role Advanced Find View" languagecode="1033" />
+      <LocalizedName description="Délégation par rôle - Recherche avancée" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

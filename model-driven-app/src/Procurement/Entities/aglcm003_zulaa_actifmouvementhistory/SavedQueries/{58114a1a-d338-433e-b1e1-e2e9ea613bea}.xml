@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{58114a1a-d338-433e-b1e1-e2e9ea613bea}</savedqueryid>
+    <layoutxml>
+      <grid name="aglcm003_zulaa_actifmouvementhistories" jump="aglcm003_historyname" select="1" icon="1" preview="0">
+        <row name="aglcm003_zulaa_actifmouvementhistory" id="aglcm003_zulaa_actifmouvementhistoryid">
+          <cell name="aglcm003_historyname" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_actifmouvementhistory">
+          <attribute name="aglcm003_zulaa_actifmouvementhistoryid" />
+          <attribute name="aglcm003_historyname" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Asset Movement History Lookup View" languagecode="1033" />
+      <LocalizedName description="Vue de recherche de l’historique des mouvements d’actifs" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>1</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{319540b6-2091-4fcd-bec9-250ccea3e0f1}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_nom" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_categorieid">
+          <cell name="aglcm003_nom" width="300" />
+          <cell name="aglcm003_isactive" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>4</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_categorie">
+          <attribute name="aglcm003_zulaa_categorieid" />
+          <attribute name="aglcm003_nom" />
+          <order attribute="aglcm003_nom" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <filter type="or" isquickfindfields="1">
+            <condition attribute="aglcm003_nom" operator="like" value="{0}" />
+          </filter>
+          <attribute name="aglcm003_isactive" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Quick Find Active Categories" languagecode="1033" />
+      <LocalizedName description="Recherche rapide des catégories actives" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

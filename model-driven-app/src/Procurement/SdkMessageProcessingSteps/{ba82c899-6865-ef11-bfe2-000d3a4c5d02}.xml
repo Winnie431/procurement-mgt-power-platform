@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SdkMessageProcessingStep Name="DaAmountUpdate.DaAmountUpdate: Update of aglcm003_zulaa_demandedachatarticlefournisseur" SdkMessageProcessingStepId="{ba82c899-6865-ef11-bfe2-000d3a4c5d02}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SdkMessageId>20bebb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
+  <PluginTypeName>DaAmountUpdate.DaAmountUpdate, DaAmountUpdate, Version=1.0.0.0, Culture=neutral, PublicKeyToken=468c5f968f7a2cb9</PluginTypeName>
+  <PluginTypeId>72d772c4-ab19-4324-8d1c-2d28a7c6d73f</PluginTypeId>
+  <PrimaryEntity>aglcm003_zulaa_demandedachatarticlefournisseur</PrimaryEntity>
+  <AsyncAutoDelete>0</AsyncAutoDelete>
+  <Description>DaAmountUpdate.DaAmountUpdate: Update of aglcm003_zulaa_demandedachatarticlefournisseur</Description>
+  <FilteringAttributes></FilteringAttributes>
+  <InvocationSource>0</InvocationSource>
+  <Mode>0</Mode>
+  <Rank>1</Rank>
+  <EventHandlerTypeCode>4602</EventHandlerTypeCode>
+  <Stage>10</Stage>
+  <IsCustomizable>1</IsCustomizable>
+  <IsHidden>0</IsHidden>
+  <SupportedDeployment>0</SupportedDeployment>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <SdkMessageProcessingStepImages />
+</SdkMessageProcessingStep>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{d52a54a5-9215-49e9-99d6-8c788b10c90d}</savedqueryid>
+    <layoutxml>
+      <grid name="aglcm003_zulaa_actifs" jump="aglcm003_codeactif" select="1" icon="1" preview="0">
+        <row name="aglcm003_zulaa_actif" id="aglcm003_zulaa_actifid">
+          <cell name="aglcm003_entiteid" width="100" />
+          <cell name="aglcm003_numeroserie" width="119" />
+          <cell name="aglcm003_numeroparc" width="116" />
+          <cell name="aglcm003_codeactif" width="120" />
+          <cell name="aglcm003_magasinid" width="100" />
+          <cell name="aglcm003_articleid" width="100" />
+          <cell name="aglcm003_modele" width="100" />
+          <cell name="aglcm003_dateacquisition" width="136" />
+          <cell name="aglcm003_garantie" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_actif">
+          <attribute name="aglcm003_zulaa_actifid" />
+          <attribute name="aglcm003_codeactif" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_entiteid" />
+          <attribute name="aglcm003_articleid" />
+          <attribute name="aglcm003_magasinid" />
+          <attribute name="aglcm003_numeroserie" />
+          <attribute name="aglcm003_numeroparc" />
+          <attribute name="aglcm003_modele" />
+          <attribute name="aglcm003_garantie" />
+          <attribute name="aglcm003_dateacquisition" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Asset Lookup View" languagecode="1033" />
+      <LocalizedName description="Vue de recherche d'actifs" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

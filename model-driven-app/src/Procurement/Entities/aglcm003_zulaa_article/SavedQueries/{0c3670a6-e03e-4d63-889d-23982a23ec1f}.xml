@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{0c3670a6-e03e-4d63-889d-23982a23ec1f}</savedqueryid>
+    <layoutxml>
+      <grid name="aglcm003_zulaa_articles" jump="aglcm003_nom" select="1" icon="1" preview="0">
+        <row name="aglcm003_zulaa_article" id="aglcm003_zulaa_articleid">
+          <cell name="aglcm003_codearticle" width="99" />
+          <cell name="aglcm003_nom" width="203" />
+          <cell name="aglcm003_description" width="199" />
+          <cell name="aglcm003_categorieid" width="107" />
+          <cell name="a_de3ad608b02a4acc96fb1788a7b68652.aglcm003_nom" width="147" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_article">
+          <attribute name="aglcm003_zulaa_articleid" />
+          <attribute name="aglcm003_nom" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_codearticle" />
+          <link-entity alias="a_de3ad608b02a4acc96fb1788a7b68652" name="aglcm003_zulaa_categorie" to="aglcm003_categorieid" from="aglcm003_zulaa_categorieid" link-type="outer" visible="false">
+            <attribute name="aglcm003_nom" />
+          </link-entity>
+          <attribute name="aglcm003_description" />
+          <attribute name="aglcm003_categorieid" />
+          <order attribute="aglcm003_nom" descending="false" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Item Lookup View" languagecode="1033" />
+      <LocalizedName description="Affichage de recherche d'éléments" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

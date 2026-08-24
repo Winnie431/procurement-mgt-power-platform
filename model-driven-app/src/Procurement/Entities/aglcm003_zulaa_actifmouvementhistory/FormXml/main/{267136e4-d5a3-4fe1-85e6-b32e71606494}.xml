@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{267136e4-d5a3-4fe1-85e6-b32e71606494}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{e8911e92-dd37-4a98-8a82-664deb04b96c}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+            <label description="Général" languagecode="1036" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{ed78b502-092a-46a6-a643-8dcd964b7f91}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                    <label description="Général" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{355e77ea-28eb-49da-9697-bac4a6308d3a}">
+                        <labels>
+                          <label description="History Name" languagecode="1033" />
+                          <label description="Nom de l’historique" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_historyname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="aglcm003_historyname" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8a27c3f8-9277-4cbd-a250-8c70bfac533e}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                          <label description="Propriétaire" languagecode="1036" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{676a92d7-ba3c-4c29-b19b-79399c1763db}">
+                        <labels>
+                          <label description="Attribution Date" languagecode="1033" />
+                          <label description="Date d’attribution" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_datedattribution" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="aglcm003_datedattribution" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+      <LocalizedName description="Informations" languagecode="1036" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A Form For This Entity" languagecode="1033" />
+      <Description description="Un formulaire pour cette entité" languagecode="1036" />
+    </Descriptions>
+  </systemform>
+</forms>

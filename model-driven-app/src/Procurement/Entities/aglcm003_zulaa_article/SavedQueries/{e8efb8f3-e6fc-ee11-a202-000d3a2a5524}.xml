@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{e8efb8f3-e6fc-ee11-a202-000d3a2a5524}</savedqueryid>
+    <querytype>8192</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical" output-format="xml-platform">
+        <entity name="aglcm003_zulaa_article">
+          <attribute name="aglcm003_zulaa_articleid" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+            <condition attribute="ownerid" operator="eq-userid" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="My Articles" languagecode="1033" />
+      <LocalizedName description="Mes articles" languagecode="1036" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Active Articles owned by me" languagecode="1033" />
+      <Description description="Articles actifs dont je suis propriétaire" languagecode="1036" />
+    </Descriptions>
+  </savedquery>
+</savedqueries>

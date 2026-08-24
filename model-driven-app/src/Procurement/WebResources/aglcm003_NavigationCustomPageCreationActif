@@ -1,0 +1,34 @@
+function openCustomPageAsDialog(executionContext) {
+    // Récupérer l'ID de l'enregistrement en cours
+    var formContext = executionContext ;
+    var CodeReception = formContext.getAttribute("aglcm003_codereception").getValue();
+    var entityName = formContext.data.entity.getEntityName();
+
+    console.log("Code de la reception", CodeReception);
+    
+    // Configuration de la page
+    var pageInput = {
+        pageType: "custom",
+        name: "aglcm003_creationactifapartirdereception_e29d7", // Remplacez par le nom de la Custom Page
+        entityName : entityName,
+        recordId: CodeReception, // Passer l'ID comme paramètre
+    };
+
+    // Options pour centrer la boîte de dialogue
+    var navigationOptions = {
+        target: 2, // Mode modal
+        width: { value: 85, unit: "%" }, // Largeur du panneauuteur de la boîte de dialogue
+        position: 1 // Centrer la boîte de dialogue
+        
+    };
+
+    // Ouvrir la boîte de dialogue
+    Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
+        function success() {
+            console.log("Custom Page ouverte comme boîte de dialogue !");
+        },
+        function error(err) {
+            console.error("Erreur lors de l'ouverture de la Custom Page :", err);
+        }
+    );
+}

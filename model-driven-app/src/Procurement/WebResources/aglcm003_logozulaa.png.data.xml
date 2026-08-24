@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{d9673c68-6217-ef11-9f89-6045bd9c5fcf}</WebResourceId>
+  <Name>aglcm003_logozulaa.png</Name>
+  <DisplayName>Logo Zulaa</DisplayName>
+  <Description>Logo de l'application de gestion des achats Zulaa</Description>
+  <WebResourceType>5</WebResourceType>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsEnabledForMobileClient>1</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>1</IsAvailableForMobileOffline>
+  <DependencyXml>&lt;Dependencies&gt;&lt;Dependency componentType="WebResource"/&gt;&lt;/Dependencies&gt;</DependencyXml>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/aglcm003_logozulaapngD9673C68-6217-EF11-9F89-6045BD9C5FCF</FileName>
+</WebResource>

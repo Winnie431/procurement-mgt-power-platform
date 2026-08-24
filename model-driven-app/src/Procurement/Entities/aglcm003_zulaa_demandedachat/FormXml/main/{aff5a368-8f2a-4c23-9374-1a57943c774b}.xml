@@ -1,0 +1,547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{aff5a368-8f2a-4c23-9374-1a57943c774b}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls" shownavigationbar="false">
+      <tabs>
+        <tab verticallayout="true" id="{5249a828-df9e-4a6c-84e7-d3da249fc34a}" IsUserDefined="1" name="General">
+          <labels>
+            <label description="General" languagecode="1033" />
+            <label description="Général" languagecode="1036" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{8b4fbcac-4657-4a11-9103-2b943c441cca}" columns="111" name="Nouvelle  demande d'achat" visible="true" celllabelposition="Top">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                    <label description="Général" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{6b827078-e5c1-4969-b604-e03ac26048ab}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Entity" languagecode="1033" />
+                          <label description="Entité" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_entiteid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_entiteid" disabled="false" />
+                      </cell>
+                      <cell id="{4c5c1d90-56cb-4985-a8db-dc910f17cb14}" locklevel="0" colspan="1" rowspan="1" visible="false">
+                        <labels>
+                          <label description="Current Workflow Run" languagecode="1033" />
+                          <label description="Exécution du workflow actuel" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_currentworkflowrun" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_currentworkflowrun" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{fc686e5c-b8ce-40d7-a297-7a2af824c631}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e414a5c5-50d0-41fe-b048-58f4b04e3891}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Make this request based on a expression of need?" languagecode="1033" />
+                          <label description="Faire cette demande en fonction d'une expression de besoin ?" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_haseb" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="aglcm003_haseb" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{fb55a696-644b-44dd-a968-2d682f2d1984}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{00191fe3-26e2-46ca-bee0-c603630cf211}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{dd56400a-b04b-439d-9622-59b00ba8f3ea}" locklevel="0" colspan="1" rowspan="1" visible="true">
+                        <labels>
+                          <label description="Expression of Need" languagecode="1033" />
+                          <label description="Expression du besoin" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_expressiondebesoinid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_expressiondebesoinid" disabled="false">
+                          <parameters>
+                            <DependentAttributeName>aglcm003_zulaa_demandedachat.aglcm003_entiteid</DependentAttributeName>
+                            <DependentAttributeType>aglcm003_zulaa_entite</DependentAttributeType>
+                            <FilterRelationshipName>aglcm003_zulaa_expressiondebesoin_entite</FilterRelationshipName>
+                            <DefaultViewId>{9F9A0F58-CB6A-EF11-BFE3-6045BD9DFA7F}</DefaultViewId>
+                            <AvailableViewIds>{93242EE3-246C-46D6-BA6A-768107850904},{9F9A0F58-CB6A-EF11-BFE3-6045BD9DFA7F},{7A235383-5959-4693-BD43-5499FDA4641B},{7BF1C827-8C34-EF11-8409-002248822253}</AvailableViewIds>
+                          </parameters>
+                        </control>
+                      </cell>
+                      <cell id="{4a197a7b-3073-4a15-8da6-c19dd1aa2d6a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="VAT" languagecode="1033" />
+                          <label description="TVA" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_tvaid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_tvaid" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{78ff619c-03e6-4163-b811-333819051e5b}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7add332d-f923-497e-8793-53bfbaf749eb}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Direction" languagecode="1033" />
+                          <label description="Direction" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_directionid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_directionid" disabled="false">
+                          <parameters>
+                            <DisableViewPicker>true</DisableViewPicker>
+                            <DependentAttributeName>aglcm003_zulaa_demandedachat.aglcm003_entiteid</DependentAttributeName>
+                            <DependentAttributeType>aglcm003_zulaa_entite</DependentAttributeType>
+                            <FilterRelationshipName>aglcm003_direction_entite</FilterRelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                      <cell id="{b6a33174-d5fc-4688-b2b7-41c6f7dee229}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Category" languagecode="1033" />
+                          <label description="Catégorie  " languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_categorieid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_categorieid" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{01ad5806-ba9c-44ad-aac3-d0c7b4518b26}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{eab22785-4e3c-45ed-bac3-ccae0e89d00a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Department" languagecode="1033" />
+                          <label description="Département" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_departementid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_departementid" disabled="false">
+                          <parameters>
+                            <DisableViewPicker>true</DisableViewPicker>
+                            <DependentAttributeName>aglcm003_zulaa_demandedachat.aglcm003_entiteid</DependentAttributeName>
+                            <DependentAttributeType>aglcm003_zulaa_entite</DependentAttributeType>
+                            <FilterRelationshipName>aglcm003_departement_entite</FilterRelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                      <cell id="{cb313bfd-172c-4bd0-87f3-c2e77aefeea8}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Description" languagecode="1033" />
+                          <label description="Description" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_description" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="aglcm003_description" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{6b262a61-d96b-4fbe-bc95-aa4bb8bdfe25}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5f02254f-4ce9-4ed0-8dbc-912e982b0a9f}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Cost Center" languagecode="1033" />
+                          <label description="Centre de coûts" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_centredecoutid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_centredecoutid" disabled="false">
+                          <parameters>
+                            <DisableViewPicker>true</DisableViewPicker>
+                            <DependentAttributeName>aglcm003_zulaa_demandedachat.aglcm003_entiteid</DependentAttributeName>
+                            <DependentAttributeType>aglcm003_zulaa_entite</DependentAttributeType>
+                            <FilterRelationshipName>aglcm003_centredecout_entite</FilterRelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                      <cell id="{99622134-26c4-4ccf-9622-03a4ef37860e}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Delivery Address" languagecode="1033" />
+                          <label description="Adresse de livraison" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_adressedelivraison" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_adressedelivraison" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{ce999ba4-d2f3-49ad-9afd-0885843e9a69}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{22efb9b5-bc68-41b9-975d-427510a85199}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Supplier" languagecode="1033" />
+                          <label description="Fournisseur" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_fournisseurid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_fournisseurid" disabled="false">
+                          <parameters>
+                            <DisableViewPicker>true</DisableViewPicker>
+                          </parameters>
+                        </control>
+                      </cell>
+                      <cell id="{c7f1be28-1056-4662-8bba-fea4395b3e69}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Delivery Date" languagecode="1033" />
+                          <label description="Date de livraison" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_datedelivraison" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="aglcm003_datedelivraison" disabled="false" />
+                      </cell>
+                      <cell id="{f75fb968-a116-49fe-93fc-d19e61710d86}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Supply Type" languagecode="1033" />
+                          <label description="Type d'approvisionnement" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_typedapprovisionnementcode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="aglcm003_typedapprovisionnementcode" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1c3cc921-a6cf-460c-8c7c-629c8bb77f38}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Currency" languagecode="1033" />
+                          <label description="Devise" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_devise" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_devise" disabled="false" />
+                      </cell>
+                      <cell id="{9cbca027-d63c-45b4-ae2a-ddcacb9e3606}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Charge Type" languagecode="1033" />
+                          <label description="Type de frais" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_typedimputation" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="aglcm003_typedimputation" disabled="false" />
+                      </cell>
+                      <cell id="{026b5429-3500-4656-a37c-efd3e46c7001}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Import Mode" languagecode="1033" />
+                          <label description="Mode d'importation" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_modedimportationcode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="aglcm003_modedimportationcode" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{80ab59c7-9cb6-4d02-9c33-b9c83fa0fd5c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="aglcm003_zulaa_devise_1" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_zulaa_devise_1" disabled="false">
+                          <parameters>
+                            <DisableViewPicker>true</DisableViewPicker>
+                          </parameters>
+                        </control>
+                      </cell>
+                      <cell id="{b2eff8a5-2e5a-4f52-8952-aaa74d8f0fd8}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Dac" languagecode="1033" />
+                          <label description="Dac" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_dac" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_dac" disabled="false" />
+                      </cell>
+                      <cell id="{b256ef63-6ae4-4af1-8ea6-407bbc280a98}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Delivery Time" languagecode="1033" />
+                          <label description="Délai de livraison" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_delaisdelivraison" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_delaisdelivraison" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{f7a2aceb-2b0e-4925-8c42-df59def7f116}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell id="{3725c778-c05d-439d-b226-0eab6ea3af30}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Specific Conditions" languagecode="1033" />
+                          <label description="Conditions spécifiques" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_conditionsspecifiques" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_conditionsspecifiques" disabled="false" />
+                      </cell>
+                      <cell id="{b4b928bb-9a14-401e-8ccd-4b5d1c6a0c01}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Proforma Reference" languagecode="1033" />
+                          <label description="Référence pro forma" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_referencedelaproforma" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_referencedelaproforma" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{820ccc40-2c4c-48f6-8dc0-ae0803220f5e}" visible="false">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                          <label description="Propriétaire" languagecode="1036" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                      <cell locklevel="0" id="{e1e58ac6-d079-4dce-b742-7a5a1ef4fd31}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell id="{30cbd484-ff5c-45b3-bca3-a51850448680}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Incoterm" languagecode="1033" />
+                          <label description="Incoterm" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_incoterm" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_incoterm" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{ab184355-4641-4f79-87c0-963b6fbf3562}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell id="{f8b03c8d-a622-487f-913d-3e271c6e2075}" locklevel="0" colspan="1" rowspan="1" visible="false">
+                        <labels>
+                          <label description="Purchase Request Status" languagecode="1033" />
+                          <label description="Statut de la demande d'achat" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_statutcode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="aglcm003_statutcode" disabled="false" />
+                      </cell>
+                      <cell id="{39ecd4b8-4d96-45c3-b557-2225957f35d9}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Warranty" languagecode="1033" />
+                          <label description="Garantie" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_garantie" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_garantie" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{ae5c3611-6149-4379-9423-c043a6357457}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{d21c3753-90aa-4c84-9e1f-186f446cd3ee}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell id="{a25bfe9f-5f69-4711-867f-91622c2329fa}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Send PO to Supplier?" languagecode="1033" />
+                          <label description="Envoyer le bon de commande au fournisseur ?" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_isenvoiebcaufournisseur" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="aglcm003_isenvoiebcaufournisseur" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_3" id="a08c1fc0-431a-416f-8fe9-4fd823fd0c9c" IsUserDefined="0" locklevel="1" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Top" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                    <label description="Nouvelle section" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{2fde7ffa-c731-4c4b-84df-bbe1a4288dba}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="New SG control 1745577134462" languagecode="1033" />
+                          <label description="Nouveau contrôle SG 1745577134462" languagecode="1036" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_2" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>true</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <RelationshipName>aglcm003_zulaa_daaf_demandeachat</RelationshipName>
+                            <TargetEntityType>aglcm003_zulaa_demandedachatarticlefournisseur</TargetEntityType>
+                            <ViewId>{3672E82B-4B4D-4D37-A36F-591776E9CC2B}</ViewId>
+                            <ViewIds>{3672E82B-4B4D-4D37-A36F-591776E9CC2B}</ViewIds>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="Documents" id="067b642d-20d3-4d44-9a74-163ed7c4669f" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Documents" languagecode="1033" />
+            <label description="Documents" languagecode="1036" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="Documents" id="0409ad15-6342-45ca-9e5d-1c01434a3b94" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Documents" languagecode="1033" />
+                    <label description="Documents" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{8a36d4ea-dcd6-475d-989d-497e627b0346}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="New SG control 1718701401745" languagecode="1033" />
+                          <label description="Nouveau contrôle SG 1718701401745" languagecode="1036" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_1" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>6</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>sharepointdocument</TargetEntityType>
+                            <ViewId>{A5B008AC-07D9-4554-8509-2C05767BFF51}</ViewId>
+                            <ViewIds>{A5B008AC-07D9-4554-8509-2C05767BFF51}</ViewIds>
+                            <RelationshipName>aglcm003_zulaa_demandedachat_SharePointDocuments</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{b80d6662-a99c-447f-9f51-84369bf68cc7}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{0bd29033-2dd7-400b-8895-868520c6bab8}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{2d2719be-81c4-46ce-9577-1a5506e9a06b}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{1f28abfd-7f7e-4b3f-ac4e-a84ca9b89f7c}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{606cab3c-7492-4490-8f83-cee5958ca57c}" locklevel="1" colspan="1" rowspan="1">
+              <labels>
+                <label description="Net Amount (HT)" languagecode="1033" />
+                <label description="Montant net (HT)" languagecode="1036" />
+              </labels>
+              <control id="header_aglcm003_montantht" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="aglcm003_montantht" disabled="true" />
+            </cell>
+            <cell id="{dea58a02-ee39-493e-9c35-a671389fbddc}" locklevel="0" colspan="1" rowspan="1">
+              <labels>
+                <label description="Total Amount Including Tax (TTC)" languagecode="1033" />
+                <label description="Montant total TTC (taxes incluses)" languagecode="1036" />
+              </labels>
+              <control id="header_aglcm003_montantttc" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="aglcm003_montantttc" disabled="true" />
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{1c7f24a6-fe01-4a8d-807e-2bdaae38c18e}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{f8b779e8-ee05-4e96-8aae-45d529d9d34c}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{bf72c910-285e-4670-b562-c8caf7f41066}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{6c78f811-12d6-4a0c-8761-45f96134845a}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <controlDescriptions />
+      <Navigation>
+        <NavBar />
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <formLibraries>
+        <Library name="aglcm003_script.js" libraryUniqueId="{17b17368-5f16-400c-a1eb-0ea6576df74e}" />
+        <Library name="aglcm003_mappageebtoda" libraryUniqueId="{11e02aa4-1792-4e50-b448-d11d5ad6f848}" />
+        <Library name="aglcm003_setHasEbDefaultValue" libraryUniqueId="{ca132f8c-2b25-4d2b-81b6-b58ef7673808}" />
+      </formLibraries>
+      <events>
+        <event name="onload" application="false" active="false">
+          <Handlers>
+            <Handler functionName="onLoad" libraryName="aglcm003_script.js" handlerUniqueId="{18355e6d-1b6f-40a8-9ff3-045ef8e5a496}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="aglcm003_expressiondebesoinid">
+          <Handlers>
+            <Handler functionName="onLookupFieldChange" libraryName="aglcm003_mappageebtoda" handlerUniqueId="{dcba79a7-3557-410c-b473-77834ba17a1c}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="aglcm003_entiteid">
+          <Handlers>
+            <Handler functionName="setHasEbDefaultValue" libraryName="aglcm003_setHasEbDefaultValue" handlerUniqueId="{1d945d20-8558-41ab-82f9-3bace3004de9}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+      </events>
+      <DisplayConditions Order="1" FallbackForm="true">
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Purchase Request Information" languagecode="1033" />
+      <LocalizedName description="Informations sur la demande d'achat" languagecode="1036" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+      <Description description="Formulaire pour cette entité." languagecode="1036" />
+    </Descriptions>
+  </systemform>
+</forms>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppModuleSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SiteMapUniqueName>aglcm003_assetmouvementtempalte</SiteMapUniqueName>
+  <EnableCollapsibleGroups>False</EnableCollapsibleGroups>
+  <ShowHome>True</ShowHome>
+  <ShowPinned>True</ShowPinned>
+  <ShowRecents>True</ShowRecents>
+  <SiteMap IntroducedVersion="7.0.0.0">
+    <Area Id="area_d3532c39" ResourceId="SitemapDesigner.NewTitle" DescriptionResourceId="SitemapDesigner.NewTitle" ShowGroups="true" IntroducedVersion="7.0.0.0">
+      <Titles>
+        <Title LCID="1033" Title="Area1" />
+      </Titles>
+      <Group Id="group_461c19bd" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="Group1" />
+        </Titles>
+        <SubArea Id="subarea_83caf52f" ResourceId="SitemapDesigner.NewSubArea" Icon="/_imgs/imagestrips/transparent_spacer.gif" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Subarea1" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_07892aab" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="aglcm003_zulaa_actifmouvementhistory" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+      </Group>
+    </Area>
+  </SiteMap>
+  <LocalizedNames>
+    <LocalizedName description="asset mouvement tempalte" languagecode="1033" />
+    <LocalizedName description="asset mouvement tempalte" languagecode="1036" />
+  </LocalizedNames>
+</AppModuleSiteMap>

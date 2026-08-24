@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>ablnstd_abalonstudiocanvascomponents_44617</Name>
+  <AppVersion>2024-06-28T08:29:37Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.24062.17.0</CreatedByClientVersion>
+  <MinClientVersion>3.24062.17.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"200","primaryDeviceHeight":"640","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Phone","showStatusBar":"false","publisherVersion":"3.24062.17","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"true","isUnifiedRootApp":"false","sienaVersion":"20240620T091952Z-3.24062.17.0"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>RGBA(251,101,60,1)</BackgroundColor>
+  <DisplayName>Abalon Studio - Canvas Components</DisplayName>
+  <Description></Description>
+  <CommitMessage></CommitMessage>
+  <Publisher></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{}</ConnectionReferences>
+  <DatabaseReferences>{}</DatabaseReferences>
+  <AppComponents>[{"appComponentName":"d2406938a4c44551bc9a6472c2bdb1ef","displayName":"Hamburger menu","appVersion":"2024-06-20T12:36:56Z","appComponentLibraryLogicalName":"ablnstd_abalonstudiocanvascomponents_44617","environmentName":"8de843bd-736c-efa9-b5bf-c46cb085b34d","allowCustomization":true,"createdOn":"2024-03-28T17:22:16.74Z","lastModifiedOn":"2024-06-20T12:36:50.54Z","connectionReferences":{},"databaseReferences":{}},{"appComponentName":"40f11e534ee34768b9cab98947ea3298","displayName":"Colorfull choices","appVersion":"2024-06-20T12:36:56Z","appComponentLibraryLogicalName":"ablnstd_abalonstudiocanvascomponents_44617","environmentName":"8de843bd-736c-efa9-b5bf-c46cb085b34d","allowCustomization":true,"createdOn":"2024-03-28T17:22:16.74Z","lastModifiedOn":"2024-06-20T12:36:50.54Z","connectionReferences":{},"databaseReferences":{}}]</AppComponents>
+  <AppComponentDependencies>[]</AppComponentDependencies>
+  <CanConsumeAppPass>1</CanConsumeAppPass>
+  <CanvasAppType>1</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/ablnstd_abalonstudiocanvascomponents_44617_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/ablnstd_abalonstudiocanvascomponents_44617_DocumentUri.msapp</DocumentUri>
+  <AdditionalUris>
+    <AdditionalUri>/CanvasApps/ablnstd_abalonstudiocanvascomponents_44617_AdditionalUris0_identity.json</AdditionalUri>
+  </AdditionalUris>
+</CanvasApp>

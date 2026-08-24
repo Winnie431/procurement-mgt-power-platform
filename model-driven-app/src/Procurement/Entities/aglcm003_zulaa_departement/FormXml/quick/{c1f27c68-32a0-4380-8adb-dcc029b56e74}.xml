@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{c1f27c68-32a0-4380-8adb-dcc029b56e74}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{255a4ab7-7401-4682-8b2e-1bb4d1855d68}" IsUserDefined="1">
+          <labels>
+            <label description="" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{1abc3fdd-1c89-42fa-882a-b58e531711cb}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                    <label description="Général" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{ebf82ab9-144e-4ae0-a9f3-7831df045295}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Entity" languagecode="1033" />
+                          <label description="Entité" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_entiteid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_entiteid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{dd9f3071-7ae0-4942-8cbb-266f6802f709}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Direction" languagecode="1033" />
+                          <label description="Direction" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_directionid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_directionid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d4cf9d7f-89f0-4fc6-98b4-cb1e842599d4}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                          <label description="Nom" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_nom" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="aglcm003_nom" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{bfeae71c-f747-4e4b-8032-875c4505bde7}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Head" languagecode="1033" />
+                          <label description="Responsable" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_responsableid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_responsableid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{85f2caa9-3f0d-4c44-b83a-f1c67792ff6c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="IsActive" languagecode="1033" />
+                          <label description="Est Actif" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_isactif" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="aglcm003_isactif" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5f0ed111-b098-41c1-bfa7-ba704e66323f}" colspan="1" rowspan="1" visible="false">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                          <label description="Propriétaire" languagecode="1036" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+      <LocalizedName description="Informations" languagecode="1036" />
+    </LocalizedNames>
+  </systemform>
+</forms>

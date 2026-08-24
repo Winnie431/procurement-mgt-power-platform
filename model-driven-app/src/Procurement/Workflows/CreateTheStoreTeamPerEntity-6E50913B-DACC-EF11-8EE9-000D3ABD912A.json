@@ -1,0 +1,203 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "aglcm003_CR_Dataverse_Zulaa"
+        },
+        "runtimeSource": "embedded"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "Lorsqu’une_ligne_est_ajoutée,_modifiée_ou_supprimée": {
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "aglcm003_magasin",
+              "subscriptionRequest/scope": 4
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "1a8cf549-60db-4a4e-a5e5-c005c22449dd"
+          }
+        }
+      },
+      "actions": {
+        "Récupérer_l'entité": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "aglcm003_zulaa_entites",
+              "recordId": "@triggerOutputs()?['body/_aglcm003_entiteid_value']"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "0e1babb8-33a4-4b6e-9533-fc2b430d5ae1"
+          }
+        },
+        "Récupérer_la_BU_l'entité": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "businessunits",
+              "recordId": "@outputs('Récupérer_l''entité')?['body/_aglcm003_businessunitpropretaire_value']"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Récupérer_l'entité": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "603b0e0b-f684-4f9b-8682-63611d6edc64"
+          }
+        },
+        "Add_a_new_team_magasin": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "teams",
+              "item/administratorid@odata.bind": "systemusers(@{triggerOutputs()?['body/_createdby_value']})",
+              "item/businessunitid@odata.bind": "businessunits(@{outputs('Récupérer_la_BU_l''entité')?['body/businessunitid']})",
+              "item/membershiptype": 1,
+              "item/name": "@{outputs('Récupérer_l''entité')?['body/aglcm003_code']} Team @{triggerOutputs()?['body/aglcm003_nomentite']}",
+              "item/teamtype": 0
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "CreateRecord",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Récupérer_la_BU_l'entité": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f954879e-0d43-431e-be06-5f543422eed1"
+          }
+        },
+        "Update_a_row": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "aglcm003_zulaa_entites",
+              "recordId": "@outputs('Récupérer_l''entité')?['body/aglcm003_zulaa_entiteid']",
+              "item/aglcm003_teammagasin@odata.bind": "teams(@{outputs('Add_a_new_team_magasin')?['body/teamid']})"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "UpdateOnlyRecord",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Add_a_new_team_magasin": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ec9f49c2-7829-4ce7-a9cc-db65b52e437a"
+          }
+        },
+        "Initialize_variable": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Alt",
+                "type": "string",
+                "value": "@@"
+              }
+            ]
+          },
+          "runAfter": {
+            "Update_a_row": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "edfa765b-4989-46d1-8e12-40feac3a8e01"
+          }
+        },
+        "Compose": {
+          "type": "Compose",
+          "inputs": {
+            "Principal": {
+              "teamid": "@outputs('Update_a_row')?['body/_aglcm003_teammagasin_value']",
+              "@{variables('Alt')}odata.type": "Microsoft.Dynamics.CRM.team"
+            },
+            "AccessMask": "ReadAccess"
+          },
+          "runAfter": {
+            "Initialize_variable": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f3ba71d3-9110-4244-a8f1-283da7532c32"
+          }
+        },
+        "Perform_an_unbound_action": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "actionName": "GrantAccess",
+              "item/Target": "aglcm003_magasins(@{triggerOutputs()?['body/aglcm003_magasinid']})",
+              "item/PrincipalAccess": "@outputs('Compose')"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "PerformUnboundAction",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Compose": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "bac27c8d-ce9c-44be-a44d-a859506b0d40"
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{0fa6b06e-94bc-ef11-b8e8-7c1e5284b185}</formid>
+    <IntroducedVersion>1.0.0.1</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab id="F931FFE2-B873-473F-8F95-9502F0AA3F5E" name="tab_1" showlabel="false" labelid="{43b21be0-a7bb-4ea0-813b-d6e5db486737}">
+          <labels>
+            <label description="New Tab" languagecode="1033" />
+            <label description="Nouvel onglet" languagecode="1036" />
+          </labels>
+          <columns>
+            <column width="34%">
+              <sections>
+                <section id="0C655D4E-C6E3-424E-9AF5-71E72D30D12E" name="tab_1_column_1_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{d8645578-7535-43b0-af2c-4fd0f2a67cd5}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                    <label description="Général" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="542FBFBE-0E4C-496C-8012-555DE6581923" labelid="{c76fc587-a39e-49e0-8d02-3375e5ca8670}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9c76d890-6677-42c7-8dc3-5726192712b1}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Stock Withdrawal" languagecode="1033" />
+                          <label description="Sortie de stock" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_sortiestockid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_sortiestockid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ff780a55-85a8-4b4e-94c6-e3c1a478dbc6}" locklevel="0" colspan="1" rowspan="1" visible="false">
+                        <labels>
+                          <label description="Store" languagecode="1033" />
+                          <label description="Magasin" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_magasinid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_magasinid" disabled="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section id="02DECBA0-3AE2-484D-A19F-C5353AF4F4F2" name="tab_1_column_2_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{7d302fc6-32d8-43aa-b8c6-b3d171f4c96c}">
+                  <labels>
+                    <label description="Asset to assign" languagecode="1033" />
+                    <label description="Actif à attribuer" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="266FE48D-4D04-4E9A-8C5A-7DEF9A2F059B" labelid="{0a2efc4f-ab88-434d-9006-e42a4d289a92}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{998d5ac4-eb08-4ec9-9a85-49896b4c9c2e}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Asset" languagecode="1033" />
+                          <label description="Actif" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_actifid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_actifid" disabled="false">
+                          <parameters>
+                            <DependentAttributeName>aglcm003_zulaa_sortiestockactif.aglcm003_magasinid</DependentAttributeName>
+                            <DependentAttributeType>aglcm003_magasin</DependentAttributeType>
+                            <FilterRelationshipName>aglcm003_zulaa_actif_magasin</FilterRelationshipName>
+                            <AvailableViewIds>{D52A54A5-9215-49E9-99D6-8C788B10C90D}</AvailableViewIds>
+                            <DisableViewPicker>true</DisableViewPicker>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8e724aea-3f7c-4e7f-ae8f-fce4dbf15fd8}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Person to assign" languagecode="1033" />
+                          <label description="Personne à assigner" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_personneaattribue" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_personneaattribue" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section id="46FD66EA-B686-41D9-AAE0-C565BD78EC1F" name="tab_1_column_3_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{e1527ebf-eb55-4f80-8ebc-b67ae6d3fd12}" visible="false">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                    <label description="Nouvelle section" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="07C04A4E-A482-45CC-BAB7-7FCA3CD02938" labelid="{8a08d3f9-39d5-4e7b-baaa-40b58fd62599}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+        <Role Id="{67a417dd-5408-4780-ae31-08eb352689d8}" />
+        <Role Id="{1e751128-eb5a-4fc6-a40a-1b9777e44be0}" />
+        <Role Id="{2caf8682-2983-4ef1-911a-21428753c86c}" />
+        <Role Id="{aca8900e-9ae0-48b0-b8a0-27c5d1b3ddfa}" />
+        <Role Id="{8af06709-761b-45ce-8635-2843b7611713}" />
+        <Role Id="{6243f70f-f966-4bef-a974-3fcf74010665}" />
+        <Role Id="{df86adf3-7f84-42ca-9f5d-471894cc0a67}" />
+        <Role Id="{bcea6ffa-392f-4fc3-9cb9-4f5c1ee014ca}" />
+        <Role Id="{e8f681c1-b86d-4eb8-96e9-4fe841b8e677}" />
+        <Role Id="{26dbdc93-b507-4142-bee8-53bd107de494}" />
+        <Role Id="{e966cc81-0df5-4219-8d84-810dd77a2f94}" />
+        <Role Id="{f6b0002f-e424-456f-9923-91a4a24531d3}" />
+        <Role Id="{193bc51f-e247-4384-9ae8-9b5002fc254e}" />
+        <Role Id="{28b7e58a-972a-4f98-be9b-a7c0b42b8d58}" />
+        <Role Id="{9114d76e-83a6-4284-9a3d-b22ddde94ff4}" />
+        <Role Id="{a2f58b85-93af-4738-b79c-b2dac2a56c2f}" />
+        <Role Id="{9647979b-20a6-49c4-ae51-b8009ec9ef27}" />
+        <Role Id="{7be09862-32a5-4748-8b4a-cb796e44f27b}" />
+        <Role Id="{b0f08eca-c9fd-4fdc-96c7-d42c64f8f28c}" />
+        <Role Id="{77f0a1c4-d371-4c74-9322-d4b8ce4b63dd}" />
+        <Role Id="{a4f9ae0b-bc0e-48aa-9e4a-e107b36708f0}" />
+        <Role Id="{d09e433c-062d-484b-ae30-e168ebb6628e}" />
+        <Role Id="{eb40b86c-4ad3-4db8-b5c8-f35dbfaf1a2f}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+      <LocalizedName description="Informations" languagecode="1036" />
+    </LocalizedNames>
+  </systemform>
+</forms>

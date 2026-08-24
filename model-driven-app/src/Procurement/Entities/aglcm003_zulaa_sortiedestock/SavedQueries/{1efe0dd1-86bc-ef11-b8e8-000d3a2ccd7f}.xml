@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{1efe0dd1-86bc-ef11-b8e8-000d3a2ccd7f}</savedqueryid>
+    <querytype>8192</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical" output-format="xml-platform">
+        <entity name="aglcm003_zulaa_sortiedestock">
+          <attribute name="aglcm003_zulaa_sortiedestockid" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+            <condition attribute="ownerid" operator="eq-userid" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="My Sortie de stocks" languagecode="1033" />
+      <LocalizedName description="Mes sorties de stock" languagecode="1036" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Active Sortie de stocks owned by me" languagecode="1033" />
+      <Description description="Sorties de stock actives dont je suis propriétaire" languagecode="1036" />
+    </Descriptions>
+  </savedquery>
+</savedqueries>

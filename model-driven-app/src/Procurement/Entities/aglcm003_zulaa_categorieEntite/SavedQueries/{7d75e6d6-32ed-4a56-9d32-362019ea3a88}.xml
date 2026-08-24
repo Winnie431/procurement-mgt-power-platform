@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{7d75e6d6-32ed-4a56-9d32-362019ea3a88}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_categorieentite" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_categorieentiteid">
+          <cell name="aglcm003_entiteid" width="100" />
+          <cell name="aglcm003_categorieid" width="100" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_categorieentite">
+          <attribute name="aglcm003_zulaa_categorieentiteid" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_entiteid" />
+          <attribute name="aglcm003_categorieid" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Company Category" languagecode="1033" />
+      <LocalizedName description="Catégorie d'entreprise active" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

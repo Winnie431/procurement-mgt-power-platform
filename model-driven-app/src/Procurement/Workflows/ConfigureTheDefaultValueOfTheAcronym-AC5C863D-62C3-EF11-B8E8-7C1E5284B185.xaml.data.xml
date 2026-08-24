@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{ac5c863d-62c3-ef11-b8e8-7c1e5284b185}" Name="Configure The Default Value Of The Acronym" Description="Click To Add Description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/ConfigureTheDefaultValueOfTheAcronym-AC5C863D-62C3-EF11-B8E8-7C1E5284B185.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>2</Category>
+  <Mode>1</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>0</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <RunAs>1</RunAs>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.1</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>2</ProcessTriggerScope>
+  <PrimaryEntity>aglcm003_zulaa_inventaire</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Configure The Default Value Of The Acronym" />
+    <LocalizedName languagecode="1036" description="Configurer la valeur par défaut de l’acronyme" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description languagecode="1033" description="Click To Add Description" />
+    <Description languagecode="1036" description="Cliquez pour ajouter une description" />
+  </Descriptions>
+</Workflow>

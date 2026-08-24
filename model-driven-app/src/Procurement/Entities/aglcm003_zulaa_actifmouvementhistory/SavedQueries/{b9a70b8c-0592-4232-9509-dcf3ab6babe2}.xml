@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{b9a70b8c-0592-4232-9509-dcf3ab6babe2}</savedqueryid>
+    <layoutxml>
+      <grid name="aglcm003_zulaa_actifmouvementhistories" jump="aglcm003_historyname" select="1" icon="1" preview="1">
+        <row name="aglcm003_zulaa_actifmouvementhistory" id="aglcm003_zulaa_actifmouvementhistoryid">
+          <cell name="aglcm003_sortiestockid" width="109" />
+          <cell name="aglcm003_actifid" width="100" />
+          <cell name="aglcm003_attribuea" width="100" />
+          <cell name="aglcm003_datedattribution" width="138" />
+          <cell name="aglcm003_statutdelactif" width="125" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>2</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_actifmouvementhistory">
+          <attribute name="aglcm003_zulaa_actifmouvementhistoryid" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_actifid" />
+          <attribute name="aglcm003_attribuea" />
+          <attribute name="aglcm003_datedattribution" />
+          <attribute name="aglcm003_sortiestockid" />
+          <attribute name="aglcm003_statutdelactif" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Asset Movement History Associated View" languagecode="1033" />
+      <LocalizedName description="Vue associée de l’historique des mouvements d’actifs" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

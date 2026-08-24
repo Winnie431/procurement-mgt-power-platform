@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{ecfc1c60-3d20-4f30-b281-626df0aa2aa6}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_code" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_centredecoutid">
+          <cell name="aglcm003_code" width="300" />
+          <cell name="aglcm003_site" width="100" />
+          <cell name="aglcm003_libelle" width="100" />
+          <cell name="aglcm003_centredecout" width="122" />
+          <cell name="aglcm003_validateureb" width="116" />
+          <cell name="aglcm003_responsablemetier" width="149" />
+          <cell name="aglcm003_controldegestionid" width="147" />
+          <cell name="aglcm003_entiteid" width="100" />
+          <cell name="createdon" width="125" />
+          <cell name="aglcm003_businessunitparent" width="158" />
+          <cell name="aglcm003_businessunitpropretaire" width="184" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_centredecout">
+          <attribute name="aglcm003_zulaa_centredecoutid" />
+          <attribute name="aglcm003_code" />
+          <attribute name="createdon" />
+          <order attribute="aglcm003_code" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="1" />
+          </filter>
+          <attribute name="aglcm003_site" />
+          <attribute name="aglcm003_libelle" />
+          <attribute name="aglcm003_centredecout" />
+          <attribute name="aglcm003_validateureb" />
+          <attribute name="aglcm003_responsablemetier" />
+          <attribute name="aglcm003_controldegestionid" />
+          <attribute name="aglcm003_entiteid" />
+          <attribute name="aglcm003_businessunitparent" />
+          <attribute name="aglcm003_businessunitpropretaire" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Inactive Cost Centers" languagecode="1033" />
+      <LocalizedName description="Centres de coûts inactifs" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

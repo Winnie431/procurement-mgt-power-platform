@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RibbonDiffXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CustomActions>
+    <HideCustomAction HideActionId="aglcm003.Mscrm.Form.aglcm003_zulaa_inventairearticle.NewRecord.Hide" Location="Mscrm.Form.aglcm003_zulaa_inventairearticle.NewRecord" />
+    <HideCustomAction HideActionId="aglcm003.Mscrm.Form.aglcm003_zulaa_inventairearticle.NewRecordForBPFEntity.Hide" Location="Mscrm.Form.aglcm003_zulaa_inventairearticle.NewRecordForBPFEntity" />
+    <HideCustomAction HideActionId="aglcm003.Mscrm.SubGrid.aglcm003_zulaa_inventairearticle.AddExistingAssoc.Hide" Location="Mscrm.SubGrid.aglcm003_zulaa_inventairearticle.AddExistingAssoc" />
+    <HideCustomAction HideActionId="aglcm003.Mscrm.SubGrid.aglcm003_zulaa_inventairearticle.AddExistingStandard.Hide" Location="Mscrm.SubGrid.aglcm003_zulaa_inventairearticle.AddExistingStandard" />
+    <HideCustomAction HideActionId="aglcm003.Mscrm.SubGrid.aglcm003_zulaa_inventairearticle.AddNewStandard.Hide" Location="Mscrm.SubGrid.aglcm003_zulaa_inventairearticle.AddNewStandard" />
+    <HideCustomAction HideActionId="aglcm003.Mscrm.SubGrid.aglcm003_zulaa_inventairearticle.NewRecord.Hide" Location="Mscrm.SubGrid.aglcm003_zulaa_inventairearticle.NewRecord" />
+  </CustomActions>
+  <Templates>
+    <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+  </Templates>
+  <CommandDefinitions />
+  <RuleDefinitions>
+    <TabDisplayRules />
+    <DisplayRules />
+    <EnableRules />
+  </RuleDefinitions>
+  <LocLabels />
+</RibbonDiffXml>

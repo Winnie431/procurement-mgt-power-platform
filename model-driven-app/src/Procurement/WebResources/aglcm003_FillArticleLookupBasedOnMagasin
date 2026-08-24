@@ -1,0 +1,99 @@
+function onFormLoad(executionContext) {
+    const formContext = executionContext.getFormContext();
+
+    // Check if the Magasin field is already populated
+    const magasinLookup = formContext.getAttribute("aglcm003_magasinid").getValue();
+
+    if (magasinLookup && magasinLookup[0]) {
+        filterArticlesByMagasin(formContext, magasinLookup[0].id);
+    }
+}
+
+function filterArticlesByMagasin(formContext, magasinId) {
+    magasinId = magasinId.replace(/[{}]/g, ""); // Remove braces from the ID
+
+    Xrm.WebApi.retrieveMultipleRecords(
+        "aglcm003_magasinarticle",
+        `?$select=_aglcm003_articleid_value&$filter=_aglcm003_magasinid_value eq ${magasinId}`
+    ).then(
+        function (result) {
+            console.log(result);
+
+            // Créer un tableau pour stocker les valeurs "_aglcm003_articleid_value"
+            const allowedGuids = [];
+
+            // Parcourir le tableau "entities" pour extraire les valeurs
+            result.entities.forEach(entity => {
+                if (entity._aglcm003_articleid_value) {
+                    allowedGuids.push(entity._aglcm003_articleid_value);
+                }
+            });
+
+            // Afficher le tableau contenant les valeurs GUID
+            console.log(allowedGuids);
+
+            if (allowedGuids.length > 0) {
+                // Appliquer un filtre à la colonne lookup
+                formContext.getControl("aglcm003_articleid").addPreSearch(function () {
+                    addArticleLookupFilter(formContext, allowedGuids);
+                });
+            } else {
+
+            }
+            
+            
+            /*if (articleIds.length > 0) {
+                console.log("Je suis dans le IF");
+                const filter = `<filter type="and">
+                                    <condition attribute="_aglcm003_articleid_value" operator="in">
+                                        ${articleIds.map((id) => `<value>${id}</value>`).join("")}
+                                    </condition>
+                                </filter>`;
+
+                // Apply the filter to the Article lookup
+                //formContext.getControl("aglcm003_articleid").addCustomFilter(filter);
+                const articleControl = formContext.getControl("aglcm003_articleid");
+                if (articleControl) {
+                    articleControl.addCustomFilter(filter);
+                    formContext.ui.clearFormNotification("noArticles");
+                    console.log("Filter applied:", filter);
+                    // Clear any notifications
+                    formContext.ui.clearFormNotification("noArticles");
+                } else {
+                    console.error("Article lookup field not found on the form.");
+                }
+            } else {
+                // If no articles are found, show a notification
+                formContext.getControl("aglcm003_articleid").addCustomFilter(
+                    `<filter type="and"><condition attribute="aglcm003_articleid" operator="null" /></filter>`
+                );
+                formContext.ui.setFormNotification(
+                    "No articles available for the selected Magasin.",
+                    "WARNING",
+                    "noArticles"
+                );
+            }*/
+        },
+        function (error) {
+            console.error("Error retrieving Magasin articles:", error);
+            formContext.ui.setFormNotification(
+                "An error occurred while retrieving articles for the selected Magasin.",
+                "ERROR",
+                "fetchError"
+            );
+        }
+    );
+}
+
+
+function addArticleLookupFilter(formContext, allowedGuids) {
+    // Construire un filtre en utilisant les GUID autorisés
+    const fetchXmlFilter = `
+        <filter type="or">
+            ${allowedGuids.map(guid => `<condition attribute="aglcm003_zulaa_articleid" operator="eq" value="${guid}" />`).join("")}
+        </filter>
+    `;
+
+    // Appliquer le filtre FetchXML au champ lookup
+    formContext.getControl("aglcm003_articleid").addCustomFilter(fetchXmlFilter, "aglcm003_zulaa_article");
+}

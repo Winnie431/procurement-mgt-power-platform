@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppModule>
+  <UniqueName>aglcm003_ZULAA</UniqueName>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <WebResourceId>d9673c68-6217-ef11-9f89-6045bd9c5fcf</WebResourceId>
+  <OptimizedFor></OptimizedFor>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <FormFactor>1</FormFactor>
+  <ClientType>4</ClientType>
+  <NavigationType>0</NavigationType>
+  <AppModuleComponents>
+    <AppModuleComponent type="1" schemaName="aglcm003_delegationparrole" />
+    <AppModuleComponent type="1" schemaName="aglcm003_lignedelareception" />
+    <AppModuleComponent type="1" schemaName="aglcm003_magasin" />
+    <AppModuleComponent type="1" schemaName="aglcm003_notefournisseur" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_actif" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_article" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_auxdeconsversion" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_bondecommande" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_categorie" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_categorieentite" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_centredecout" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_demandedachat" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_demandedachatarticlefournisseur" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_demandesortiestock" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_departement" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_devise" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_direction" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_entite" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_expressiondebesoin" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_fournisseur" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_inventaire" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_inventaireactif" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_inventairearticle" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_lignesdelademandedesortie" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_pays" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_reception" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_retourstock" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_retourstockactif" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_retourstockarticle" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_sortiedestock" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_sortiestockactif" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_sortiestockarticle" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_tva" />
+    <AppModuleComponent type="1" schemaName="aglcm003_zulaa_unite" />
+    <AppModuleComponent type="1" schemaName="systemuser" />
+    <AppModuleComponent type="60" id="{2b59ef57-773f-ef11-840a-000d3a49c73e}" />
+    <AppModuleComponent type="60" id="{1c5f5638-b0f8-4556-a7bf-281d9526361b}" />
+    <AppModuleComponent type="60" id="{347bc45e-3eb2-422c-b124-5fff5cbacc2b}" />
+    <AppModuleComponent type="60" id="{f41b38aa-d0ab-ef11-b8e8-7c1e52295aa1}" />
+    <AppModuleComponent type="60" id="{2dcaf62d-8abb-ef11-b8e8-7c1e5284b185}" />
+    <AppModuleComponent type="60" id="{0fa6b06e-94bc-ef11-b8e8-7c1e5284b185}" />
+    <AppModuleComponent type="60" id="{1efe93a4-9c32-47f3-9552-ee176d75ba28}" />
+    <AppModuleComponent type="60" id="{d6a51915-097b-4403-8fb5-f27764553e3d}" />
+    <AppModuleComponent type="62" schemaName="aglcm003_ZULAA" />
+  </AppModuleComponents>
+  <AppModuleRoleMaps>
+    <Role id="{29cfed22-0c69-ef11-bfe3-6045bd9dfa7f}" />
+    <Role id="{a7f09ace-47a7-ef11-b8e9-000d3a228a91}" />
+    <Role id="{3260f1ab-1039-ef11-a316-000d3a78bcff}" />
+    <Role id="{bc573542-d64d-ef11-bfe2-6045bd91cd0d}" />
+    <Role id="{cb1b0be3-ed33-ef11-8409-000d3a4a0760}" />
+    <Role id="{219778cc-b1cd-ef11-8ee9-7c1e52298a6c}" />
+    <Role id="{db688177-d64d-ef11-bfe2-7c1e52285b25}" />
+    <Role id="{040c4a6c-d64d-ef11-bfe2-6045bd91cd0d}" />
+    <Role id="{15f75980-d64d-ef11-bfe2-6045bd91cd0d}" />
+    <Role id="{f4fbdaa9-d64d-ef11-bfe2-7c1e52285b25}" />
+    <Role id="{5bc5346a-10cd-ef11-b8e8-6045bd884039}" />
+    <Role id="{94d09283-ffcc-ef11-b8e8-6045bd884039}" />
+    <Role id="{cba862bb-d64d-ef11-bfe2-6045bd91cd0d}" />
+    <Role id="{18a072ca-d64d-ef11-bfe2-6045bd91cd0d}" />
+    <Role id="{5512f941-d74d-ef11-bfe2-7c1e52285b25}" />
+    <Role id="{7833f485-d569-ef11-bfe3-6045bd9dfa7f}" />
+    <Role id="{627090ff-40a3-4053-8790-584edc5be201}" />
+    <Role id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+  </AppModuleRoleMaps>
+  <LocalizedNames>
+    <LocalizedName description="ZULAA" languagecode="1033" />
+    <LocalizedName description="ZULAA" languagecode="1036" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description description="PURCHASE &amp; STOCK MANAGEMENT SOFTWARE" languagecode="1033" />
+    <Description description="LOGICIEL DE GESTION DES ACHATS ET STOCKS" languagecode="1036" />
+  </Descriptions>
+  <appelements>
+    <appelement uniquename="agl_aglcm003_ZULAA_canvasappid_agl_zulaadefaultcommandlibrary_cdb20">
+      <canvasappid>
+        <name>agl_zulaadefaultcommandlibrary_cdb20</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>agl_aglcm003_ZULAA_canvasappid_agl_zulaadefaultcommandlibrary_cdb20</name>
+    </appelement>
+    <appelement uniquename="aglcm003_aglcm003_ZULAA_canvasappid_ablnstd_workflowrunworkflowvizualizer_4963a">
+      <canvasappid>
+        <name>ablnstd_workflowrunworkflowvizualizer_4963a</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>aglcm003_aglcm003_ZULAA_canvasappid_ablnstd_workflowrunworkflowvizualizer_4963a</name>
+    </appelement>
+    <appelement uniquename="aglcm003_aglcm003_ZULAA_canvasappid_aglcm003_creationactifapartirdereception_e29d7">
+      <canvasappid>
+        <name>aglcm003_creationactifapartirdereception_e29d7</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>aglcm003_aglcm003_ZULAA_canvasappid_aglcm003_creationactifapartirdereception_e29d7</name>
+    </appelement>
+  </appelements>
+  <appsettings>
+    <appsetting settingdefinitionid.uniquename="AppChannel">
+      <iscustomizable>1</iscustomizable>
+      <value>1</value>
+    </appsetting>
+  </appsettings>
+</AppModule>

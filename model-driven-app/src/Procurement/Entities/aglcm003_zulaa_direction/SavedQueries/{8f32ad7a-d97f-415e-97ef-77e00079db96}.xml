@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{8f32ad7a-d97f-415e-97ef-77e00079db96}</savedqueryid>
+    <layoutxml>
+      <grid name="aglcm003_zulaa_directions" jump="aglcm003_nom" select="1" icon="1" preview="0">
+        <row name="aglcm003_zulaa_direction" id="aglcm003_zulaa_directionid">
+          <cell name="aglcm003_nom" width="300" />
+          <cell name="aglcm003_entiteid" width="100" />
+          <cell name="aglcm003_responsableid" width="111" />
+          <cell name="aglcm003_code" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_direction">
+          <attribute name="aglcm003_zulaa_directionid" />
+          <attribute name="aglcm003_nom" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_entiteid" />
+          <attribute name="aglcm003_responsableid" />
+          <attribute name="aglcm003_code" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Direction Lookup View" languagecode="1033" />
+      <LocalizedName description="Vue Recherche des  directions" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

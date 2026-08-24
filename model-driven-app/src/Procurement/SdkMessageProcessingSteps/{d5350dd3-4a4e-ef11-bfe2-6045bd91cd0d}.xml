@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SdkMessageProcessingStep Name="CalculMontantDA.CalculMontantDA: Create of aglcm003_zulaa_demandedachatarticlefournisseur" SdkMessageProcessingStepId="{d5350dd3-4a4e-ef11-bfe2-6045bd91cd0d}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SdkMessageId>9ebdbb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
+  <PluginTypeName>CalculMontantDA.CalculMontantDA, CalculMontantDA, Version=1.0.0.0, Culture=neutral, PublicKeyToken=38d19d989321e419</PluginTypeName>
+  <PluginTypeId>70129907-2ae2-445c-bbec-5e21d39b77aa</PluginTypeId>
+  <PrimaryEntity>aglcm003_zulaa_demandedachatarticlefournisseur</PrimaryEntity>
+  <AsyncAutoDelete>0</AsyncAutoDelete>
+  <Description>CalculMontantDA.CalculMontantDA: Create of aglcm003_zulaa_demandedachatarticlefournisseur</Description>
+  <FilteringAttributes></FilteringAttributes>
+  <InvocationSource>1</InvocationSource>
+  <Mode>0</Mode>
+  <Rank>2</Rank>
+  <EventHandlerTypeCode>4602</EventHandlerTypeCode>
+  <Stage>40</Stage>
+  <IsCustomizable>1</IsCustomizable>
+  <IsHidden>0</IsHidden>
+  <SupportedDeployment>0</SupportedDeployment>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <SdkMessageProcessingStepImages />
+</SdkMessageProcessingStep>

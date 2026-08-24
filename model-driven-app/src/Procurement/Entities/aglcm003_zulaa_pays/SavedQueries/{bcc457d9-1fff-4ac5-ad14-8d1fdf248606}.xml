@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>1</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{bcc457d9-1fff-4ac5-ad14-8d1fdf248606}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_nom" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_paysid">
+          <cell name="aglcm003_nom" width="300" />
+          <cell name="aglcm003_indicateurdupays" width="147" />
+          <cell name="createdon" width="125" />
+          <cell name="aglcm003_isactif" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>4</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_pays">
+          <attribute name="aglcm003_zulaa_paysid" />
+          <attribute name="aglcm003_nom" />
+          <attribute name="createdon" />
+          <order attribute="aglcm003_nom" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <filter type="or" isquickfindfields="1">
+            <condition attribute="aglcm003_nom" operator="like" value="{0}" />
+          </filter>
+          <attribute name="aglcm003_indicateurdupays" />
+          <attribute name="aglcm003_isactif" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Quick Find Active Countries" languagecode="1033" />
+      <LocalizedName description="Recherche Rapide des Pays Actifs" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{439a96cb-696b-ef11-bfe3-6045bd9dfa7f}</WebResourceId>
+  <Name>aglcm003_convertlibellecentredecouttoupper</Name>
+  <DisplayName>Convert Libelle centre de cout to Upper</DisplayName>
+  <Description>Convertion du  libelle centre de cout en majuscule</Description>
+  <WebResourceType>3</WebResourceType>
+  <IntroducedVersion>1.0.0.1</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/aglcm003_convertlibellecentredecouttoupper439A96CB-696B-EF11-BFE3-6045BD9DFA7F</FileName>
+</WebResource>

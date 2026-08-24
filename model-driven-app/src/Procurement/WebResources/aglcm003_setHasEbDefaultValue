@@ -1,0 +1,52 @@
+
+function setHasEbDefaultValue(executionContext) {
+    // Récupération du contexte du formulaire pour accéder aux champs et autres informations du formulaire
+    var formContext = executionContext.getFormContext();
+
+    // Récupération de la valeur du champ lookup 'aglcm003_entiteid'
+    var entiteIdDA = formContext.getAttribute("aglcm003_entiteid").getValue();
+   
+
+    // Vérifie si une valeur a été sélectionnée dans le champ 'aglcm003_entiteid'
+    if (entiteIdDA != null) {
+        // Extraction de l'ID de l'enregistrement lookup sélectionné (sans les accolades)
+        var lookupId = entiteIdDA[0].id.replace('{', '').replace('}', '');
+        //alert(lookupId);
+        
+
+        // Appel à l'API Web pour récupérer les informations de l'enregistrement associé
+        Xrm.WebApi.retrieveRecord(
+            "aglcm003_zulaa_entite", // Nom logique de l'entité à partir de laquelle les données sont récupérées
+            lookupId,                            // ID de l'enregistrement à récupérer
+            "?$select=aglcm003_haseb" // Sélection des champs à récupérer
+        ).then(
+            function success(result) {
+                
+                var hasEbValue = result.aglcm003_haseb;
+                
+
+                // Vérifie si le champ 'aglcm003_haseb' existe sur le formulaire
+                var hasEbField = formContext.getAttribute("aglcm003_haseb");
+                if (hasEbField != null) {
+                    hasEbField.setValue(hasEbValue);
+                    //alert(hasEbValue, "valeur de has eb de la DA ");
+
+                    //alert(typeof hasEbValue);
+                    if (hasEbValue === true) {
+                        formContext.getControl("aglcm003_expressiondebesoinid").setVisible(true);
+                        formContext.getAttribute("aglcm003_expressiondebesoinid").setRequiredLevel("required");
+                    }else{
+                        formContext.getControl("aglcm003_expressiondebesoinid").setVisible(false);
+                        formContext.getAttribute("aglcm003_expressiondebesoinid").setRequiredLevel("none");
+                    }
+                } else {
+                    //console.log("Field 'aglcm003_haseb' not found on the form.");
+                }
+            },
+            function error(error) {
+                // Affiche le message d'erreur en cas d'échec de l'appel à l'API Web
+                //console.log(error.message);
+            }
+        );
+    }
+}

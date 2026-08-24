@@ -1,0 +1,773 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml version="9.2.26073.158" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.26073.158" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.26074.00157">
+  <SolutionManifest>
+    <UniqueName>CMXZULAADEV</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="CMX-ZULAA DEV" languagecode="1033" />
+      <LocalizedName description="CMX-ZULAA DEV" languagecode="1036" />
+    </LocalizedNames>
+    <Descriptions />
+    <Version>1.0.260202.4</Version>
+    <Managed>0</Managed>
+    <Publisher>
+      <UniqueName>AGL_CM003</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="AGL Cameroun CM003" languagecode="1033" />
+        <LocalizedName description="AGL Cameroun CM003" languagecode="1036" />
+      </LocalizedNames>
+      <Descriptions />
+      <EMailAddress xsi:nil="true"></EMailAddress>
+      <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
+      <CustomizationPrefix>aglcm003</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>70349</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="1" schemaName="ablnstd_apprvlstd_wfrun" behavior="1" />
+      <RootComponent type="1" schemaName="aglcm003_delegationparrole" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_lignedelareception" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_magasin" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_magasinarticle" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_notefournisseur" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_acronyme" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_actif" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_actifmouvementhistory" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_article" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_auxdeconsversion" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_bondecommande" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_categorie" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_categorieentite" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_centredecout" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_codecompteur" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_demandedachat" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_demandedachatarticlefournisseur" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_demandesortiestock" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_departement" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_devise" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_direction" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_entite" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_expressiondebesoin" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_fournisseur" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_inventaire" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_inventaireactif" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_inventairearticle" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_lignesdelademandedesortie" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_pays" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_reception" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_retourstock" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_retourstockactif" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_retourstockarticle" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_sortiedestock" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_sortiestockactif" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_sortiestockarticle" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_tva" behavior="0" />
+      <RootComponent type="1" schemaName="aglcm003_zulaa_unite" behavior="0" />
+      <RootComponent type="1" schemaName="systemuser" behavior="1" />
+      <RootComponent type="1" schemaName="team" behavior="1" />
+      <RootComponent type="20" id="{040c4a6c-d64d-ef11-bfe2-6045bd91cd0d}" behavior="0" />
+      <RootComponent type="20" id="{15f75980-d64d-ef11-bfe2-6045bd91cd0d}" behavior="0" />
+      <RootComponent type="20" id="{18a072ca-d64d-ef11-bfe2-6045bd91cd0d}" behavior="0" />
+      <RootComponent type="20" id="{219778cc-b1cd-ef11-8ee9-7c1e52298a6c}" behavior="0" />
+      <RootComponent type="20" id="{29cfed22-0c69-ef11-bfe3-6045bd9dfa7f}" behavior="0" />
+      <RootComponent type="20" id="{5512f941-d74d-ef11-bfe2-7c1e52285b25}" behavior="0" />
+      <RootComponent type="20" id="{5bc5346a-10cd-ef11-b8e8-6045bd884039}" behavior="0" />
+      <RootComponent type="20" id="{7833f485-d569-ef11-bfe3-6045bd9dfa7f}" behavior="0" />
+      <RootComponent type="20" id="{7c7e3553-a77d-f011-b4cc-7c1e524da469}" behavior="0" />
+      <RootComponent type="20" id="{94d09283-ffcc-ef11-b8e8-6045bd884039}" behavior="0" />
+      <RootComponent type="20" id="{a7f09ace-47a7-ef11-b8e9-000d3a228a91}" behavior="0" />
+      <RootComponent type="20" id="{bc573542-d64d-ef11-bfe2-6045bd91cd0d}" behavior="0" />
+      <RootComponent type="20" id="{cb1b0be3-ed33-ef11-8409-000d3a4a0760}" behavior="0" />
+      <RootComponent type="20" id="{cba862bb-d64d-ef11-bfe2-6045bd91cd0d}" behavior="0" />
+      <RootComponent type="20" id="{db688177-d64d-ef11-bfe2-7c1e52285b25}" behavior="0" />
+      <RootComponent type="20" id="{f4fbdaa9-d64d-ef11-bfe2-7c1e52285b25}" behavior="0" />
+      <RootComponent type="29" id="{04140554-8db0-ef11-b8e8-7c1e5284b185}" behavior="0" />
+      <RootComponent type="29" id="{05516bab-8117-ef11-9f89-6045bd9c5fcf}" behavior="0" />
+      <RootComponent type="29" id="{09791533-37ae-ee11-a568-0022489b93eb}" behavior="0" />
+      <RootComponent type="29" id="{09c9e4b9-243a-ef11-8409-002248822253}" behavior="0" />
+      <RootComponent type="29" id="{0ca88efb-89bb-ef11-b8e8-7c1e5284b185}" behavior="0" />
+      <RootComponent type="29" id="{0e7bf132-8829-ef11-840b-6045bd8d9cf9}" behavior="0" />
+      <RootComponent type="29" id="{10567ee2-d060-f011-bec3-6045bd901da8}" behavior="0" />
+      <RootComponent type="29" id="{15912df1-a05c-f011-bec2-7c1e524da469}" behavior="0" />
+      <RootComponent type="29" id="{15f982f2-fd19-f011-998a-7c1e524da469}" behavior="0" />
+      <RootComponent type="29" id="{2515c6d3-9fa5-ef11-8a69-000d3a2141aa}" behavior="0" />
+      <RootComponent type="29" id="{2568888f-db4f-ef11-bfe2-7c1e52285b25}" behavior="0" />
+      <RootComponent type="29" id="{28ff6c46-a76a-ef11-bfe2-000d3a4c5d02}" behavior="0" />
+      <RootComponent type="29" id="{33488aa5-382a-ef11-840a-002248822253}" behavior="0" />
+      <RootComponent type="29" id="{34017421-d6ab-ef11-b8e8-6045bd884039}" behavior="0" />
+      <RootComponent type="29" id="{35605536-97bc-ef11-b8e8-6045bd884039}" behavior="0" />
+      <RootComponent type="29" id="{3a9b8564-5634-ef11-8409-000d3a4a0760}" behavior="0" />
+      <RootComponent type="29" id="{4bc59364-3e1f-ef11-840a-000d3a2f362e}" behavior="0" />
+      <RootComponent type="29" id="{51346c30-dbbd-ef11-b8e8-6045bd884039}" behavior="0" />
+      <RootComponent type="29" id="{5e407802-0dc6-ef11-b8e8-6045bd884039}" behavior="0" />
+      <RootComponent type="29" id="{5f378d32-e13a-ef11-8409-6045bd9092dd}" behavior="0" />
+      <RootComponent type="29" id="{61ad7e00-4b35-ef11-8409-6045bd9092dd}" behavior="0" />
+      <RootComponent type="29" id="{62d5689a-c513-f011-9989-6045bd9920e1}" behavior="0" />
+      <RootComponent type="29" id="{69cb27ff-efa7-ef11-b8e8-7c1e524e3980}" behavior="0" />
+      <RootComponent type="29" id="{6e50913b-dacc-ef11-8ee9-000d3abd912a}" behavior="0" />
+      <RootComponent type="29" id="{6f7b42cf-f93c-ef11-8409-6045bd9092dd}" behavior="0" />
+      <RootComponent type="29" id="{8056122f-863b-ef11-8409-6045bd9092dd}" behavior="0" />
+      <RootComponent type="29" id="{8553418d-e1be-ef11-b8e8-6045bd884039}" behavior="0" />
+      <RootComponent type="29" id="{85ed9b2f-cd33-ef11-8409-002248822253}" behavior="0" />
+      <RootComponent type="29" id="{8965d0f4-4606-ef11-9f89-6045bd890a9a}" behavior="0" />
+      <RootComponent type="29" id="{8e5904e2-6bb9-ef11-b8e8-6045bd884039}" behavior="0" />
+      <RootComponent type="29" id="{917dd84d-ac5f-ef11-bfe2-6045bd907456}" behavior="0" />
+      <RootComponent type="29" id="{967e6f38-4a3d-ef11-8409-6045bd9092dd}" behavior="0" />
+      <RootComponent type="29" id="{9e3d4ea6-a6c1-ef11-b8e8-6045bd884039}" behavior="0" />
+      <RootComponent type="29" id="{a1cdaa75-d160-f011-bec2-7c1e525f4bf8}" behavior="0" />
+      <RootComponent type="29" id="{a272f1f0-76c3-ef11-b8e8-6045bd884039}" behavior="0" />
+      <RootComponent type="29" id="{a53cba2f-6db9-ef11-b8e8-6045bd884039}" behavior="0" />
+      <RootComponent type="29" id="{a97d326e-193d-ef11-8409-6045bd9092dd}" behavior="0" />
+      <RootComponent type="29" id="{a98abddc-4a3d-ef11-8409-6045bd9092dd}" behavior="0" />
+      <RootComponent type="29" id="{abdc512c-b0be-ef11-b8e8-7c1e5284b185}" behavior="0" />
+      <RootComponent type="29" id="{ac5c863d-62c3-ef11-b8e8-7c1e5284b185}" behavior="0" />
+      <RootComponent type="29" id="{af65c770-0ec6-ef11-b8e8-6045bd884039}" behavior="0" />
+      <RootComponent type="29" id="{b81f2c30-df7c-f011-b4cb-7c1e525f4bf8}" behavior="0" />
+      <RootComponent type="29" id="{baf0b1f2-57ae-ef11-b8e8-6045bd884039}" behavior="0" />
+      <RootComponent type="29" id="{bd15023d-092f-ef11-840a-002248822253}" behavior="0" />
+      <RootComponent type="29" id="{c0dfd343-e42f-ef11-840a-002248822253}" behavior="0" />
+      <RootComponent type="29" id="{d4bdaaee-63c3-ef11-b8e8-7c1e5284b185}" behavior="0" />
+      <RootComponent type="29" id="{d5f4b535-3065-ef11-bfe3-6045bd9dfa7f}" behavior="0" />
+      <RootComponent type="29" id="{db46d3cb-d537-ef11-8409-002248822253}" behavior="0" />
+      <RootComponent type="29" id="{de3c67ab-ceab-ef11-b8e8-7c1e5284b185}" behavior="0" />
+      <RootComponent type="29" id="{de8241ea-8fcb-ef11-b8e8-6045bd884039}" behavior="0" />
+      <RootComponent type="29" id="{e2337f44-3f3d-ef11-8409-002248822253}" behavior="0" />
+      <RootComponent type="29" id="{e49603bf-5bae-ef11-b8e8-6045bd884039}" behavior="0" />
+      <RootComponent type="29" id="{e905f6d7-0650-ef11-bfe2-7c1e52285b25}" behavior="0" />
+      <RootComponent type="29" id="{ea125a29-234f-ef11-bfe2-7c1e52285b25}" behavior="0" />
+      <RootComponent type="29" id="{f57056df-95bc-ef11-b8e8-6045bd884039}" behavior="0" />
+      <RootComponent type="29" id="{fc006c4c-fb62-f011-bec2-6045bd9920e1}" behavior="0" />
+      <RootComponent type="29" id="{fddc0f0c-d3ab-ef11-b8e8-7c1e5284b185}" behavior="0" />
+      <RootComponent type="29" id="{ff17913f-c513-f011-9989-6045bd9920e1}" behavior="0" />
+      <RootComponent type="300" schemaName="agl_zulaadefaultcommandlibrary_cdb20" behavior="0" />
+      <RootComponent type="300" schemaName="aglcm003_creationactifapartirdereception_e29d7" behavior="0" />
+      <RootComponent type="431" schemaName="aglcm003_zulaa_entite aglcm003_logo" behavior="0" />
+      <RootComponent type="432" schemaName="aglcm003_zulaa_entite" behavior="0" />
+      <RootComponent type="61" schemaName="agl_iIconcategoriezulaa.svg" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_blockeditadddelete" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_blockupload" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_Centredecoutzulaa.png" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_convertlibellecentredecouttoupper" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_convertlibelledirtoupper" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_convertlibellepaystoupper" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_covertlibellearticletoupper" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_covertlibellecategorietoupper" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_covertlibelledeparttoupper" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_covertlibelleentitetoupper" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_covertlibellefournitoupper" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_deviseicon" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_DirectionZulaa.png" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_FillArticleLookupBasedOnMagasin" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_FounisseurZulaa.png" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_iconcentredecoutzulaa" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_icondirectionzulaa.svg" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_icontauxdeconversionzulaasvg" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_logoAGL.png" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_logoarticlezulaa" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_Logoarticlezulaa.svg" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_logozulaa.png" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_MagasinZulaa.jpg" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_mappageebtoda" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_mappingfournisseurbctorc" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_NavigationCustomPageCreationActif" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_onarticlechangedemandesortie" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_onquantitychangedemandesortie" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_OnQuantityChangeSortiedeStock" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_opencustom_from_form" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_PaysZulaa.png" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_script.js" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_setAndValidateQuantitedejarecu" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_setandvalidatequantiteLlivre" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_setHasEbDefaultValue" behavior="0" />
+      <RootComponent type="61" schemaName="aglcm003_ValidateEmptymagasinOnDS" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_/RichTextEditorControl/libs/ckeditor/plugins/blockquote/icons/hidpi/blockquote.png" behavior="0" />
+      <RootComponent type="62" schemaName="aglcm003_assetmouvementtempalte" behavior="0" />
+      <RootComponent type="62" schemaName="aglcm003_notefourni" behavior="0" />
+      <RootComponent type="62" schemaName="aglcm003_ZULAA" behavior="0" />
+      <RootComponent type="70" id="{08d38a74-fc62-f011-bec2-7c1e525f4bf8}" behavior="0" />
+      <RootComponent type="80" schemaName="aglcm003_ZULAA" behavior="0" />
+      <RootComponent type="9" schemaName="aglcm003_languagecode" behavior="0" />
+      <RootComponent type="9" schemaName="aglcm003_listestatutlivraison" behavior="0" />
+      <RootComponent type="9" schemaName="aglcm003_modeimportation" behavior="0" />
+      <RootComponent type="9" schemaName="aglcm003_outofstockcode" behavior="0" />
+      <RootComponent type="9" schemaName="aglcm003_priorite" behavior="0" />
+      <RootComponent type="9" schemaName="aglcm003_quantitemagasinajourcode" behavior="0" />
+      <RootComponent type="9" schemaName="aglcm003_returnrequestcode" behavior="0" />
+      <RootComponent type="9" schemaName="aglcm003_role" behavior="0" />
+      <RootComponent type="9" schemaName="aglcm003_rolegestiondestock" behavior="0" />
+      <RootComponent type="9" schemaName="aglcm003_rolevebvdacg" behavior="0" />
+      <RootComponent type="9" schemaName="aglcm003_statusofpurchaserequestline" behavior="0" />
+      <RootComponent type="9" schemaName="aglcm003_statutbpncommandecode" behavior="0" />
+      <RootComponent type="9" schemaName="aglcm003_statutdelactif" behavior="0" />
+      <RootComponent type="9" schemaName="aglcm003_statutdelinventaire" behavior="0" />
+      <RootComponent type="9" schemaName="aglcm003_statutdemandeachatcode" behavior="0" />
+      <RootComponent type="9" schemaName="aglcm003_statutdemandedesortie" behavior="0" />
+      <RootComponent type="9" schemaName="aglcm003_statutgeststockrecepcode" behavior="0" />
+      <RootComponent type="9" schemaName="aglcm003_statutreception" behavior="0" />
+      <RootComponent type="9" schemaName="aglcm003_typeapprovisionnementcode" behavior="0" />
+      <RootComponent type="9" schemaName="aglcm003_typedarticles" behavior="0" />
+      <RootComponent type="9" schemaName="aglcm003_typedimputation" behavior="0" />
+      <RootComponent type="9" schemaName="aglcm003_typegestionda" behavior="0" />
+      <RootComponent type="91" id="{0aba439a-fe8a-4b22-99a5-8960e4a61b32}" schemaName="BulkPatchPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=07e68c12e63bc747" behavior="0" />
+      <RootComponent type="91" id="{67eb9277-520d-45aa-95e9-504b7dfbe659}" schemaName="CalculMontantDA, Version=1.0.0.0, Culture=neutral, PublicKeyToken=38d19d989321e419" behavior="0" />
+      <RootComponent type="91" id="{5ee70772-2de0-411b-94ec-f5720944b749}" schemaName="CalculMontantDADelete, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f728363e7814519" behavior="0" />
+      <RootComponent type="91" id="{9f723f11-88f0-4420-badc-a0aa83bba1c1}" schemaName="CategorieEntitéNamePlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4d6c3892466a4ed6" behavior="0" />
+      <RootComponent type="91" id="{b84f9fcb-f217-40a6-bc8d-079ffc2699f9}" schemaName="CodeGneationPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9b18e7298d93b8e7" behavior="0" />
+      <RootComponent type="91" id="{77565228-e3be-40c5-b57b-ff4e3de9dd39}" schemaName="DaAmountUpdate, Version=1.0.0.0, Culture=neutral, PublicKeyToken=468c5f968f7a2cb9" behavior="0" />
+      <RootComponent type="91" id="{e711a181-bdbc-42f2-a626-bd0f8bc530b3}" schemaName="GenerateCodeBCPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7e9df4eec31d7d9f" behavior="0" />
+      <RootComponent type="91" id="{0a6034d4-951e-47d7-b914-512e5f0d2175}" schemaName="GenerateCodeEBPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=99416271ca1827de" behavior="0" />
+      <RootComponent type="91" id="{60d27b0a-f6e0-4482-9d9d-9105542eea95}" schemaName="GenerateEncryptCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0832deb892a3fe98" behavior="0" />
+      <RootComponent type="91" id="{5addebad-d3da-473d-ade8-21c5dfd87a7a}" schemaName="Zulaa Gestion de Stock.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f169ead759eb29f" behavior="0" />
+      <RootComponent type="91" id="{94831ccf-a964-42b5-9358-a417d35f7cdb}" schemaName="ZulaaReception.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ee0f489481216997" behavior="0" />
+      <RootComponent type="92" id="{0716cbbc-a1c1-ef11-b8e8-7c1e52295aa1}" behavior="0" />
+      <RootComponent type="92" id="{18044aeb-a2c1-ef11-b8e8-7c1e52295aa1}" behavior="0" />
+      <RootComponent type="92" id="{19f0f918-72c3-ef11-b8e8-7c1e5284b185}" behavior="0" />
+      <RootComponent type="92" id="{1ce9085a-4b4e-ef11-bfe2-7c1e52285b25}" behavior="0" />
+      <RootComponent type="92" id="{1f3a08d3-a4c1-ef11-b8e8-7c1e5284b185}" behavior="0" />
+      <RootComponent type="92" id="{3cf2eff3-a4c1-ef11-b8e8-6045bd884039}" behavior="0" />
+      <RootComponent type="92" id="{41440383-a4c1-ef11-b8e8-7c1e5284b185}" behavior="0" />
+      <RootComponent type="92" id="{4d954c23-4b4e-ef11-bfe2-6045bd91cd0d}" behavior="0" />
+      <RootComponent type="92" id="{53591be8-2d21-f011-998a-7c1e524da469}" behavior="0" />
+      <RootComponent type="92" id="{57b6aa38-accb-ef11-b8e8-7c1e52295aa1}" behavior="0" />
+      <RootComponent type="92" id="{58f760c8-15c6-ef11-b8e8-6045bd884039}" behavior="0" />
+      <RootComponent type="92" id="{594a59ac-594f-ef11-bfe2-7c1e52285b25}" behavior="0" />
+      <RootComponent type="92" id="{5d831fbb-a2c1-ef11-b8e8-7c1e5284b185}" behavior="0" />
+      <RootComponent type="92" id="{62946bfb-06ab-ef11-b8e8-7c1e5284b185}" behavior="0" />
+      <RootComponent type="92" id="{65cf84cf-c6c8-ef11-b8e8-6045bd884039}" behavior="0" />
+      <RootComponent type="92" id="{69f9e465-03aa-ef11-b8e8-7c1e5284b185}" behavior="0" />
+      <RootComponent type="92" id="{7322e74e-4a4e-ef11-bfe2-7c1e52285b25}" behavior="0" />
+      <RootComponent type="92" id="{7534e4d6-6865-ef11-bfe2-000d3a4c5d02}" behavior="0" />
+      <RootComponent type="92" id="{7d68a398-a1c1-ef11-b8e8-7c1e52295aa1}" behavior="0" />
+      <RootComponent type="92" id="{81883c36-a2c1-ef11-b8e8-7c1e52295aa1}" behavior="0" />
+      <RootComponent type="92" id="{85015abe-bc63-ef11-bfe2-000d3a4c5d02}" behavior="0" />
+      <RootComponent type="92" id="{886a7dba-4a4e-ef11-bfe2-6045bd91cd0d}" behavior="0" />
+      <RootComponent type="92" id="{8c375b27-a4c1-ef11-b8e8-7c1e52295aa1}" behavior="0" />
+      <RootComponent type="92" id="{b0639ddc-6e29-ef11-840a-6045bd9092dd}" behavior="0" />
+      <RootComponent type="92" id="{b598729d-a2c1-ef11-b8e8-7c1e52295aa1}" behavior="0" />
+      <RootComponent type="92" id="{ba82c899-6865-ef11-bfe2-000d3a4c5d02}" behavior="0" />
+      <RootComponent type="92" id="{ce13ce7c-4d4e-ef11-bfe2-6045bd91cd0d}" behavior="0" />
+      <RootComponent type="92" id="{ce6965bf-66c3-ef11-b8e8-7c1e5284b185}" behavior="0" />
+      <RootComponent type="92" id="{d5350dd3-4a4e-ef11-bfe2-6045bd91cd0d}" behavior="0" />
+      <RootComponent type="92" id="{e277cf56-accb-ef11-b8e8-6045bd884039}" behavior="0" />
+      <RootComponent type="92" id="{e4f7a6cb-8734-ef11-8409-6045bd9092dd}" behavior="0" />
+      <RootComponent type="92" id="{e8527ebf-accb-ef11-b8e8-6045bd884039}" behavior="0" />
+      <RootComponent type="92" id="{eb57c383-a2c1-ef11-b8e8-7c1e5284b185}" behavior="0" />
+      <RootComponent type="92" id="{fb5c3a63-f1c4-ef11-b8e8-6045bd884039}" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="1" schemaName="ablnstd_apprvlstd_wfrun" displayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="1" schemaName="ablnstd_apprvlstd_wfrun" displayName="Workflow run" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="ablnstd_apprvlstd_wfrunapproval" displayName="Workflow run approval" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="29" displayName="Purchase Order Document Generation" id="{d5f4b535-3065-ef11-bfe3-6045bd9dfa7f}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="ablnstd_apprvlstd_wfrunapproval" displayName="Workflow run approval" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="60" displayName="Workflow run quick view form" parentDisplayName="Workflow run" id="{a936c1da-5e43-ef11-a316-6045bd6ef16d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="ablnstd_apprvlstd_wfrunapproval" displayName="Workflow run approval" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{aa89ecd3-ed5f-4d1b-8fb0-8e4bf33a7d48}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="ablnstd_apprvlstd_wfrunapprover" displayName="Workflow run approver" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{aa89ecd3-ed5f-4d1b-8fb0-8e4bf33a7d48}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="team" displayName="Team" parentSchemaName="" solution="msdynce_AppCommonPatch (9.0.1904.4006)" />
+        <Dependent type="1" schemaName="team" displayName="Team" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="ablnstd_wfrun_finaloutcome" displayName="ablnstd_wfrun_finaloutcome" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="60" displayName="Workflow run quick view form" parentDisplayName="Workflow run" id="{a936c1da-5e43-ef11-a316-6045bd6ef16d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="ablnstd_wfrun_finaloutcome" displayName="ablnstd_wfrun_finaloutcome" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{aa89ecd3-ed5f-4d1b-8fb0-8e4bf33a7d48}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="ablnstd_wfrun_SpecificStartingStage" displayName="ablnstd_wfrun_SpecificStartingStage" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{aa89ecd3-ed5f-4d1b-8fb0-8e4bf33a7d48}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="ablnstd_wfrun_WfDefVersion" displayName="ablnstd_wfrun_WfDefVersion" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{aa89ecd3-ed5f-4d1b-8fb0-8e4bf33a7d48}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="ablnstd_wfrunapproval_WfRun" displayName="ablnstd_wfrunapproval_WfRun" parentSchemaName="ablnstd_apprvlstd_wfrunapproval" parentDisplayName="Workflow run approval" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="60" displayName="Workflow run quick view form" parentDisplayName="Workflow run" id="{a936c1da-5e43-ef11-a316-6045bd6ef16d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="ablnstd_wfrunapproval_WfRun" displayName="ablnstd_wfrunapproval_WfRun" parentSchemaName="ablnstd_apprvlstd_wfrunapproval" parentDisplayName="Workflow run approval" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{aa89ecd3-ed5f-4d1b-8fb0-8e4bf33a7d48}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="ablnstd_wfrunapprover_WorkflowRun" displayName="ablnstd_wfrunapprover_WorkflowRun" parentSchemaName="ablnstd_apprvlstd_wfrunapprover" parentDisplayName="Workflow run approver" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{aa89ecd3-ed5f-4d1b-8fb0-8e4bf33a7d48}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="ablnstd_wfrunlatestapproval" displayName="ablnstd_wfrunlatestapproval" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="60" displayName="Workflow run quick view form" parentDisplayName="Workflow run" id="{a936c1da-5e43-ef11-a316-6045bd6ef16d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ablnstd_finaloutcomeid" displayName="Final outcome" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="60" displayName="Workflow run quick view form" parentDisplayName="Workflow run" id="{a936c1da-5e43-ef11-a316-6045bd6ef16d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ablnstd_finaloutcomeid" displayName="Final outcome" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{aa89ecd3-ed5f-4d1b-8fb0-8e4bf33a7d48}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ablnstd_latestapprovalid" displayName="Latest Approval" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="60" displayName="Workflow run quick view form" parentDisplayName="Workflow run" id="{a936c1da-5e43-ef11-a316-6045bd6ef16d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ablnstd_name" displayName="Name" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="10" schemaName="aglcm003_zulaa_demandedachat_workflowrun_" displayName="aglcm003_zulaa_demandedachat_workflowrun_" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ablnstd_name" displayName="Name" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="10" schemaName="aglcm003_zulaa_demandesortiestock_currentworkflowrun_ablnstd_apprvlstd_wfrun" displayName="aglcm003_zulaa_demandesortiestock_currentworkflowrun_ablnstd_apprvlstd_wfrun" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ablnstd_name" displayName="Name" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="10" schemaName="aglcm003_zulaa_expressiondebesoin_workflowrun" displayName="aglcm003_zulaa_expressiondebesoin_workflowrun" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ablnstd_name" displayName="Name" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="10" schemaName="aglcm003_zulaa_reception_ablnstd_apprvlstd_wfrun" displayName="aglcm003_zulaa_reception_ablnstd_apprvlstd_wfrun" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ablnstd_name" displayName="Name" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="10" schemaName="aglcm003_zulaa_retourstock_currentworkflowrun_ablnstd_apprvlstd_wfrun" displayName="aglcm003_zulaa_retourstock_currentworkflowrun_ablnstd_apprvlstd_wfrun" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ablnstd_name" displayName="Name" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="10" schemaName="aglcm003_zulaa_sortiedestock_currentworkflowrun" displayName="aglcm003_zulaa_sortiedestock_currentworkflowrun" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ablnstd_name" displayName="Name" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{2c05e49d-c90e-441e-9219-c52920ded719}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ablnstd_name" displayName="Name" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{aa89ecd3-ed5f-4d1b-8fb0-8e4bf33a7d48}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ablnstd_name" displayName="Name" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{bd5b6993-0160-4077-9c2c-2d27ea801d7f}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ablnstd_regardingid" displayName="Regarding" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{aa89ecd3-ed5f-4d1b-8fb0-8e4bf33a7d48}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ablnstd_runstatuscode" displayName="Workflow run status" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="60" displayName="Workflow run quick view form" parentDisplayName="Workflow run" id="{a936c1da-5e43-ef11-a316-6045bd6ef16d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ablnstd_runstatuscode" displayName="Workflow run status" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{aa89ecd3-ed5f-4d1b-8fb0-8e4bf33a7d48}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ablnstd_specificstartingstageid" displayName="Specific starting stage" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{aa89ecd3-ed5f-4d1b-8fb0-8e4bf33a7d48}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ablnstd_startingstagetypecode" displayName="Starting stage type" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{aa89ecd3-ed5f-4d1b-8fb0-8e4bf33a7d48}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ablnstd_wfdefversionid" displayName="Workflow definition version" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{aa89ecd3-ed5f-4d1b-8fb0-8e4bf33a7d48}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="createdon" displayName="Created On" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{2c05e49d-c90e-441e-9219-c52920ded719}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ownerid" displayName="Owner" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="Active" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{2c05e49d-c90e-441e-9219-c52920ded719}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ownerid" displayName="Owner" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="Active" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{aa89ecd3-ed5f-4d1b-8fb0-8e4bf33a7d48}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ownerid" displayName="Owner" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="Active" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{bd5b6993-0160-4077-9c2c-2d27ea801d7f}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="statuscode" displayName="Status Reason" parentSchemaName="ablnstd_apprvlstd_wfrun" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{2c05e49d-c90e-441e-9219-c52920ded719}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="20" displayName="Approval Studio - Approver" solution="apprvlstd (1.2.240906.15)" id="{3260f1ab-1039-ef11-a316-000d3a78bcff}" />
+        <Dependent type="80" schemaName="aglcm003_ZULAA" displayName="ZULAA" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Active Workflow run approvers" displayName="Active Workflow run approvers" parentSchemaName="ablnstd_apprvlstd_wfrunapprover" parentDisplayName="Workflow run approver" solution="apprvlstd (1.2.240906.15)" id="{fcc70381-c532-4f94-b250-1e89e319d40f}" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{aa89ecd3-ed5f-4d1b-8fb0-8e4bf33a7d48}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="My On Going approvals" displayName="My On Going approvals" parentSchemaName="ablnstd_apprvlstd_wfrunapproval" parentDisplayName="Workflow run approval" solution="apprvlstd (1.2.240906.15)" id="{e5f8c250-c2c6-465f-b97d-0d95442e9391}" />
+        <Dependent type="60" displayName="Workflow run quick view form" parentDisplayName="Workflow run" id="{a936c1da-5e43-ef11-a316-6045bd6ef16d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="My On Going approvals" displayName="My On Going approvals" parentSchemaName="ablnstd_apprvlstd_wfrunapproval" parentDisplayName="Workflow run approval" solution="apprvlstd (1.2.240906.15)" id="{e5f8c250-c2c6-465f-b97d-0d95442e9391}" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{aa89ecd3-ed5f-4d1b-8fb0-8e4bf33a7d48}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Run approvers" displayName="Run approvers" parentSchemaName="ablnstd_apprvlstd_wfrunapprover" parentDisplayName="Workflow run approver" solution="apprvlstd (1.2.240906.15)" id="{63e7d19d-97fd-ee11-9f89-000d3ae76128}" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{aa89ecd3-ed5f-4d1b-8fb0-8e4bf33a7d48}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Workflow run's approvals" displayName="Workflow run's approvals" parentSchemaName="ablnstd_apprvlstd_wfrunapproval" parentDisplayName="Workflow run approval" solution="apprvlstd (1.2.240906.15)" id="{49c06654-c3fc-ee11-9f89-000d3ae76128}" />
+        <Dependent type="60" displayName="Workflow run quick view form" parentDisplayName="Workflow run" id="{a936c1da-5e43-ef11-a316-6045bd6ef16d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Workflow run's approvals" displayName="Workflow run's approvals" parentSchemaName="ablnstd_apprvlstd_wfrunapproval" parentDisplayName="Workflow run approval" solution="apprvlstd (1.2.240906.15)" id="{49c06654-c3fc-ee11-9f89-000d3ae76128}" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{aa89ecd3-ed5f-4d1b-8fb0-8e4bf33a7d48}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Workflow run's approvals" displayName="Workflow run's approvals" parentSchemaName="ablnstd_apprvlstd_wfrunapproval" parentDisplayName="Workflow run approval" solution="apprvlstd (1.2.240906.15)" id="{f129d767-c3fc-ee11-9f89-000d3ae76128}" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{aa89ecd3-ed5f-4d1b-8fb0-8e4bf33a7d48}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="300" schemaName="ablnstd_workflowrunworkflowvizualizer_4963a" displayName="Workflow Run - Workflow vizualizer" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="AppElement" displayName="aglcm003_aglcm003_ZULAA_canvasappid_ablnstd_workflowrunworkflowvizualizer_4963a" id.uniquename="aglcm003_aglcm003_ZULAA_canvasappid_ablnstd_workflowrunworkflowvizualizer_4963a" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Information" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" id="{2c05e49d-c90e-441e-9219-c52920ded719}" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{2c05e49d-c90e-441e-9219-c52920ded719}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Workflow run quick view form" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" id="{a936c1da-5e43-ef11-a316-6045bd6ef16d}" />
+        <Dependent type="60" displayName="Workflow run quick view form" parentDisplayName="Workflow run" id="{a936c1da-5e43-ef11-a316-6045bd6ef16d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Information" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" id="{aa89ecd3-ed5f-4d1b-8fb0-8e4bf33a7d48}" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{aa89ecd3-ed5f-4d1b-8fb0-8e4bf33a7d48}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Information" parentDisplayName="Workflow run" solution="apprvlstd (1.2.240906.15)" id="{bd5b6993-0160-4077-9c2c-2d27ea801d7f}" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Workflow run" id="{bd5b6993-0160-4077-9c2c-2d27ea801d7f}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="ablnstd_fluentoutlinedicon_sned" displayName="ablnstd_fluentoutlinedicon_sned" solution="apprvlstd (1.2.240906.15)" />
+        <Dependent type="1" schemaName="ablnstd_apprvlstd_wfrun" displayName="Workflow run" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="adx_contacts.svg" displayName="adx_contacts.svg" solution="PowerPages_RuntimeCoreDependencies (1.0.2305.1)">
+          <package appName="Power Pages Core Package" version="1.1.2605.258">PowerPages_Core (1.1.2605.258)</package>
+        </Required>
+        <Dependent type="62" schemaName="aglcm003_ZULAA" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="cat_customapi_icon" displayName="cat_customapi_icon" solution="msdyn_DataverseAcceleratorApp (1.0.5.6)">
+          <package appName="Dataverse Accelerator" version="1.0.5.6">DataverseAccelerator_Anchor (1.0.5.6)</package>
+        </Required>
+        <Dependent type="62" schemaName="aglcm003_ZULAA" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Icons/AnalysisJob.svg" displayName="msdyn_/Icons/AnalysisJob.svg" solution="msdyn_PowerAppsChecker (2.2.3321.1)">
+          <package appName="PowerAppsChecker" version="2.2.3321.1">msdyn_PowerAppsCheckerAnchor (2.2.3321.1)</package>
+        </Required>
+        <Dependent type="62" schemaName="aglcm003_ZULAA" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Icons/SolutionHealthAppModule.svg" displayName="msdyn_/Icons/SolutionHealthAppModule.svg" solution="msdyn_PowerAppsChecker (2.2.3321.1)">
+          <package appName="PowerAppsChecker" version="2.2.3321.1">msdyn_PowerAppsCheckerAnchor (2.2.3321.1)</package>
+        </Required>
+        <Dependent type="62" schemaName="aglcm003_ZULAA" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/RichTextEditorControl/libs/ckeditor/plugins/blockquote/icons/hidpi/blockquote.png" displayName="msdyn_/RichTextEditorControl/libs/ckeditor/plugins/blockquote/icons/hidpi/blockquote.png" solution="msdyn_RichTextEditor (9.0.26073.1013)">
+          <package appName="msdynce_Activities" version="9.0.26064.260619001">msdynce_EnableUCIByDefault (9.0.26064.260619001)</package>
+          <package appName="msdyn_CustomControlsExtended" version="9.0.26073.1013">msdyn_TimelineExtended (9.0.26073.1013)</package>
+        </Required>
+        <Dependent type="61" schemaName="msdyn_/RichTextEditorControl/libs/ckeditor/plugins/blockquote/icons/hidpi/blockquote.png" displayName="msdyn_/RichTextEditorControl/libs/ckeditor/plugins/blockquote/icons/hidpi/blockquote.png" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyncrm_/KnowledgeArticleSubgrid/Hierarchy_16.svg" displayName="msdyncrm_/KnowledgeArticleSubgrid/Hierarchy_16.svg" solution="msdynce_KnowledgeManagementFeatures (9.0.26071.3015)">
+          <package appName="msdynce_KnowledgeManagement" version="9.0.26071.3015">msdynce_KnowledgeManagementAnchor (9.0.26071.3015)</package>
+        </Required>
+        <Dependent type="62" schemaName="aglcm003_ZULAA" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyncrm_/KnowledgeSearch/DefaultIcon.svg" displayName="msdyncrm_/KnowledgeSearch/DefaultIcon.svg" solution="msdynce_KnowledgeManagementFeatures (9.0.26071.3015)">
+          <package appName="msdynce_KnowledgeManagement" version="9.0.26071.3015">msdynce_KnowledgeManagementAnchor (9.0.26071.3015)</package>
+        </Required>
+        <Dependent type="62" schemaName="aglcm003_ZULAA" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyncrm_/KnowledgeSearch/SendToCTI.svg" displayName="msdyncrm_/KnowledgeSearch/SendToCTI.svg" solution="msdynce_KnowledgeManagementFeatures (9.0.26071.3015)">
+          <package appName="msdynce_KnowledgeManagement" version="9.0.26071.3015">msdynce_KnowledgeManagementAnchor (9.0.26071.3015)</package>
+        </Required>
+        <Dependent type="62" schemaName="aglcm003_ZULAA" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="mspp_ad_placement.svg" displayName="mspp_ad_placement.svg" solution="PowerPages_AppResources (1.0.2605.0)">
+          <package appName="Power Pages Core Package" version="1.1.2605.258">PowerPages_Core (1.1.2605.258)</package>
+        </Required>
+        <Dependent type="62" schemaName="aglcm003_ZULAA" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="mspp_entity_forms.svg" displayName="mspp_entity_forms.svg" solution="PowerPages_AppResources (1.0.2605.0)">
+          <package appName="Power Pages Core Package" version="1.1.2605.258">PowerPages_Core (1.1.2605.258)</package>
+        </Required>
+        <Dependent type="62" schemaName="aglcm003_ZULAA" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="mspp_entity_permissions.svg" displayName="mspp_entity_permissions.svg" solution="PowerPages_AppResources (1.0.2605.0)">
+          <package appName="Power Pages Core Package" version="1.1.2605.258">PowerPages_Core (1.1.2605.258)</package>
+        </Required>
+        <Dependent type="62" schemaName="aglcm003_ZULAA" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="mspp_publishing_state_transition_rules.svg" displayName="mspp_publishing_state_transition_rules.svg" solution="PowerPages_AppResources (1.0.2605.0)">
+          <package appName="Power Pages Core Package" version="1.1.2605.258">PowerPages_Core (1.1.2605.258)</package>
+        </Required>
+        <Dependent type="62" schemaName="aglcm003_ZULAA" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="mspp_redirects.svg" displayName="mspp_redirects.svg" solution="PowerPages_AppResources (1.0.2605.0)">
+          <package appName="Power Pages Core Package" version="1.1.2605.258">PowerPages_Core (1.1.2605.258)</package>
+        </Required>
+        <Dependent type="62" schemaName="aglcm003_ZULAA" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="mspp_site_markers.svg" displayName="mspp_site_markers.svg" solution="PowerPages_AppResources (1.0.2605.0)">
+          <package appName="Power Pages Core Package" version="1.1.2605.258">PowerPages_Core (1.1.2605.258)</package>
+        </Required>
+        <Dependent type="62" schemaName="aglcm003_ZULAA" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="mspp_site_settings.svg" displayName="mspp_site_settings.svg" solution="PowerPages_AppResources (1.0.2605.0)">
+          <package appName="Power Pages Core Package" version="1.1.2605.258">PowerPages_Core (1.1.2605.258)</package>
+        </Required>
+        <Dependent type="62" schemaName="aglcm003_ZULAA" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="mspp_web_forms.svg" displayName="mspp_web_forms.svg" solution="PowerPages_AppResources (1.0.2605.0)">
+          <package appName="Power Pages Core Package" version="1.1.2605.258">PowerPages_Core (1.1.2605.258)</package>
+        </Required>
+        <Dependent type="62" schemaName="aglcm003_ZULAA" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="mspp_web_pages.svg" displayName="mspp_web_pages.svg" solution="PowerPages_AppResources (1.0.2605.0)">
+          <package appName="Power Pages Core Package" version="1.1.2605.258">PowerPages_Core (1.1.2605.258)</package>
+        </Required>
+        <Dependent type="62" schemaName="aglcm003_ZULAA" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2607.3003)">
+          <package appName="Base Custom Controls" version="9.0.2607.3003">BaseCustomControlsCore (9.0.2607.3003)</package>
+        </Required>
+        <Dependent type="68" id="{130d83b1-d2bd-4dee-a13d-13f0f41a4ea5}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2607.3003)">
+          <package appName="Base Custom Controls" version="9.0.2607.3003">BaseCustomControlsCore (9.0.2607.3003)</package>
+        </Required>
+        <Dependent type="68" id="{17161f73-7b30-4856-bdc5-406c151cf76e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2607.3003)">
+          <package appName="Base Custom Controls" version="9.0.2607.3003">BaseCustomControlsCore (9.0.2607.3003)</package>
+        </Required>
+        <Dependent type="68" id="{33dbfa1d-3f8f-4849-bcc4-b3c41d1c13a3}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2607.3003)">
+          <package appName="Base Custom Controls" version="9.0.2607.3003">BaseCustomControlsCore (9.0.2607.3003)</package>
+        </Required>
+        <Dependent type="68" id="{67f5acef-cb06-43f9-8496-027a6c4adf7e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2607.3003)">
+          <package appName="Base Custom Controls" version="9.0.2607.3003">BaseCustomControlsCore (9.0.2607.3003)</package>
+        </Required>
+        <Dependent type="68" id="{7458b09f-439f-403e-ae56-f7e6634b9fad}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2607.3003)">
+          <package appName="Base Custom Controls" version="9.0.2607.3003">BaseCustomControlsCore (9.0.2607.3003)</package>
+        </Required>
+        <Dependent type="68" id="{783f42fb-5f65-4bc9-bc62-a16f6c9c40ee}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2607.3003)">
+          <package appName="Base Custom Controls" version="9.0.2607.3003">BaseCustomControlsCore (9.0.2607.3003)</package>
+        </Required>
+        <Dependent type="68" id="{d03eb01e-5d86-48bc-be96-03dfb8bb46de}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2607.3003)">
+          <package appName="Base Custom Controls" version="9.0.2607.3003">BaseCustomControlsCore (9.0.2607.3003)</package>
+        </Required>
+        <Dependent type="68" id="{eeae9801-88b3-4c6a-8405-d0d4b71756d9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.FieldControls.ToggleControl" displayName="MscrmControls.FieldControls.ToggleControl" solution="BaseCustomControlsCore (9.0.2607.3003)">
+          <package appName="Base Custom Controls" version="9.0.2607.3003">BaseCustomControlsCore (9.0.2607.3003)</package>
+        </Required>
+        <Dependent type="60" displayName="Information" parentDisplayName="Store" id="{0b4883a9-e64f-4486-94df-001137182a53}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.FieldControls.ToggleControl" displayName="MscrmControls.FieldControls.ToggleControl" solution="BaseCustomControlsCore (9.0.2607.3003)">
+          <package appName="Base Custom Controls" version="9.0.2607.3003">BaseCustomControlsCore (9.0.2607.3003)</package>
+        </Required>
+        <Dependent type="60" displayName="Information" parentDisplayName="Entity" id="{dc92d1b1-18f1-45c3-9ed4-6286eb981e1e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.AvailableOnForm!0" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.AvailableOnForm!0">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=aglcm003__Mscrm.Form.%7B!EntityLogicalName%7D.Save!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0,appactionruleid.uniquename=msdyn_Mscrm.AvailableOnForm!0" id.appactionid.uniquename="aglcm003__Mscrm.Form.{!EntityLogicalName}.Save!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0" id.appactionruleid.uniquename="msdyn_Mscrm.AvailableOnForm!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.AvailableOnForm!0" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.AvailableOnForm!0">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=aglcm003__Mscrm.Form.%7B!EntityLogicalName%7D.SaveAsComplete!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0,appactionruleid.uniquename=msdyn_Mscrm.AvailableOnForm!0" id.appactionid.uniquename="aglcm003__Mscrm.Form.{!EntityLogicalName}.SaveAsComplete!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0" id.appactionruleid.uniquename="msdyn_Mscrm.AvailableOnForm!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.CanSavePrimary!0" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.CanSavePrimary!0">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=aglcm003__Mscrm.Form.%7B!EntityLogicalName%7D.Save!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0,appactionruleid.uniquename=msdyn_Mscrm.CanSavePrimary!0" id.appactionid.uniquename="aglcm003__Mscrm.Form.{!EntityLogicalName}.Save!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0" id.appactionruleid.uniquename="msdyn_Mscrm.CanSavePrimary!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.CanSavePrimary!0" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.CanSavePrimary!0">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=aglcm003__Mscrm.Form.%7B!EntityLogicalName%7D.SaveAsComplete!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0,appactionruleid.uniquename=msdyn_Mscrm.CanSavePrimary!0" id.appactionid.uniquename="aglcm003__Mscrm.Form.{!EntityLogicalName}.SaveAsComplete!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0" id.appactionruleid.uniquename="msdyn_Mscrm.CanSavePrimary!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.CanSavePrimaryEntityType!1" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.CanSavePrimaryEntityType!1">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=aglcm003__Mscrm.Form.%7B!EntityLogicalName%7D.Save!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0,appactionruleid.uniquename=msdyn_Mscrm.CanSavePrimaryEntityType!1" id.appactionid.uniquename="aglcm003__Mscrm.Form.{!EntityLogicalName}.Save!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0" id.appactionruleid.uniquename="msdyn_Mscrm.CanSavePrimaryEntityType!1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.CanSavePrimaryEntityType!1" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.CanSavePrimaryEntityType!1">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=aglcm003__Mscrm.Form.%7B!EntityLogicalName%7D.SaveAsComplete!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0,appactionruleid.uniquename=msdyn_Mscrm.CanSavePrimaryEntityType!1" id.appactionid.uniquename="aglcm003__Mscrm.Form.{!EntityLogicalName}.SaveAsComplete!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0" id.appactionruleid.uniquename="msdyn_Mscrm.CanSavePrimaryEntityType!1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.IsAutoSaveDisable!0" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.IsAutoSaveDisable!0">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=aglcm003__Mscrm.Form.%7B!EntityLogicalName%7D.Save!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0,appactionruleid.uniquename=msdyn_Mscrm.IsAutoSaveDisable!0" id.appactionid.uniquename="aglcm003__Mscrm.Form.{!EntityLogicalName}.Save!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0" id.appactionruleid.uniquename="msdyn_Mscrm.IsAutoSaveDisable!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.IsEntityAvailableForUserInMocaOffline!0" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.IsEntityAvailableForUserInMocaOffline!0">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=aglcm003__Mscrm.Form.%7B!EntityLogicalName%7D.Save!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0,appactionruleid.uniquename=msdyn_Mscrm.IsEntityAvailableForUserInMocaOffline!0" id.appactionid.uniquename="aglcm003__Mscrm.Form.{!EntityLogicalName}.Save!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0" id.appactionruleid.uniquename="msdyn_Mscrm.IsEntityAvailableForUserInMocaOffline!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.IsEntityAvailableForUserInMocaOffline!0" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.IsEntityAvailableForUserInMocaOffline!0">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=aglcm003__Mscrm.Form.%7B!EntityLogicalName%7D.SaveAsComplete!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0,appactionruleid.uniquename=msdyn_Mscrm.IsEntityAvailableForUserInMocaOffline!0" id.appactionid.uniquename="aglcm003__Mscrm.Form.{!EntityLogicalName}.SaveAsComplete!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0" id.appactionruleid.uniquename="msdyn_Mscrm.IsEntityAvailableForUserInMocaOffline!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.OutlookRenderTypeWeb!1" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.OutlookRenderTypeWeb!1">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=aglcm003__Mscrm.Form.%7B!EntityLogicalName%7D.Save!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0,appactionruleid.uniquename=msdyn_Mscrm.OutlookRenderTypeWeb!1" id.appactionid.uniquename="aglcm003__Mscrm.Form.{!EntityLogicalName}.Save!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0" id.appactionruleid.uniquename="msdyn_Mscrm.OutlookRenderTypeWeb!1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.OutlookRenderTypeWeb!1" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.OutlookRenderTypeWeb!1">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=aglcm003__Mscrm.Form.%7B!EntityLogicalName%7D.SaveAsComplete!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0,appactionruleid.uniquename=msdyn_Mscrm.OutlookRenderTypeWeb!1" id.appactionid.uniquename="aglcm003__Mscrm.Form.{!EntityLogicalName}.SaveAsComplete!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0" id.appactionruleid.uniquename="msdyn_Mscrm.OutlookRenderTypeWeb!1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.PrimaryIsActivity!1" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.PrimaryIsActivity!1">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=aglcm003__Mscrm.Form.%7B!EntityLogicalName%7D.SaveAsComplete!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0,appactionruleid.uniquename=msdyn_Mscrm.PrimaryIsActivity!1" id.appactionid.uniquename="aglcm003__Mscrm.Form.{!EntityLogicalName}.SaveAsComplete!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0" id.appactionruleid.uniquename="msdyn_Mscrm.PrimaryIsActivity!1" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.ReadPrimaryPermission!0" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.ReadPrimaryPermission!0">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=aglcm003__Mscrm.Form.%7B!EntityLogicalName%7D.Save!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0,appactionruleid.uniquename=msdyn_Mscrm.ReadPrimaryPermission!0" id.appactionid.uniquename="aglcm003__Mscrm.Form.{!EntityLogicalName}.Save!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0" id.appactionruleid.uniquename="msdyn_Mscrm.ReadPrimaryPermission!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="appactionrule" displayName="msdyn_Mscrm.ReadPrimaryPermission!0" solution="msdyn_SystemAppActions (9.1.0.57)" id.uniquename="msdyn_Mscrm.ReadPrimaryPermission!0">
+          <package appName="PowerAppsActions Package" version="9.1.0.57">PowerAppsActions_Anchor (9.1.0.57)</package>
+        </Required>
+        <Dependent type="appaction_appactionrule_classicrules" displayName="appactionid.uniquename=aglcm003__Mscrm.Form.%7B!EntityLogicalName%7D.SaveAsComplete!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0,appactionruleid.uniquename=msdyn_Mscrm.ReadPrimaryPermission!0" id.appactionid.uniquename="aglcm003__Mscrm.Form.{!EntityLogicalName}.SaveAsComplete!aglcm003_ZULAA!aglcm003_zulaa_expressiondebesoin!0" id.appactionruleid.uniquename="msdyn_Mscrm.ReadPrimaryPermission!0" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="SettingDefinition" displayName="AppChannel" solution="msdyn_AppFrameworkInfraExtensions (1.0.0.19)" id.uniquename="AppChannel">
+          <package appName="PowerAppsAppFramework Package" version="1.0.0.25">PowerAppsAppFramework_Anchor (1.0.0.25)</package>
+        </Required>
+        <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=aglcm003_ZULAA,settingdefinitionid.uniquename=AppChannel" id.parentappmoduleid.uniquename="aglcm003_ZULAA" id.settingdefinitionid.uniquename="AppChannel" />
+      </MissingDependency>
+    </MissingDependencies>
+  </SolutionManifest>
+</ImportExportXml>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PluginAssembly FullName="Zulaa Gestion de Stock.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f169ead759eb29f" PluginAssemblyId="5addebad-d3da-473d-ade8-21c5dfd87a7a" CustomizationLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsolationMode>2</IsolationMode>
+  <SourceType>0</SourceType>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <FileName>/PluginAssemblies/ZulaaGestiondeStockPackage-5ADDEBAD-D3DA-473D-ADE8-21C5DFD87A7A/ZulaaGestiondeStockPackage.dll</FileName>
+  <PluginTypes>
+    <PluginType AssemblyQualifiedName="Zulaa_Gestion_de_Stock.Package.PostOperation_GenerateCode_Create, Zulaa Gestion de Stock.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f169ead759eb29f" PluginTypeId="5ef9a2d2-ab8f-4dc4-a94b-db04cfb97ee9" Name="Zulaa_Gestion_de_Stock.Package.PostOperation_GenerateCode_Create">
+      <FriendlyName>1e2805de-4253-4f54-84bf-e58b840a6647</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="Zulaa_Gestion_de_Stock.Package.PostOperationBloquerLigneInvActif, Zulaa Gestion de Stock.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f169ead759eb29f" PluginTypeId="917ce392-73bb-461e-b306-44822cb7a0c5" Name="Zulaa_Gestion_de_Stock.Package.PostOperationBloquerLigneInvActif">
+      <FriendlyName>c9fab5e4-a443-41a5-96c7-932dac25b2d0</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="Zulaa_Gestion_de_Stock.Package.PostOperationBloquerLigneRetourStockArticle, Zulaa Gestion de Stock.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f169ead759eb29f" PluginTypeId="4aea09c4-aa53-4138-b553-c16a28029baa" Name="Zulaa_Gestion_de_Stock.Package.PostOperationBloquerLigneRetourStockArticle">
+      <FriendlyName>0ef0821a-c048-409a-8d15-9038ea521fb2</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="Zulaa_Gestion_de_Stock.Package.PostOperationBloquerLignesDemandeSortie, Zulaa Gestion de Stock.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f169ead759eb29f" PluginTypeId="148bffe7-fc42-41de-a583-89d0fedb84eb" Name="Zulaa_Gestion_de_Stock.Package.PostOperationBloquerLignesDemandeSortie">
+      <FriendlyName>ac80afa0-34ac-4848-b19e-aeb00eff6ba7</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="Zulaa_Gestion_de_Stock.Package.PostOperationBloquerLignesInventaire, Zulaa Gestion de Stock.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f169ead759eb29f" PluginTypeId="1e1b0fca-1c19-4506-b562-cb64cb94e23e" Name="Zulaa_Gestion_de_Stock.Package.PostOperationBloquerLignesInventaire">
+      <FriendlyName>c93fe7ea-f7d1-4c6a-9aa5-4beaff98661a</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="Zulaa_Gestion_de_Stock.Package.PostOperationBloquerLigneSortieActif, Zulaa Gestion de Stock.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f169ead759eb29f" PluginTypeId="50cb42b4-fe77-47fa-922d-7a87c77bcb12" Name="Zulaa_Gestion_de_Stock.Package.PostOperationBloquerLigneSortieActif">
+      <FriendlyName>0cf939fa-d6fa-43a5-bba0-09c3907c8110</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="Zulaa_Gestion_de_Stock.Package.PostOperationBloquerLigneSortieArticle, Zulaa Gestion de Stock.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f169ead759eb29f" PluginTypeId="76f8250e-3f2f-45ba-8ff1-0f15df43efd7" Name="Zulaa_Gestion_de_Stock.Package.PostOperationBloquerLigneSortieArticle">
+      <FriendlyName>3609ef78-245c-4235-b3c6-ef394b740b80</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="Zulaa_Gestion_de_Stock.Package.PostOperationBloquerLignesRetourStockActif, Zulaa Gestion de Stock.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f169ead759eb29f" PluginTypeId="283182eb-5fa0-4c37-89a6-76ed5e3209af" Name="Zulaa_Gestion_de_Stock.Package.PostOperationBloquerLignesRetourStockActif">
+      <FriendlyName>f3918b47-bb2c-48e9-ba18-8deb2ef98c77</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="Zulaa_Gestion_de_Stock.Package.PostOperationPopulateLigneInventaire, Zulaa Gestion de Stock.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f169ead759eb29f" PluginTypeId="c59b2a4d-e12e-4b7f-940b-cb594d141cc0" Name="Zulaa_Gestion_de_Stock.Package.PostOperationPopulateLigneInventaire">
+      <FriendlyName>081602d6-ddd5-4aea-b909-96f070408e5b</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="Zulaa_Gestion_de_Stock.Package.PostOperationPopulateLignesSortiedeStock, Zulaa Gestion de Stock.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f169ead759eb29f" PluginTypeId="612a622e-60be-4b5d-a177-39b71f0031c1" Name="Zulaa_Gestion_de_Stock.Package.PostOperationPopulateLignesSortiedeStock">
+      <FriendlyName>836694ad-22a0-49a5-aca0-1fef115bc350</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="Zulaa_Gestion_de_Stock.Package.PostOperationPoulateLignesRetourStock, Zulaa Gestion de Stock.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f169ead759eb29f" PluginTypeId="f683aa88-f79a-42a1-a440-2bdbaf685344" Name="Zulaa_Gestion_de_Stock.Package.PostOperationPoulateLignesRetourStock">
+      <FriendlyName>4b3f53ad-c03a-45a9-ab13-dcca51689296</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="Zulaa_Gestion_de_Stock.Package.PostOpperation_GenerateCodeActif, Zulaa Gestion de Stock.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f169ead759eb29f" PluginTypeId="0f2b4534-65d9-4af6-860f-6d50e6a959f4" Name="Zulaa_Gestion_de_Stock.Package.PostOpperation_GenerateCodeActif">
+      <FriendlyName>2412b4bb-27b0-4474-928e-2269a4038055</FriendlyName>
+    </PluginType>
+  </PluginTypes>
+</PluginAssembly>

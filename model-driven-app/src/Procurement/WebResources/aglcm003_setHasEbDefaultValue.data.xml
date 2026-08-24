@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{53491084-ec70-ef11-a670-6045bd8c8fe0}</WebResourceId>
+  <Name>aglcm003_setHasEbDefaultValue</Name>
+  <DisplayName>Set HasEb Default Value</DisplayName>
+  <Description>Mettre la valeur par défaut de HAS EB  dans le formulaire de création de la DA</Description>
+  <LanguageCode>0</LanguageCode>
+  <WebResourceType>3</WebResourceType>
+  <IntroducedVersion>1.0.0.1</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <DependencyXml>&lt;Dependencies&gt;&lt;Dependency componentType="WebResource"/&gt;&lt;/Dependencies&gt;</DependencyXml>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/aglcm003_setHasEbDefaultValue53491084-EC70-EF11-A670-6045BD8C8FE0</FileName>
+</WebResource>

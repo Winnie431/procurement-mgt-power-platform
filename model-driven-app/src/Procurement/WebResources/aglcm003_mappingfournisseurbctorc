@@ -1,0 +1,49 @@
+function onLookupFieldChangeRC(executionContext) {
+    // Récupération du contexte du formulaire pour accéder aux champs et autres informations du formulaire
+    var formContext = executionContext.getFormContext();
+
+    // Récupération de la valeur du champ lookuUP 'aglcm003_bondecommandeid'
+    var bondecommande = formContext.getAttribute("aglcm003_bondecommandeid").getValue();
+    //console.log(bondecommande); // Affiche la valeur récupérée pour debug
+
+    // Vérifie si une valeur a été sélectionnée dans le champ 'aglcm003_bondecommandeid'
+    if (bondecommande != null) {
+        // Extraction de l'ID de l'enregistrement lookup sélectionné (sans les accolades)
+        var lookupId = bondecommande[0].id.replace('{', '').replace('}', '');
+        //console.log(lookupId); // Affiche l'ID extrait pour debug
+
+        // Appel à l'API Web pour récupérer les informations de l'enregistrement associé
+        Xrm.WebApi.retrieveRecord(
+            "aglcm003_zulaa_bondecommande", // Nom logique de l'entité à partir de laquelle les données sont récupérées
+            lookupId,                            // ID de l'enregistrement à récupérer
+            "?$select=aglcm003_code,_aglcm003_fournisseurid_value,aglcm003_montantht,aglcm003_montantttc" // Sélection des champs à récupérer
+        ).then(
+            function success(result) {
+                console.log(result); // Affiche le résultat complet pour debug
+
+                // Remplir le champ 'aglcm003_fournisseurid' sur le formulaire avec les données récupérées
+                var fournisseur = new Array();
+                fournisseur[0] = {};
+                fournisseur[0].id = result._aglcm003_fournisseurid_value; // ID du fournisseur récupérée
+                fournisseur[0].name = result["_aglcm003_fournisseurid_value@OData.Community.Display.V1.FormattedValue"]; // Nom formaté du fournisseur
+                fournisseur[0].entityType = "aglcm003_zulaa_fournisseur"; // Nom logique de l'entité liée
+
+                console.log(fournisseur); // Affiche l'objet fournisseur pour debug
+
+                // Remplit le champ lookup 'aglcm003_fournisseurid' sur le formulaire avec l'objet fournisseur
+                formContext.getAttribute("aglcm003_fournisseurid").setValue(fournisseur);
+
+                //Remplit le champ lookup 'aglcm003_montantht' sur le formulaire avec l'objet montantht
+                formContext.getAttribute("aglcm003_montantht").setValue(result.aglcm003_montantht);
+
+                //Remplit le champ lookup 'aglcm003_montantht' sur le formulaire avec l'objet montantht
+                formContext.getAttribute("aglcm003_montantttc").setValue(result.aglcm003_montantttc);
+
+            },
+            function error(error) {
+                // Affiche le message d'erreur en cas d'échec de l'appel à l'API Web
+                console.log(error.message);
+            }
+        );
+    }
+}

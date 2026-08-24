@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{4fc7e67e-678e-4d8d-932c-815b5c17ae1c}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{fceab076-7056-41ee-8173-84599c05c058}" IsUserDefined="1">
+          <labels>
+            <label description="" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{f5062312-67c8-4b8f-9cd0-caec996c5be8}">
+                  <labels>
+                    <label description="GENERAL" languagecode="1033" />
+                    <label description="GÉNÉRAL" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{2f738fca-611d-4933-bdcf-70f48b9355b1}">
+                        <labels>
+                          <label description="Code" languagecode="1033" />
+                          <label description="Code" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_code" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="aglcm003_code" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{58a4ec7a-88fe-410f-a4a2-beffd831f395}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                          <label description="Nom" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_nom" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_nom" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c39d8b23-045f-445a-81fd-3b94ce003eae}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Phone number" languagecode="1033" />
+                          <label description="Numéro de téléphone" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_ndetelephone" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_ndetelephone" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9779ae2c-fbc0-4442-87f6-fcd7996e25a1}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Email" languagecode="1033" />
+                          <label description="E-mail" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_email" classid="{ADA2203E-B4CD-49BE-9DDF-234642B43B52}" datafieldname="aglcm003_email" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ac2dad90-ddc5-43ed-901b-767ebf6670f1}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                          <label description="Propriétaire" languagecode="1036" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{20958add-b70d-4562-86c8-9688d4d15cb0}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Address" languagecode="1033" />
+                          <label description="Adresse" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_adresse" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_adresse" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ecc9d791-d7bc-4bf3-aa18-b27dde9fac35}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Postal Code" languagecode="1033" />
+                          <label description="Code postal" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_codepostal" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_codepostal" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{10bde440-934c-4529-b269-e1f3de0497c2}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="DAF" languagecode="1033" />
+                          <label description="DAF" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_dafid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_dafid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{19f5b110-7581-4524-aefb-dbc57af5314e}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="DAFA" languagecode="1033" />
+                          <label description="DAFA" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_dafaid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_dafaid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a7a019c1-5f67-4a43-9b4f-b5ed23b29c3d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="CurrencyId" languagecode="1033" />
+                          <label description="CurrencyId" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_deviseid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_deviseid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9c2f0fad-5822-47b3-990a-0188dbe8f147}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="DG" languagecode="1033" />
+                          <label description="DG" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_dgid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_dgid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b78c6829-d59c-4097-8e2c-4ec7c2608b25}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Logo" languagecode="1033" />
+                          <label description="Logo" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_logo" classid="{7E548B0D-209C-477B-9DCD-F0F44472381D}" datafieldname="aglcm003_logo" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{780e3a1f-0736-42fd-b05c-a8c353cf45d6}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Taxpayer Number" languagecode="1033" />
+                          <label description="Numéro d'identification fiscale" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_nducontribuable" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_nducontribuable" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6308900a-63dd-4c1f-92c3-9d1cc73018a6}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="CountryId" languagecode="1033" />
+                          <label description="CountryId" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_paysid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_paysid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8c21d498-bfd8-4940-ad23-fbe603dfad20}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Commercial Register" languagecode="1033" />
+                          <label description="Registre du commerce" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_registredecommerce" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_registredecommerce" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ed531849-69ef-4827-9605-2e22fb698ce8}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Purchasing Department Manager" languagecode="1033" />
+                          <label description="Responsable du service achats" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_responsableservicedachatid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_responsableservicedachatid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e0771dff-1f85-4d5d-8658-305264cb2051}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Stock Owner" languagecode="1033" />
+                          <label description="Propriétaire des stocks" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_proprietairedestockid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_proprietairedestockid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e54fcd4b-0b84-451a-8c82-fba306b28b82}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Purchasing Service" languagecode="1033" />
+                          <label description="Service achats" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_serviceachat" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_serviceachat" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{aa1b674b-5a24-4a5a-86bd-f679d8d3e8e0}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Threshold1" languagecode="1033" />
+                          <label description="Seuil 1" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_seuil1" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="aglcm003_seuil1" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c08fc61b-f0dc-4ae8-b170-4a5a69134572}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Threshold2" languagecode="1033" />
+                          <label description="Seuil 2" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_seuil2" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="aglcm003_seuil2" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c53a956f-c54f-4ba8-b0f2-8d431f71ef15}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Website" languagecode="1033" />
+                          <label description="Site web" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_siteweb" classid="{71716B6C-711E-476C-8AB8-5D11542BFB47}" datafieldname="aglcm003_siteweb" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+      <LocalizedName description="Informations" languagecode="1036" />
+    </LocalizedNames>
+  </systemform>
+</forms>

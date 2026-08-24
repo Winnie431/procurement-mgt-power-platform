@@ -1,0 +1,807 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{dc92d1b1-18f1-45c3-9ed4-6286eb981e1e}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls" shownavigationbar="false">
+      <tabs>
+        <tab verticallayout="true" id="{869e9a0e-2fa3-4a52-ba21-87caac3e21cf}" IsUserDefined="1" name="Entite" contenttype="cardSections">
+          <labels>
+            <label description="General" languagecode="1033" />
+            <label description="Généralités" languagecode="1036" />
+          </labels>
+          <columns>
+            <column width="34%">
+              <sections>
+                <section showlabel="true" showbar="false" IsUserDefined="0" id="{d0343df2-7e1b-48bc-897e-e6c5e2aa3493}" columns="11" name="Information sur l'entité" celllabelposition="Top">
+                  <labels>
+                    <label description="ENTITY INFORMATION" languagecode="1033" />
+                    <label description="Information sur l'entité" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{dbdbe55b-a40e-4dc8-97c4-f7590ca53aeb}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                          <label description="Nom" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_nom" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_nom" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fed666c3-510d-4327-bd48-4b611a13eb45}">
+                        <labels>
+                          <label description="Entity Code" languagecode="1033" />
+                          <label description="Code de l'entité" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_code" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="aglcm003_code" />
+                      </cell>
+                      <cell locklevel="0" id="{76dd3512-892c-4556-8d31-eb17143aab99}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9dfc4cf3-9c59-4122-afe7-8f927c2cf8cc}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Taxpayer Number" languagecode="1033" />
+                          <label description="Numéro d'identification fiscale" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_nducontribuable" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_nducontribuable" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{d852f5e2-e027-49af-8149-0781de4b3bc0}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0197ba55-8b41-4f81-a3bb-a6eb558f3d91}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Commercial Register" languagecode="1033" />
+                          <label description="Registre du commerce" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_registredecommerce" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_registredecommerce" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{5fc47ed3-2e01-464d-b3fd-77fb7fc908fa}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c8b3610d-762c-4b2c-8b36-d34adf90f4c3}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Parent Business Unit" languagecode="1033" />
+                          <label description="Unité commerciale mère" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_businessunitparent" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_businessunitparent" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{d5d4868b-28b2-4318-833d-83c35232556c}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{85a02ebd-d65b-44e3-96c2-24e8e09ea29d}" locklevel="0" rowspan="1" colspan="1">
+                        <labels>
+                          <label description="DA Management Type" languagecode="1033" />
+                          <label description="Type de gestion DAF" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_typegestionda" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="aglcm003_typegestionda" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{4361489f-532f-4d2f-a03b-480bbd1887b5}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{eaa56ad4-205a-4cf7-a233-afa7f37f0995}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Capital SA" languagecode="1033" />
+                          <label description="Capital SA" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_capitalsa" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="aglcm003_capitalsa" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{7d9e0643-5a4b-4424-839a-a9acac6801b8}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a08db063-f4be-44fd-894e-1146e359279c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Currency" languagecode="1033" />
+                          <label description="Devise" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_deviseid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_deviseid" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{5f7185af-457f-4e91-8f2d-796b1d79a81d}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8e231848-dea4-4e4e-aa00-103e7b3b105f}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Threshold1" languagecode="1033" />
+                          <label description="Seuil 1" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_seuil1" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="aglcm003_seuil1" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{1bc7460b-72a6-4581-abf9-65c8dd7a06fe}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ec06c78a-595d-4df9-b8c7-30cfc96784fa}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Threshold2" languagecode="1033" />
+                          <label description="Seuil 2" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_seuil2" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="aglcm003_seuil2" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{fcfd0b82-a5d0-4f0c-9d57-31056cb98b84}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5db5f8b1-ee6b-422f-8861-3a724a2f231f}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Language" languagecode="1033" />
+                          <label description="Langue" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_language" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="aglcm003_language" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{a16c4a1e-78e1-42c7-bba3-ce0dd92d2892}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{88d8684a-c7e4-4e13-9a68-4361297c4897}" visible="false">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                          <label description="Propriétaire" languagecode="1036" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                      <cell locklevel="0" id="{cb4eab7f-1263-4277-b730-1b1eeaee362b}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section name="Adresse" id="f08ed5b4-890c-44e0-9d9e-8eec904b95b6" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Top" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="ADDRESS" languagecode="1033" />
+                    <label description="Adresse" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{a6ce5c91-424e-476b-8a53-ce9e7a2b3860}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Country" languagecode="1033" />
+                          <label description="Pays" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_paysid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_paysid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d38c3ef3-c11f-440f-b719-c1fcf778fafd}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="City" languagecode="1033" />
+                          <label description="Ville" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_ville" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_ville" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9ecee6af-bf3e-43b4-8049-d5c779bb88cb}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Address" languagecode="1033" />
+                          <label description="Adresse" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_adresse" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_adresse" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8db041b6-71f9-44ae-8b12-7ba16f114cb7}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Phone number" languagecode="1033" />
+                          <label description="Numéro de téléphone" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_ndetelephone" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_ndetelephone" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fb339039-1f76-4446-8b81-0a6a2189d2c0}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Postal Code" languagecode="1033" />
+                          <label description="Code postal" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_codepostal" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_codepostal" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{413063ba-22f8-4392-a016-7d11114e9794}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Email" languagecode="1033" />
+                          <label description="E-mail" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_email" classid="{ADA2203E-B4CD-49BE-9DDF-234642B43B52}" datafieldname="aglcm003_email" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{abfa105f-1ef5-4e05-a8c3-772084eb7497}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Fax" languagecode="1033" />
+                          <label description="Fax" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_fax" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_fax" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7ca9cb1a-a5a6-4fb8-a156-d957ff1619b0}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Website" languagecode="1033" />
+                          <label description="Site web" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_siteweb" classid="{71716B6C-711E-476C-8AB8-5D11542BFB47}" datafieldname="aglcm003_siteweb" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="Entite_section_6" id="e996930d-9550-4e4d-83b4-fe486dffd590" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Need Expression Configuration" languagecode="1033" />
+                    <label description="Configuration de l'expression du besoin" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{4d3a3501-583d-4f34-95c9-005b333907f7}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="The entity uses the need expression" languagecode="1033" />
+                          <label description="L'entité utilise l'expression du besoin" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_haseb" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="aglcm003_haseb" uniqueid="{08c5fb5a-7e02-45f1-bf4a-9edb73908a0d}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6ee7e331-7591-4a1f-bcad-f9ff256f6968}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Integrats with other systems?" languagecode="1033" />
+                          <label description="Intégration avec d'autres systèmes ?" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_isintegratswithothersystems" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="aglcm003_isintegratswithothersystems" disabled="false" uniqueid="{e727fe6f-300d-45b4-8fce-2d6f79635f5c}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section name="Respondables" id="87fec4ca-7e5a-4888-ba1e-6e38501d330d" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Top" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="RESPONSIBLE PARTIES" languagecode="1033" />
+                    <label description="Respondables" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{845bebaf-3d30-4e4b-a272-9aa73c370fea}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="DAF" languagecode="1033" />
+                          <label description="DAF" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_dafid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_dafid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d3ca01d3-1993-46d9-90ba-a8dbd3886b5d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="DAFA" languagecode="1033" />
+                          <label description="DAFA" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_dafaid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_dafaid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1a123b15-7ffd-4329-95a1-3be3631d980b}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="DG" languagecode="1033" />
+                          <label description="DG" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_dgid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_dgid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2674cea9-5d93-4be3-a1a6-0095da95fa1f}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Purchasing Department Manager" languagecode="1033" />
+                          <label description="Responsable du service achats" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_responsableservicedachatid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_responsableservicedachatid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{20c67e14-1322-40bf-a7a1-80deff47b569}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Stock Owner" languagecode="1033" />
+                          <label description="Propriétaire des stocks" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_proprietairedestockid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="aglcm003_proprietairedestockid" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="Entite_section_5" id="fe49f4a9-492f-46e8-b4bc-b10c0234ea59" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Purchase Order Document Configuration" languagecode="1033" />
+                    <label description="Configuration du document de commande" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{63d40c60-6867-4d1e-bcc6-cd99f647c3cc}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Show VAT" languagecode="1033" />
+                          <label description="Afficher la TVA" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_has_tva" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="aglcm003_has_tva" uniqueid="{67a88b8e-82e5-4689-ba38-72a9dc13ad9a}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{5b0fbd64-2456-46f9-8180-e7008bc5bd9e}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Display the Veritas logo" languagecode="1033" />
+                          <label description="Afficher le logo Veritas" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_has_logo_veritas" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="aglcm003_has_logo_veritas" uniqueid="{75c93854-33eb-400c-aaf9-a60b60d098ea}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{cc329b39-acaa-4d77-b9a0-265895b68922}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Show delivery status" languagecode="1033" />
+                          <label description="Afficher l'état de la livraison" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_has_statut_livraison" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="aglcm003_has_statut_livraison" uniqueid="{12d94629-6755-45d5-8663-8238c1eb1a26}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{a5cd3413-a882-4bdd-a97f-a13dd98f46dc}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Show Total TTC" languagecode="1033" />
+                          <label description="Afficher le TTC total" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_has_tttc" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="aglcm003_has_tttc" uniqueid="{6481799e-d4b8-4050-a8ad-b24e8c784e32}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{866ab63b-4368-4c2e-819a-e7b9157148be}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Show SA with board of directors" languagecode="1033" />
+                          <label description="Afficher SA avec conseil d'administration" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_has_sa_con_admin" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="aglcm003_has_sa_con_admin" uniqueid="{fd56d0ce-148f-4b8b-b6ac-e69985f1a2be}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{3d108e0e-44ea-4ba9-a33a-83a68ccf9acb}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Last Validator" languagecode="1033" />
+                          <label description="Dernier validateur" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_has_derniervalidateur" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="aglcm003_has_derniervalidateur" uniqueid="{52e3a00a-a973-4647-8208-f1303137c27c}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{7a45bbd5-a824-442d-850c-a68bf2197445}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="List Validators" languagecode="1033" />
+                          <label description="Liste des validateurs" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_has_listerdesvalidateurs" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="aglcm003_has_listerdesvalidateurs" uniqueid="{c238e409-6265-432f-a4e8-83cfd7ac3a1e}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{aaea62dd-2618-4093-854c-9af8626eac69}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Specific fixed conditions" languagecode="1033" />
+                          <label description="Conditions fixes spécifiques" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_has_conditionsspecifiquesfixes" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_has_conditionsspecifiquesfixes" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9b2aa902-f421-4e97-8323-f0e8922379a2}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Statistical number" languagecode="1033" />
+                          <label description="Numéro statistique" languagecode="1036" />
+                        </labels>
+                        <control id="aglcm003_numerostatistique" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="aglcm003_numerostatistique" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="Catégorie par entite" id="6acc2945-c7dc-482f-8ba1-1c740059252c" IsUserDefined="0" locklevel="0" showlabel="true" visible="true">
+          <labels>
+            <label description="Category by entity" languagecode="1033" />
+            <label description="Catégorie par entité" languagecode="1036" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="Catégorie par entite_section_3" id="5bcdafcf-22d7-4135-bee9-d40a8978deac" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="New section" languagecode="1033" />
+                    <label description="Nouvelle section" languagecode="1036" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{26a984a0-cb47-46c1-91be-b6cc00e375dc}" rowspan="4" colspan="1" auto="false">
+                        <labels>
+                          <label description="Entity Category" languagecode="1033" />
+                          <label description="Catégorie d'entité" languagecode="1036" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="CategorieEntite" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>aglcm003_zulaa_categorieentite</TargetEntityType>
+                            <ViewId>{7D75E6D6-32ED-4A56-9D32-362019EA3A88}</ViewId>
+                            <ViewIds>{7D75E6D6-32ED-4A56-9D32-362019EA3A88}</ViewIds>
+                            <RelationshipName>aglcm003_zulaa_categorieentite_entite</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{f194e62f-ce85-4654-b230-fd3f581147af}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{7fd85f7d-821a-40a5-a397-aa93d9b0e004}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{77145b9d-f8cd-4ac9-8630-c447c2d7fadb}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{1a3c2778-dfdf-4134-94fd-bc31ac1d0368}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{742412c5-15cd-4163-82cf-2e93b929735a}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{741516d0-47d8-4337-a26b-d3b9fbf901c7}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{81e83697-2c29-48cb-b9d8-01e240b60c0d}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{0bca6b69-fc31-4c62-abc2-76bd87bf2b32}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+      <controlDescriptions>
+        <controlDescription forControl="{67a88b8e-82e5-4689-ba38-72a9dc13ad9a}">
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>aglcm003_has_tva</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>aglcm003_has_tva</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_has_tva</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_has_tva</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_has_tva</value>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{75c93854-33eb-400c-aaf9-a60b60d098ea}">
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>aglcm003_has_logo_veritas</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>aglcm003_has_logo_veritas</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_has_logo_veritas</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_has_logo_veritas</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_has_logo_veritas</value>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{52e3a00a-a973-4647-8208-f1303137c27c}">
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>aglcm003_has_derniervalidateur</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>aglcm003_has_derniervalidateur</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_has_derniervalidateur</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_has_derniervalidateur</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_has_derniervalidateur</value>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{12d94629-6755-45d5-8663-8238c1eb1a26}">
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>aglcm003_has_statut_livraison</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>aglcm003_has_statut_livraison</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_has_statut_livraison</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_has_statut_livraison</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_has_statut_livraison</value>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{6481799e-d4b8-4050-a8ad-b24e8c784e32}">
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>aglcm003_has_tttc</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>aglcm003_has_tttc</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_has_tttc</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_has_tttc</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_has_tttc</value>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{fd56d0ce-148f-4b8b-b6ac-e69985f1a2be}">
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>aglcm003_has_sa_con_admin</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>aglcm003_has_sa_con_admin</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_has_sa_con_admin</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_has_sa_con_admin</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_has_sa_con_admin</value>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{c238e409-6265-432f-a4e8-83cfd7ac3a1e}">
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>aglcm003_has_listerdesvalidateurs</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>aglcm003_has_listerdesvalidateurs</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_has_listerdesvalidateurs</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_has_listerdesvalidateurs</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_has_listerdesvalidateurs</value>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{08c5fb5a-7e02-45f1-bf4a-9edb73908a0d}">
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>aglcm003_haseb</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>aglcm003_haseb</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_haseb</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_haseb</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_haseb</value>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{e727fe6f-300d-45b4-8fce-2d6f79635f5c}">
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>aglcm003_isintegratswithothersystems</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_isintegratswithothersystems</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_isintegratswithothersystems</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">aglcm003_isintegratswithothersystems</value>
+            </parameters>
+          </customControl>
+        </controlDescription>
+      </controlDescriptions>
+      <formLibraries>
+        <Library name="aglcm003_covertlibelleentitetoupper" libraryUniqueId="{c24906f4-1b06-4001-90bd-779ce80174df}" />
+      </formLibraries>
+      <events>
+        <event name="onsave" application="false" active="false">
+          <Handlers>
+            <Handler functionName="transformToUpperCase" libraryName="aglcm003_covertlibelleentitetoupper" handlerUniqueId="{dbc557f9-2d2e-4669-bd5b-c7a0ec80451a}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+      </events>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+      <LocalizedName description="Informations" languagecode="1036" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+      <Description description="Formulaire pour cette entité." languagecode="1036" />
+    </Descriptions>
+  </systemform>
+</forms>

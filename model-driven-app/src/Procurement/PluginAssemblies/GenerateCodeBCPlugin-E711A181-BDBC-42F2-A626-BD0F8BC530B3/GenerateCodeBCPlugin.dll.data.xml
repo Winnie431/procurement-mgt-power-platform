@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PluginAssembly FullName="GenerateCodeBCPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7e9df4eec31d7d9f" PluginAssemblyId="e711a181-bdbc-42f2-a626-bd0f8bc530b3" CustomizationLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsolationMode>2</IsolationMode>
+  <SourceType>0</SourceType>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <FileName>/PluginAssemblies/GenerateCodeBCPlugin-E711A181-BDBC-42F2-A626-BD0F8BC530B3/GenerateCodeBCPlugin.dll</FileName>
+  <PluginTypes>
+    <PluginType AssemblyQualifiedName="GenerateCodeBCPlugin.GenerateCodeBCPlugin, GenerateCodeBCPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7e9df4eec31d7d9f" PluginTypeId="01e03fdb-93f0-4997-9d5b-aeb10a4ac724" Name="GenerateCodeBCPlugin.GenerateCodeBCPlugin">
+      <FriendlyName>03c10f3e-b50f-4ad6-97d5-09d2aeacf4e4</FriendlyName>
+    </PluginType>
+  </PluginTypes>
+</PluginAssembly>

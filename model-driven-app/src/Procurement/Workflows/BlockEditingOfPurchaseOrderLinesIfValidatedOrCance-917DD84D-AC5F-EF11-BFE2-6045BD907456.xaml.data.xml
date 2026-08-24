@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{917dd84d-ac5f-ef11-bfe2-6045bd907456}" Name="Block Editing Of Purchase Order Lines If Validated Or Canceled" Description="Click To Add Description" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/BlockEditingOfPurchaseOrderLinesIfValidatedOrCance-917DD84D-AC5F-EF11-BFE2-6045BD907456.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>2</Category>
+  <Mode>1</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>0</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <RunAs>1</RunAs>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <PrimaryEntity>aglcm003_zulaa_bondecommande</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Block Editing Of Purchase Order Lines If Validated Or Canceled" />
+    <LocalizedName languagecode="1036" description="Bloquer l’édition des lignes de bon de commande si validé ou annulé" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description languagecode="1033" description="Click To Add Description" />
+    <Description languagecode="1036" description="Cliquez pour ajouter une description" />
+  </Descriptions>
+</Workflow>

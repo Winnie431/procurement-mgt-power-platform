@@ -1,0 +1,1920 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name LocalizedName="Cost Center" OriginalName="Centre de cout">aglcm003_zulaa_centredecout</Name>
+  <EntityInfo>
+    <entity Name="aglcm003_zulaa_centredecout">
+      <LocalizedNames>
+        <LocalizedName description="Cost Center" languagecode="1033" />
+        <LocalizedName description="Centre de coûts" languagecode="1036" />
+      </LocalizedNames>
+      <LocalizedCollectionNames>
+        <LocalizedCollectionName description="Cost Centers" languagecode="1033" />
+        <LocalizedCollectionName description="Centres de coûts" languagecode="1036" />
+      </LocalizedCollectionNames>
+      <Descriptions>
+        <Description description="Contains cost center data" languagecode="1033" />
+        <Description description="Contient des données sur les centres de coûts" languagecode="1036" />
+      </Descriptions>
+      <attributes>
+        <attribute PhysicalName="aglcm003_businessunitparent">
+          <Type>lookup</Type>
+          <Name>aglcm003_businessunitparent</Name>
+          <LogicalName>aglcm003_businessunitparent</LogicalName>
+          <RequiredLevel>recommended</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Parent Business Unit" languagecode="1033" />
+            <displayname description="Unité commerciale parent" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="aglcm003_businessunitpropretaire">
+          <Type>lookup</Type>
+          <Name>aglcm003_businessunitpropretaire</Name>
+          <LogicalName>aglcm003_businessunitpropretaire</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Business Unit Owner" languagecode="1033" />
+            <displayname description="Propriétaire de l'unité commerciale" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="aglcm003_centredecout">
+          <Type>nvarchar</Type>
+          <Name>aglcm003_centredecout</Name>
+          <LogicalName>aglcm003_centredecout</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <Format>text</Format>
+          <MaxLength>2000</MaxLength>
+          <Length>4000</Length>
+          <displaynames>
+            <displayname description="Cost Center" languagecode="1033" />
+            <displayname description="Centre de coûts" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Example: 70f00" languagecode="1033" />
+            <Description description="Exemple : 70f00" languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="aglcm003_code">
+          <Type>nvarchar</Type>
+          <Name>aglcm003_code</Name>
+          <LogicalName>aglcm003_code</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <DisplayMask>PrimaryName|ValidForAdvancedFind|ValidForForm|ValidForGrid|RequiredForForm</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>1</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>1</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <Format>text</Format>
+          <MaxLength>850</MaxLength>
+          <Length>1700</Length>
+          <displaynames>
+            <displayname description="Code" languagecode="1033" />
+            <displayname description="Code" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="The code of the cost center (e.g., DLA-70F00)" languagecode="1033" />
+            <Description description="Code du centre de coûts (par exemple, DLA-70F00)" languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="aglcm003_controldegestionId">
+          <Type>lookup</Type>
+          <Name>aglcm003_controldegestionid</Name>
+          <LogicalName>aglcm003_controldegestionid</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Management Control Approver" languagecode="1033" />
+            <displayname description="Responsable du contrôle de gestion" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Management control approver" languagecode="1033" />
+            <Description description="Responsable du contrôle de gestion" languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="aglcm003_departementId">
+          <Type>lookup</Type>
+          <Name>aglcm003_departementid</Name>
+          <LogicalName>aglcm003_departementid</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Department" languagecode="1033" />
+            <displayname description="Département" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Department of the cost center" languagecode="1033" />
+            <Description description="Département du centre de coûts" languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="aglcm003_directionId">
+          <Type>lookup</Type>
+          <Name>aglcm003_directionid</Name>
+          <LogicalName>aglcm003_directionid</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Direction" languagecode="1033" />
+            <displayname description="Direction" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Cost center direction" languagecode="1033" />
+            <Description description="Direction du centre de coûts" languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="aglcm003_entiteId">
+          <Type>lookup</Type>
+          <Name>aglcm003_entiteid</Name>
+          <LogicalName>aglcm003_entiteid</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>1</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Entity" languagecode="1033" />
+            <displayname description="Entité" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="aglcm003_isactif">
+          <Type>bit</Type>
+          <Name>aglcm003_isactif</Name>
+          <LogicalName>aglcm003_isactif</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <AppDefaultValue>0</AppDefaultValue>
+          <optionset Name="aglcm003_zulaa_centredecout_aglcm003_isactif">
+            <OptionSetType>bit</OptionSetType>
+            <IntroducedVersion>1.0.0.0</IntroducedVersion>
+            <IsCustomizable>1</IsCustomizable>
+            <ExternalTypeName></ExternalTypeName>
+            <displaynames>
+              <displayname description="IsActive" languagecode="1033" />
+              <displayname description="IsActive" languagecode="1036" />
+            </displaynames>
+            <Descriptions>
+              <Description description="" languagecode="1033" />
+            </Descriptions>
+            <options>
+              <option value="1" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="Yes" languagecode="1033" />
+                  <label description="Oui" languagecode="1036" />
+                </labels>
+              </option>
+              <option value="0" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="No" languagecode="1033" />
+                  <label description="Non" languagecode="1036" />
+                </labels>
+              </option>
+            </options>
+          </optionset>
+          <displaynames>
+            <displayname description="IsActive" languagecode="1033" />
+            <displayname description="IsActive" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="aglcm003_libelle">
+          <Type>nvarchar</Type>
+          <Name>aglcm003_libelle</Name>
+          <LogicalName>aglcm003_libelle</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>1</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <Format>text</Format>
+          <MaxLength>2000</MaxLength>
+          <Length>4000</Length>
+          <displaynames>
+            <displayname description="Label" languagecode="1033" />
+            <displayname description="Libellé" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="The label of the cost center (e.g., SERVICE IT)" languagecode="1033" />
+            <Description description="Étiquette du centre de coûts (par exemple, SERVICE IT)" languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="aglcm003_responsablemetier">
+          <Type>lookup</Type>
+          <Name>aglcm003_responsablemetier</Name>
+          <LogicalName>aglcm003_responsablemetier</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Business Manager Approver" languagecode="1033" />
+            <displayname description="Responsable commercial Approbateur" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Cost center business manager" languagecode="1033" />
+            <Description description="Responsable commercial du centre de coûts" languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="aglcm003_sharepointid">
+          <Type>int</Type>
+          <Name>aglcm003_sharepointid</Name>
+          <LogicalName>aglcm003_sharepointid</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>disabled</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <Format>none</Format>
+          <MinValue>-2147483648</MinValue>
+          <MaxValue>2147483647</MaxValue>
+          <displaynames>
+            <displayname description="SharePoint ID" languagecode="1033" />
+            <displayname description="ID SharePoint" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="aglcm003_sharepointidciw">
+          <Type>int</Type>
+          <Name>aglcm003_sharepointidciw</Name>
+          <LogicalName>aglcm003_sharepointidciw</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>disabled</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <Format>none</Format>
+          <MinValue>-2147483648</MinValue>
+          <MaxValue>2147483647</MaxValue>
+          <displaynames>
+            <displayname description="SharePointID CIW" languagecode="1033" />
+            <displayname description="SharePointID CIW" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="aglcm003_sharepointidsn">
+          <Type>int</Type>
+          <Name>aglcm003_sharepointidsn</Name>
+          <LogicalName>aglcm003_sharepointidsn</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>disabled</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <Format>none</Format>
+          <MinValue>-2147483648</MinValue>
+          <MaxValue>2147483647</MaxValue>
+          <displaynames>
+            <displayname description="SharePointID SN" languagecode="1033" />
+            <displayname description="SharePointID SN" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="aglcm003_site">
+          <Type>nvarchar</Type>
+          <Name>aglcm003_site</Name>
+          <LogicalName>aglcm003_site</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <Format>text</Format>
+          <MaxLength>2000</MaxLength>
+          <Length>4000</Length>
+          <displaynames>
+            <displayname description="Site" languagecode="1033" />
+            <displayname description="Site" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Example: DLA, KRI" languagecode="1033" />
+            <Description description="Exemple : DLA, KRI" languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="aglcm003_teamADS">
+          <Type>lookup</Type>
+          <Name>aglcm003_teamads</Name>
+          <LogicalName>aglcm003_teamads</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.1</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Team ADS" languagecode="1033" />
+            <displayname description="Équipe ADS" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Security Agent Team" languagecode="1033" />
+            <Description description="Équipe d'agents de sécurité" languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="aglcm003_teamAR">
+          <Type>lookup</Type>
+          <Name>aglcm003_teamar</Name>
+          <LogicalName>aglcm003_teamar</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.1</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Team AR" languagecode="1033" />
+            <displayname description="Équipe AR" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Reception Agent Team" languagecode="1033" />
+            <Description description="Équipe d'agents de réception" languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="aglcm003_teamcg">
+          <Type>lookup</Type>
+          <Name>aglcm003_teamcg</Name>
+          <LogicalName>aglcm003_teamcg</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Team CG" languagecode="1033" />
+            <displayname description="Équipe CG" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="aglcm003_teamcreateureb">
+          <Type>lookup</Type>
+          <Name>aglcm003_teamcreateureb</Name>
+          <LogicalName>aglcm003_teamcreateureb</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="EB Creator Team" languagecode="1033" />
+            <displayname description="Équipe créatrice EB" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="aglcm003_teamdm">
+          <Type>lookup</Type>
+          <Name>aglcm003_teamdm</Name>
+          <LogicalName>aglcm003_teamdm</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Team DM EB" languagecode="1033" />
+            <displayname description="Équipe DM EB" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="The team of the business manager of the cost center. EB Validator" languagecode="1033" />
+            <Description description="Équipe du responsable commercial du centre de coûts. Validateur EB" languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="aglcm003_teamDS_RS">
+          <Type>lookup</Type>
+          <Name>aglcm003_teamds_rs</Name>
+          <LogicalName>aglcm003_teamds_rs</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.1</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Team DS_RS" languagecode="1033" />
+            <displayname description="Équipe DS_RS" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Stock request and return team" languagecode="1033" />
+            <Description description="Équipe chargée des demandes et des retours de stock" languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="aglcm003_teamDSAP">
+          <Type>lookup</Type>
+          <Name>aglcm003_teamdsap</Name>
+          <LogicalName>aglcm003_teamdsap</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.1</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Team DS-AP" languagecode="1033" />
+            <displayname description="Équipe DS-AP" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="aglcm003_teamGDS">
+          <Type>lookup</Type>
+          <Name>aglcm003_teamgds</Name>
+          <LogicalName>aglcm003_teamgds</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.1</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Team GDS" languagecode="1033" />
+            <displayname description="Équipe GDS" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Stock Manager Team" languagecode="1033" />
+            <Description description="Équipe de gestionnaires des stocks" languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="aglcm003_teamrm">
+          <Type>lookup</Type>
+          <Name>aglcm003_teamrm</Name>
+          <LogicalName>aglcm003_teamrm</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Team RM" languagecode="1033" />
+            <displayname description="Équipe RM" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Validator DA by cost center" languagecode="1033" />
+            <Description description="Validateur DA par centre de coûts" languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="aglcm003_validateurEB">
+          <Type>lookup</Type>
+          <Name>aglcm003_validateureb</Name>
+          <LogicalName>aglcm003_validateureb</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Expression of need approver" languagecode="1033" />
+            <displayname description="Approbateur de l'expression du besoin" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="1033" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="aglcm003_zulaa_centredecoutId">
+          <Type>primarykey</Type>
+          <Name>aglcm003_zulaa_centredecoutid</Name>
+          <LogicalName>aglcm003_zulaa_centredecoutid</LogicalName>
+          <RequiredLevel>systemrequired</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|RequiredForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>0</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>1</IsFilterable>
+          <IsRetrievable>1</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <displaynames>
+            <displayname description="CostCenterID" languagecode="1033" />
+            <displayname description="CostCenterID" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Unique identifier for entity instances" languagecode="1033" />
+            <Description description="Identifiant unique pour les instances d'entité" languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="CreatedBy">
+          <Type>lookup</Type>
+          <Name>createdby</Name>
+          <LogicalName>createdby</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>0</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Created By" languagecode="1033" />
+            <displayname description="Créé par" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+            <Description description="Identifiant unique de l'utilisateur qui a créé l'enregistrement." languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="CreatedOn">
+          <Type>datetime</Type>
+          <Name>createdon</Name>
+          <LogicalName>createdon</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>inactive</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>0</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>1</IsFilterable>
+          <IsRetrievable>1</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <Format>datetime</Format>
+          <CanChangeDateTimeBehavior>0</CanChangeDateTimeBehavior>
+          <Behavior>1</Behavior>
+          <displaynames>
+            <displayname description="Created On" languagecode="1033" />
+            <displayname description="Créé le" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Date and time when the record was created." languagecode="1033" />
+            <Description description="Date et heure de création de l'enregistrement." languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="CreatedOnBehalfBy">
+          <Type>lookup</Type>
+          <Name>createdonbehalfby</Name>
+          <LogicalName>createdonbehalfby</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>0</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Created By (Delegate)" languagecode="1033" />
+            <displayname description="Créé par (délégué)" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Unique identifier of the delegate user who created the record." languagecode="1033" />
+            <Description description="Identifiant unique de l'utilisateur délégué qui a créé l'enregistrement." languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="ImportSequenceNumber">
+          <Type>int</Type>
+          <Name>importsequencenumber</Name>
+          <LogicalName>importsequencenumber</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind</DisplayMask>
+          <ImeMode>disabled</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <Format></Format>
+          <MinValue>-2147483648</MinValue>
+          <MaxValue>2147483647</MaxValue>
+          <displaynames>
+            <displayname description="Import Sequence Number" languagecode="1033" />
+            <displayname description="Numéro de séquence d'importation" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Sequence number of the import that created this record." languagecode="1033" />
+            <Description description="Numéro de séquence de l'importation qui a créé cet enregistrement." languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="ModifiedBy">
+          <Type>lookup</Type>
+          <Name>modifiedby</Name>
+          <LogicalName>modifiedby</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>0</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Modified By" languagecode="1033" />
+            <displayname description="Modifié par" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+            <Description description="Identifiant unique de l'utilisateur qui a modifié l'enregistrement." languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="ModifiedOn">
+          <Type>datetime</Type>
+          <Name>modifiedon</Name>
+          <LogicalName>modifiedon</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>inactive</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>0</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>1</IsFilterable>
+          <IsRetrievable>1</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <Format>datetime</Format>
+          <CanChangeDateTimeBehavior>0</CanChangeDateTimeBehavior>
+          <Behavior>1</Behavior>
+          <displaynames>
+            <displayname description="Modified On" languagecode="1033" />
+            <displayname description="Modifié le" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Date and time when the record was modified." languagecode="1033" />
+            <Description description="Date et heure de modification de l'enregistrement." languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="ModifiedOnBehalfBy">
+          <Type>lookup</Type>
+          <Name>modifiedonbehalfby</Name>
+          <LogicalName>modifiedonbehalfby</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>0</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Modified By (Delegate)" languagecode="1033" />
+            <displayname description="Modifié par (délégué)" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Unique identifier of the delegate user who modified the record." languagecode="1033" />
+            <Description description="Identifiant unique de l'utilisateur délégué qui a modifié l'enregistrement." languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="OverriddenCreatedOn">
+          <Type>datetime</Type>
+          <Name>overriddencreatedon</Name>
+          <LogicalName>overriddencreatedon</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForGrid</DisplayMask>
+          <ImeMode>inactive</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <Format>date</Format>
+          <CanChangeDateTimeBehavior>0</CanChangeDateTimeBehavior>
+          <Behavior>1</Behavior>
+          <displaynames>
+            <displayname description="Record Created On" languagecode="1033" />
+            <displayname description="Enregistrement créé le" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Date and time that the record was migrated." languagecode="1033" />
+            <Description description="Date et heure auxquelles l'enregistrement a été migré." languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="OwnerId">
+          <Type>owner</Type>
+          <Name>ownerid</Name>
+          <LogicalName>ownerid</LogicalName>
+          <RequiredLevel>systemrequired</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid|RequiredForForm</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>1</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes>
+            <LookupType id="00000000-0000-0000-0000-000000000000">8</LookupType>
+            <LookupType id="00000000-0000-0000-0000-000000000000">9</LookupType>
+          </LookupTypes>
+          <displaynames>
+            <displayname description="Owner" languagecode="1033" />
+            <displayname description="Propriétaire" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Owner Id" languagecode="1033" />
+            <Description description="ID du propriétaire" languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="OwningBusinessUnit">
+          <Type>lookup</Type>
+          <Name>owningbusinessunit</Name>
+          <LogicalName>owningbusinessunit</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>0</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>1</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Owning Business Unit" languagecode="1033" />
+            <displayname description="Unité commerciale propriétaire" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Unique identifier for the business unit that owns the record" languagecode="1033" />
+            <Description description="Identifiant unique de l'unité commerciale propriétaire de l'enregistrement" languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="OwningTeam">
+          <Type>lookup</Type>
+          <Name>owningteam</Name>
+          <LogicalName>owningteam</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>0</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsLogical>1</IsLogical>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Owning Team" languagecode="1033" />
+            <displayname description="Équipe propriétaire" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+            <Description description="Identifiant unique pour l'équipe propriétaire de l'enregistrement." languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="OwningUser">
+          <Type>lookup</Type>
+          <Name>owninguser</Name>
+          <LogicalName>owninguser</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>0</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>0</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsLogical>1</IsLogical>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <LookupStyle>single</LookupStyle>
+          <LookupTypes />
+          <displaynames>
+            <displayname description="Owning User" languagecode="1033" />
+            <displayname description="Utilisateur propriétaire" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+            <Description description="Identifiant unique de l'utilisateur propriétaire de l'enregistrement." languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="statecode">
+          <Type>state</Type>
+          <Name>statecode</Name>
+          <LogicalName>statecode</LogicalName>
+          <RequiredLevel>systemrequired</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>0</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>1</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <optionset Name="aglcm003_zulaa_centredecout_statecode">
+            <OptionSetType>state</OptionSetType>
+            <IntroducedVersion>1.0</IntroducedVersion>
+            <IsCustomizable>1</IsCustomizable>
+            <displaynames>
+              <displayname description="Status" languagecode="1033" />
+              <displayname description="Statut" languagecode="1036" />
+            </displaynames>
+            <Descriptions>
+              <Description description="Status of the Cost Center" languagecode="1033" />
+              <Description description="Statut du centre de coûts" languagecode="1036" />
+            </Descriptions>
+            <states>
+              <state value="0" defaultstatus="1" invariantname="Active" IsHidden="0">
+                <labels>
+                  <label description="Active" languagecode="1033" />
+                  <label description="Actif" languagecode="1036" />
+                </labels>
+              </state>
+              <state value="1" defaultstatus="2" invariantname="Inactive" IsHidden="0">
+                <labels>
+                  <label description="Inactive" languagecode="1033" />
+                  <label description="Inactif" languagecode="1036" />
+                </labels>
+              </state>
+            </states>
+          </optionset>
+          <displaynames>
+            <displayname description="Status" languagecode="1033" />
+            <displayname description="Statut" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Status of the Cost Center" languagecode="1033" />
+            <Description description="Statut du centre de coûts" languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="statuscode">
+          <Type>status</Type>
+          <Name>statuscode</Name>
+          <LogicalName>statuscode</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <optionset Name="aglcm003_zulaa_centredecout_statuscode">
+            <OptionSetType>status</OptionSetType>
+            <IntroducedVersion>1.0</IntroducedVersion>
+            <IsCustomizable>1</IsCustomizable>
+            <displaynames>
+              <displayname description="Status Reason" languagecode="1033" />
+              <displayname description="Raison du statut" languagecode="1036" />
+            </displaynames>
+            <Descriptions>
+              <Description description="Reason for the status of the Cost Center" languagecode="1033" />
+              <Description description="Raison du statut du centre de coûts" languagecode="1036" />
+            </Descriptions>
+            <statuses>
+              <status value="1" state="0" IsHidden="0">
+                <labels>
+                  <label description="Active" languagecode="1033" />
+                  <label description="Actif" languagecode="1036" />
+                </labels>
+              </status>
+              <status value="2" state="1" IsHidden="0">
+                <labels>
+                  <label description="Inactive" languagecode="1033" />
+                  <label description="Inactif" languagecode="1036" />
+                </labels>
+              </status>
+            </statuses>
+          </optionset>
+          <displaynames>
+            <displayname description="Status Reason" languagecode="1033" />
+            <displayname description="Raison du statut" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Reason for the status of the Cost Center" languagecode="1033" />
+            <Description description="Raison du statut du centre de coûts" languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="TimeZoneRuleVersionNumber">
+          <Type>int</Type>
+          <Name>timezoneruleversionnumber</Name>
+          <LogicalName>timezoneruleversionnumber</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <Format></Format>
+          <MinValue>-1</MinValue>
+          <MaxValue>2147483647</MaxValue>
+          <displaynames>
+            <displayname description="Time Zone Rule Version Number" languagecode="1033" />
+            <displayname description="Numéro de version de la règle de fuseau horaire" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="For internal use only." languagecode="1033" />
+            <Description description="À usage interne uniquement." languagecode="1036" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="UTCConversionTimeZoneCode">
+          <Type>int</Type>
+          <Name>utcconversiontimezonecode</Name>
+          <LogicalName>utcconversiontimezonecode</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>0</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <Format></Format>
+          <MinValue>-1</MinValue>
+          <MaxValue>2147483647</MaxValue>
+          <displaynames>
+            <displayname description="UTC Conversion Time Zone Code" languagecode="1033" />
+            <displayname description="Code de fuseau horaire de conversion UTC" languagecode="1036" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Time zone code that was in use when the record was created." languagecode="1033" />
+            <Description description="Code de fuseau horaire utilisé lors de la création de l'enregistrement." languagecode="1036" />
+          </Descriptions>
+        </attribute>
+      </attributes>
+      <EntityKeys>
+        <EntityKey>
+          <Name>aglcm003_AKCentreDeCout</Name>
+          <LogicalName>aglcm003_akcentredecout</LogicalName>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>0</IsCustomizable>
+          <EntityKeyAttributes>
+            <AttributeName>aglcm003_sharepointid</AttributeName>
+          </EntityKeyAttributes>
+          <displaynames>
+            <displayname description="AK Centre De Cout" languagecode="1033" />
+          </displaynames>
+        </EntityKey>
+        <EntityKey>
+          <Name>aglcm003_AKCentredecoutCIW</Name>
+          <LogicalName>aglcm003_akcentredecoutciw</LogicalName>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>0</IsCustomizable>
+          <EntityKeyAttributes>
+            <AttributeName>aglcm003_sharepointidciw</AttributeName>
+          </EntityKeyAttributes>
+          <displaynames>
+            <displayname description="AK Centre de cout CIW" languagecode="1033" />
+          </displaynames>
+        </EntityKey>
+        <EntityKey>
+          <Name>aglcm003_AKCentredecoutSN</Name>
+          <LogicalName>aglcm003_akcentredecoutsn</LogicalName>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>0</IsCustomizable>
+          <EntityKeyAttributes>
+            <AttributeName>aglcm003_sharepointidsn</AttributeName>
+          </EntityKeyAttributes>
+          <displaynames>
+            <displayname description="AK Centre de cout SN" languagecode="1033" />
+          </displaynames>
+        </EntityKey>
+      </EntityKeys>
+      <EntitySetName>aglcm003_zulaa_centredecouts</EntitySetName>
+      <IsDuplicateCheckSupported>0</IsDuplicateCheckSupported>
+      <IsBusinessProcessEnabled>0</IsBusinessProcessEnabled>
+      <IsRequiredOffline>0</IsRequiredOffline>
+      <IsInteractionCentricEnabled>0</IsInteractionCentricEnabled>
+      <IsCollaboration>0</IsCollaboration>
+      <AutoRouteToOwnerQueue>0</AutoRouteToOwnerQueue>
+      <IsConnectionsEnabled>0</IsConnectionsEnabled>
+      <IsDocumentManagementEnabled>0</IsDocumentManagementEnabled>
+      <AutoCreateAccessTeams>0</AutoCreateAccessTeams>
+      <IsOneNoteIntegrationEnabled>0</IsOneNoteIntegrationEnabled>
+      <IsKnowledgeManagementEnabled>0</IsKnowledgeManagementEnabled>
+      <IsSLAEnabled>0</IsSLAEnabled>
+      <IsDocumentRecommendationsEnabled>0</IsDocumentRecommendationsEnabled>
+      <IsBPFEntity>0</IsBPFEntity>
+      <OwnershipTypeMask>UserOwned</OwnershipTypeMask>
+      <IsAuditEnabled>0</IsAuditEnabled>
+      <IsRetrieveAuditEnabled>0</IsRetrieveAuditEnabled>
+      <IsRetrieveMultipleAuditEnabled>0</IsRetrieveMultipleAuditEnabled>
+      <IsActivity>0</IsActivity>
+      <ActivityTypeMask></ActivityTypeMask>
+      <IsActivityParty>0</IsActivityParty>
+      <IsReplicated>0</IsReplicated>
+      <IsReplicationUserFiltered>0</IsReplicationUserFiltered>
+      <IsMailMergeEnabled>0</IsMailMergeEnabled>
+      <IsVisibleInMobile>0</IsVisibleInMobile>
+      <IsVisibleInMobileClient>0</IsVisibleInMobileClient>
+      <IsReadOnlyInMobileClient>0</IsReadOnlyInMobileClient>
+      <IsOfflineInMobileClient>0</IsOfflineInMobileClient>
+      <DaysSinceRecordLastModified>0</DaysSinceRecordLastModified>
+      <MobileOfflineFilters></MobileOfflineFilters>
+      <IsMapiGridEnabled>1</IsMapiGridEnabled>
+      <IsReadingPaneEnabled>1</IsReadingPaneEnabled>
+      <IsQuickCreateEnabled>0</IsQuickCreateEnabled>
+      <SyncToExternalSearchIndex>0</SyncToExternalSearchIndex>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <IsCustomizable>1</IsCustomizable>
+      <IsRenameable>1</IsRenameable>
+      <IsMappable>1</IsMappable>
+      <CanModifyAuditSettings>1</CanModifyAuditSettings>
+      <CanModifyMobileVisibility>1</CanModifyMobileVisibility>
+      <CanModifyMobileClientVisibility>1</CanModifyMobileClientVisibility>
+      <CanModifyMobileClientReadOnly>1</CanModifyMobileClientReadOnly>
+      <CanModifyMobileClientOffline>1</CanModifyMobileClientOffline>
+      <CanModifyConnectionSettings>1</CanModifyConnectionSettings>
+      <CanModifyDuplicateDetectionSettings>1</CanModifyDuplicateDetectionSettings>
+      <CanModifyMailMergeSettings>1</CanModifyMailMergeSettings>
+      <CanModifyQueueSettings>1</CanModifyQueueSettings>
+      <CanCreateAttributes>1</CanCreateAttributes>
+      <CanCreateForms>1</CanCreateForms>
+      <CanCreateCharts>1</CanCreateCharts>
+      <CanCreateViews>1</CanCreateViews>
+      <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+      <CanEnableSyncToExternalSearchIndex>1</CanEnableSyncToExternalSearchIndex>
+      <EnforceStateTransitions>0</EnforceStateTransitions>
+      <CanChangeHierarchicalRelationship>1</CanChangeHierarchicalRelationship>
+      <EntityHelpUrlEnabled>0</EntityHelpUrlEnabled>
+      <ChangeTrackingEnabled>1</ChangeTrackingEnabled>
+      <CanChangeTrackingBeEnabled>1</CanChangeTrackingBeEnabled>
+      <IsEnabledForExternalChannels>0</IsEnabledForExternalChannels>
+      <IsMSTeamsIntegrationEnabled>0</IsMSTeamsIntegrationEnabled>
+      <IsSolutionAware>0</IsSolutionAware>
+      <HasRelatedNotes>True</HasRelatedNotes>
+    </entity>
+  </EntityInfo>
+  <FormXml />
+  <SavedQueries />
+  <RibbonDiffXml />
+</Entity>

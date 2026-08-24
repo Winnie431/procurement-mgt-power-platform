@@ -1,0 +1,43 @@
+function setAndValidateQuantiteLivre(executionContext) {
+    try {
+        // Get the context of the grid
+        var gridContext = executionContext.getFormContext();
+
+ 
+        // Get the attributes for Quantité Livré and Quantité Restante
+        var quantiteLivreField = gridContext.getAttribute("aglcm003_quantitelivrer");
+        Alert(quantiteLivreField);
+
+        var quantiteRestanteField = gridContext.getAttribute("aglcm003_quantiterestante");
+        Alert(quantiteRestanteField);
+        // Get the current values
+        var quantiteLivre = quantiteLivreField.getValue();
+Alert(quantiteLivre);
+        var quantiteRestante = quantiteRestanteField.getValue();
+Alert(quantiteRestante);
+
+        // Set default value for Quantité Livré if it's null
+        if (quantiteLivre === null && quantiteRestante !== null) {
+            quantiteLivreField.setValue(quantiteRestante); // Default value
+        }
+
+        // Validate the entered value for Quantité Livré
+        if (quantiteLivre !== null && quantiteRestante !== null) {
+            if (quantiteLivre > quantiteRestante || quantiteLivre === 0) {
+                // Reset to the default value
+                quantiteLivreField.setValue(quantiteRestante);
+
+                // Display a notification
+                gridContext.getControl("aglcm003_quantitelivre").setNotification(
+                    "La quantité livré  ne peut être supérieure à la quantité restante ou être zero. Reset to default."
+                );
+            } else {
+                // Clear notification if valid
+                gridContext.getControl("aglcm003_quantitelivre").clearNotification();
+            }
+        }
+
+    } catch (error) {
+        console.error("Error in setAndValidateQuantiteLivre: ", error.message);
+    }
+}

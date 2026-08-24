@@ -1,0 +1,1382 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "aglcm003_CR_Dataverse_Zulaa"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_wordonlinebusiness-1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "aglcm003_CR_Word_Zulaa"
+        },
+        "api": {
+          "name": "shared_wordonlinebusiness"
+        }
+      },
+      "shared_sharepointonline-1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "aglcm003_CR_SharePoint_Zulaa"
+        },
+        "api": {
+          "name": "shared_sharepointonline"
+        }
+      },
+      "shared_office365-1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "aglcm003_CR_Outlook_Zulaa"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)": {
+          "defaultValue": "https://teamsite.msc.com/sites/CM003-AFR-CIO-ZULAA-MODELDRIVEN-DEV",
+          "type": "String",
+          "metadata": {
+            "schemaName": "aglcm003_Ev_Con_Zulaa_Modeldriven",
+            "description": "Site SharePoint"
+          }
+        },
+        "Ev_Folder_WordDocumentsZulaaModeldriven (aglcm003_Ev_Folder_WordDocumentsZulaaModeldriven)": {
+          "defaultValue": "b!D5F9rOgxM0yyCNdD89KrzSnaVhu-jXRJjHzlshORXgRMLjieOVVjRJncZP1-0c5-",
+          "type": "String",
+          "metadata": {
+            "schemaName": "aglcm003_Ev_Folder_WordDocumentsZulaaModeldriven",
+            "description": "Bibliothèque de documents à compléter pour les modèles de documents"
+          }
+        },
+        "Ev_Lib_Need_Expression (aglcm003_Ev_lib_expression_besoin)": {
+          "defaultValue": "320b15c3-5b83-4053-843d-e1e579c25b8c",
+          "type": "String",
+          "metadata": {
+            "schemaName": "aglcm003_Ev_lib_expression_besoin"
+          }
+        },
+        "Ev_File_TemplateFichierEB (aglcm003_Ev_File_TemplateFichierEB)": {
+          "defaultValue": "01XU4T366Y4K5L246E6BBKRJ5KCRFRSPX4 ",
+          "type": "String",
+          "metadata": {
+            "schemaName": "aglcm003_Ev_File_TemplateFichierEB"
+          }
+        },
+        "Document partagé ZulaaModelDriven (aglcm003_SharedDocumentZulaaModelDriven)": {
+          "defaultValue": "Shared Documents",
+          "type": "String",
+          "metadata": {
+            "schemaName": "aglcm003_SharedDocumentZulaaModelDriven",
+            "description": "Dossier racine Documents partagés d’un site SharePoint"
+          }
+        },
+        "Ev_File_TemplateFichierEB_French (aglcm003_Ev_File_TemplateFichierEB_French)": {
+          "defaultValue": "01XU4T362YHUNUJGHXSBBINWLLBXTK44JN",
+          "type": "String",
+          "metadata": {
+            "schemaName": "aglcm003_Ev_File_TemplateFichierEB_French"
+          }
+        }
+      },
+      "triggers": {
+        "Lorsqu’une_ligne_est_ajoutée,_modifiée_ou_supprimée": {
+          "metadata": {
+            "operationMetadataId": "a6bd44d5-5a6a-43a0-b757-24e829f44867"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "aglcm003_zulaa_expressiondebesoin",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "aglcm003_statuteb ",
+              "subscriptionRequest/filterexpression": "aglcm003_statuteb eq 2"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Récupérer_le_centre_de_coût_": {
+          "runAfter": {
+            "Récupérer_l'entité": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "fbbd78c2-c47b-4316-b966-b52ff632d9a6"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_zulaa_centredecouts",
+              "recordId": "@triggerOutputs()?['body/_aglcm003_centredecoutid_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Récupérer_l'entité": {
+          "runAfter": {
+            "Condition_1": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ca410731-f8cd-4cb1-bb1b-7fc23a440751"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_zulaa_entites",
+              "recordId": "@triggerBody()?['_aglcm003_entiteid_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Récupérer_le_demandeur_": {
+          "runAfter": {
+            "initialiser_la_variabble_ListeDesEmailServiceAchat": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "5344a470-8619-4d19-adf2-d5738c548358"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "systemusers",
+              "recordId": "@triggerBody()?['_createdby_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Récupérer_la_direction": {
+          "runAfter": {
+            "Récupérer_le_demandeur_": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "7bb03b5e-2abe-4821-97ee-dfe49349ff79"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_zulaa_directions",
+              "recordId": "@triggerBody()?['_aglcm003_directionid_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Condition": {
+          "actions": {
+            "Récupérer_les_membres_de_l'quipes": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "937ca2b1-c01a-4916-908a-9185c055234c"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "ListRecords",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "systemusers",
+                  "fetchXml": "<fetch top=\"50\">\n  <entity name=\"systemuser\">\n    <attribute name=\"fullname\" />\n    <link-entity name=\"teammembership\" from=\"systemuserid\" to=\"systemuserid\" link-type=\"any\" intersect=\"true\">\n      <link-entity name=\"team\" from=\"teamid\" to=\"teamid\" alias=\"teamGUID\">\n        <filter>\n          <condition attribute=\"teamid\" operator=\"eq\" value=\"@{body('Récupérer_l''entité')?['_aglcm003_teamsa_value']}\" />\n        </filter>\n      </link-entity>\n    </link-entity>\n  </entity>\n</fetch>"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Apply_to_each": {
+              "foreach": "@outputs('Récupérer_les_membres_de_l''quipes')?['body/value']",
+              "actions": {
+                "Append_to_string_variable": {
+                  "runAfter": {
+                    "Get_User": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "ea504e42-836f-4a2e-82a4-e3be781c9399"
+                  },
+                  "type": "AppendToStringVariable",
+                  "inputs": {
+                    "name": "ListeDesEmailServiceAchat",
+                    "value": "@{body('Get_User')?['internalemailaddress']};"
+                  }
+                },
+                "Get_User": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "939f66fd-f309-47b9-9c0b-0f7d58ef920a"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps",
+                      "operationId": "GetItem",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "systemusers",
+                      "recordId": "@item()?['systemuserid']"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                }
+              },
+              "runAfter": {
+                "Récupérer_les_membres_de_l'quipes": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "c9ce1011-31f9-4ea5-a263-21be6922c8b4"
+              },
+              "type": "Foreach"
+            },
+            "Compose-capitaliser_le_GUID": {
+              "runAfter": {
+                "Apply_to_each": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "f9079717-4a59-47e1-b5b9-b6aa9bc936ef"
+              },
+              "type": "Compose",
+              "inputs": "@toUpper(triggerBody()?['aglcm003_zulaa_expressiondebesoinid'])"
+            },
+            "Compose_-_remplacer_les_tirets_de_8": {
+              "runAfter": {
+                "Compose-capitaliser_le_GUID": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "60c18a74-d737-4872-b3aa-9a3c6e022ea1"
+              },
+              "type": "Compose",
+              "inputs": "@replace(outputs('Compose-capitaliser_le_GUID'),'-','')"
+            },
+            "Condition_2": {
+              "actions": {
+                "Populate_a_Microsoft_Word_template": {
+                  "runAfter": {},
+                  "metadata": {
+                    "01XU4T366Y4K5L246E6BBKRJ5KCRFRSPX4": "/Template Zulaa/TemplateEb valide (2).docx",
+                    "operationMetadataId": "b79d18c5-e522-4ded-adaf-84cc8c8bc42b"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_wordonlinebusiness-1",
+                      "operationId": "CreateFileItem",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_wordonlinebusiness"
+                    },
+                    "parameters": {
+                      "source": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                      "drive": "@parameters('Ev_Folder_WordDocumentsZulaaModeldriven (aglcm003_Ev_Folder_WordDocumentsZulaaModeldriven)')",
+                      "file": "@parameters('Ev_File_TemplateFichierEB (aglcm003_Ev_File_TemplateFichierEB)')",
+                      "dynamicFileSchema/856932921": "@{body('Récupérer_le_validateur')?['lastname']} @{body('Récupérer_le_validateur')?['firstname']}",
+                      "dynamicFileSchema/964707228": "@{body('Récupérer_le_demandeur_')?['lastname']} @{body('Récupérer_le_demandeur_')?['firstname']}",
+                      "dynamicFileSchema/1303273336": "@triggerBody()?['aglcm003_code']",
+                      "dynamicFileSchema/1981503401": "@variables('Nom departement')",
+                      "dynamicFileSchema/-968896585": "@body('Récupérer_la_direction')?['aglcm003_nom']",
+                      "dynamicFileSchema/-1594169970": "@body('Récupérer_le_centre_de_coût_')?['aglcm003_code']",
+                      "dynamicFileSchema/-932973856": "@formatDateTime(triggerBody()?['createdon'],'dd/MM/yyyy HH:mm')",
+                      "dynamicFileSchema/-458727495": "@formatDateTime(utcNow(),'dd/MM/yyyy HH:mm')",
+                      "dynamicFileSchema/-1824351841": "@body('Récuperer_la_catégorie')?['aglcm003_nom']",
+                      "dynamicFileSchema/-1144118252": "@triggerBody()?['aglcm003_description']",
+                      "dynamicFileSchema/-365911044": "@formatDateTime(utcNow(),'dd/MM/yyyy HH:mm')"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Create_new_folder": {
+                  "runAfter": {
+                    "Populate_a_Microsoft_Word_template": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "8fe24762-23ef-445e-9257-bc0402f6183a"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_sharepointonline-1",
+                      "operationId": "CreateNewFolder",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                    },
+                    "parameters": {
+                      "dataset": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                      "table": "@parameters('Ev_Lib_Need_Expression (aglcm003_Ev_lib_expression_besoin)')",
+                      "parameters/path": "@{triggerBody()?['aglcm003_code']}_@{outputs('Compose_-_remplacer_les_tirets_de_8')}"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Create_file": {
+                  "runAfter": {
+                    "Create_new_folder": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "fcdb9b8c-489f-48a8-9703-bb8e5a254f34"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_sharepointonline-1",
+                      "operationId": "CreateFile",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                    },
+                    "parameters": {
+                      "dataset": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                      "folderPath": "/@{parameters('Document partagé ZulaaModelDriven (aglcm003_SharedDocumentZulaaModelDriven)')}/Document Généré  Word",
+                      "name": "@concat(outputs('Récupérer_l''entité')?['body/aglcm003_code'],'_',triggerBody()?['aglcm003_code'],'.docx')",
+                      "body": "@body('Populate_a_Microsoft_Word_template')"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  },
+                  "runtimeConfiguration": {
+                    "contentTransfer": {
+                      "transferMode": "Chunked"
+                    }
+                  }
+                },
+                "Convert_Word_Document_to_PDF": {
+                  "runAfter": {
+                    "Create_file": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "e0be4c5b-75fa-44fa-b86f-53b5471ac9b2"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_wordonlinebusiness-1",
+                      "operationId": "GetFilePDF",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_wordonlinebusiness"
+                    },
+                    "parameters": {
+                      "source": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                      "drive": "@parameters('Ev_Folder_WordDocumentsZulaaModeldriven (aglcm003_Ev_Folder_WordDocumentsZulaaModeldriven)')",
+                      "file": "/Document Généré  Word/@{outputs('Create_file')?['body/Name']}"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Create_file_1": {
+                  "runAfter": {
+                    "Convert_Word_Document_to_PDF": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "7dff9256-42b3-42ab-91eb-7689afa176e8"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_sharepointonline-1",
+                      "operationId": "CreateFile",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                    },
+                    "parameters": {
+                      "dataset": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                      "folderPath": "/aglcm003_zulaa_expressiondebesoin/@{triggerBody()?['aglcm003_code']}_@{outputs('Compose_-_remplacer_les_tirets_de_8')}",
+                      "name": "@concat(outputs('Récupérer_l''entité')?['body/aglcm003_code'],'_',triggerBody()?['aglcm003_code'],'.pdf')",
+                      "body": "@body('Convert_Word_Document_to_PDF')"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  },
+                  "runtimeConfiguration": {
+                    "contentTransfer": {
+                      "transferMode": "Chunked"
+                    }
+                  }
+                },
+                "Send_an_email_(V2)": {
+                  "runAfter": {
+                    "Create_file_1": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "b2e77002-9c6a-48f8-b391-04769a84f15c"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_office365-1",
+                      "operationId": "SendEmailV2",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                    },
+                    "parameters": {
+                      "emailMessage/To": "@variables('ListeDesEmailServiceAchat')",
+                      "emailMessage/Subject": "@{triggerBody()?['aglcm003_code']} - @{triggerBody()?['aglcm003_libelle']}",
+                      "emailMessage/Body": "<p class=\"editor-paragraph\">Find attached the validated statement of requirements.<br><br>Best regards,<br><b><strong class=\"editor-text-bold\">Zulaa</strong></b></p>",
+                      "emailMessage/Attachments": [
+                        {
+                          "Name": "@{triggerBody()?['aglcm003_code']}.pdf",
+                          "ContentBytes": "@body('Convert_Word_Document_to_PDF')"
+                        }
+                      ],
+                      "emailMessage/Importance": "Normal"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                }
+              },
+              "runAfter": {
+                "Compose_-_remplacer_les_tirets_de_8": [
+                  "Succeeded"
+                ]
+              },
+              "else": {
+                "actions": {
+                  "Populate_a_Microsoft_Word_template_1": {
+                    "runAfter": {},
+                    "metadata": {
+                      "01XU4T366Y4K5L246E6BBKRJ5KCRFRSPX4": "/Template Zulaa/TemplateEb valide (2).docx",
+                      "operationMetadataId": "b79d18c5-e522-4ded-adaf-84cc8c8bc42b",
+                      "01XU4T362YHUNUJGHXSBBINWLLBXTK44JN": "/Template Zulaa/TemplateEb valide - French.docx"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_wordonlinebusiness-1",
+                        "operationId": "CreateFileItem",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_wordonlinebusiness"
+                      },
+                      "parameters": {
+                        "source": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                        "drive": "@parameters('Ev_Folder_WordDocumentsZulaaModeldriven (aglcm003_Ev_Folder_WordDocumentsZulaaModeldriven)')",
+                        "file": "@parameters('Ev_File_TemplateFichierEB_French (aglcm003_Ev_File_TemplateFichierEB_French)')",
+                        "dynamicFileSchema/856932921": "@{body('Récupérer_le_validateur')?['lastname']} @{body('Récupérer_le_validateur')?['firstname']}",
+                        "dynamicFileSchema/964707228": "@{body('Récupérer_le_demandeur_')?['lastname']} @{body('Récupérer_le_demandeur_')?['firstname']}",
+                        "dynamicFileSchema/1303273336": "@triggerBody()?['aglcm003_code']",
+                        "dynamicFileSchema/1981503401": "@variables('Nom departement')",
+                        "dynamicFileSchema/-968896585": "@body('Récupérer_la_direction')?['aglcm003_nom']",
+                        "dynamicFileSchema/-1594169970": "@body('Récupérer_le_centre_de_coût_')?['aglcm003_code']",
+                        "dynamicFileSchema/-932973856": "@formatDateTime(triggerBody()?['createdon'],'dd/MM/yyyy HH:mm')",
+                        "dynamicFileSchema/-458727495": "@formatDateTime(utcNow(),'dd/MM/yyyy HH:mm')",
+                        "dynamicFileSchema/-1824351841": "@body('Récuperer_la_catégorie')?['aglcm003_nom']",
+                        "dynamicFileSchema/-1144118252": "@triggerBody()?['aglcm003_description']",
+                        "dynamicFileSchema/-365911044": "@formatDateTime(utcNow(),'dd/MM/yyyy HH:mm')"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    }
+                  },
+                  "Create_new_folder_1": {
+                    "runAfter": {
+                      "Populate_a_Microsoft_Word_template_1": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "8fe24762-23ef-445e-9257-bc0402f6183a"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_sharepointonline-1",
+                        "operationId": "CreateNewFolder",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                      },
+                      "parameters": {
+                        "dataset": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                        "table": "@parameters('Ev_Lib_Need_Expression (aglcm003_Ev_lib_expression_besoin)')",
+                        "parameters/path": "@{triggerBody()?['aglcm003_code']}_@{outputs('Compose_-_remplacer_les_tirets_de_8')}"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    }
+                  },
+                  "Create_file_2": {
+                    "runAfter": {
+                      "Create_new_folder_1": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "fcdb9b8c-489f-48a8-9703-bb8e5a254f34"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_sharepointonline-1",
+                        "operationId": "CreateFile",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                      },
+                      "parameters": {
+                        "dataset": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                        "folderPath": "/@{parameters('Document partagé ZulaaModelDriven (aglcm003_SharedDocumentZulaaModelDriven)')}/Document Généré  Word",
+                        "name": "@concat(outputs('Récupérer_l''entité')?['body/aglcm003_code'],'_',triggerBody()?['aglcm003_code'],'.docx')",
+                        "body": "@body('Populate_a_Microsoft_Word_template_1')"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    },
+                    "runtimeConfiguration": {
+                      "contentTransfer": {
+                        "transferMode": "Chunked"
+                      }
+                    }
+                  },
+                  "Convert_Word_Document_to_PDF_1": {
+                    "runAfter": {
+                      "Create_file_2": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "e0be4c5b-75fa-44fa-b86f-53b5471ac9b2"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_wordonlinebusiness-1",
+                        "operationId": "GetFilePDF",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_wordonlinebusiness"
+                      },
+                      "parameters": {
+                        "source": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                        "drive": "@parameters('Ev_Folder_WordDocumentsZulaaModeldriven (aglcm003_Ev_Folder_WordDocumentsZulaaModeldriven)')",
+                        "file": "/Document Généré  Word/@{outputs('Create_file_2')?['body/Name']}"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    }
+                  },
+                  "Create_file_1_1": {
+                    "runAfter": {
+                      "Convert_Word_Document_to_PDF_1": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "7dff9256-42b3-42ab-91eb-7689afa176e8"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_sharepointonline-1",
+                        "operationId": "CreateFile",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                      },
+                      "parameters": {
+                        "dataset": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                        "folderPath": "/aglcm003_zulaa_expressiondebesoin/@{triggerBody()?['aglcm003_code']}_@{outputs('Compose_-_remplacer_les_tirets_de_8')}",
+                        "name": "@concat(outputs('Récupérer_l''entité')?['body/aglcm003_code'],'_',triggerBody()?['aglcm003_code'],'.pdf')",
+                        "body": "@body('Convert_Word_Document_to_PDF_1')"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    },
+                    "runtimeConfiguration": {
+                      "contentTransfer": {
+                        "transferMode": "Chunked"
+                      }
+                    }
+                  },
+                  "Send_an_email_(V2)_1_1": {
+                    "runAfter": {
+                      "Create_file_1_1": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "b2e77002-9c6a-48f8-b391-04769a84f15c"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_office365-1",
+                        "operationId": "SendEmailV2",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                      },
+                      "parameters": {
+                        "emailMessage/To": "@variables('ListeDesEmailServiceAchat')",
+                        "emailMessage/Subject": "@{triggerBody()?['aglcm003_code']} - @{triggerBody()?['aglcm003_libelle']}",
+                        "emailMessage/Body": "<p class=\"editor-paragraph\">Veuillez trouver ci-joint expression de besoin @{triggerOutputs()?['body/aglcm003_code']} validée.</p><p class=\"editor-paragraph\"><br>Best regards,<br><b><strong class=\"editor-text-bold\">Zulaa</strong></b></p>",
+                        "emailMessage/Attachments": [
+                          {
+                            "Name": "@{triggerBody()?['aglcm003_code']}.pdf",
+                            "ContentBytes": "@body('Convert_Word_Document_to_PDF_1')"
+                          }
+                        ],
+                        "emailMessage/Importance": "Normal"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    }
+                  }
+                }
+              },
+              "expression": {
+                "and": [
+                  {
+                    "equals": [
+                      "@outputs('Récupérer_l''entité')?['body/aglcm003_language']",
+                      0
+                    ]
+                  }
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "a80e344e-b08c-434c-abb8-dcd240c2e660"
+              },
+              "type": "If"
+            }
+          },
+          "runAfter": {
+            "Initialize_variable_1": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Récupérer__les_membre_de_l\"equipe": {
+                "runAfter": {
+                  "For_each": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "d42b64a5-d56e-441b-8c23-46e62e2c6e8c"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "ListRecords",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "systemusers",
+                    "fetchXml": "<fetch top=\"50\">\n  <entity name=\"systemuser\">\n    <attribute name=\"fullname\" />\n    <link-entity name=\"teammembership\" from=\"systemuserid\" to=\"systemuserid\" link-type=\"any\" intersect=\"true\">\n      <link-entity name=\"team\" from=\"teamid\" to=\"teamid\" alias=\"teamGUID\">\n        <filter>\n          <condition attribute=\"teamid\" operator=\"eq\" value=\"@{variables('IDTeamSACategorie')}\" />\n        </filter>\n      </link-entity>\n    </link-entity>\n  </entity>\n</fetch>"
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              },
+              "Apply_to_each-copy": {
+                "foreach": "@outputs('Récupérer__les_membre_de_l\"equipe')?['body/value']",
+                "actions": {
+                  "Append_to_string_variable_1": {
+                    "runAfter": {
+                      "Get_User_1": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "b433cdfe-ed5c-44c0-ac97-f5ce2be271cb"
+                    },
+                    "type": "AppendToStringVariable",
+                    "inputs": {
+                      "name": "ListeDesEmailServiceAchat",
+                      "value": "@{body('Get_User_1')?['internalemailaddress']};"
+                    }
+                  },
+                  "Get_User_1": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "72c84593-503c-4dd0-b563-0c8120bbc15d"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_commondataserviceforapps",
+                        "operationId": "GetItem",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                      },
+                      "parameters": {
+                        "entityName": "systemusers",
+                        "recordId": "@item()?['systemuserid']"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    }
+                  }
+                },
+                "runAfter": {
+                  "Récupérer__les_membre_de_l\"equipe": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "f6ae943b-a96e-413c-8eb2-23fcc3f02e47"
+                },
+                "type": "Foreach"
+              },
+              "Compose-capitaliser_le_GUID_1": {
+                "runAfter": {
+                  "Apply_to_each-copy": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "738961d7-5b95-4db2-ba24-68bd14182b78"
+                },
+                "type": "Compose",
+                "inputs": "@toUpper(triggerBody()?['aglcm003_zulaa_expressiondebesoinid'])"
+              },
+              "Compose_1-remplacer_les_tirets_de_8": {
+                "runAfter": {
+                  "Compose-capitaliser_le_GUID_1": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "571058db-a7db-4df1-93b3-1877989e8f0f"
+                },
+                "type": "Compose",
+                "inputs": "@replace(outputs('Compose-capitaliser_le_GUID_1'),'-','')"
+              },
+              "List_rows_CategorieEntité": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "55465dc0-23e6-4678-b738-36a84b083a15"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "ListRecords",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "aglcm003_zulaa_categorieentites",
+                    "$filter": "_aglcm003_categorieid_value eq '@{triggerBody()?['_aglcm003_categorie_value']}'  and  _aglcm003_entiteid_value eq '@{triggerBody()?['_aglcm003_entiteid_value']}'"
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              },
+              "For_each": {
+                "foreach": "@outputs('List_rows_CategorieEntité')?['body/value']",
+                "actions": {
+                  "Set_ID_team_SA_categorie_": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "bed01257-0b48-45fa-ab94-23b6e20eea12"
+                    },
+                    "type": "SetVariable",
+                    "inputs": {
+                      "name": "IDTeamSACategorie",
+                      "value": "@item()?['_aglcm003_teamcategoriesa_value']"
+                    }
+                  }
+                },
+                "runAfter": {
+                  "List_rows_CategorieEntité": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "5b878f13-4e1c-4877-b58d-50252a3a49d6"
+                },
+                "type": "Foreach"
+              },
+              "Condition_3": {
+                "actions": {
+                  "Populate_a_Microsoft_Word_template_2": {
+                    "runAfter": {},
+                    "metadata": {
+                      "01XU4T366Y4K5L246E6BBKRJ5KCRFRSPX4": "/Template Zulaa/TemplateEb valide (2).docx",
+                      "operationMetadataId": "b79d18c5-e522-4ded-adaf-84cc8c8bc42b"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_wordonlinebusiness-1",
+                        "operationId": "CreateFileItem",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_wordonlinebusiness"
+                      },
+                      "parameters": {
+                        "source": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                        "drive": "@parameters('Ev_Folder_WordDocumentsZulaaModeldriven (aglcm003_Ev_Folder_WordDocumentsZulaaModeldriven)')",
+                        "file": "@parameters('Ev_File_TemplateFichierEB (aglcm003_Ev_File_TemplateFichierEB)')",
+                        "dynamicFileSchema/856932921": "@{body('Récupérer_le_validateur')?['lastname']} @{body('Récupérer_le_validateur')?['firstname']}",
+                        "dynamicFileSchema/964707228": "@{body('Récupérer_le_demandeur_')?['lastname']} @{body('Récupérer_le_demandeur_')?['firstname']}",
+                        "dynamicFileSchema/1303273336": "@triggerBody()?['aglcm003_code']",
+                        "dynamicFileSchema/1981503401": "@variables('Nom departement')",
+                        "dynamicFileSchema/-968896585": "@body('Récupérer_la_direction')?['aglcm003_nom']",
+                        "dynamicFileSchema/-1594169970": "@body('Récupérer_le_centre_de_coût_')?['aglcm003_code']",
+                        "dynamicFileSchema/-932973856": "@formatDateTime(triggerBody()?['createdon'],'dd/MM/yyyy HH:mm')",
+                        "dynamicFileSchema/-458727495": "@formatDateTime(utcNow(),'dd/MM/yyyy HH:mm')",
+                        "dynamicFileSchema/-1824351841": "@body('Récuperer_la_catégorie')?['aglcm003_nom']",
+                        "dynamicFileSchema/-1144118252": "@triggerBody()?['aglcm003_description']",
+                        "dynamicFileSchema/-365911044": "@formatDateTime(utcNow(),'dd/MM/yyyy HH:mm')"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    }
+                  },
+                  "Create_new_folder-copy": {
+                    "runAfter": {
+                      "Populate_a_Microsoft_Word_template_2": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "4f42dc4e-ffee-428a-a968-fb200bff1ad9"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_sharepointonline-1",
+                        "operationId": "CreateNewFolder",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                      },
+                      "parameters": {
+                        "dataset": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                        "table": "@parameters('Ev_Lib_Need_Expression (aglcm003_Ev_lib_expression_besoin)')",
+                        "parameters/path": "@{triggerBody()?['aglcm003_code']}_@{outputs('Compose_1-remplacer_les_tirets_de_8')}"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    }
+                  },
+                  "Create_file-copy": {
+                    "runAfter": {
+                      "Create_new_folder-copy": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "7b1942ac-3ef5-41fc-88c9-301dd84797e0"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_sharepointonline-1",
+                        "operationId": "CreateFile",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                      },
+                      "parameters": {
+                        "dataset": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                        "folderPath": "/@{parameters('Document partagé ZulaaModelDriven (aglcm003_SharedDocumentZulaaModelDriven)')}/Document Généré  Word",
+                        "name": "@concat(outputs('Récupérer_l''entité')?['body/aglcm003_code'],'_',triggerBody()?['aglcm003_code'],'.docx')",
+                        "body": "@body('Populate_a_Microsoft_Word_template_2')"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    },
+                    "runtimeConfiguration": {
+                      "contentTransfer": {
+                        "transferMode": "Chunked"
+                      }
+                    }
+                  },
+                  "Convert_Word_Document_to_PDF-copy": {
+                    "runAfter": {
+                      "Create_file-copy": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "b72bac7f-c67b-44e5-9e95-cd9787a2815f"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_wordonlinebusiness-1",
+                        "operationId": "GetFilePDF",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_wordonlinebusiness"
+                      },
+                      "parameters": {
+                        "source": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                        "drive": "@parameters('Ev_Folder_WordDocumentsZulaaModeldriven (aglcm003_Ev_Folder_WordDocumentsZulaaModeldriven)')",
+                        "file": "/Document Généré  Word/@{outputs('Create_file-copy')?['body/Name']}"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    }
+                  },
+                  "Create_file_1-copy": {
+                    "runAfter": {
+                      "Convert_Word_Document_to_PDF-copy": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "c081d4cd-e01a-4fe1-956d-667c6d3175cb"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_sharepointonline-1",
+                        "operationId": "CreateFile",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                      },
+                      "parameters": {
+                        "dataset": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                        "folderPath": "/aglcm003_zulaa_expressiondebesoin/@{triggerBody()?['aglcm003_code']}_@{outputs('Compose_1-remplacer_les_tirets_de_8')}",
+                        "name": "@concat(outputs('Récupérer_l''entité')?['body/aglcm003_code'],'_',triggerBody()?['aglcm003_code'],'.pdf')",
+                        "body": "@body('Convert_Word_Document_to_PDF-copy')"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    },
+                    "runtimeConfiguration": {
+                      "contentTransfer": {
+                        "transferMode": "Chunked"
+                      }
+                    }
+                  },
+                  "Send_an_email_(V2)-copy": {
+                    "runAfter": {
+                      "Create_file_1-copy": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "da115448-d333-4c9b-941b-1941b500c561"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_office365-1",
+                        "operationId": "SendEmailV2",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                      },
+                      "parameters": {
+                        "emailMessage/To": "@{variables('ListeDesEmailServiceAchat')} ",
+                        "emailMessage/Subject": "@{triggerBody()?['aglcm003_code']} - @{triggerBody()?['aglcm003_libelle']}",
+                        "emailMessage/Body": "<p class=\"editor-paragraph\">Find attached the validated statement of requirements.<br><br>Best regards,<br>Zulaa</p>",
+                        "emailMessage/Attachments": [
+                          {
+                            "Name": "@{triggerBody()?['aglcm003_code']}.pdf",
+                            "ContentBytes": "@body('Convert_Word_Document_to_PDF-copy')"
+                          }
+                        ],
+                        "emailMessage/Importance": "Normal"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    }
+                  }
+                },
+                "runAfter": {
+                  "Compose_1-remplacer_les_tirets_de_8": [
+                    "Succeeded"
+                  ]
+                },
+                "else": {
+                  "actions": {
+                    "Populate_a_Microsoft_Word_template_3": {
+                      "runAfter": {},
+                      "metadata": {
+                        "01XU4T366Y4K5L246E6BBKRJ5KCRFRSPX4": "/Template Zulaa/TemplateEb valide (2).docx",
+                        "operationMetadataId": "b79d18c5-e522-4ded-adaf-84cc8c8bc42b",
+                        "01XU4T362YHUNUJGHXSBBINWLLBXTK44JN": "/Template Zulaa/TemplateEb valide - French.docx"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_wordonlinebusiness-1",
+                          "operationId": "CreateFileItem",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_wordonlinebusiness"
+                        },
+                        "parameters": {
+                          "source": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                          "drive": "@parameters('Ev_Folder_WordDocumentsZulaaModeldriven (aglcm003_Ev_Folder_WordDocumentsZulaaModeldriven)')",
+                          "file": "@parameters('Ev_File_TemplateFichierEB_French (aglcm003_Ev_File_TemplateFichierEB_French)')",
+                          "dynamicFileSchema/856932921": "@{body('Récupérer_le_validateur')?['lastname']} @{body('Récupérer_le_validateur')?['firstname']}",
+                          "dynamicFileSchema/964707228": "@{body('Récupérer_le_demandeur_')?['lastname']} @{body('Récupérer_le_demandeur_')?['firstname']}",
+                          "dynamicFileSchema/1303273336": "@triggerBody()?['aglcm003_code']",
+                          "dynamicFileSchema/1981503401": "@variables('Nom departement')",
+                          "dynamicFileSchema/-968896585": "@body('Récupérer_la_direction')?['aglcm003_nom']",
+                          "dynamicFileSchema/-1594169970": "@body('Récupérer_le_centre_de_coût_')?['aglcm003_code']",
+                          "dynamicFileSchema/-932973856": "@formatDateTime(triggerBody()?['createdon'],'dd/MM/yyyy HH:mm')",
+                          "dynamicFileSchema/-458727495": "@formatDateTime(utcNow(),'dd/MM/yyyy HH:mm')",
+                          "dynamicFileSchema/-1824351841": "@body('Récuperer_la_catégorie')?['aglcm003_nom']",
+                          "dynamicFileSchema/-1144118252": "@triggerBody()?['aglcm003_description']",
+                          "dynamicFileSchema/-365911044": "@formatDateTime(utcNow(),'dd/MM/yyyy HH:mm')"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    },
+                    "Create_new_folder-copy_1": {
+                      "runAfter": {
+                        "Populate_a_Microsoft_Word_template_3": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "4f42dc4e-ffee-428a-a968-fb200bff1ad9"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_sharepointonline-1",
+                          "operationId": "CreateNewFolder",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                        },
+                        "parameters": {
+                          "dataset": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                          "table": "@parameters('Ev_Lib_Need_Expression (aglcm003_Ev_lib_expression_besoin)')",
+                          "parameters/path": "@{triggerBody()?['aglcm003_code']}_@{outputs('Compose_1-remplacer_les_tirets_de_8')}"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    },
+                    "Create_file-copy_1": {
+                      "runAfter": {
+                        "Create_new_folder-copy_1": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "7b1942ac-3ef5-41fc-88c9-301dd84797e0"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_sharepointonline-1",
+                          "operationId": "CreateFile",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                        },
+                        "parameters": {
+                          "dataset": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                          "folderPath": "/@{parameters('Document partagé ZulaaModelDriven (aglcm003_SharedDocumentZulaaModelDriven)')}/Document Généré  Word",
+                          "name": "@concat(outputs('Récupérer_l''entité')?['body/aglcm003_code'],'_',triggerBody()?['aglcm003_code'],'.docx')",
+                          "body": "@body('Populate_a_Microsoft_Word_template_3')"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      },
+                      "runtimeConfiguration": {
+                        "contentTransfer": {
+                          "transferMode": "Chunked"
+                        }
+                      }
+                    },
+                    "Convert_Word_Document_to_PDF-copy_1": {
+                      "runAfter": {
+                        "Create_file-copy_1": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "b72bac7f-c67b-44e5-9e95-cd9787a2815f"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_wordonlinebusiness-1",
+                          "operationId": "GetFilePDF",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_wordonlinebusiness"
+                        },
+                        "parameters": {
+                          "source": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                          "drive": "@parameters('Ev_Folder_WordDocumentsZulaaModeldriven (aglcm003_Ev_Folder_WordDocumentsZulaaModeldriven)')",
+                          "file": "/Document Généré  Word/@{outputs('Create_file-copy_1')?['body/Name']}"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    },
+                    "Create_file_1-copy_1": {
+                      "runAfter": {
+                        "Convert_Word_Document_to_PDF-copy_1": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "c081d4cd-e01a-4fe1-956d-667c6d3175cb"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_sharepointonline-1",
+                          "operationId": "CreateFile",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                        },
+                        "parameters": {
+                          "dataset": "@parameters('Ev_Con_Zulaa_Modeldriven (aglcm003_Ev_Con_Zulaa_Modeldriven)')",
+                          "folderPath": "/aglcm003_zulaa_expressiondebesoin/@{triggerBody()?['aglcm003_code']}_@{outputs('Compose_1-remplacer_les_tirets_de_8')}",
+                          "name": "@concat(outputs('Récupérer_l''entité')?['body/aglcm003_code'],'_',triggerBody()?['aglcm003_code'],'.pdf')",
+                          "body": "@body('Convert_Word_Document_to_PDF-copy_1')"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      },
+                      "runtimeConfiguration": {
+                        "contentTransfer": {
+                          "transferMode": "Chunked"
+                        }
+                      }
+                    },
+                    "Send_an_email_(V2)-copy_1_1": {
+                      "runAfter": {
+                        "Create_file_1-copy_1": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "da115448-d333-4c9b-941b-1941b500c561"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_office365-1",
+                          "operationId": "SendEmailV2",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                        },
+                        "parameters": {
+                          "emailMessage/To": "@{variables('ListeDesEmailServiceAchat')} ",
+                          "emailMessage/Subject": "@{triggerBody()?['aglcm003_code']} - @{triggerBody()?['aglcm003_libelle']}",
+                          "emailMessage/Body": "<p class=\"editor-paragraph\">Veuillez trouver ci-joint l'expression des besoins validée.</p><br><p class=\"editor-paragraph\">Cordialement,</p><p class=\"editor-paragraph\"><b><strong class=\"editor-text-bold\">Zulaa</strong></b></p>",
+                          "emailMessage/Attachments": [
+                            {
+                              "Name": "@{triggerBody()?['aglcm003_code']}.pdf",
+                              "ContentBytes": "@body('Convert_Word_Document_to_PDF-copy_1')"
+                            }
+                          ],
+                          "emailMessage/Importance": "Normal"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    }
+                  }
+                },
+                "expression": {
+                  "equals": [
+                    "@outputs('Récupérer_l''entité')?['body/aglcm003_language']",
+                    0
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "0b417035-0dbb-421c-8157-aea0a191466b"
+                },
+                "type": "If"
+              }
+            }
+          },
+          "expression": {
+            "and": [
+              {
+                "equals": [
+                  "@body('Récupérer_l''entité')?['aglcm003_typegestionda']",
+                  1
+                ]
+              }
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "3035887c-0d8e-4e64-8eef-ffa1069c6c41"
+          },
+          "type": "If"
+        },
+        "initialiser_la_variabble_ListeDesEmailServiceAchat": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "bdd9d07f-7edc-4de8-8598-24e74e8c3dbe"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "ListeDesEmailServiceAchat",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Récupérer_le_validateur": {
+          "runAfter": {
+            "Compose_2": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "088acd52-5ff1-4c25-b3f8-53c723185174"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "systemusers",
+              "recordId": "@triggerBody()?['_aglcm003_validateurid_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Compose_2": {
+          "runAfter": {
+            "Récuperer_la_catégorie": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "48f4c6cb-65e2-40ca-ba62-682c03eca765"
+          },
+          "type": "Compose",
+          "inputs": "@triggerBody()?['_aglcm003_validateurid_value']"
+        },
+        "Condition_1": {
+          "actions": {
+            "Récupérer_le_département_": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "778931a5-75ba-4065-9626-832cc73acea2"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "GetItem",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "aglcm003_zulaa_departements",
+                  "recordId": "@triggerBody()?['_aglcm003_departementid_value']"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Set_variable_Nom_de_departement": {
+              "runAfter": {
+                "Récupérer_le_département_": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "3d0f6947-634c-4d31-a21b-99105be12a15"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "Nom departement",
+                "value": "@body('Récupérer_le_département_')?['aglcm003_nom']"
+              }
+            }
+          },
+          "runAfter": {
+            "Initialize_variable": [
+              "Succeeded"
+            ]
+          },
+          "expression": {
+            "and": [
+              {
+                "equals": [
+                  "@empty(triggerBody()?['_aglcm003_departementid_value'])",
+                  "@false"
+                ]
+              }
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "25e7581d-15e0-41aa-83c2-32e3f65c3aff"
+          },
+          "type": "If"
+        },
+        "Initialize_variable": {
+          "runAfter": {
+            "Récupérer_la_direction": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "02e91cad-f9f5-4863-a99d-9ca48a786923"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Nom departement",
+                "type": "string",
+                "value": "     "
+              }
+            ]
+          }
+        },
+        "Récuperer_la_catégorie": {
+          "runAfter": {
+            "Récupérer_le_centre_de_coût_": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "69906bb5-ba4d-4f12-88af-3fb7ac3e61a6"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_zulaa_categories",
+              "recordId": "@triggerBody()?['_aglcm003_categorie_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Initialize_variable_1": {
+          "runAfter": {
+            "Récupérer_le_validateur": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "26d05ec2-2f15-4b37-bb38-0db5e75df996"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "IDTeamSACategorie",
+                "type": "string"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

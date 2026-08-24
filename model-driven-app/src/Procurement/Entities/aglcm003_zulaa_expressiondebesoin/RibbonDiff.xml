@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RibbonDiffXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CustomActions>
+    <HideCustomAction HideActionId="agl.Mscrm.Form.aglcm003_zulaa_expressiondebesoin.Activate.Hide" Location="Mscrm.Form.aglcm003_zulaa_expressiondebesoin.Activate" />
+    <HideCustomAction HideActionId="agl.Mscrm.Form.aglcm003_zulaa_expressiondebesoin.CopySelected.Hide" Location="Mscrm.Form.aglcm003_zulaa_expressiondebesoin.CopySelected" />
+    <HideCustomAction HideActionId="agl.Mscrm.Form.aglcm003_zulaa_expressiondebesoin.Deactivate.Hide" Location="Mscrm.Form.aglcm003_zulaa_expressiondebesoin.Deactivate" />
+    <HideCustomAction HideActionId="agl.Mscrm.Form.aglcm003_zulaa_expressiondebesoin.Flows.RefreshCommandBar.Flows.Hide" Location="Mscrm.Form.aglcm003_zulaa_expressiondebesoin.Flows.RefreshCommandBar.Flows" />
+    <HideCustomAction HideActionId="agl.Mscrm.Form.aglcm003_zulaa_expressiondebesoin.Flows.RefreshCommandBar.Hide" Location="Mscrm.Form.aglcm003_zulaa_expressiondebesoin.Flows.RefreshCommandBar" />
+    <HideCustomAction HideActionId="agl.Mscrm.Form.aglcm003_zulaa_expressiondebesoin.Reports.Hide" Location="Mscrm.Form.aglcm003_zulaa_expressiondebesoin.Reports" />
+    <HideCustomAction HideActionId="agl.Mscrm.Form.aglcm003_zulaa_expressiondebesoin.RunWorkflow.Hide" Location="Mscrm.Form.aglcm003_zulaa_expressiondebesoin.RunWorkflow" />
+    <HideCustomAction HideActionId="agl.Mscrm.Form.aglcm003_zulaa_expressiondebesoin.SaveAndClose.Hide" Location="Mscrm.Form.aglcm003_zulaa_expressiondebesoin.SaveAndClose" />
+    <HideCustomAction HideActionId="agl.Mscrm.Form.aglcm003_zulaa_expressiondebesoin.SendSelected.Hide" Location="Mscrm.Form.aglcm003_zulaa_expressiondebesoin.SendSelected" />
+    <HideCustomAction HideActionId="agl.Mscrm.Form.aglcm003_zulaa_expressiondebesoin.WordTemplate.Hide" Location="Mscrm.Form.aglcm003_zulaa_expressiondebesoin.WordTemplate" />
+    <HideCustomAction HideActionId="agl.Mscrm.HomepageGrid.aglcm003_zulaa_expressiondebesoin.DocumentTemplate.Hide" Location="Mscrm.HomepageGrid.aglcm003_zulaa_expressiondebesoin.DocumentTemplate" />
+    <HideCustomAction HideActionId="agl.Mscrm.HomepageGrid.aglcm003_zulaa_expressiondebesoin.ExportToExcel.Hide" Location="Mscrm.HomepageGrid.aglcm003_zulaa_expressiondebesoin.ExportToExcel" />
+    <HideCustomAction HideActionId="agl.Mscrm.HomepageGrid.aglcm003_zulaa_expressiondebesoin.Flows.RefreshCommandBar.Flows.Hide" Location="Mscrm.HomepageGrid.aglcm003_zulaa_expressiondebesoin.Flows.RefreshCommandBar.Flows" />
+    <HideCustomAction HideActionId="agl.Mscrm.HomepageGrid.aglcm003_zulaa_expressiondebesoin.Import.Hide" Location="Mscrm.HomepageGrid.aglcm003_zulaa_expressiondebesoin.Import" />
+    <HideCustomAction HideActionId="agl.Mscrm.HomepageGrid.aglcm003_zulaa_expressiondebesoin.ImportDataFromExcel.Hide" Location="Mscrm.HomepageGrid.aglcm003_zulaa_expressiondebesoin.ImportDataFromExcel" />
+    <HideCustomAction HideActionId="agl.Mscrm.HomepageGrid.aglcm003_zulaa_expressiondebesoin.RunReport.Hide" Location="Mscrm.HomepageGrid.aglcm003_zulaa_expressiondebesoin.RunReport" />
+    <HideCustomAction HideActionId="agl.Mscrm.HomepageGrid.aglcm003_zulaa_expressiondebesoin.RunWorkflow.Hide" Location="Mscrm.HomepageGrid.aglcm003_zulaa_expressiondebesoin.RunWorkflow" />
+    <HideCustomAction HideActionId="agl.Mscrm.HomepageGrid.aglcm003_zulaa_expressiondebesoin.WordTemplate.Hide" Location="Mscrm.HomepageGrid.aglcm003_zulaa_expressiondebesoin.WordTemplate" />
+  </CustomActions>
+  <Templates>
+    <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+  </Templates>
+  <CommandDefinitions />
+  <RuleDefinitions>
+    <TabDisplayRules />
+    <DisplayRules />
+    <EnableRules />
+  </RuleDefinitions>
+  <LocLabels />
+</RibbonDiffXml>

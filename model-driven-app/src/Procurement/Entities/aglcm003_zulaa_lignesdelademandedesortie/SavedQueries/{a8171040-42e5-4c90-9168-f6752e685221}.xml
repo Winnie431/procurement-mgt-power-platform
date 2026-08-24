@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{a8171040-42e5-4c90-9168-f6752e685221}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_description" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_lignesdelademandedesortieid">
+          <cell name="aglcm003_demandedesortieid" width="157" />
+          <cell name="aglcm003_magasinid" width="100" />
+          <cell name="aglcm003_articleid" width="100" />
+          <cell name="aglcm003_actifid" width="100" />
+          <cell name="aglcm003_quantiteasortir" width="131" />
+          <cell name="aglcm003_description" width="209" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>1</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_lignesdelademandedesortie">
+          <attribute name="aglcm003_zulaa_lignesdelademandedesortieid" />
+          <attribute name="aglcm003_description" />
+          <attribute name="createdon" />
+          <order attribute="aglcm003_description" descending="false" />
+          <attribute name="aglcm003_demandedesortieid" />
+          <attribute name="aglcm003_articleid" />
+          <attribute name="aglcm003_actifid" />
+          <attribute name="aglcm003_magasinid" />
+          <attribute name="aglcm003_quantiteasortir" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Stock Issue Request Line Advanced Find View" languagecode="1033" />
+      <LocalizedName description="Vue Avancée des Lignes de Demande de Sortie de Stock" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

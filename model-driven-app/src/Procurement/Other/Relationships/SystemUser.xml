@@ -1,0 +1,3441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="aglcm003_delegationparrole_systemuser">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_delegationparrole</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_personnedelegue</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Person to whom the approval has been delegated" languagecode="1033" />
+        <Description description="Personne à qui l'approbation a été déléguée" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_personnedelegue</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_delegationparrole_systemuser</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_demandedachat_FullName">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_demandedachat</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_FullName</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Name of the user who created the purchase request in SharePoint" languagecode="1033" />
+        <Description description="Nom de l'utilisateur qui a créé la demande d'achat dans SharePoint" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_FullName</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_demandedachat_FullName</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_departement_responsable">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_departement</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_responsableId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="The Head Of The Department" languagecode="1033" />
+        <Description description="Chef du Département" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_responsableId</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_departement_responsable</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_direction_responsable">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_direction</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_responsableId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="The head of the department" languagecode="1033" />
+        <Description description="Le responsable du service" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_responsableId</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_direction_responsable</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_entite_daf">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_entite</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_dafId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="The name of the DAF" languagecode="1033" />
+        <Description description="Nom de l'équipe DAF" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_dafId</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_entite_daf</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_entite_dafa">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_entite</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_dafaId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_dafaId</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_entite_dafa</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_entite_dg">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_entite</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_dgId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_dgId</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_entite_dg</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_entite_proprietairedestock">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_entite</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_proprietairedestockId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_proprietairedestockId</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_entite_proprietairedestock</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_entite_responsableservicedachat">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_entite</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_responsableservicedachatId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_responsableservicedachatId</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_entite_responsableservicedachat</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_magasin_agentdereception_systemuser">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.1</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_Magasin</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_agentdereception</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="The agent who can perform the reception for the store" languagecode="1033" />
+        <Description description="Agent Autorisé à Faire la Réception pour le Magasin" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_agentdereception</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_magasin_agentdereception_systemuser</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_magasin_agentdesecurite_systemuser">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.1</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_Magasin</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_agentdesecurite</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="This column keeps the name of the security agent who validates the DS before assignment to the user" languagecode="1033" />
+        <Description description="Nom de l’Agent de Sécurité qui Valide le DS avant l’Attribution à l’Utilisateur" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_agentdesecurite</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_magasin_agentdesecurite_systemuser</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_magasin_demandeursortieetretourstock_systemuser">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.1</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_Magasin</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_demandeursortieetretourstock</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Approbateur de la demande de sortie de stock" languagecode="1033" />
+        <Description description="Agent Autorisé à Faire une Demande de Sortie ou un Retour de Stock" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_demandeursortieetretourstock</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_magasin_demandeursortieetretourstock_systemuser</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_magasin_magasinier_systemuser">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.1</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_Magasin</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_magasinier</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Gestionnaire d'un ou plusieurs magasins" languagecode="1033" />
+        <Description description="Responsable du Magasin" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_magasinier</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_magasin_magasinier_systemuser</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_actif_utilisateurdelactif_systemuser">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.1</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_actif</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_utilisateurdelactif</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="The user to whom the asset is assigned" languagecode="1033" />
+        <Description description="Utilisateur auquel l'actif est attribué" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_utilisateurdelactif</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_actif_utilisateurdelactif_systemuser</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_actifmouvementhistory_attribuea_systemuser">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.1</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_actifmouvementhistory</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_attribuea</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_attribuea</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_actifmouvementhistory_attribuea_systemuser</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_centredecout_rm_user">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_centredecout</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_responsablemetier</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Cost center business manager" languagecode="1033" />
+        <Description description="Responsable commercial du centre de coûts" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_responsablemetier</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_centredecout_rm_user</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_centredecout_user">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_centredecout</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_controldegestionId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Management control approver" languagecode="1033" />
+        <Description description="Responsable du contrôle de gestion" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_controldegestionId</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_centredecout_user</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_centredecout_veb_user">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_centredecout</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_validateurEB</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_validateurEB</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_centredecout_veb_user</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_demandedachat_derniervalidateurda_systemuser">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_demandedachat</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_derniervalidateurda</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_derniervalidateurda</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_demandedachat_derniervalidateurda_systemuser</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_demandedachat_vcg_user">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_demandedachat</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_validateurcontrolegestion</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_validateurcontrolegestion</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_demandedachat_vcg_user</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_demandedachat_vdaf_user">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_demandedachat</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_validateurdaf</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_validateurdaf</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_demandedachat_vdaf_user</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_demandedachat_vdafa_user">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_demandedachat</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_validateurdafacompliance</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_validateurdafacompliance</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_demandedachat_vdafa_user</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_demandedachat_vdg_user">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_demandedachat</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_validateurdg</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_validateurdg</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_demandedachat_vdg_user</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_demandedachat_vm_user">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_demandedachat</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_validateurmetier</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_validateurmetier</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_demandedachat_vm_user</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_demandedachat_vra_user">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_demandedachat</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_validateurresponsableachat</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_validateurresponsableachat</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_demandedachat_vra_user</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_demandesortiestock_systemuser">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.1</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_demandesortiestock</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_demandeur</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="The User Who Made The Stock Issue Request" languagecode="1033" />
+        <Description description="Utilisateur Ayant Fait la Demande de Sortie de Stock" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_demandeur</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_demandesortiestock_systemuser</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_entite_serviceachat_user">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_entite</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_serviceachat</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_serviceachat</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_entite_serviceachat_user</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_expressiondebesoin_validateur">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_expressiondebesoin</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_validateurid</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_validateurid</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_expressiondebesoin_validateur</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_retourstockactif_proprietaires_systemuser">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.1</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_retourstockactif</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_proprietaires</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="The Asset User" languagecode="1033" />
+        <Description description="Utilisateur de l'actif" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_proprietaires</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_retourstockactif_proprietaires_systemuser</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_sortiestockactif_systemuser">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.1</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_sortiestockactif</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_personneaattribue</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="The user of the asset" languagecode="1033" />
+        <Description description="Utilisateur de l'actif" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_personneaattribue</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_sortiestockactif_systemuser</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_delegationparrole_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_delegationparrole</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a créé l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_delegationparrole_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_delegationparrole</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a modifié l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_lignedelareception_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_LignedelaReception</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a créé l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_lignedelareception_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_LignedelaReception</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a modifié l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_magasin_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_Magasin</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant Unique de l’Utilisateur Ayant Créé l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_magasin_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_Magasin</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant Unique de l’Utilisateur Ayant Modifié l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_magasinarticle_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_magasinarticle</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a créé l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_magasinarticle_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_magasinarticle</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a modifié l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_notefournisseur_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_NoteFournisseur</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur ayant créé l'enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_notefournisseur_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_NoteFournisseur</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur ayant modifié l'enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_acronyme_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_acronyme</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant Unique de l’Utilisateur Ayant Créé l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_acronyme_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_acronyme</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant Unique de l’Utilisateur Ayant Modifié l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_actif_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_actif</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a créé l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_actif_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_actif</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a modifié l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_actifmouvementhistory_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_actifmouvementhistory</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier Of The User Who Created The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l’utilisateur ayant créé l’enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_actifmouvementhistory_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_actifmouvementhistory</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier Of The User Who Modified The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l’utilisateur ayant modifié l’enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_article_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_article</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a créé l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_article_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_article</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a modifié l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_auxdeconsversion_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_auxdeconsversion</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier Of The User Who Created The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l’utilisateur ayant créé l’enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_auxdeconsversion_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_auxdeconsversion</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier Of The User Who Modified The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l’utilisateur ayant modifié l’enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_bondecommande_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_bondecommande</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a créé l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_bondecommande_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_bondecommande</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a modifié l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_categorie_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_categorie</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier Of The User Who Created The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l’utilisateur ayant créé l’enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_categorie_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_categorie</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier Of The User Who Modified The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l’utilisateur ayant modifié l’enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_categorieentite_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_categorieEntite</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a créé l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_categorieentite_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_categorieEntite</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a modifié l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_centredecout_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_centredecout</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a créé l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_centredecout_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_centredecout</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a modifié l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_codecompteur_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_codecompteur</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record.  " languagecode="1033" />
+        <Description description="Identifiant unique de l’utilisateur ayant créé l’enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_codecompteur_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_codecompteur</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record.  " languagecode="1033" />
+        <Description description="Identifiant unique de l’utilisateur ayant modifié l’enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_demandedachat_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_demandedachat</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a créé l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_demandedachat_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_demandedachat</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'unité commerciale propriétaire de l'enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_demandedachatarticlefournisseur_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_demandedachatarticlefournisseur</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant Unique de l’Utilisateur Ayant Créé l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_demandedachatarticlefournisseur_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_demandedachatarticlefournisseur</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant Unique de l’Utilisateur Ayant Modifié l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_demandesortiestock_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_demandesortiestock</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier Of The User Who Created The Record" languagecode="1033" />
+        <Description description="Identifiant Unique de l’Utilisateur Ayant Créé l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_demandesortiestock_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_demandesortiestock</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier Of The User Who Modified The Record" languagecode="1033" />
+        <Description description="Identifiant Unique de l’Utilisateur Ayant Modifié l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_departement_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_departement</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier Of The User Who Created The Record" languagecode="1033" />
+        <Description description="Identifiant Unique de l'Utilisateur Ayant Créé l'Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_departement_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_departement</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier Of The User Who Modified The Record" languagecode="1033" />
+        <Description description="Identifiant Unique de l'Utilisateur Ayant Modifié l'Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_devise_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_devise</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier Of The User Who Created The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l’utilisateur ayant créé l’enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_devise_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_devise</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier Of The User Who Modified The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l’utilisateur ayant modifié l’enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_direction_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_direction</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a créé l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_direction_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_direction</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a modifié l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_entite_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_entite</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a créé l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_entite_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_entite</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a modifié l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_expressiondebesoin_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_expressiondebesoin</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant Unique de l’Utilisateur Ayant Créé l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_expressiondebesoin_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_expressiondebesoin</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant Unique de l’Utilisateur Ayant Modifié l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_fournisseur_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_fournisseur</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier Of The User Who Created The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a créé l'enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_fournisseur_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_fournisseur</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier Of The User Who Modified The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a modifié l'enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_inventaire_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_inventaire</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a créé l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_inventaire_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_inventaire</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a modifié l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_inventaireactif_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_inventaireactif</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a créé l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_inventaireactif_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_inventaireactif</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a modifié l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_inventairearticle_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_inventairearticle</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a créé l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_inventairearticle_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_inventairearticle</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a modifié l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_lignesdelademandedesortie_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_lignesdelademandedesortie</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier Of The User Who Created The Record" languagecode="1033" />
+        <Description description="Identifiant Unique de l’Utilisateur Ayant Créé l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_lignesdelademandedesortie_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_lignesdelademandedesortie</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier Of The User Who Modified The Record" languagecode="1033" />
+        <Description description="Identifiant Unique de l’Utilisateur Ayant Modifié l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_pays_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_pays</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant Unique de l’Utilisateur Ayant Créé l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_pays_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_pays</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant Unique de l’Utilisateur Ayant Modifié l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_reception_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_reception</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a créé l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_reception_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_reception</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a modifié l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_retourstock_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_retourstock</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a créé l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_retourstock_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_retourstock</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a modifié l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_retourstockactif_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_retourstockactif</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier Of The User Who Created The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a créé l'enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_retourstockactif_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_retourstockactif</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier Of The User Who Modified The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a modifié l'enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_retourstockarticle_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_retourstockarticle</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant Unique de l’Utilisateur Ayant Créé l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_retourstockarticle_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_retourstockarticle</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant Unique de l’Utilisateur Ayant Modifié l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_sortiedestock_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_sortiedestock</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a créé l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_sortiedestock_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_sortiedestock</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a modifié l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_sortiestockactif_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_sortiestockactif</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a créé l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_sortiestockactif_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_sortiestockactif</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a modifié l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_sortiestockarticle_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_sortiestockarticle</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier Of The User Who Created The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a créé l'enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_sortiestockarticle_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_sortiestockarticle</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier Of The User Who Modified The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a modifié l'enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_tva_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_tva</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a créé l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_tva_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_tva</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a modifié l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_unite_createdby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_unite</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>CreatedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who created the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a créé l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="lk_aglcm003_zulaa_unite_modifiedby">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_unite</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>ModifiedBy</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier of the user who modified the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui a modifié l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_delegationparrole">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_delegationparrole</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_lignedelareception">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_LignedelaReception</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_magasin">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_Magasin</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant Unique de l’Utilisateur Propriétaire de l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_magasinarticle">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_magasinarticle</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_notefournisseur">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_NoteFournisseur</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l’utilisateur propriétaire de l’enregistrement  " languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_acronyme">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_acronyme</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant Unique de l’Utilisateur Propriétaire de l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_actif">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_actif</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_actifmouvementhistory">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_actifmouvementhistory</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier For The User That Owns The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l’utilisateur propriétaire de l’enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_article">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_article</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_auxdeconsversion">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_auxdeconsversion</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier For The User That Owns The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l’utilisateur propriétaire de l’enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_bondecommande">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_bondecommande</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_categorie">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_categorie</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier For The User That Owns The Record." languagecode="1033" />
+        <Description description="Identifiant unique de l’utilisateur propriétaire de l’enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_categorieentite">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_categorieEntite</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur qui possède l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_centredecout">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_centredecout</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_codecompteur">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_codecompteur</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record.  " languagecode="1033" />
+        <Description description="Identifiant unique de l’utilisateur propriétaire de l’enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_demandedachat">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_demandedachat</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_demandedachatarticlefournisseur">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_demandedachatarticlefournisseur</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant Unique de l’Utilisateur Propriétaire de l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_demandesortiestock">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_demandesortiestock</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier For The User That Owns The Record" languagecode="1033" />
+        <Description description="Identifiant Unique de l’Utilisateur Propriétaire de l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_departement">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_departement</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier For The User That Owns The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l’utilisateur propriétaire de l’enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_devise">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_devise</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier For The User That Owns The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l’utilisateur propriétaire de l’enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_direction">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_direction</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_entite">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_entite</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_expressiondebesoin">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_expressiondebesoin</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant Unique de l’Utilisateur Propriétaire de l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_fournisseur">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_fournisseur</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier For The User That Owns The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur propriétaire de l'enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_inventaire">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_inventaire</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_inventaireactif">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_inventaireactif</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_inventairearticle">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_inventairearticle</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_lignesdelademandedesortie">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_lignesdelademandedesortie</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier For The User That Owns The Record" languagecode="1033" />
+        <Description description="Identifiant Unique de l’Utilisateur Propriétaire de l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_pays">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_pays</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant Unique de l’Utilisateur Propriétaire de l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_reception">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_reception</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique pour l'utilisateur propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_retourstock">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_retourstock</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_retourstockactif">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_retourstockactif</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier For The User That Owns The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur propriétaire de l'enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_retourstockarticle">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_retourstockarticle</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant Unique de l’Utilisateur Propriétaire de l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_sortiedestock">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_sortiedestock</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_sortiestockactif">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_sortiestockactif</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_sortiestockarticle">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_sortiestockarticle</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier For The User That Owns The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur propriétaire de l'enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="user_aglcm003_zulaa_unite">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_unite</ReferencingEntityName>
+    <ReferencedEntityName>SystemUser</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningUser</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the user that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'utilisateur propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+</EntityRelationships>

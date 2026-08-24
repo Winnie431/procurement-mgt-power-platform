@@ -1,0 +1,780 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="owner_aglcm003_delegationparrole">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_delegationparrole</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_lignedelareception">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_LignedelaReception</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="Identifiant du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_magasin">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_Magasin</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du Propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_magasinarticle">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_magasinarticle</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_notefournisseur">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_NoteFournisseur</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_acronyme">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_acronyme</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du Propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_actif">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_actif</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="Identifiant du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_actifmouvementhistory">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_actifmouvementhistory</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="Identifiant du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_article">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_article</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_auxdeconsversion">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_auxdeconsversion</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="Identifiant du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_bondecommande">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_bondecommande</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_categorie">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_categorie</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="Identifiant du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_categorieentite">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_categorieEntite</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_centredecout">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_centredecout</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_codecompteur">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_codecompteur</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="Identifiant du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_demandedachat">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_demandedachat</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="Identifiant du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_demandedachatarticlefournisseur">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_demandedachatarticlefournisseur</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du Propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_demandesortiestock">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_demandesortiestock</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du Propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_departement">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_departement</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du Propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_devise">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_devise</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="Owner Id" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_direction">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_direction</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_entite">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_entite</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="Identifiant du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_expressiondebesoin">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_expressiondebesoin</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du Propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_fournisseur">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_fournisseur</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="Identifiant du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_inventaire">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_inventaire</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_inventaireactif">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_inventaireactif</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_inventairearticle">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_inventairearticle</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_lignesdelademandedesortie">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_lignesdelademandedesortie</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du Propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_pays">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_pays</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du Propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_reception">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_reception</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="Identifiant du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_retourstock">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_retourstock</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_retourstockactif">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_retourstockactif</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_retourstockarticle">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_retourstockarticle</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du Propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_sortiedestock">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_sortiedestock</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_sortiestockactif">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_sortiestockactif</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_sortiestockarticle">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_sortiestockarticle</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="owner_aglcm003_zulaa_unite">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_unite</ReferencingEntityName>
+    <ReferencedEntityName>Owner</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwnerId</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Owner Id" languagecode="1033" />
+        <Description description="ID du propriétaire" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+</EntityRelationships>

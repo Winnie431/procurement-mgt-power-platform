@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>1</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{c22e98d5-8118-4104-8eff-8cd0005efb5f}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_codeactif" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_actifid">
+          <cell name="aglcm003_codeactif" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>4</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_actif">
+          <attribute name="aglcm003_zulaa_actifid" />
+          <attribute name="aglcm003_codeactif" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <filter type="or" isquickfindfields="1">
+            <condition attribute="aglcm003_codeactif" operator="like" value="{0}" />
+            <condition attribute="aglcm003_etatactif" operator="like" value="{0}" />
+            <condition attribute="aglcm003_magasinid" operator="like" value="{0}" />
+            <condition attribute="aglcm003_marque" operator="like" value="{0}" />
+            <condition attribute="aglcm003_modele" operator="like" value="{0}" />
+            <condition attribute="aglcm003_numeroserie" operator="like" value="{0}" />
+            <condition attribute="ownerid" operator="like" value="{0}" />
+            <condition attribute="aglcm003_entiteid" operator="like" value="{0}" />
+            <condition attribute="aglcm003_statutactif" operator="like" value="{0}" />
+            <condition attribute="aglcm003_utilisateurdelactif" operator="like" value="{0}" />
+            <condition attribute="aglcm003_numeroparc" operator="like" value="{0}" />
+          </filter>
+          <order attribute="createdon" descending="true" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Quick Find Active Asset" languagecode="1033" />
+      <LocalizedName description="Recherche rapide d'actifs actifs" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

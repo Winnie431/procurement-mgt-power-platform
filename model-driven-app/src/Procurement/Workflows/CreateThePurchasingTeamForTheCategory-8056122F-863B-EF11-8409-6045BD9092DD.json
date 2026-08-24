@@ -1,0 +1,896 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "aglcm003_CR_Dataverse_Zulaa"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "Lorsqu’une_ligne_est_ajoutée,_modifiée_ou_supprimée": {
+          "metadata": {
+            "operationMetadataId": "1a8cf549-60db-4a4e-a5e5-c005c22449dd"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "aglcm003_zulaa_categorieentite",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Récupérer_l'entité": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "0e1babb8-33a4-4b6e-9533-fc2b430d5ae1"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_zulaa_entites",
+              "recordId": "@triggerOutputs()?['body/_aglcm003_entiteid_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Commutateur": {
+          "runAfter": {
+            "Initialize_variable_Alt": [
+              "Succeeded"
+            ]
+          },
+          "cases": {
+            "Casse": {
+              "case": 2,
+              "actions": {
+                "Créer_une_équipe_categorie_service_achat": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "0ab2bdea-9e8d-4a3c-8520-be1583e30889"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps",
+                      "operationId": "CreateRecord",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "teams",
+                      "item/administratorid@odata.bind": "systemusers(@{outputs('Récupérer_l''entité')?['body/_createdby_value']})",
+                      "item/businessunitid@odata.bind": "businessunits(@{outputs('Récupérer_l''entité')?['body/_aglcm003_businessunitpropretaire_value']})",
+                      "item/membershiptype": 2,
+                      "item/name": "@{outputs('Récupérer_l''entité')?['body/aglcm003_code']} Team SA @{outputs('Récupérer_la_catégorie')?['body/aglcm003_nom']}",
+                      "item/teamtype": 0
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Mettre_à_jour_la_ligne_de_la_catégorie_entite": {
+                  "runAfter": {
+                    "For_each_3": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "7b3826e0-ac45-4640-8e87-6e73760affcc"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps",
+                      "operationId": "UpdateRecord",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "aglcm003_zulaa_categorieentites",
+                      "recordId": "@triggerOutputs()?['body/aglcm003_zulaa_categorieentiteid']",
+                      "item/aglcm003_teamcategoriesa@odata.bind": "teams(@{outputs('Créer_une_équipe_categorie_service_achat')?['body/teamid']})"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Compose_équipe_categorie_SA": {
+                  "runAfter": {
+                    "Mettre_à_jour_la_ligne_de_la_catégorie_entite": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "0d438a73-3f5d-41d7-8002-092a60ffccdc"
+                  },
+                  "type": "Compose",
+                  "inputs": {
+                    "Principal": {
+                      "teamid": "@body('Créer_une_équipe_categorie_service_achat')?['teamid']",
+                      "@{variables('Alt')}odata.type": "Microsoft.Dynamics.CRM.team"
+                    },
+                    "AccessMask": "ReadAccess"
+                  }
+                },
+                "Perform_an_unbound_action-partage_de_l'entite_a_lequipe__categorie_SA": {
+                  "runAfter": {
+                    "Compose_équipe_categorie_SA": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "ccf08157-219b-4d94-859b-479c2c9d44d0"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps",
+                      "operationId": "PerformUnboundAction",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "actionName": "GrantAccess",
+                      "item/Target": "aglcm003_zulaa_entites(@{body('Récupérer_l''entité')?['aglcm003_zulaa_entiteid']})",
+                      "item/PrincipalAccess": "@outputs('Compose_équipe_categorie_SA')"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "For_each": {
+                  "foreach": "@outputs('List_rows_Direction')?['body/value']",
+                  "actions": {
+                    "Perform_an_unbound_action-partage_de_la_direction_a_lequipe_categorie_sa": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "9b8ffde3-9c3f-4d7a-a7be-798679def685"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_commondataserviceforapps",
+                          "operationId": "PerformUnboundAction",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                        },
+                        "parameters": {
+                          "actionName": "GrantAccess",
+                          "item/Target": "aglcm003_zulaa_directions(@{item()?['aglcm003_zulaa_directionid']})",
+                          "item/PrincipalAccess": "@outputs('Compose_équipe_categorie_SA')"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "Perform_an_unbound_action-partage_de_l'entite_a_lequipe__categorie_SA": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "615ccaca-d255-4ddf-9f28-3ec15d05f47f"
+                  },
+                  "type": "Foreach"
+                },
+                "For_each_1": {
+                  "foreach": "@outputs('List_rows_departement')?['body/value']",
+                  "actions": {
+                    "Perform_an_unbound_action-partage_de_la_departement_a_lequipe_categorie_sa": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "076c04a4-86f8-4ce9-ad7e-4d5b6c34e6b8"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_commondataserviceforapps",
+                          "operationId": "PerformUnboundAction",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                        },
+                        "parameters": {
+                          "actionName": "GrantAccess",
+                          "item/Target": "aglcm003_zulaa_departements(@{item()?['aglcm003_zulaa_departementid']})",
+                          "item/PrincipalAccess": "@outputs('Compose_équipe_categorie_SA')"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "For_each": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "21d45e68-9373-44ef-9527-9a2354130269"
+                  },
+                  "type": "Foreach"
+                },
+                "For_each_2": {
+                  "foreach": "@outputs('List_rows_centre_de_cout')?['body/value']",
+                  "actions": {
+                    "Perform_an_unbound_action-centre_de__cout": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "dd26fe4b-155e-4cee-80a6-1db479a1a040"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_commondataserviceforapps",
+                          "operationId": "PerformUnboundAction",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                        },
+                        "parameters": {
+                          "actionName": "GrantAccess",
+                          "item/Target": "aglcm003_zulaa_centredecouts(@{item()?['aglcm003_zulaa_centredecoutid']})",
+                          "item/PrincipalAccess": "@outputs('Compose_équipe_categorie_SA')"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "For_each_1": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "6b5a1bbe-7268-44e9-becc-78c71973884f"
+                  },
+                  "type": "Foreach"
+                },
+                "List_rows_role_de_securité_service_achat": {
+                  "runAfter": {
+                    "Créer_une_équipe_categorie_service_achat": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "a17df321-8914-4026-8d4b-9d3e9628d9ae"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps",
+                      "operationId": "ListRecords",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "roles",
+                      "$filter": "(name  eq  'Service Achat Zulaa' or name eq 'Approval Studio - Approver ' or name  eq 'App Opener' or  name eq 'Approvals User')  and  _businessunitid_value eq '@{body('Récupérer_l''entité')?['_aglcm003_businessunitpropretaire_value']}'"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "For_each_3": {
+                  "foreach": "@outputs('List_rows_role_de_securité_service_achat')?['body/value']",
+                  "actions": {
+                    "Attribution_des_roles_a_l'equipe_service_achat": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "302e60e4-bcee-4ef6-8eea-ab3fbf2f9a75"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_commondataserviceforapps",
+                          "operationId": "AssociateEntities",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                        },
+                        "parameters": {
+                          "entityName": "teams",
+                          "recordId": "@body('Créer_une_équipe_categorie_service_achat')?['teamid']",
+                          "associationEntityRelationship": "teamroles_association",
+                          "item/@odata.id": "@items('For_each_3')?['@odata.id']"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "List_rows_role_de_securité_service_achat": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "5b8a80b2-6f40-40f4-95c9-bf3c55433a7b"
+                  },
+                  "type": "Foreach"
+                },
+                "Compose-DAF": {
+                  "runAfter": {
+                    "Perform_an_unbound_action-_partage_de_la_categorie_a_lequipe_categorie_sa": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "0d438a73-3f5d-41d7-8002-092a60ffccdc"
+                  },
+                  "type": "Compose",
+                  "inputs": {
+                    "Principal": {
+                      "teamid": "@body('Récupérer_l''entité')?['_aglcm003_teamdaf_value']",
+                      "@{variables('Alt')}odata.type": "Microsoft.Dynamics.CRM.team"
+                    },
+                    "AccessMask": "ReadAccess"
+                  }
+                },
+                "For_each_categorie__a_l'équipe_DAF": {
+                  "foreach": "@outputs('List_rows_centre_de_cout')?['body/value']",
+                  "actions": {
+                    "Perform_an_unbound_action-_partage_de_la_categorie_a_l'équipe_DAF": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "dd26fe4b-155e-4cee-80a6-1db479a1a040"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_commondataserviceforapps",
+                          "operationId": "PerformUnboundAction",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                        },
+                        "parameters": {
+                          "actionName": "GrantAccess",
+                          "item/Target": "aglcm003_zulaa_categories(@{body('Récupérer_la_catégorie')?['aglcm003_zulaa_categorieid']})",
+                          "item/PrincipalAccess": "@outputs('Compose-DAF')"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "Compose-DAF": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "6b5a1bbe-7268-44e9-becc-78c71973884f"
+                  },
+                  "type": "Foreach"
+                },
+                "Compose-DAFA": {
+                  "runAfter": {
+                    "For_each_categorie__a_l'équipe_DAF": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "0d438a73-3f5d-41d7-8002-092a60ffccdc"
+                  },
+                  "type": "Compose",
+                  "inputs": {
+                    "Principal": {
+                      "teamid": "@body('Récupérer_l''entité')?['_aglcm003_teamdafa_value']",
+                      "@{variables('Alt')}odata.type": "Microsoft.Dynamics.CRM.team"
+                    },
+                    "AccessMask": "ReadAccess"
+                  }
+                },
+                "For_each_categorie__a_l'équipe_DAFA": {
+                  "foreach": "@outputs('List_rows_centre_de_cout')?['body/value']",
+                  "actions": {
+                    "Perform_an_unbound_action-_partage_de_la_categorie_a_l'équipe_DAFA": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "dd26fe4b-155e-4cee-80a6-1db479a1a040"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_commondataserviceforapps",
+                          "operationId": "PerformUnboundAction",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                        },
+                        "parameters": {
+                          "actionName": "GrantAccess",
+                          "item/Target": "aglcm003_zulaa_categories(@{body('Récupérer_la_catégorie')?['aglcm003_zulaa_categorieid']})",
+                          "item/PrincipalAccess": "@outputs('Compose-DAFA')"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "Compose-DAFA": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "6b5a1bbe-7268-44e9-becc-78c71973884f"
+                  },
+                  "type": "Foreach"
+                },
+                "Compose-DG": {
+                  "runAfter": {
+                    "For_each_categorie__a_l'équipe_DAFA": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "0d438a73-3f5d-41d7-8002-092a60ffccdc"
+                  },
+                  "type": "Compose",
+                  "inputs": {
+                    "Principal": {
+                      "teamid": "@body('Récupérer_l''entité')?['_aglcm003_teamdg_value']",
+                      "@{variables('Alt')}odata.type": "Microsoft.Dynamics.CRM.team"
+                    },
+                    "AccessMask": "ReadAccess"
+                  }
+                },
+                "For_each_categorie__a_l'équipe_DG": {
+                  "foreach": "@outputs('List_rows_centre_de_cout')?['body/value']",
+                  "actions": {
+                    "Perform_an_unbound_action-_partage_de_la_categorie_a_l'équipe_DG": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "dd26fe4b-155e-4cee-80a6-1db479a1a040"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_commondataserviceforapps",
+                          "operationId": "PerformUnboundAction",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                        },
+                        "parameters": {
+                          "actionName": "GrantAccess",
+                          "item/Target": "aglcm003_zulaa_categories(@{body('Récupérer_la_catégorie')?['aglcm003_zulaa_categorieid']})",
+                          "item/PrincipalAccess": "@outputs('Compose-DG')"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "Compose-DG": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "6b5a1bbe-7268-44e9-becc-78c71973884f"
+                  },
+                  "type": "Foreach"
+                },
+                "For_each_4": {
+                  "foreach": "@outputs('List_rows_centre_de_cout')?['body/value']",
+                  "actions": {
+                    "Compose-DM": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "0d438a73-3f5d-41d7-8002-092a60ffccdc"
+                      },
+                      "type": "Compose",
+                      "inputs": {
+                        "Principal": {
+                          "teamid": "@items('For_each_4')?['_aglcm003_teamdm_value']",
+                          "@{variables('Alt')}odata.type": "Microsoft.Dynamics.CRM.team"
+                        },
+                        "AccessMask": "ReadAccess"
+                      }
+                    },
+                    "Perform_an_unbound_action-_partage_de_la_categorie_a_l'équipe_DM": {
+                      "runAfter": {
+                        "Compose-DM": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "dd26fe4b-155e-4cee-80a6-1db479a1a040"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_commondataserviceforapps",
+                          "operationId": "PerformUnboundAction",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                        },
+                        "parameters": {
+                          "actionName": "GrantAccess",
+                          "item/Target": "aglcm003_zulaa_categories(@{body('Récupérer_la_catégorie')?['aglcm003_zulaa_categorieid']})",
+                          "item/PrincipalAccess": "@outputs('Compose-DM')"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "For_each_categorie__a_l'équipe_DG": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "5d072cf7-bc73-4954-89d5-1ea153846a74"
+                  },
+                  "type": "Foreach"
+                },
+                "For_each_5": {
+                  "foreach": "@outputs('List_rows_centre_de_cout')?['body/value']",
+                  "actions": {
+                    "Compose-RM_": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "0d438a73-3f5d-41d7-8002-092a60ffccdc"
+                      },
+                      "type": "Compose",
+                      "inputs": {
+                        "Principal": {
+                          "teamid": "@items('For_each_5')?['_aglcm003_teamrm_value']",
+                          "@{variables('Alt')}odata.type": "Microsoft.Dynamics.CRM.team"
+                        },
+                        "AccessMask": "ReadAccess"
+                      }
+                    },
+                    "Perform_an_unbound_action-_partage_de_la_categorie_a_l'équipe_RM": {
+                      "runAfter": {
+                        "Compose-RM_": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "dd26fe4b-155e-4cee-80a6-1db479a1a040"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_commondataserviceforapps",
+                          "operationId": "PerformUnboundAction",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                        },
+                        "parameters": {
+                          "actionName": "GrantAccess",
+                          "item/Target": "aglcm003_zulaa_categories(@{body('Récupérer_la_catégorie')?['aglcm003_zulaa_categorieid']})",
+                          "item/PrincipalAccess": "@outputs('Compose-RM_')"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "For_each_4": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "38eb79e8-fafd-4424-b3a2-79f0de5b3f40"
+                  },
+                  "type": "Foreach"
+                },
+                "For_each_6": {
+                  "foreach": "@outputs('List_rows_centre_de_cout')?['body/value']",
+                  "actions": {
+                    "Compose-CG": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "0d438a73-3f5d-41d7-8002-092a60ffccdc"
+                      },
+                      "type": "Compose",
+                      "inputs": {
+                        "Principal": {
+                          "teamid": "@items('For_each_6')?['_aglcm003_teamcg_value']",
+                          "@{variables('Alt')}odata.type": "Microsoft.Dynamics.CRM.team"
+                        },
+                        "AccessMask": "ReadAccess"
+                      }
+                    },
+                    "Perform_an_unbound_action-_partage_de_la_categorie_a_l'équipe_CG": {
+                      "runAfter": {
+                        "Compose-CG": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "dd26fe4b-155e-4cee-80a6-1db479a1a040"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_commondataserviceforapps",
+                          "operationId": "PerformUnboundAction",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                        },
+                        "parameters": {
+                          "actionName": "GrantAccess",
+                          "item/Target": "aglcm003_zulaa_categories(@{body('Récupérer_la_catégorie')?['aglcm003_zulaa_categorieid']})",
+                          "item/PrincipalAccess": "@outputs('Compose-CG')"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "For_each_5": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "44acf27b-4e52-49a3-9168-b128544a2aff"
+                  },
+                  "type": "Foreach"
+                },
+                "Compose-RA": {
+                  "runAfter": {
+                    "For_each_6": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "0d438a73-3f5d-41d7-8002-092a60ffccdc"
+                  },
+                  "type": "Compose",
+                  "inputs": {
+                    "Principal": {
+                      "teamid": "@body('Récupérer_l''entité')?['_aglcm003_teamra_value']",
+                      "@{variables('Alt')}odata.type": "Microsoft.Dynamics.CRM.team"
+                    },
+                    "AccessMask": "ReadAccess"
+                  }
+                },
+                "For_each_categorie__a_l'équipe_DM-copy-copy-copy": {
+                  "foreach": "@outputs('List_rows_centre_de_cout')?['body/value']",
+                  "actions": {
+                    "Perform_an_unbound_action-_partage_de_la_categorie_a_l'équipe_RA": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "dd26fe4b-155e-4cee-80a6-1db479a1a040"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_commondataserviceforapps",
+                          "operationId": "PerformUnboundAction",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                        },
+                        "parameters": {
+                          "actionName": "GrantAccess",
+                          "item/Target": "aglcm003_zulaa_categories(@{body('Récupérer_la_catégorie')?['aglcm003_zulaa_categorieid']})",
+                          "item/PrincipalAccess": "@outputs('Compose-RA')"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "Compose-RA": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "6b5a1bbe-7268-44e9-becc-78c71973884f"
+                  },
+                  "type": "Foreach"
+                },
+                "Perform_an_unbound_action-_partage_de_la_categorie_a_lequipe_categorie_sa": {
+                  "runAfter": {
+                    "For_each_2": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "dd26fe4b-155e-4cee-80a6-1db479a1a040"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps",
+                      "operationId": "PerformUnboundAction",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "actionName": "GrantAccess",
+                      "item/Target": "aglcm003_zulaa_categories(@{body('Récupérer_la_catégorie')?['aglcm003_zulaa_categorieid']})",
+                      "item/PrincipalAccess": "@outputs('Compose_équipe_categorie_SA')"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "For_each_7": {
+                  "foreach": "@outputs('List_rows_centre_de_cout')?['body/value']",
+                  "actions": {
+                    "Compose_CEB": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "2c66d934-61a2-45e4-9706-42603c4df587"
+                      },
+                      "type": "Compose",
+                      "inputs": {
+                        "Principal": {
+                          "teamid": "@items('For_each_7')?['_aglcm003_teamcreateureb_value']",
+                          "@{variables('Alt')}odata.type": "Microsoft.Dynamics.CRM.team"
+                        },
+                        "AccessMask": "ReadAccess"
+                      }
+                    },
+                    "Perform_partager_à_equipe_service_achat": {
+                      "runAfter": {
+                        "Compose_CEB": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "4f565588-bbb9-468c-868e-720a55858fd5"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_commondataserviceforapps",
+                          "operationId": "PerformUnboundAction",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                        },
+                        "parameters": {
+                          "actionName": "GrantAccess",
+                          "item/Target": "aglcm003_zulaa_categories(@{body('Récupérer_la_catégorie')?['aglcm003_zulaa_categorieid']})",
+                          "item/PrincipalAccess": "@outputs('Compose_CEB')"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "For_each_categorie__a_l'équipe_DM-copy-copy-copy": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "40ef3da4-e4ea-4888-8d6a-915644b4e790"
+                  },
+                  "type": "Foreach"
+                }
+              }
+            }
+          },
+          "default": {
+            "actions": {}
+          },
+          "expression": "@outputs('Récupérer_l''entité')?['body/aglcm003_typegestionda']",
+          "metadata": {
+            "operationMetadataId": "508fda23-21fe-4966-805c-3f3d97abeef4"
+          },
+          "type": "Switch"
+        },
+        "Récupérer_la_catégorie": {
+          "runAfter": {
+            "Récupérer_l'entité": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "603b0e0b-f684-4f9b-8682-63611d6edc64"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_zulaa_categories",
+              "recordId": "@triggerOutputs()?['body/_aglcm003_categorieid_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Initialize_variable_Alt": {
+          "runAfter": {
+            "List_rows_centre_de_cout": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "79057f57-2d9d-409a-b879-0ce14e77b484"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Alt",
+                "type": "string",
+                "value": "@@"
+              }
+            ]
+          }
+        },
+        "List_rows_Direction": {
+          "runAfter": {
+            "Récupérer_la_catégorie": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "5cecfd00-4be6-4871-a76b-7d37ba69b374"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_zulaa_directions",
+              "$filter": "_aglcm003_entiteid_value  eq  '@{body('Récupérer_l''entité')?['aglcm003_zulaa_entiteid']}'"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "List_rows_departement": {
+          "runAfter": {
+            "List_rows_Direction": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "d0078140-f8f6-4f51-b52b-178ebd291f15"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_zulaa_departements",
+              "$filter": "_aglcm003_entiteid_value  eq  '@{body('Récupérer_l''entité')?['aglcm003_zulaa_entiteid']}'"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "List_rows_centre_de_cout": {
+          "runAfter": {
+            "List_rows_departement": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "c4e5189c-d544-42a8-8615-22b8c0b5477d"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "aglcm003_zulaa_centredecouts",
+              "$filter": "_aglcm003_entiteid_value  eq  '@{body('Récupérer_l''entité')?['aglcm003_zulaa_entiteid']}'"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

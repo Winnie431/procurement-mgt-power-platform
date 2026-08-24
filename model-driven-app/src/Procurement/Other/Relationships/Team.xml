@@ -1,0 +1,1383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="aglcm003_zulaa_categorieentite_teamcategoriesa">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_categorieEntite</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_teamcategoriesa</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_teamcategoriesa</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_categorieentite_teamcategoriesa</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_centredecout_team">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.1</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_centredecout</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_teamADS</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Security Agent Team" languagecode="1033" />
+        <Description description="Équipe d'agents de sécurité" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_teamADS</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_centredecout_team</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_centredecout_teamAR_team">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.1</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_centredecout</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_teamAR</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Reception Agent Team" languagecode="1033" />
+        <Description description="Équipe d'agents de réception" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_teamAR</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_centredecout_teamAR_team</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_centredecout_teamcg">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_centredecout</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_teamcg</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_teamcg</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_centredecout_teamcg</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_centredecout_teamcreateureb">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_centredecout</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_teamcreateureb</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_teamcreateureb</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_centredecout_teamcreateureb</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_centredecout_teamdm">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_centredecout</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_teamdm</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="The team of the business manager of the cost center. EB Validator" languagecode="1033" />
+        <Description description="Équipe du responsable commercial du centre de coûts. Validateur EB" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_teamdm</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_centredecout_teamdm</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_centredecout_teamDS_RS_team">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.1</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_centredecout</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_teamDS_RS</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Stock request and return team" languagecode="1033" />
+        <Description description="Équipe chargée des demandes et des retours de stock" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_teamDS_RS</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_centredecout_teamDS_RS_team</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_centredecout_teamDSAP">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.1</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_centredecout</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_teamDSAP</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_teamDSAP</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_centredecout_teamDSAP</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_centredecout_teamGDS_team">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.1</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_centredecout</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_teamGDS</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Stock Manager Team" languagecode="1033" />
+        <Description description="Équipe de gestionnaires des stocks" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_teamGDS</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_centredecout_teamGDS_team</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_centredecout_teamrm">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_centredecout</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_teamrm</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Validator DA by cost center" languagecode="1033" />
+        <Description description="Validateur DA par centre de coûts" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_teamrm</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_centredecout_teamrm</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_entite_teamadminentite_team">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.1</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_entite</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_teamadminentite</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_teamadminentite</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_entite_teamadminentite_team</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_entite_teamdaf">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_entite</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_teamdaf</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_teamdaf</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_entite_teamdaf</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_entite_teamdafa">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_entite</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_teamdafa</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_teamdafa</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_entite_teamdafa</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_entite_teamdg">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_entite</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_teamdg</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_teamdg</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_entite_teamdg</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_entite_teammagasin_team">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.1</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_entite</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_teammagasin</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="The team responsible for everyone who has access to a store" languagecode="1033" />
+        <Description description="Équipe responsable de toutes les personnes ayant accès à un magasin" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_teammagasin</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_entite_teammagasin_team</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_entite_teamra_team">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_entite</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_teamra</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_teamra</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_entite_teamra_team</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="aglcm003_zulaa_entite_teamsa">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_entite</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeArchive>RemoveLink</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>aglcm003_teamsa</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="SA team by entity" languagecode="1033" />
+        <Description description="SA par entité" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>aglcm003_teamsa</NavigationPropertyName>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>aglcm003_zulaa_entite_teamsa</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_delegationparrole">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_delegationparrole</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'équipe propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_lignedelareception">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_LignedelaReception</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'équipe propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_magasin">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_Magasin</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant Unique de l’Équipe Propriétaire de l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_magasinarticle">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_magasinarticle</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique pour l'équipe propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_notefournisseur">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_NoteFournisseur</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'équipe propriétaire de l'enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_acronyme">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_acronyme</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant Unique de l’Équipe Propriétaire de l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_actif">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_actif</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'équipe propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_actifmouvementhistory">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_actifmouvementhistory</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier For The Team That Owns The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l’équipe propriétaire de l’enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_article">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_article</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'équipe propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_auxdeconsversion">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_auxdeconsversion</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier For The Team That Owns The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l’équipe propriétaire de l’enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_bondecommande">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_bondecommande</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'équipe propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_categorie">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_categorie</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier For The Team That Owns The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l’équipe propriétaire de l’enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_categorieentite">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_categorieEntite</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'équipe propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_centredecout">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_centredecout</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique pour l'équipe propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_codecompteur">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_codecompteur</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record.  " languagecode="1033" />
+        <Description description="Identifiant unique de l’équipe propriétaire de l’enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_demandedachat">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_demandedachat</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'équipe propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_demandedachatarticlefournisseur">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_demandedachatarticlefournisseur</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant Unique de l’Équipe Propriétaire de l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_demandesortiestock">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_demandesortiestock</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier For The Team That Owns The Record" languagecode="1033" />
+        <Description description="Identifiant Unique de l’Équipe Propriétaire de l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_departement">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_departement</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier For The Team That Owns The Record" languagecode="1033" />
+        <Description description="Identifiant Unique de l'Équipe Propriétaire de l'Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_devise">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_devise</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier For The Team That Owns The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l’équipe propriétaire de l’enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_direction">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_direction</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'équipe propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_entite">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_entite</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'équipe propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_expressiondebesoin">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_expressiondebesoin</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant Unique de l’Équipe Propriétaire de l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_fournisseur">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_fournisseur</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier For The Team That Owns The Record" languagecode="1033" />
+        <Description description="Identifiant unique pour l'équipe propriétaire de l'enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_inventaire">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_inventaire</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'équipe propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_inventaireactif">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_inventaireactif</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'équipe propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_inventairearticle">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_inventairearticle</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'équipe propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_lignesdelademandedesortie">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_lignesdelademandedesortie</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier For The Team That Owns The Record" languagecode="1033" />
+        <Description description="Identifiant Unique de l’Équipe Propriétaire de l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_pays">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_pays</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant Unique de l’Équipe Propriétaire de l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_reception">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_reception</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'équipe propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_retourstock">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_retourstock</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique pour l'équipe propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_retourstockactif">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_retourstockactif</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier For The Team That Owns The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l'équipe propriétaire de l'enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_retourstockarticle">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_retourstockarticle</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant Unique de l’Équipe Propriétaire de l’Enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_sortiedestock">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_sortiedestock</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'équipe propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_sortiestockactif">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_sortiestockactif</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'équipe propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_sortiestockarticle">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_sortiestockarticle</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique Identifier For The Team That Owns The Record" languagecode="1033" />
+        <Description description="Identifiant unique de l'équipe propriétaire de l'enregistrement" languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+  <EntityRelationship Name="team_aglcm003_zulaa_unite">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>aglcm003_zulaa_unite</ReferencingEntityName>
+    <ReferencedEntityName>Team</ReferencedEntityName>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>NoCascade</CascadeDelete>
+    <CascadeArchive>NoCascade</CascadeArchive>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <ReferencingAttributeName>OwningTeam</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="Unique identifier for the team that owns the record." languagecode="1033" />
+        <Description description="Identifiant unique de l'équipe propriétaire de l'enregistrement." languagecode="1036" />
+      </Descriptions>
+    </RelationshipDescription>
+  </EntityRelationship>
+</EntityRelationships>

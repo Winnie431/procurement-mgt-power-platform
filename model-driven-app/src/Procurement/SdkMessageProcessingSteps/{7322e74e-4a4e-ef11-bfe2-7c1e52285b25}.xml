@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SdkMessageProcessingStep Name="BulkPatchPlugin.BulkPatch: Update of aglcm003_zulaa_demandedachat" SdkMessageProcessingStepId="{7322e74e-4a4e-ef11-bfe2-7c1e52285b25}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SdkMessageId>20bebb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
+  <PluginTypeName>BulkPatchPlugin.BulkPatch, BulkPatchPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=07e68c12e63bc747</PluginTypeName>
+  <PluginTypeId>95c3a0ee-3ad8-4a20-a188-f1b88e800ec1</PluginTypeId>
+  <PrimaryEntity>aglcm003_zulaa_demandedachat</PrimaryEntity>
+  <AsyncAutoDelete>0</AsyncAutoDelete>
+  <Description>BulkPatchPlugin.BulkPatch: Update of aglcm003_zulaa_demandedachat</Description>
+  <FilteringAttributes>aglcm003_tvaid</FilteringAttributes>
+  <InvocationSource>1</InvocationSource>
+  <Mode>0</Mode>
+  <Rank>1</Rank>
+  <EventHandlerTypeCode>4602</EventHandlerTypeCode>
+  <Stage>40</Stage>
+  <IsCustomizable>1</IsCustomizable>
+  <IsHidden>0</IsHidden>
+  <SupportedDeployment>0</SupportedDeployment>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <SdkMessageProcessingStepImages />
+</SdkMessageProcessingStep>

@@ -1,0 +1,17 @@
+function onQuantityChange(executionContext) {
+    const formContext = executionContext.getFormContext();
+
+    const enteredQuantity = formContext.getAttribute("aglcm003_quantitesortie").getValue();
+    const availableQuantity = formContext.getAttribute("aglcm003_quantitedisponible").getValue();
+
+    console.log("entered qte " + enteredQuantity);
+    console.log("available qte " + availableQuantity);
+
+    if (enteredQuantity > availableQuantity) {
+        formContext.getControl("aglcm003_quantitesortie").setNotification(
+            "La quantité à sortir ne peut excéder la quantité en stock : " + availableQuantity + "."
+        );
+    } else {
+        formContext.getControl("aglcm003_quantitesortie").clearNotification();
+    }
+}

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PluginAssembly FullName="BulkPatchPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=07e68c12e63bc747" PluginAssemblyId="0aba439a-fe8a-4b22-99a5-8960e4a61b32" CustomizationLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsolationMode>2</IsolationMode>
+  <SourceType>0</SourceType>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <FileName>/PluginAssemblies/BulkPatchPlugin-0ABA439A-FE8A-4B22-99A5-8960E4A61B32/BulkPatchPlugin.dll</FileName>
+  <PluginTypes>
+    <PluginType AssemblyQualifiedName="BulkPatchPlugin.BulkPatch, BulkPatchPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=07e68c12e63bc747" PluginTypeId="95c3a0ee-3ad8-4a20-a188-f1b88e800ec1" Name="BulkPatchPlugin.BulkPatch">
+      <FriendlyName>6b1dd392-55de-4ab7-b656-4de983561df7</FriendlyName>
+    </PluginType>
+  </PluginTypes>
+</PluginAssembly>

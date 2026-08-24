@@ -1,0 +1,679 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps-1": {
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "aglcm003_CR_Dataverse_Zulaa"
+        },
+        "runtimeSource": "embedded"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "Lorsqu’une_ligne_est_ajoutée,_modifiée_ou_supprimée": {
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "aglcm003_zulaa_entite",
+              "subscriptionRequest/scope": 4
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "connectionName": "shared_commondataserviceforapps-1"
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "5ae0d370-43e3-4667-8a60-6a559697d2ea"
+          }
+        }
+      },
+      "actions": {
+        "Ajouter_une_nouvelle_ligne_BU__Entité": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "businessunits",
+              "item/parentbusinessunitid@odata.bind": "businessunits(@{triggerBody()?['_aglcm003_businessunitparent_value']})",
+              "item/name": "BU-Zulaa-@{triggerBody()?['aglcm003_code']}"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "CreateRecord",
+              "connectionName": "shared_commondataserviceforapps-1"
+            }
+          },
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "85964480-d95d-4d5c-a9ee-4f4f33388368"
+          }
+        },
+        "Update_a_row_entite": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "aglcm003_zulaa_entites",
+              "recordId": "@triggerBody()?['aglcm003_zulaa_entiteid']",
+              "item/aglcm003_businessunitpropretaire@odata.bind": "businessunits(@{body('Ajouter_une_nouvelle_ligne_BU__Entité')?['businessunitid']})",
+              "item/aglcm003_teamadminentite@odata.bind": "teams(@{outputs('Ajouter_une_nouvelle_team_Admin')?['body/teamid']})",
+              "item/aglcm003_teamdaf@odata.bind": "teams(@{body('Ajouter_une_nouvelle_Team__DAF')?['teamid']})",
+              "item/aglcm003_teamdafa@odata.bind": "teams(@{body('Ajouter_une_nouvelle_Team_DAFA')?['teamid']})",
+              "item/aglcm003_teamdg@odata.bind": "teams(@{body('Ajouter_une_nouvelle_Team_DG')?['teamid']})",
+              "item/aglcm003_teamra@odata.bind": "teams(@{body('Ajouter_une_nouvelle_Team_RA')?['teamid']})",
+              "item/aglcm003_teamsa@odata.bind": "teams(@{body('Ajouter_une_nouvelle_Team_SA')?['teamid']})"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "UpdateRecord",
+              "connectionName": "shared_commondataserviceforapps-1"
+            }
+          },
+          "runAfter": {
+            "Ajouter_une_nouvelle_Team_DAFA": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "42072af6-05d3-4b8e-98d1-b84758a343fb"
+          }
+        },
+        "Ajouter_une_nouvelle_Team_DG": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "teams",
+              "item/administratorid@odata.bind": "systemusers(@{triggerBody()?['_createdby_value']})",
+              "item/businessunitid@odata.bind": "businessunits(@{body('Ajouter_une_nouvelle_ligne_BU__Entité')?['businessunitid']})",
+              "item/membershiptype": 1,
+              "item/name": "@{triggerBody()?['aglcm003_code']}Team DG",
+              "item/teamtype": 0
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "CreateRecord",
+              "connectionName": "shared_commondataserviceforapps-1"
+            }
+          },
+          "runAfter": {
+            "Ajouter_une_nouvelle_Team_RA": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "85964480-d95d-4d5c-a9ee-4f4f33388368"
+          }
+        },
+        "Ajouter_une_nouvelle_Team__DAF": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "teams",
+              "item/administratorid@odata.bind": "systemusers(@{triggerBody()?['_createdby_value']})",
+              "item/businessunitid@odata.bind": "businessunits(@{body('Ajouter_une_nouvelle_ligne_BU__Entité')?['businessunitid']})",
+              "item/membershiptype": 1,
+              "item/name": "@{triggerBody()?['aglcm003_code']} Team DAF",
+              "item/teamtype": 0
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "CreateRecord",
+              "connectionName": "shared_commondataserviceforapps-1"
+            }
+          },
+          "runAfter": {
+            "Ajouter_une_nouvelle_Team_DG": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "85964480-d95d-4d5c-a9ee-4f4f33388368"
+          }
+        },
+        "List_team_rows": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "teams",
+              "$filter": "_businessunitid_value eq '@{body('Ajouter_une_nouvelle_ligne_BU__Entité')?['businessunitid']}' "
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "connectionName": "shared_commondataserviceforapps-1"
+            }
+          },
+          "runAfter": {
+            "Update_a_row_entite": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "9f38f888-d14f-4044-a9ea-862491a81ad7"
+          }
+        },
+        "Initialize_variable": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Alt",
+                "type": "string",
+                "value": "@@"
+              }
+            ]
+          },
+          "runAfter": {
+            "List_team_rows": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "657fb65c-0206-4f30-adb7-42ade3df0d7a"
+          }
+        },
+        "For_each": {
+          "type": "Foreach",
+          "foreach": "@outputs('List_team_rows')?['body/value']",
+          "actions": {
+            "Compose": {
+              "type": "Compose",
+              "inputs": {
+                "Principal": {
+                  "teamid": "@items('For_each')?['teamid']",
+                  "@{variables('Alt')}odata.type": "Microsoft.Dynamics.CRM.team"
+                },
+                "AccessMask": "ReadAccess"
+              },
+              "metadata": {
+                "operationMetadataId": "0ceff522-4e9d-4fdf-884e-e64f62785409"
+              }
+            },
+            "Perform_an_unbound_action_entite": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "actionName": "GrantAccess",
+                  "item/Target": "aglcm003_zulaa_entites(@{triggerBody()?['aglcm003_zulaa_entiteid']})",
+                  "item/PrincipalAccess": "@outputs('Compose')"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "PerformUnboundAction",
+                  "connectionName": "shared_commondataserviceforapps-1"
+                }
+              },
+              "runAfter": {
+                "Compose": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "116114af-afa9-4e36-8dbf-766e6356d8c0"
+              }
+            }
+          },
+          "runAfter": {
+            "Initialize_variable": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "3b1e4e7b-5cbc-419c-affc-223fbc19f316"
+          }
+        },
+        "Ajouter_une_nouvelle_Team_DAFA": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "teams",
+              "item/administratorid@odata.bind": "systemusers(@{triggerBody()?['_createdby_value']})",
+              "item/businessunitid@odata.bind": "businessunits(@{body('Ajouter_une_nouvelle_ligne_BU__Entité')?['businessunitid']})",
+              "item/membershiptype": 1,
+              "item/name": " @{triggerBody()?['aglcm003_code']}Team DAFA",
+              "item/teamtype": 0
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "CreateRecord",
+              "connectionName": "shared_commondataserviceforapps-1"
+            }
+          },
+          "runAfter": {
+            "Ajouter_une_nouvelle_Team__DAF": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "1043534b-b909-400c-8652-8a163a1dcd61"
+          }
+        },
+        "Ajouter_une_nouvelle_Team_SA": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "teams",
+              "item/administratorid@odata.bind": "systemusers(@{triggerBody()?['_createdby_value']})",
+              "item/businessunitid@odata.bind": "businessunits(@{body('Ajouter_une_nouvelle_ligne_BU__Entité')?['businessunitid']})",
+              "item/membershiptype": 1,
+              "item/name": "@{triggerBody()?['aglcm003_code']}Team SA",
+              "item/teamtype": 0
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "CreateRecord",
+              "connectionName": "shared_commondataserviceforapps-1"
+            }
+          },
+          "runAfter": {
+            "Ajouter_une_nouvelle_team_Admin": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "85964480-d95d-4d5c-a9ee-4f4f33388368"
+          }
+        },
+        "Ajouter_une_nouvelle_Team_RA": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "teams",
+              "item/administratorid@odata.bind": "systemusers(@{triggerBody()?['_createdby_value']})",
+              "item/businessunitid@odata.bind": "businessunits(@{body('Ajouter_une_nouvelle_ligne_BU__Entité')?['businessunitid']})",
+              "item/membershiptype": 1,
+              "item/name": "@{triggerBody()?['aglcm003_code']}Team RA",
+              "item/teamtype": 0
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "CreateRecord",
+              "connectionName": "shared_commondataserviceforapps-1"
+            }
+          },
+          "runAfter": {
+            "Ajouter_une_nouvelle_Team_SA": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "85964480-d95d-4d5c-a9ee-4f4f33388368"
+          }
+        },
+        "List_rows_role_Securité__team_SA": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "roles",
+              "$filter": "(name  eq  'Service Achat Zulaa' or name eq 'Approval Studio - Approver ' or name  eq 'App Opener'  or  name  eq  'Approvals User')  and  _businessunitid_value eq '@{body('Update_a_row_entite')?['_aglcm003_businessunitpropretaire_value']}'"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "connectionName": "shared_commondataserviceforapps-1"
+            }
+          },
+          "runAfter": {
+            "List_rows_role_Sécurité_team_admin": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "5682e29c-e7ee-4cb6-a65e-1615d55abd86"
+          }
+        },
+        "For_each_1": {
+          "type": "Foreach",
+          "foreach": "@outputs('List_rows_role_Securité__team_SA')?['body/value']",
+          "actions": {
+            "Relate_rows_team_SA": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "teams",
+                  "recordId": "@body('Ajouter_une_nouvelle_Team_SA')?['teamid']",
+                  "associationEntityRelationship": "teamroles_association",
+                  "item/@odata.id": "@item()?['@odata.id']"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "AssociateEntities",
+                  "connectionName": "shared_commondataserviceforapps-1"
+                }
+              },
+              "metadata": {
+                "operationMetadataId": "f8f25637-3af0-4025-8cde-3646db25703b"
+              }
+            }
+          },
+          "runAfter": {
+            "For_each_2": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "e5f9173a-3bc3-4351-a222-e51e7cbd435c"
+          }
+        },
+        "List_rows_role_Securité__team_RA": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "roles",
+              "$filter": "(name  eq  'Responsable Achat Zulaa' or name eq 'Approval Studio - Approver ' or name  eq 'App Opener'  or name eq  'Approvals User' )  and  _businessunitid_value eq '@{body('Update_a_row_entite')?['_aglcm003_businessunitpropretaire_value']}'"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "connectionName": "shared_commondataserviceforapps-1"
+            }
+          },
+          "runAfter": {
+            "For_each_1": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "bb2f2663-eb8e-4732-b199-bef852a68472"
+          }
+        },
+        "Apply_to_each": {
+          "type": "Foreach",
+          "foreach": "@outputs('List_rows_role_Securité__team_RA')?['body/value']",
+          "actions": {
+            "Relate_rows_team_RA_": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "teams",
+                  "recordId": "@outputs('Ajouter_une_nouvelle_Team_RA')?['body/teamid']",
+                  "associationEntityRelationship": "teamroles_association",
+                  "item/@odata.id": "@items('Apply_to_each')?['@odata.id']"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "AssociateEntities",
+                  "connectionName": "shared_commondataserviceforapps-1"
+                }
+              },
+              "metadata": {
+                "operationMetadataId": "90f70c97-6ce4-4e95-8d1a-a328f7dc35e3"
+              }
+            }
+          },
+          "runAfter": {
+            "List_rows_role_Securité__team_RA": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "6fe89ac5-6e42-4e07-8259-f15c55703780"
+          }
+        },
+        "List_rows_role_Securité_team_DG": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "roles",
+              "$filter": "(name  eq  'Directeur General Zulaa' or name eq 'Approval Studio - Approver ' or name  eq 'App Opener' or  name eq 'Approvals User' )  and  _businessunitid_value eq '@{body('Update_a_row_entite')?['_aglcm003_businessunitpropretaire_value']}'"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "connectionName": "shared_commondataserviceforapps-1"
+            }
+          },
+          "runAfter": {
+            "Apply_to_each": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "2170dfe8-908f-40b8-b12a-911f3db8dc6f"
+          }
+        },
+        "Apply_to_each_2": {
+          "type": "Foreach",
+          "foreach": "@outputs('List_rows_role_Securité_team_DG')?['body/value']",
+          "actions": {
+            "Relate_rows_team_DG": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "teams",
+                  "recordId": "@outputs('Ajouter_une_nouvelle_Team_DG')?['body/teamid']",
+                  "associationEntityRelationship": "teamroles_association",
+                  "item/@odata.id": "@items('Apply_to_each_2')?['@odata.id']"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "AssociateEntities",
+                  "connectionName": "shared_commondataserviceforapps-1"
+                }
+              },
+              "metadata": {
+                "operationMetadataId": "008bc7c8-30e5-44d0-a405-a8f3dda36776"
+              }
+            }
+          },
+          "runAfter": {
+            "List_rows_role_Securité_team_DG": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "dd487e89-eb1e-4182-a7b1-8c656c5f83f8"
+          }
+        },
+        "List_rows_role_Securité__team_DAF": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "roles",
+              "$filter": "(name  eq  'Directeur Administratif et Financier Zulaa' or name eq 'Approval Studio - Approver ' or name  eq 'App Opener'  or  name  eq  'Approvals User')  and  _businessunitid_value eq '@{body('Update_a_row_entite')?['_aglcm003_businessunitpropretaire_value']}'"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "connectionName": "shared_commondataserviceforapps-1"
+            }
+          },
+          "runAfter": {
+            "Apply_to_each_2": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "06f8d479-7e22-4e75-9e6e-ce5f65f71daf"
+          }
+        },
+        "Apply_to_each_3": {
+          "type": "Foreach",
+          "foreach": "@outputs('List_rows_role_Securité__team_DAF')?['body/value']",
+          "actions": {
+            "Relate_rows_team_DAF": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "teams",
+                  "recordId": "@outputs('Ajouter_une_nouvelle_Team__DAF')?['body/teamid']",
+                  "associationEntityRelationship": "teamroles_association",
+                  "item/@odata.id": "@items('Apply_to_each_3')?['@odata.id']"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "AssociateEntities",
+                  "connectionName": "shared_commondataserviceforapps-1"
+                }
+              },
+              "metadata": {
+                "operationMetadataId": "342e683f-2c76-4a8d-be7f-3a2dbe578de3"
+              }
+            }
+          },
+          "runAfter": {
+            "List_rows_role_Securité__team_DAF": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "aeb3a4b2-aee4-4db6-96d8-4e15060c1b82"
+          }
+        },
+        "List_rows_role_Securité__team_DAFA": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "roles",
+              "$filter": "(name  eq  'Directeur Administratif et Financier Adjoin Zulaa' or name eq 'Approval Studio - Approver ' or name  eq 'App Opener'  or  name eq  'Approvals User')  and  _businessunitid_value eq '@{body('Update_a_row_entite')?['_aglcm003_businessunitpropretaire_value']}'"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "connectionName": "shared_commondataserviceforapps-1"
+            }
+          },
+          "runAfter": {
+            "Apply_to_each_3": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "b08c04e2-907b-4f16-9050-f1f4ff2a7839"
+          }
+        },
+        "Apply_to_each_4": {
+          "type": "Foreach",
+          "foreach": "@outputs('List_rows_role_Securité__team_DAFA')?['body/value']",
+          "actions": {
+            "Relate_rows_team_DAFA": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "teams",
+                  "recordId": "@outputs('Ajouter_une_nouvelle_Team_DAFA')?['body/teamid']",
+                  "associationEntityRelationship": "teamroles_association",
+                  "item/@odata.id": "@items('Apply_to_each_4')?['@odata.id']"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "AssociateEntities",
+                  "connectionName": "shared_commondataserviceforapps-1"
+                }
+              },
+              "metadata": {
+                "operationMetadataId": "96262d7c-0add-4012-aea5-72bf5618f2cc"
+              }
+            }
+          },
+          "runAfter": {
+            "List_rows_role_Securité__team_DAFA": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "7c94e6ca-ad2e-4853-9c3a-67e6b96d5612"
+          }
+        },
+        "Ajouter_une_nouvelle_team_Admin": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "teams",
+              "item/administratorid@odata.bind": "systemusers(@{triggerBody()?['_createdby_value']})",
+              "item/businessunitid@odata.bind": "businessunits(@{body('Ajouter_une_nouvelle_ligne_BU__Entité')?['businessunitid']})",
+              "item/membershiptype": 1,
+              "item/name": "@{triggerBody()?['aglcm003_code']} Team Admin",
+              "item/teamtype": 0
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "CreateRecord",
+              "connectionName": "shared_commondataserviceforapps-1"
+            }
+          },
+          "runAfter": {
+            "Ajouter_une_nouvelle_ligne_BU__Entité": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "91c2649c-9f90-4eff-9716-40e3401a5388"
+          }
+        },
+        "List_rows_role_Sécurité_team_admin": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "roles",
+              "$filter": "(name  eq  'Administrateur Zulaa' or name eq 'Approval Studio - Approver ' or name  eq 'App Opener'  or  name eq 'Approvals User')  and  _businessunitid_value eq '@{body('Update_a_row_entite')?['_aglcm003_businessunitpropretaire_value']}'"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "connectionName": "shared_commondataserviceforapps-1"
+            }
+          },
+          "runAfter": {
+            "For_each": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "8f0d9f92-0ceb-4de2-9d73-4be3c56c8efa"
+          }
+        },
+        "For_each_2": {
+          "type": "Foreach",
+          "foreach": "@outputs('List_rows_role_Sécurité_team_admin')?['body/value']",
+          "actions": {
+            "Relate_rows__team_admin": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "teams",
+                  "recordId": "@body('Ajouter_une_nouvelle_team_Admin')?['teamid']",
+                  "associationEntityRelationship": "teamroles_association",
+                  "item/@odata.id": "@items('For_each_2')?['@odata.id']"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "AssociateEntities",
+                  "connectionName": "shared_commondataserviceforapps-1"
+                }
+              },
+              "metadata": {
+                "operationMetadataId": "6d13d72f-001c-46c8-8e55-b8b9338bbb7f"
+              }
+            }
+          },
+          "runAfter": {
+            "List_rows_role_Securité__team_SA": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "3d904e4b-0de3-41b3-88e6-eec0aa7b4ab3"
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

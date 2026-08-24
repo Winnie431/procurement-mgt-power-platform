@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{82dbce96-a1e1-4371-aa01-60b3ec252093}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_name" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_notefournisseurid">
+          <cell name="aglcm003_name" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_notefournisseur">
+          <attribute name="aglcm003_notefournisseurid" />
+          <attribute name="aglcm003_name" />
+          <attribute name="createdon" />
+          <order attribute="aglcm003_name" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="1" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Inactive Supplier Notes" languagecode="1033" />
+      <LocalizedName description="Notes fournisseur inactives  " languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

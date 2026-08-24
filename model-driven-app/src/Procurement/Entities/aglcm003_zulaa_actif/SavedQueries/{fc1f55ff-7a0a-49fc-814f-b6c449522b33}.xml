@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{fc1f55ff-7a0a-49fc-814f-b6c449522b33}</savedqueryid>
+    <layoutxml>
+      <grid name="aglcm003_zulaa_actifs" jump="aglcm003_codeactif" select="1" icon="1" preview="1">
+        <row name="aglcm003_zulaa_actif" id="aglcm003_zulaa_actifid">
+          <cell name="aglcm003_numeroserie" width="119" />
+          <cell name="aglcm003_numeroparc" width="116" />
+          <cell name="aglcm003_magasinid" width="100" />
+          <cell name="aglcm003_codeactif" width="97" />
+          <cell name="aglcm003_modele" width="100" />
+          <cell name="aglcm003_dateacquisition" width="136" />
+          <cell name="aglcm003_garantie" width="100" />
+          <cell name="aglcm003_etatactif" width="103" />
+          <cell name="aglcm003_statutactif" width="109" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>2</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_actif">
+          <attribute name="aglcm003_zulaa_actifid" />
+          <attribute name="aglcm003_codeactif" />
+          <order attribute="aglcm003_codeactif" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_garantie" />
+          <attribute name="aglcm003_modele" />
+          <attribute name="aglcm003_numeroserie" />
+          <attribute name="aglcm003_numeroparc" />
+          <attribute name="aglcm003_magasinid" />
+          <attribute name="aglcm003_dateacquisition" />
+          <attribute name="aglcm003_etatactif" />
+          <attribute name="aglcm003_statutactif" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Asset Associated View" languagecode="1033" />
+      <LocalizedName description="Vue d'actifs associés" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

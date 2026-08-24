@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SdkMessageProcessingStep Name="CodeGneationPlugin.CodeGenrationPlugin: Create of aglcm003_zulaa_demandedachat" SdkMessageProcessingStepId="{b0639ddc-6e29-ef11-840a-6045bd9092dd}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SdkMessageId>9ebdbb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
+  <PluginTypeName>CodeGneationPlugin.CodeGenrationPlugin, CodeGneationPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9b18e7298d93b8e7</PluginTypeName>
+  <PluginTypeId>1bd0dbef-d6fd-4361-9e1d-64389eac0526</PluginTypeId>
+  <PrimaryEntity>aglcm003_zulaa_demandedachat</PrimaryEntity>
+  <AsyncAutoDelete>0</AsyncAutoDelete>
+  <Description>CodeGneationPlugin.CodeGenrationPlugin: Create of aglcm003_zulaa_demandedachat</Description>
+  <FilteringAttributes></FilteringAttributes>
+  <InvocationSource>1</InvocationSource>
+  <Mode>0</Mode>
+  <Rank>1</Rank>
+  <EventHandlerTypeCode>4602</EventHandlerTypeCode>
+  <Stage>40</Stage>
+  <IsCustomizable>1</IsCustomizable>
+  <IsHidden>0</IsHidden>
+  <SupportedDeployment>0</SupportedDeployment>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <SdkMessageProcessingStepImages />
+</SdkMessageProcessingStep>

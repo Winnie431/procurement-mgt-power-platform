@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SdkMessageProcessingStep Name="ZulaaReception.Package.PostOperationPopulateLigneDeLaReception: Create of aglcm003_zulaa_reception" SdkMessageProcessingStepId="{69f9e465-03aa-ef11-b8e8-7c1e5284b185}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SdkMessageId>9ebdbb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
+  <PluginTypeName>ZulaaReception.Package.PostOperationPopulateLigneDeLaReception, ZulaaReception.Package, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ee0f489481216997</PluginTypeName>
+  <PluginTypeId>8a363162-f1e3-4b6d-a549-7e0f799150e8</PluginTypeId>
+  <PrimaryEntity>aglcm003_zulaa_reception</PrimaryEntity>
+  <AsyncAutoDelete>0</AsyncAutoDelete>
+  <Description>ZulaaReception.Package.PostOperationPopulateLigneDeLaReception: Create of aglcm003_zulaa_reception</Description>
+  <FilteringAttributes></FilteringAttributes>
+  <InvocationSource>1</InvocationSource>
+  <Mode>0</Mode>
+  <Rank>2</Rank>
+  <EventHandlerTypeCode>4602</EventHandlerTypeCode>
+  <Stage>40</Stage>
+  <IsCustomizable>1</IsCustomizable>
+  <IsHidden>0</IsHidden>
+  <SupportedDeployment>0</SupportedDeployment>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <SdkMessageProcessingStepImages />
+</SdkMessageProcessingStep>

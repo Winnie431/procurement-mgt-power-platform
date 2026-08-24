@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>ablnstd_abalonstudiocanvastemplate_1462c</Name>
+  <AppVersion>2024-06-28T08:29:40Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.24062.17.0</CreatedByClientVersion>
+  <MinClientVersion>3.24062.17.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","showStatusBar":"false","publisherVersion":"3.24062.17","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"false","isUnifiedRootApp":"false","sienaVersion":"20240620T080002Z-3.24062.17.0"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>rgba(43, 105, 156, 1)</BackgroundColor>
+  <DisplayName>Abalon Studio - Canvas Template</DisplayName>
+  <Description></Description>
+  <CommitMessage></CommitMessage>
+  <Publisher></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{}</ConnectionReferences>
+  <DatabaseReferences>{}</DatabaseReferences>
+  <AppComponents>[]</AppComponents>
+  <AppComponentDependencies>[{"appComponentName":"d2406938a4c44551bc9a6472c2bdb1ef","appName":"be3e76f2-e0bb-4ad7-9c6d-1220abf73cee","appComponentLibraryName":"dd82977b-cf04-4263-8a55-33c1f6b42e36","appComponentLibraryVersion":"2024-06-28T08:29:37Z","appComponentLibraryLogicalName":"ablnstd_abalonstudiocanvascomponents_44617","tenantId":"088e9b00-ffd0-458e-bfa1-acf4c596d3cb","environmentName":"8de843bd-736c-efa9-b5bf-c46cb085b34d"}]</AppComponentDependencies>
+  <CanConsumeAppPass>1</CanConsumeAppPass>
+  <CanvasAppType>0</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[{"componenttype":300,"logicalname":"ablnstd_abalonstudiocanvascomponents_44617","componenttypeplatformname":"CanvasApp"}]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/ablnstd_abalonstudiocanvastemplate_1462c_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/ablnstd_abalonstudiocanvastemplate_1462c_DocumentUri.msapp</DocumentUri>
+  <AdditionalUris>
+    <AdditionalUri>/CanvasApps/ablnstd_abalonstudiocanvastemplate_1462c_AdditionalUris0_identity.json</AdditionalUri>
+  </AdditionalUris>
+</CanvasApp>

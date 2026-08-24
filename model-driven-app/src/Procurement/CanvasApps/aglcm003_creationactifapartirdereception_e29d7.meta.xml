@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>aglcm003_creationactifapartirdereception_e29d7</Name>
+  <AppVersion>2025-03-26T11:36:36Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.25032.10.0</CreatedByClientVersion>
+  <MinClientVersion>3.25032.10.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","showStatusBar":"false","publisherVersion":"3.25032.10","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false","sienaVersion":"20241212T114054Z-3.24121.10.0"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
+  <DisplayName>Créer un actif à partir  d'une réception</DisplayName>
+  <Description xsi:nil="true"></Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
+  <Publisher xsi:nil="true"></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{}</ConnectionReferences>
+  <DatabaseReferences>{"default.cds":{"databaseDetails":{"referenceType":"Environmental","environmentName":"default.cds","overrideValues":{"status":"NotSpecified","environmentVariableName":""}},"dataSources":{"Ligne de la Receptions":{"entitySetName":"aglcm003_lignedelareceptions","logicalName":"aglcm003_lignedelareception"},"Receptions":{"entitySetName":"aglcm003_zulaa_receptions","logicalName":"aglcm003_zulaa_reception"},"Articles":{"entitySetName":"aglcm003_zulaa_articles","logicalName":"aglcm003_zulaa_article"},"Actifs":{"entitySetName":"aglcm003_zulaa_actifs","logicalName":"aglcm003_zulaa_actif"},"Entités":{"entitySetName":"aglcm003_zulaa_entites","logicalName":"aglcm003_zulaa_entite"},"Bons de commandes":{"entitySetName":"aglcm003_zulaa_bondecommandes","logicalName":"aglcm003_zulaa_bondecommande"},"Magasins":{"entitySetName":"aglcm003_magasins","logicalName":"aglcm003_magasin"},"Fournisseurs":{"entitySetName":"aglcm003_zulaa_fournisseurs","logicalName":"aglcm003_zulaa_fournisseur"}}}}</DatabaseReferences>
+  <AppComponents>[]</AppComponents>
+  <AppComponentDependencies>[]</AppComponentDependencies>
+  <CanConsumeAppPass>0</CanConsumeAppPass>
+  <CanvasAppType>2</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[{"logicalname":"aglcm003_lignedelareception","componenttype":1},{"logicalname":"aglcm003_zulaa_reception","componenttype":1},{"logicalname":"aglcm003_zulaa_article","componenttype":1},{"logicalname":"aglcm003_zulaa_actif","componenttype":1},{"logicalname":"aglcm003_zulaa_entite","componenttype":1},{"logicalname":"aglcm003_zulaa_bondecommande","componenttype":1},{"logicalname":"aglcm003_magasin","componenttype":1},{"logicalname":"aglcm003_zulaa_fournisseur","componenttype":1}]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/aglcm003_creationactifapartirdereception_e29d7_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/aglcm003_creationactifapartirdereception_e29d7_DocumentUri.msapp</DocumentUri>
+  <AdditionalUris>
+    <AdditionalUri>/CanvasApps/aglcm003_creationactifapartirdereception_e29d7_AdditionalUris0_identity.json</AdditionalUri>
+  </AdditionalUris>
+</CanvasApp>

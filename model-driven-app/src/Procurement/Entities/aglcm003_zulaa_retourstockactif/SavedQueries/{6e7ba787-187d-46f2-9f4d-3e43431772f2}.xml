@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{6e7ba787-187d-46f2-9f4d-3e43431772f2}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="aglcm003_code" select="1" icon="1" preview="1">
+        <row name="result" id="aglcm003_zulaa_retourstockactifid">
+          <cell name="aglcm003_retourstockid" width="112" />
+          <cell name="aglcm003_actifid" width="100" />
+          <cell name="aglcm003_magasinid" width="100" />
+          <cell name="aglcm003_numerodeserie" width="133" />
+          <cell name="aglcm003_proprietaires" width="112" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="aglcm003_zulaa_retourstockactif">
+          <attribute name="aglcm003_zulaa_retourstockactifid" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="aglcm003_magasinid" />
+          <attribute name="aglcm003_numerodeserie" />
+          <attribute name="aglcm003_proprietaires" />
+          <attribute name="aglcm003_retourstockid" />
+          <attribute name="aglcm003_actifid" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Return Of Stock Assets" languagecode="1033" />
+      <LocalizedName description="Retour des actifs en stock" languagecode="1036" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

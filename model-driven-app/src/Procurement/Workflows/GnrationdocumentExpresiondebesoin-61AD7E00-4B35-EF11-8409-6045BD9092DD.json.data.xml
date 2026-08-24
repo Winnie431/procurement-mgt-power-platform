@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{61ad7e00-4b35-ef11-8409-6045bd9092dd}" Name="Génération document Expresion de besoin" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <JsonFileName>/Workflows/GnrationdocumentExpresiondebesoin-61AD7E00-4B35-EF11-8409-6045BD9092DD.json</JsonFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>5</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>0</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <RunAs>1</RunAs>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <PrimaryEntity>none</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Génération document Expresion de besoin" />
+    <LocalizedName languagecode="1036" description="Génération document Expresion de besoin" />
+  </LocalizedNames>
+</Workflow>

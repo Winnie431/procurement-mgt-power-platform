@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{b3c91312-7517-ef11-9f89-000d3a2f362e}</WebResourceId>
+  <Name>aglcm003_iconcentredecoutzulaa</Name>
+  <DisplayName>Icon centre de cout Zulaa</DisplayName>
+  <WebResourceType>11</WebResourceType>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/aglcm003_iconcentredecoutzulaaB3C91312-7517-EF11-9F89-000D3A2F362E</FileName>
+</WebResource>

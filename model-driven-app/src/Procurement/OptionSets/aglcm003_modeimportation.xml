@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="aglcm003_modeimportation" localizedName="Importation Mode" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <ExternalTypeName></ExternalTypeName>
+  <displaynames>
+    <displayname description="Importation Mode" languagecode="1033" />
+    <displayname description="Mode d'importation" languagecode="1036" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="1" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Route" languagecode="1033" />
+        <label description="Route" languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="2" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Air" languagecode="1033" />
+        <label description="Aérien" languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="3" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Express" languagecode="1033" />
+        <label description="Express" languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="4" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Local" languagecode="1033" />
+        <label description="Local" languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="5" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="RAS" languagecode="1033" />
+        <label description="RAS" languagecode="1036" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>
